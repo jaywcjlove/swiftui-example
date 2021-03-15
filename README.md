@@ -23,3 +23,5 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何使用 `@ObservedObject` 管理外部对象的状态？](example/state/demo3)
 - [如何使用 `@EnvironmentObject` 在视图之间共享数据？](example/state/demo4)
 - [如何使用 `objectWillChange` 手动发送状态更新？](example/state/demo5)
+- [如何创建常量绑定？](example/state/demo6)
+- [如何创建自定义绑定？](example/state/demo7)
