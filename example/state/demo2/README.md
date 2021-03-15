@@ -1,4 +1,4 @@
-如何使用 @StateObject 创建和监视外部对象
+如何使用 `@StateObject` 创建和监视外部对象
 ----
 
 `SwiftUI` 的 `@StateObject` 属性包装器是 `@ObservedObject` 的一种特殊形式，具有所有相同的功能，但还有一个重要的附加功能：它应该用于创建观察到的对象，而不仅仅是存储从外部传入的对象。
@@ -42,3 +42,5 @@ struct ContentView_Previews: PreviewProvider {
   }
 }
 ```
+
+如果您很难记住区别，请尝试以下操作：每当在属性包装程序中看到 `State` 时，例如 `@State`，`@StateObject`，`@GestureState`，表示“当前视图拥有此数据”。

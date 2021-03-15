@@ -20,3 +20,5 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 响应交互并控制程序状态
 
 - [@ObservedObject，@State 和 @EnvironmentObject 有什么区别？](example/state/demo1)
+- [如何使用 `@StateObject` 创建和监视外部对象？](example/state/demo2)
+- [如何使用 `@ObservedObject` 管理外部对象的状态？](example/state/demo3)
