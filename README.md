@@ -25,3 +25,5 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何使用 `objectWillChange` 手动发送状态更新？](example/state/demo5)
 - [如何创建常量绑定？](example/state/demo6)
 - [如何创建自定义绑定？](example/state/demo7)
+- [如何在 SwiftUI 中使用计时器？](example/state/demo8)
+- [当使用 `onChange()` 改变状态时如何运行一些代码？](example/state/demo9)
