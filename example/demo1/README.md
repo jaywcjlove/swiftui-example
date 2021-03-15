@@ -10,6 +10,10 @@
 
 ![](imgs/3.png)
 
-现在你可以点击 `>` 运行起来，也可以通过快捷键 <kbd>⌘</kbd> + <kbd>r</kbd>
+现在你可以点击 `▶︎` 运行起来，也可以通过快捷键 <kbd>⌘</kbd> + <kbd>r</kbd>
 
 ![](imgs/4.png)
+
+- <kbd>⌘</kbd> + <kbd>b</kbd> 编译工程
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>k</kbd> 清除编译文件夹
+- <kbd>⌘</kbd> + <kbd>.</kbd> 停止运行
