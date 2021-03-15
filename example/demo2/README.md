@@ -55,3 +55,19 @@ NavigationView {
   }
 }
 ```
+
+通过 `.listStyle(SidebarListStyle())` 设置导航菜单列表透明磨砂玻璃效果。
+
+
+```swift
+NavigationView {
+  List {
+    Text("Hello World")
+    Text("Hello World")
+    Text("Hello World")
+  }
+  .listStyle(SidebarListStyle())
+}
+```
+
+![](imgs/2.png)
