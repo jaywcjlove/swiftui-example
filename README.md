@@ -54,3 +54,4 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何放大或缩小视图？](example/transforming-views/demo11)
 - [如何圆角化一个视图？](example/transforming-views/demo12)
 - [如何调整视图的不透明度？](example/transforming-views/demo13)
+- [如何调整视图的强调色？](example/transforming-views/demo14)
