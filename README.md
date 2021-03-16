@@ -11,8 +11,8 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 
 通过实际的应用程序项目学习SwiftUI
 
-- [SwiftUI教程：构建完整的项目](example/demo1)
-- [使用列表构建菜单](example/demo2)
+- [SwiftUI教程：构建完整的项目](example/introduction/demo1)
+- [使用列表构建菜单](example/introduction/demo2)
 
 ## 状态
 
