@@ -50,3 +50,4 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何在视图周围绘制阴影？](example/transforming-views/demo7)
 - [如何裁剪视图，以便仅可见部分？](example/transforming-views/demo8)
 - [如何旋转视图？](example/transforming-views/demo9)
+- [如何旋转 3D 视图？](example/transforming-views/demo10)
