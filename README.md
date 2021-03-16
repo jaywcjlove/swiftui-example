@@ -59,3 +59,6 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何模糊视图？](example/transforming-views/demo16)
 - [如何将视图融合在一起？](example/transforming-views/demo17)
 - [如何通过着色，去饱和等来调整视图？](example/transforming-views/demo18)
+- [使用 ButtonStyle 自定义按钮](example/transforming-views/demo19)
+- [使用 ProgressViewStyle 自定义 ProgressView](example/transforming-views/demo20)
+- [使用 ToggleStyle 自定义 Toggle](example/transforming-views/demo21)
