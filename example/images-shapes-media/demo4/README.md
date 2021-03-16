@@ -43,3 +43,34 @@ Image(systemName: "person.crop.circle.fill.badge.plus")
     .foregroundColor(.blue)
     .font(.largeTitle)
 ```
+
+对于其他渐变样式，请尝试 `RadialGradient` 或 `AngularGradient`。 例如，这将创建一个从圆心开始到边缘的各种颜色的径向渐变：
+
+```swift
+Circle()
+    .fill(
+        RadialGradient(gradient: Gradient(colors: [.red, .yellow, .green, .blue, .purple]), center: .center, startRadius: 50, endRadius: 200)        
+    )
+    .frame(width: 200, height: 200)
+```
+
+这将创建一个角度渐变（通常称为圆锥渐变），循环显示各种颜色，然后返回到起点：
+
+```swift
+Circle()
+    .fill(
+        AngularGradient(gradient: Gradient(colors: [.red, .yellow, .green, .blue, .purple, .red]), center: .center)
+    )
+    .frame(width: 200, height: 200)
+```
+
+由于所有三种渐变类型均符合 `ShapeStyle` 协议，因此可以将它们用于背景，填充和笔触。 例如，这使用我们的彩虹圆锥形渐变作为圆的粗内部笔画：
+
+```swift
+Circle()
+    .strokeBorder(
+        AngularGradient(gradient: Gradient(colors: [.red, .yellow, .green, .blue, .purple, .red]), center: .center, startAngle: .zero, endAngle: .degrees(360)),
+        lineWidth: 50
+    )
+    .frame(width: 200, height: 200)
+```
