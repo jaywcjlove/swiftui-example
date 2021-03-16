@@ -93,3 +93,56 @@ struct ContentView: View {
     }
 }
 ```
+
+对于更高级的示例，请尝试以下操作–它借鉴了 `Apple Music` 的专辑显示风格，在点击时将小视图扩展为更大的视图。 在此示例中，仅文本是动画的，因为其位置在改变： 
+
+```swift
+struct ContentView: View {
+    @Namespace private var animation
+    @State private var isZoomed = false
+
+    var frame: CGFloat {
+        isZoomed ? 300 : 44
+    }
+
+    var body: some View {
+        VStack {
+            Spacer()
+
+            VStack {
+                HStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.blue)
+                        .frame(width: frame, height: frame)
+                        .padding(.top, isZoomed ? 20 : 0)
+
+                    if isZoomed == false {
+                        Text("Taylor Swift – 1989")
+                            .matchedGeometryEffect(id: "AlbumTitle", in: animation)
+                            .font(.headline)
+                        Spacer()
+                    }
+                }
+
+                if isZoomed == true {
+                    Text("Taylor Swift – 1989")
+                        .matchedGeometryEffect(id: "AlbumTitle", in: animation)
+                        .font(.headline)
+                        .padding(.bottom, 60)
+                    Spacer()
+                }
+            }
+            .onTapGesture {
+                withAnimation(.spring()) {
+                    isZoomed.toggle()
+                }
+            }
+            .padding()
+            .frame(maxWidth: .infinity)
+            .frame(height: 400)
+            .background(Color(white: 0.9))
+            .foregroundColor(.black)
+        }
+    }
+}
+```
