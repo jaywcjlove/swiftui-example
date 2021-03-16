@@ -81,3 +81,4 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何为绑定值的变化制作动画？](example/animation/demo3)
 - [如何创建显式动画？](example/animation/demo4)
 - [如何延迟动画？](example/animation/demo5)
+- [视图出现后如何立即启动动画？](example/animation/demo6)
