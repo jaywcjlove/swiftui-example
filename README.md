@@ -11,7 +11,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 
 通过实际的应用程序项目学习SwiftUI
 
-- [SwiftUI教程：构建完整的项目](example/introduction/demo1)
+- [SwiftUI 教程：构建完整的项目](example/introduction/demo1)
 - [使用列表构建菜单](example/introduction/demo2)
 
 ## 使用静态文本
@@ -23,6 +23,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何使用 multilineTextAlignment() 调整文本对齐方式？](example/working-with-static-text/demo3)
 - [如何在文本视图中设置文本格式？](example/working-with-static-text/demo4)
 - [如何在文字中的字母之间增加空格？](example/working-with-static-text/demo5)
+- [如何在文字检视中格式化日期？](example/working-with-static-text/demo6)
 
 ## 状态
 
