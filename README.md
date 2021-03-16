@@ -14,6 +14,12 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [SwiftUI教程：构建完整的项目](example/introduction/demo1)
 - [使用列表构建菜单](example/introduction/demo2)
 
+## 使用静态文本
+
+整齐地布局文本
+
+- [如何使用 Text 视图创建静态标签？](example/working-with-static-text/demo1)
+
 ## 状态
 
 响应交互并控制程序状态
