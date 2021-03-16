@@ -44,3 +44,4 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何使用其偏移量调整视图的位置？](example/transforming-views/demo1)
 - [如何为视图周围的填充着色？](example/transforming-views/demo2)
 - [如何堆叠修改器以创建更高级的效果？](example/transforming-views/demo3)
+- [如何在视图周围绘制边框？](example/transforming-views/demo4)
