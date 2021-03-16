@@ -52,3 +52,4 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何旋转视图？](example/transforming-views/demo9)
 - [如何旋转 3D 视图？](example/transforming-views/demo10)
 - [如何放大或缩小视图？](example/transforming-views/demo11)
+- [如何圆角化一个视图？](example/transforming-views/demo12)
