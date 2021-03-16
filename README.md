@@ -18,15 +18,15 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 
 响应交互并控制程序状态
 
-- [@ObservedObject，@State 和 @EnvironmentObject 有什么区别？](example/state/demo1)
-- [如何使用 `@StateObject` 创建和监视外部对象？](example/state/demo2)
-- [如何使用 `@ObservedObject` 管理外部对象的状态？](example/state/demo3)
-- [如何使用 `@EnvironmentObject` 在视图之间共享数据？](example/state/demo4)
-- [如何使用 `objectWillChange` 手动发送状态更新？](example/state/demo5)
-- [如何创建常量绑定？](example/state/demo6)
-- [如何创建自定义绑定？](example/state/demo7)
-- [如何在 SwiftUI 中使用计时器？](example/state/demo8)
-- [当使用 `onChange()` 改变状态时如何运行一些代码？](example/state/demo9)
+- [@ObservedObject，@State 和 @EnvironmentObject 有什么区别？](example/advanced-state/demo1)
+- [如何使用 `@StateObject` 创建和监视外部对象？](example/advanced-state/demo2)
+- [如何使用 `@ObservedObject` 管理外部对象的状态？](example/advanced-state/demo3)
+- [如何使用 `@EnvironmentObject` 在视图之间共享数据？](example/advanced-state/demo4)
+- [如何使用 `objectWillChange` 手动发送状态更新？](example/advanced-state/demo5)
+- [如何创建常量绑定？](example/advanced-state/demo6)
+- [如何创建自定义绑定？](example/advanced-state/demo7)
+- [如何在 SwiftUI 中使用计时器？](example/advanced-state/demo8)
+- [当使用 `onChange()` 改变状态时如何运行一些代码？](example/advanced-state/demo9)
 
 ## 切换界面
 
@@ -87,3 +87,5 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何通过过渡添加和删除视图？](example/animation/demo9)
 - [如何创建不对称过渡？](example/animation/demo10)
 - [如何创建自定义过渡？](example/animation/demo11)
+- [如何设置文字大小的动画？](example/animation/demo12)
+- [如何用事务覆盖动画？](example/animation/demo13)
