@@ -70,3 +70,8 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [SwiftUI 的内置形状](example/drawing/demo1)
 - [如何绘制自定义路径？](example/drawing/demo2)
 - [如何绘制多边形和星星？](example/drawing/demo3)
+- [如何画一个棋盘？](example/drawing/demo4)
+
+## 动画
+
+通过运动使您的观点栩栩如生
