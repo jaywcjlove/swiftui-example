@@ -57,3 +57,5 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何调整视图的强调色？](example/transforming-views/demo14)
 - [如何用一个视图掩盖另一个视图？](example/transforming-views/demo15)
 - [如何模糊视图？](example/transforming-views/demo16)
+- [如何将视图融合在一起？](example/transforming-views/demo17)
+- [如何通过着色，去饱和等来调整视图？](example/transforming-views/demo18)
