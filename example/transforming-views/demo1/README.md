@@ -59,4 +59,4 @@ ZStack(alignment: .bottomTrailing) {
 }
 ```
 
-将 `offset` 放置在其它参数的末尾可确保它们一起移动。
+将 `offset` 放置在其它修饰符的末尾可确保它们一起移动。
