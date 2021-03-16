@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SheetView: View {
     @Environment(\.presentationMode) var presentationMode
-//    @Environment(\.fullScreenCover) var presentationMode
 
     var body: some View {
         Button("Press to dismiss") {
@@ -21,7 +20,6 @@ struct SheetView: View {
         
         
     }
-//    .full
 }
 
 struct ContentView: View {
