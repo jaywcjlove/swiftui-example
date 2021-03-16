@@ -62,3 +62,11 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [使用 ButtonStyle 自定义按钮](example/transforming-views/demo19)
 - [使用 ProgressViewStyle 自定义 ProgressView](example/transforming-views/demo20)
 - [使用 ToggleStyle 自定义 Toggle](example/transforming-views/demo21)
+
+## 绘画
+
+使用自定义形状控制渲染
+
+- [SwiftUI 的内置形状](example/drawing/demo1)
+- [如何绘制自定义路径？](example/drawing/demo2)
+- [如何绘制多边形和星星？](example/drawing/demo3)
