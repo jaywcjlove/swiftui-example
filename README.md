@@ -74,7 +74,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 
 ## 动画
 
-通过运动使您的观点栩栩如生
+通过运动使您的界面栩栩如生
 
 - [如何创建基本动画？](example/animation/demo1)
 - [如何制作弹簧动画？](example/animation/demo2)
