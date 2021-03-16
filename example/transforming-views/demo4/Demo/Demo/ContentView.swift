@@ -9,10 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Examples with Swift")
+        Text("Example with Swift")
             .padding()
-            .background(Color.red)
-            .foregroundColor(.white)
+            .overlay(
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(Color.blue, lineWidth: 4)
+            )
     }
 }
 

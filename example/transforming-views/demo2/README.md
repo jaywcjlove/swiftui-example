@@ -6,7 +6,7 @@
 例如，这将创建一个具有黑色背景和白色前景的文本视图，然后向其添加系统默认填充：
 
 ```swift
-Text("Hacking with Swift")
+Text("Examples with Swift")
     .background(Color.red)
     .foregroundColor(.white)
     .padding()
@@ -15,7 +15,7 @@ Text("Hacking with Swift")
 这会添加系统默认填充，然后设置黑色背景颜色和白色前景：
 
 ```swift
-Text("Hacking with Swift")
+Text("Examples with Swift")
     .padding()
     .background(Color.red)
     .foregroundColor(.white)
