@@ -26,6 +26,14 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何在文字检视中格式化日期？](example/working-with-static-text/demo6)
 - [如何使用 textCase() 使 TextField 大写或小写？](example/working-with-static-text/demo7)
 - [如何使用 Label 并排显示文本和图标？](example/working-with-static-text/demo8)
+- [如何使用 redacted() 将内容标记为占位符？](example/working-with-static-text/demo9)
+
+## 图像，形状和媒体
+
+绘制图标，圆形，渐变等
+
+- [如何使用图像视图绘制图像？](example/images-shapes-media/demo1)
+- [如何调整图像适合其空间的展示方式？](example/images-shapes-media/demo2)
 
 ## 状态
 
