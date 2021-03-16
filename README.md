@@ -19,6 +19,8 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 整齐地布局文本
 
 - [如何使用 Text 视图创建静态标签？](example/working-with-static-text/demo1)
+- [如何使用字体，颜色，行距等为文本视图设置样式？](example/working-with-static-text/demo2)
+- [如何使用 multilineTextAlignment() 调整文本对齐方式](example/working-with-static-text/demo3)
 
 ## 状态
 
