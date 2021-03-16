@@ -36,3 +36,8 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [点击列表行时如何推送新视图？](example/presenting-views/demo2)
 - [如何在 SwiftUI 中使用程序化导航？](example/presenting-views/demo3)
 - [如何显示弹出视图？](example/presenting-views/demo3)
+
+## 转换视图
+
+剪辑，大小，比例，旋转等
+
