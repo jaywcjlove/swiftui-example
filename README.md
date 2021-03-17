@@ -43,6 +43,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何使用 `trim()` 绘制实体形状的一部分？](example/images-shapes-media/demo9)
 - [什么时候应该使用 `ContainerRelativeShape`？](example/images-shapes-media/demo10)
 - [如何使用 `VideoPlayer` 播放电影？](example/images-shapes-media/demo11)
+- [如何使用 `SpriteView` 集成 `SpriteKit`？](example/images-shapes-media/demo12)
 
 ## 状态
 
