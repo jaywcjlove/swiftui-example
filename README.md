@@ -18,15 +18,15 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 
 整齐地布局文本
 
-- [如何使用 Text 视图创建静态标签？](example/working-with-static-text/demo1)
+- [如何使用 `Text` 视图创建静态标签？](example/working-with-static-text/demo1)
 - [如何使用字体，颜色，行距等为文本视图设置样式？](example/working-with-static-text/demo2)
-- [如何使用 multilineTextAlignment() 调整文本对齐方式？](example/working-with-static-text/demo3)
+- [如何使用 `multilineTextAlignment()` 调整文本对齐方式？](example/working-with-static-text/demo3)
 - [如何在文本视图中设置文本格式？](example/working-with-static-text/demo4)
 - [如何在文字中的字母之间增加空格？](example/working-with-static-text/demo5)
 - [如何在文字检视中格式化日期？](example/working-with-static-text/demo6)
-- [如何使用 textCase() 使 TextField 大写或小写？](example/working-with-static-text/demo7)
-- [如何使用 Label 并排显示文本和图标？](example/working-with-static-text/demo8)
-- [如何使用 redacted() 将内容标记为占位符？](example/working-with-static-text/demo9)
+- [如何使用 `textCase()` 使 `TextField` 大写或小写？](example/working-with-static-text/demo7)
+- [如何使用 `Label` 并排显示文本和图标？](example/working-with-static-text/demo8)
+- [如何使用 `redacted()` 将内容标记为占位符？](example/working-with-static-text/demo9)
 
 ## 图像，形状和媒体
 
@@ -38,28 +38,29 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何使用SF符号渲染图像？](example/images-shapes-media/demo4)
 - [如何渲染渐变？](example/images-shapes-media/demo5)
 - [如何使用图像和其他视图作为背景？](example/images-shapes-media/demo6)
+- [如何显示实体形状？](example/working-with-static-text/demo7)
 
 ## 状态
 
 响应交互并控制程序状态
 
-- [@ObservedObject，@State 和 @EnvironmentObject 有什么区别？](example/advanced-state/demo1)
+- [`@ObservedObject`，`@State` 和 `@EnvironmentObject` 有什么区别？](example/advanced-state/demo1)
 - [如何使用 `@StateObject` 创建和监视外部对象？](example/advanced-state/demo2)
 - [如何使用 `@ObservedObject` 管理外部对象的状态？](example/advanced-state/demo3)
 - [如何使用 `@EnvironmentObject` 在视图之间共享数据？](example/advanced-state/demo4)
 - [如何使用 `objectWillChange` 手动发送状态更新？](example/advanced-state/demo5)
 - [如何创建常量绑定？](example/advanced-state/demo6)
 - [如何创建自定义绑定？](example/advanced-state/demo7)
-- [如何在 SwiftUI 中使用计时器？](example/advanced-state/demo8)
+- [如何在 `SwiftUI` 中使用计时器？](example/advanced-state/demo8)
 - [当使用 `onChange()` 改变状态时如何运行一些代码？](example/advanced-state/demo9)
 
 ## 切换界面
 
 将您的用户从一个视图移动到另一个视图
 
-- [如何将新视图推送到 NavigationView 上？](example/presenting-views/demo1)
+- [如何将新视图推送到 `NavigationView` 上？](example/presenting-views/demo1)
 - [点击列表行时如何推送新视图？](example/presenting-views/demo2)
-- [如何在 SwiftUI 中使用程序化导航？](example/presenting-views/demo3)
+- [如何在 `SwiftUI` 中使用程序化导航？](example/presenting-views/demo3)
 - [如何显示弹出视图？](example/presenting-views/demo3)
 
 ## 转换视图
@@ -84,9 +85,9 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何模糊视图？](example/transforming-views/demo16)
 - [如何将视图融合在一起？](example/transforming-views/demo17)
 - [如何通过着色，去饱和等来调整视图？](example/transforming-views/demo18)
-- [使用 ButtonStyle 自定义按钮](example/transforming-views/demo19)
-- [使用 ProgressViewStyle 自定义 ProgressView](example/transforming-views/demo20)
-- [使用 ToggleStyle 自定义 Toggle](example/transforming-views/demo21)
+- [使用 `ButtonStyle` 自定义按钮](example/transforming-views/demo19)
+- [使用 `ProgressViewStyle` 自定义 `ProgressView`](example/transforming-views/demo20)
+- [使用 `ToggleStyle` 自定义 `Toggle`](example/transforming-views/demo21)
 
 ## 绘画
 
