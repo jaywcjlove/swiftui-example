@@ -40,6 +40,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何使用图像和其他视图作为背景？](example/images-shapes-media/demo6)
 - [如何显示实体形状？](example/working-with-static-text/demo7)
 - [如何同时填充和描边形状？](example/working-with-static-text/demo8)
+- [如何使用 `trim()` 绘制实体形状的一部分？](example/working-with-static-text/demo9)
 
 ## 状态
 
