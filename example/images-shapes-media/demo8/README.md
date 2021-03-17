@@ -28,7 +28,7 @@ ZStack {
 ```
 
 
-如果要填充和描边很多形状，则应考虑将此功能包装在扩展中。 只有 `InsettableShapes` 才能获取 `strokeBorder()` 方法，因此您可能应该编写两种扩展方法-一种使用 `stroke()` 处理常规形状，另一种使用 `strokeBorder()` 处理可嵌入形状。
+如果要填充和描边很多形状，则应考虑将此功能包装在扩展中。 只有 `InsettableShapes` 才能获取 `strokeBorder()` 方法，因此您可能应该编写两种扩展方法 - 一种使用 `stroke()` 处理常规形状，另一种使用 `strokeBorder()` 处理可嵌入形状。
 
 这就是代码中的样子：
 

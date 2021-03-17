@@ -19,3 +19,5 @@ Image("dog")
 Image(systemName: "cloud.heavyrain.fill")
     .font(.largeTitle)
 ```
+
+请注意，如何使用 `font()` 修饰符来调整 `SF Symbols`，就好像它们是文本一样。
