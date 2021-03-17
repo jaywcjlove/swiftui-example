@@ -37,6 +37,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何平铺图像？](example/images-shapes-media/demo3)
 - [如何使用SF符号渲染图像？](example/images-shapes-media/demo4)
 - [如何渲染渐变？](example/images-shapes-media/demo5)
+- [如何使用图像和其他视图作为背景？](example/images-shapes-media/demo6)
 
 ## 状态
 
