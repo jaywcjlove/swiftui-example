@@ -1,7 +1,9 @@
 SwiftUI by Example
 ---
 
-SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问题以及了解 SwiftUI 的实际工作方式。
+SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问题以及了解 SwiftUI 的实际工作方式。实例主要来源 [`hackingwithswift.com`](https://www.hackingwithswift.com/quick-start/swiftui)，下面所有实例都是在 macOS Big Sur 系统上运行，Xcode `v12.4`。
+
+⚠️ 注意：文字解释内容基于 Google 翻译，小部分经过了添加或者修改
 
 ## 介绍
 
@@ -57,6 +59,14 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何使用 `ForEach` 循环创建视图？](example/images-shapes-media/demo6)
 - [如何使用 `layoutPriority()` 控制布局优先级？](example/images-shapes-media/demo7)
 - [如何使两个视图具有相同的宽度或高度？](example/images-shapes-media/demo8)
+
+## 堆栈，网格，滚动视图
+
+以结构化方式定位视图
+
+- [如何使用 `VStack` 和 `HStack` 创建堆栈？](example/images-shapes-media/demo1)
+
+
 
 ## 状态
 
