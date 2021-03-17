@@ -55,6 +55,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何将内容放置在安全区域之外？](example/images-shapes-media/demo4)
 - [如何返回不同的视图类型？](example/images-shapes-media/demo5)
 - [如何使用 `ForEach` 循环创建视图？](example/images-shapes-media/demo6)
+- [如何使用 `layoutPriority()` 控制布局优先级？](example/images-shapes-media/demo7)
 
 ## 状态
 
