@@ -1,7 +1,7 @@
 SwiftUI by Example
 ---
 
-SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问题以及了解 SwiftUI 的实际工作方式。实例主要来源 [`hackingwithswift.com`](https://www.hackingwithswift.com/quick-start/swiftui)，下面所有实例都是在 macOS Big Sur 系统上运行，Xcode `v12.4`。
+SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问题以及了解 SwiftUI 的实际工作方式。主要内容来源 [`hackingwithswift.com`](https://www.hackingwithswift.com/quick-start/swiftui)，下面所有实例都是在 macOS Big Sur 系统上运行，基于 Xcode `12.4` 开发。
 
 ⚠️ 注意：文字解释内容基于 Google 翻译，小部分经过了添加或者修改
 
@@ -65,8 +65,10 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 以结构化方式定位视图
 
 - [如何使用 `VStack` 和 `HStack` 创建堆栈？](example/images-shapes-media/demo1)
-
-
+- [如何使用对齐和间距自定义堆栈布局？](example/images-shapes-media/demo2)
+- [如何使用 `Spacer` 将视图强制移到堆栈中的一侧？](example/images-shapes-media/demo3)
+- [如何制作固定尺寸的 `Spacer`？](example/images-shapes-media/demo4)
+- [如何使用 `ZStack` 在彼此之上叠加视图？](example/images-shapes-media/demo5)
 
 ## 状态
 
@@ -95,7 +97,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 
 剪辑，大小，比例，旋转等
 
-- [如何使用其偏移量调整视图的位置？](example/transforming-views/demo1)
+- [如何使用其偏移量调整视图的位置 `offset`？](example/transforming-views/demo1)
 - [如何为视图周围的填充着色？](example/transforming-views/demo2)
 - [如何堆叠修改器以创建更高级的效果？](example/transforming-views/demo3)
 - [如何在视图周围绘制边框？](example/transforming-views/demo4)
