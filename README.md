@@ -42,6 +42,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何同时填充和描边形状？](example/images-shapes-media/demo8)
 - [如何使用 `trim()` 绘制实体形状的一部分？](example/images-shapes-media/demo9)
 - [什么时候应该使用 `ContainerRelativeShape`？](example/images-shapes-media/demo10)
+- [如何使用 `VideoPlayer` 播放电影？](example/images-shapes-media/demo11)
 
 ## 状态
 
