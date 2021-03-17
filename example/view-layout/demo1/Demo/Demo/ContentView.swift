@@ -16,7 +16,6 @@ struct ContentView: View {
                 Text("Welcome")
                     .frame(minWidth: 0, maxWidth: 200, minHeight: 0, maxHeight: 200)
                     .font(.largeTitle)
-                
             }
             Button {
                 print("Button tapped")
@@ -26,7 +25,6 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .foregroundColor(.white)
                     .background(Color.red)
-                
             }
         }
         .frame(width: 500, height: 100, alignment: .center)

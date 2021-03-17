@@ -50,6 +50,9 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 布局大小，优先级和间距
 
 - [如何给视图定制 `frame`？](example/images-shapes-media/demo1)
+- [如何使用 `padding` 来控制各个视图之间的间距？](example/images-shapes-media/demo2)
+- [如何使用 `GeometryReader` 提供相对大小？](example/images-shapes-media/demo3)
+- [如何将内容放置在安全区域之外？](example/images-shapes-media/demo4)
 
 ## 状态
 
