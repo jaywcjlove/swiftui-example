@@ -11,6 +11,7 @@
 		7D49939A2601EB7100504434 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4993992601EB7100504434 /* ContentView.swift */; };
 		7D49939C2601EB7200504434 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D49939B2601EB7200504434 /* Assets.xcassets */; };
 		7D49939F2601EB7200504434 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D49939E2601EB7200504434 /* Preview Assets.xcassets */; };
+		7D4993A92601ECDC00504434 /* TossResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4993A82601ECDC00504434 /* TossResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		7D49939E2601EB7200504434 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7D4993A02601EB7200504434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D4993A12601EB7200504434 /* Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Demo.entitlements; sourceTree = "<group>"; };
+		7D4993A82601ECDC00504434 /* TossResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TossResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				7D4993972601EB7100504434 /* DemoApp.swift */,
 				7D4993992601EB7100504434 /* ContentView.swift */,
+				7D4993A82601ECDC00504434 /* TossResult.swift */,
 				7D49939B2601EB7200504434 /* Assets.xcassets */,
 				7D4993A02601EB7200504434 /* Info.plist */,
 				7D4993A12601EB7200504434 /* Demo.entitlements */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D4993A92601ECDC00504434 /* TossResult.swift in Sources */,
 				7D49939A2601EB7100504434 /* ContentView.swift in Sources */,
 				7D4993982601EB7100504434 /* DemoApp.swift in Sources */,
 			);

@@ -23,6 +23,9 @@ struct ContentView: View {
 
             tossResult
                 .frame(width: 400, height: 300)
+            
+            TossResult()
+                .frame(width: 400, height: 300)
         }
     }
 }
