@@ -69,6 +69,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何使用 `Spacer` 将视图强制移到堆栈中的一侧？](example/images-shapes-media/demo3)
 - [如何制作固定尺寸的 `Spacer`？](example/images-shapes-media/demo4)
 - [如何使用 `ZStack` 在彼此之上叠加视图？](example/images-shapes-media/demo5)
+- [如何使用 `zIndex` 更改视图分层的顺序？](example/images-shapes-media/demo6)
 
 ## 状态
 
