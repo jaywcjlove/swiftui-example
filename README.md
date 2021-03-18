@@ -71,6 +71,8 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何使用 `ZStack` 在彼此之上叠加视图？](example/stacks-grids-scrollviews/demo5)
 - [如何使用 `zIndex` 更改视图分层的顺序？](example/stacks-grids-scrollviews/demo6)
 - [如何使用尺寸类创建不同的布局？](example/stacks-grids-scrollviews/demo7)
+- [如何根据大小类在 `HStack` 和 `VStack` 之间自动切换？](example/stacks-grids-scrollviews/demo8)
+- [如何使用 `ScrollView` 添加水平和垂直滚动？](example/stacks-grids-scrollviews/demo9)
 
 ## 状态
 
