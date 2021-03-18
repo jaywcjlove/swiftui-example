@@ -73,6 +73,10 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何使用尺寸类创建不同的布局？](example/stacks-grids-scrollviews/demo7)
 - [如何根据大小类在 `HStack` 和 `VStack` 之间自动切换？](example/stacks-grids-scrollviews/demo8)
 - [如何使用 `ScrollView` 添加水平和垂直滚动？](example/stacks-grids-scrollviews/demo9)
+- [如何使用 `ScrollViewReader` 使滚动视图移动到某个位置？](example/stacks-grids-scrollviews/demo10)
+- [如何使用 `ScrollView` 和 `GeometryReader` 创建3D效果(如Cover Flow)？](example/stacks-grids-scrollviews/demo11)
+- [如何使用 `LazyVGrid` 和 `LazyHGrid` 在网格中放置视图？](example/stacks-grids-scrollviews/demo12)
+- [如何使用 `LazyVStack` 和 `LazyHStack` 延迟加载视图？](example/stacks-grids-scrollviews/demo13)
 
 ## 状态
 
