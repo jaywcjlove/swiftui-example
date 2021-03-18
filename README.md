@@ -51,25 +51,26 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 
 布局大小，优先级和间距
 
-- [如何给视图定制 `frame`？](example/images-shapes-media/demo1)
-- [如何使用 `padding` 来控制各个视图之间的间距？](example/images-shapes-media/demo2)
-- [如何使用 `GeometryReader` 提供相对大小？](example/images-shapes-media/demo3)
-- [如何将内容放置在安全区域之外？](example/images-shapes-media/demo4)
-- [如何返回不同的视图类型？](example/images-shapes-media/demo5)
-- [如何使用 `ForEach` 循环创建视图？](example/images-shapes-media/demo6)
-- [如何使用 `layoutPriority()` 控制布局优先级？](example/images-shapes-media/demo7)
-- [如何使两个视图具有相同的宽度或高度？](example/images-shapes-media/demo8)
+- [如何给视图定制 `frame`？](example/view-layout/demo1)
+- [如何使用 `padding` 来控制各个视图之间的间距？](example/view-layout/demo2)
+- [如何使用 `GeometryReader` 提供相对大小？](example/view-layout/demo3)
+- [如何将内容放置在安全区域之外？](example/view-layout/demo4)
+- [如何返回不同的视图类型？](example/view-layout/demo5)
+- [如何使用 `ForEach` 循环创建视图？](example/view-layout/demo6)
+- [如何使用 `layoutPriority()` 控制布局优先级？](example/view-layout/demo7)
+- [如何使两个视图具有相同的宽度或高度？](example/view-layout/demo8)
 
 ## 堆栈，网格，滚动视图
 
 以结构化方式定位视图
 
-- [如何使用 `VStack` 和 `HStack` 创建堆栈？](example/images-shapes-media/demo1)
-- [如何使用对齐和间距自定义堆栈布局？](example/images-shapes-media/demo2)
-- [如何使用 `Spacer` 将视图强制移到堆栈中的一侧？](example/images-shapes-media/demo3)
-- [如何制作固定尺寸的 `Spacer`？](example/images-shapes-media/demo4)
-- [如何使用 `ZStack` 在彼此之上叠加视图？](example/images-shapes-media/demo5)
-- [如何使用 `zIndex` 更改视图分层的顺序？](example/images-shapes-media/demo6)
+- [如何使用 `VStack` 和 `HStack` 创建堆栈？](example/stacks-grids-scrollviews/demo1)
+- [如何使用对齐和间距自定义堆栈布局？](example/stacks-grids-scrollviews/demo2)
+- [如何使用 `Spacer` 将视图强制移到堆栈中的一侧？](example/stacks-grids-scrollviews/demo3)
+- [如何制作固定尺寸的 `Spacer`？](example/stacks-grids-scrollviews/demo4)
+- [如何使用 `ZStack` 在彼此之上叠加视图？](example/stacks-grids-scrollviews/demo5)
+- [如何使用 `zIndex` 更改视图分层的顺序？](example/stacks-grids-scrollviews/demo6)
+- [如何使用尺寸类创建不同的布局？](example/stacks-grids-scrollviews/demo7)
 
 ## 状态
 
