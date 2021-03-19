@@ -98,6 +98,14 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何创建日期选择器 `DatePicker` 并从中读取值？](example/user-interface-controls/demo14)
 - [如何创建分段控件并从中读取值？](example/user-interface-controls/demo15)
 - [如何创建步进器 `Stepper` 并从中读取值？](example/user-interface-controls/demo16)
+- [如何使用 `labelsHidden()` 隐藏 `Picker`，`Stepper`，`Toggle` 等标签？](example/user-interface-controls/demo17)
+- [如何使用文本编辑器创建多行可编辑文本 `TextEditor`？](example/user-interface-controls/demo18)
+- [如何让用户使用 `ColorPicker` 选择颜色？](example/user-interface-controls/demo19)
+- [如何使用 `ProgressView` 显示任务的进度？](example/user-interface-controls/demo20)
+- [如何使用 `ProgressView` 显示不确定的进度？](example/user-interface-controls/demo21)
+- [如何显示地图 `Map` 视图？](example/user-interface-controls/demo22)
+- [如何在地图 `Map` 视图中显示注释？](example/user-interface-controls/demo23)
+- [如何在 `Safari` 中打开 Web 链接？](example/user-interface-controls/demo24)
 
 ## 状态
 
