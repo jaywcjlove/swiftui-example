@@ -151,6 +151,19 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何允许列表中的行选择？](example/lists/demo12)
 - [如何使用隐式堆栈？](example/lists/demo13)
 
+## 表单
+
+快速有效地获得用户输入
+
+- [使用表单 `Form`](example/forms/demo1)
+- [基本表格设计](example/forms/demo2)
+- [将表格分为几个部分](example/forms/demo3)
+- [表单选择器 `Pickers`](example/forms/demo4)
+- [启用和禁用表单中的元素](example/forms/demo5)
+- [显示和隐藏表单行](example/forms/demo6)
+
+## 容器
+
 ## 切换界面
 
 将您的用户从一个视图移动到另一个视图
