@@ -107,6 +107,18 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何在地图 `Map` 视图中显示注释？](example/user-interface-controls/demo23)
 - [如何在 `Safari` 中打开 Web 链接？](example/user-interface-controls/demo24)
 
+## 响应事件
+
+快捷方式，旋转方式和外观
+
+- [如何使用 `scenePhase` 检测您的应用何时移至背景或前景？](example/responding-to-events/demo1)
+- [如何响应查看生命周期事件：`onAppear()` 和 `onDisappear()` ？](example/responding-to-events/demo2)
+- [如何使用 `keyboardShortcut()` 添加键盘快捷键？](example/responding-to-events/demo3)
+- [如何控制应用启动时显示的视图？](example/responding-to-events/demo4)
+- [应用启动时如何运行代码？](example/responding-to-events/demo5)
+- [如何将 `AppDelegate` 添加到 SwiftUI 应用？](example/responding-to-events/demo6)
+- [如何检测设备旋转？](example/responding-to-events/demo7)
+
 ## 状态
 
 响应交互并控制程序状态
