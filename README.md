@@ -133,6 +133,24 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何在 `SwiftUI` 中使用计时器？](example/advanced-state/demo8)
 - [当使用 `onChange()` 改变状态时如何运行一些代码？](example/advanced-state/demo9)
 
+## 列表
+
+创建数据滚动表
+
+- [使用列表 `List`](example/lists/demo1)
+- [如何创建静态物品列表？](example/lists/demo2)
+- [如何创建动态项目列表？](example/lists/demo3)
+- [如何让用户从列表中删除行？](example/lists/demo4)
+- [如何让用户在列表中移动行？](example/lists/demo5)
+- [如何将 `Section` 添加到列表？](example/lists/demo6)
+- [如何使用 `EditButton` 启用对列表的编辑？](example/lists/demo7)
+- [如何使用 `listRowBackground()` 设置列表行的背景色？](example/lists/demo8)
+- [如何创建分组和插入分组列表？](example/lists/demo9)
+- [如何创建扩展列表？](example/lists/demo10)
+- [如何滚动到列表中的特定行？](example/lists/demo11)
+- [如何允许列表中的行选择？](example/lists/demo12)
+- [如何使用隐式堆栈？](example/lists/demo13)
+
 ## 切换界面
 
 将您的用户从一个视图移动到另一个视图
