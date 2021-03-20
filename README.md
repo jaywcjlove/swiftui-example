@@ -238,3 +238,12 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何创建自定义过渡？](example/animation/demo11)
 - [如何设置文字大小的动画？](example/animation/demo12)
 - [如何用事务覆盖动画？](example/animation/demo13)
+
+## 跨平台 SwiftUI
+
+学习让您的应用在任何地方都看起来很棒
+
+- [学习一次，随处应用](example/animation/demo1)
+- [如何在 `macOS` 上获取半透明列表？](example/animation/demo2)
+- [如何在 `watchOS` 上制作轮播列表？](example/animation/demo3)
+- [How to read the Digital Crown on watchOS using digitalCrownRotation()](example/animation/demo4)
