@@ -243,7 +243,23 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 
 学习让您的应用在任何地方都看起来很棒
 
-- [学习一次，随处应用](example/animation/demo1)
-- [如何在 `macOS` 上获取半透明列表？](example/animation/demo2)
-- [如何在 `watchOS` 上制作轮播列表？](example/animation/demo3)
-- [How to read the Digital Crown on watchOS using digitalCrownRotation()](example/animation/demo4)
+- [学习一次，随处应用](example/cross-platform/demo1)
+- [如何在 `macOS` 上获取半透明列表？](example/cross-platform/demo2)
+- [如何在 `watchOS` 上制作轮播列表？](example/cross-platform/demo3)
+- [如何使用 `digitalCrownRotation()` 在 `watchOS` 上读取 `Digital Crown`？](example/cross-platform/demo4)
+
+## 数据
+
+通过 `Core Data` 集成和更多功能处理数据
+
+- [在 `SwiftUI` 中使用 `Core Data` 的简介](example/animation/demo1)
+- [如何配置核心数据以与 `SwiftUI` 一起使用？](example/animation/demo2)
+- [如何从 `SwiftUI` 视图访问 `Core Data` 管理的对象上下文？](example/animation/demo3)
+- [如何使用 `@FetchRequest` 创建核心数据获取请求？](example/animation/demo4)
+- [如何使用 `predicate` 过滤核心数据获取请求？](example/animation/demo5)
+- [如何从 `SwiftUI` 视图添加 `Core Data` 对象？](example/animation/demo6)
+- [如何从 `SwiftUI` 视图中删除 `Core Data` 对象？](example/animation/demo7)
+- [如何限制获取请求中的项目数？](example/animation/demo8)
+- [How to create a document-based app using FileDocument and DocumentGroup](example/animation/demo9)
+- [How to export files using fileExporter()](example/animation/demo10)
+- [How to continue an NSUserActivity in SwiftUI](example/animation/demo11)
