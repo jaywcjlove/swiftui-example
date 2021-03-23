@@ -274,3 +274,24 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何检测暗模式？](example/accessibility/demo4)
 - [How to use decorative images to reduce screen reader clutter](example/accessibility/demo5)
 - [How to reduce animations when requested](example/accessibility/demo6)
+
+
+## 附录A
+
+如何使用每个 SwiftUI 属性包装器
+
+- [了解 Swift 和 SwiftUI 中的属性包装器](example/appendix-a/demo1)
+- [所有 SwiftUI 属性包装器都进行了解释和比较](example/appendix-a/demo2)
+- [什么是 `@State` 属性包装器？](example/appendix-a/demo3)
+- [什么是 `@StateObject` 属性包装器？](example/appendix-a/demo4)
+- [什么是 `@Published` 属性包装器？](example/appendix-a/demo5)
+- [什么是 `@ObservedObject` 属性包装器？](example/appendix-a/demo6)
+- [什么是 `@EnvironmentObject` 属性包装器？](example/appendix-a/demo7)
+- [什么是 `@Environment` 属性包装器？](example/appendix-a/demo8)
+- [什么是 `@Binding` 属性包装器？](example/appendix-a/demo9)
+- [什么是 `@GestureState` 属性包装器？](example/appendix-a/demo10)
+- [什么是 `@FetchRequest` 属性包装器？](example/appendix-a/demo11)
+- [什么是 `@AppStorage` 属性包装器？](example/appendix-a/demo12)
+- [什么是 `@SceneStorage` 属性包装器？](example/appendix-a/demo13)
+- [什么是 `@ScaledMetric` 属性包装器？](example/appendix-a/demo14)
+- [什么是 `@UIApplicationDelegateAdaptor` 属性包装器？](example/appendix-a/demo15)
