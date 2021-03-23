@@ -263,3 +263,14 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何使用 `FileDocument` 和 `DocumentGroup` 创建基于文档的应用程序？](example/animation/demo9)
 - [如何使用 `fileExporter()` 导出文件？](example/animation/demo10)
 - [How to continue an NSUserActivity in SwiftUI](example/animation/demo11)
+
+## 辅助功能
+
+如何使每个人都能使用您的应用
+
+- [SwiftUI 的可访问性简介](example/accessibility/demo1)
+- [如何使用带有自定义字体的动态类型？](example/accessibility/demo2)
+- [如何检测“减少运动”辅助功能设置？](example/accessibility/demo3)
+- [如何检测暗模式？](example/accessibility/demo4)
+- [How to use decorative images to reduce screen reader clutter](example/accessibility/demo5)
+- [How to reduce animations when requested](example/accessibility/demo6)
