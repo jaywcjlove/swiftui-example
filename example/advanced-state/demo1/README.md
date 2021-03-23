@@ -1,11 +1,11 @@
-@ObservedObject，@State 和 @EnvironmentObject 有什么区别？
+`@ObservedObject`，`@State` 和 `@EnvironmentObject` 有什么区别？
 ---
 
 在任何现代应用中，状态都是不可避免的，但是使用 `SwiftUI` 时要记住，我们所有的视图只是其状态的简单功能-我们不直接更改视图，而是操纵状态并由其决定结果。
 
 `SwiftUI` 为我们提供了几种在应用程序中存储状态的方法，但是它们有些微的不同，因此，重要的是要了解它们的不同之处，以便正确使用框架。
 
-使用状态的最简单方法是@State属性包装器，其用法如下：
+使用状态的最简单方法是 `@State` 属性包装器，其用法如下：
 
 ```swift
 struct ContentView: View {

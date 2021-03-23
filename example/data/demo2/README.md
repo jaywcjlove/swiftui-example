@@ -171,9 +171,10 @@ struct ContentView: View {
     }
     
     private func addItem() {
-        let newItem = ProgrammingLanguage(context: viewContext)
-        newItem.name = "Example Language 1"
-        newItem.creator = "A. Programmer"
+        let language = ProgrammingLanguage(context: viewContext)
+        language.name = "Example Language 1"
+        language.creator = "A. Programmer"
+
         do {
             try viewContext.save()
         } catch {

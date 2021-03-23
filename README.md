@@ -260,6 +260,6 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何从 `SwiftUI` 视图添加 `Core Data` 对象？](example/animation/demo6)
 - [如何从 `SwiftUI` 视图中删除 `Core Data` 对象？](example/animation/demo7)
 - [如何限制获取请求中的项目数？](example/animation/demo8)
-- [How to create a document-based app using FileDocument and DocumentGroup](example/animation/demo9)
-- [How to export files using fileExporter()](example/animation/demo10)
+- [如何使用 `FileDocument` 和 `DocumentGroup` 创建基于文档的应用程序？](example/animation/demo9)
+- [如何使用 `fileExporter()` 导出文件？](example/animation/demo10)
 - [How to continue an NSUserActivity in SwiftUI](example/animation/demo11)
