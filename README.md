@@ -177,6 +177,21 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何创建工具栏并向其中添加按钮？](example/forms/demo9)
 - [如何为 `iPadOS` 添加侧边栏？](example/forms/demo10)
 
+## 对话框和菜单
+
+发生某些情况时显示模式通知
+
+- [使用简介](example/alerts-and-menus/demo1)
+- [如何显示 `alert`？](example/alerts-and-menus/demo2)
+- [如何为 `alert` 按钮添加动作？](example/alerts-and-menus/demo3)
+- [如何在单个视图中显示多个 `alert`？](example/alerts-and-menus/demo4)
+- [如何显示动作面板？](example/alerts-and-menus/demo5)
+- [如何显示上下文菜单？](example/alerts-and-menus/demo6)
+- [如何使用 `appStoreOverlay()` 推荐另一个应用程序？](example/alerts-and-menus/demo7)
+- [按下按钮时如何显示菜单？](example/alerts-and-menus/demo8)
+- [如何让用户从菜单中选择选项？](example/alerts-and-menus/demo9)
+
+
 ## 切换界面
 
 将您的用户从一个视图移动到另一个视图
