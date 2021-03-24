@@ -119,6 +119,20 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何将 `AppDelegate` 添加到 SwiftUI 应用？](example/responding-to-events/demo6)
 - [如何检测设备旋转？](example/responding-to-events/demo7)
 
+## 点击和手势
+
+滑动，轻击，摇动和其他输入
+
+- [如何在视图中添加手势识别器？](example/taps-and-gestures/demo1)
+- [如何阅读点击和双击手势？](example/taps-and-gestures/demo2)
+- [如何使用 `highPriorityGesture()` 强制一个手势先识别另一个手势？](example/taps-and-gestures/demo3)
+- [如何使用 `simultaneousGesture()` 同时识别两个手势？](example/taps-and-gestures/demo4)
+- [如何使用 `sequenced(before:)` 创建手势链？](example/taps-and-gestures/demo5)
+- [如何检测到用户将鼠标悬停在视图上？](example/taps-and-gestures/demo6)
+- [如何检测摇动手势？](example/taps-and-gestures/demo7)
+- [如何使用 `contentShape()` 控制视图的可点击区域？](example/taps-and-gestures/demo8)
+- [如何使用 `allowsHitTesting()` 禁用视图的点击？](example/taps-and-gestures/demo9)
+
 ## 状态
 
 响应交互并控制程序状态
