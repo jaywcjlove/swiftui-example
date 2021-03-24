@@ -268,6 +268,18 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何设置文字大小的动画？](example/animation/demo12)
 - [如何用事务覆盖动画？](example/animation/demo13)
 
+## 排版视图
+
+使您的UI结构更易于理解
+
+- [如何创建和排版自定义视图？](example/composing-views/demo1)
+- [如何将文本视图结合在一起？](example/composing-views/demo2)
+- [如何将视图存储为属性？](example/composing-views/demo3)
+- [如何创建自定义修改程序？](example/composing-views/demo4)
+- [如何为 `SwiftUI` 包装自定义 `UIView`？](example/composing-views/demo5)
+- [如何为 `UIViewRepresentable` 结构创建修饰符？](example/composing-views/demo6)
+- [如何将图像插入文本？](example/composing-views/demo7)
+
 ## 跨平台 SwiftUI
 
 学习让您的应用在任何地方都看起来很棒
