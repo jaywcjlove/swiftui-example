@@ -313,9 +313,19 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何使用带有自定义字体的动态类型？](example/accessibility/demo2)
 - [如何检测“减少运动”辅助功能设置？](example/accessibility/demo3)
 - [如何检测暗模式？](example/accessibility/demo4)
-- [How to use decorative images to reduce screen reader clutter](example/accessibility/demo5)
-- [How to reduce animations when requested](example/accessibility/demo6)
+- [如何使用装饰性图像减少屏幕阅读器的混乱？](example/accessibility/demo5)
+- [如何在请求时减少动画？](example/accessibility/demo6)
 
+
+## 工具
+
+使用Xcode的帮助构建更好的应用程序
+
+- [如何以不同的动态类型大小预览布局？](example/tooling/demo1)
+- [如何在亮(light)和黑暗(dark)模式下预览布局？](example/tooling/demo2)
+- [如何在不同的设备中预览布局？](example/tooling/demo3)
+- [如何在导航视图中预览布局?](example/tooling/demo4)
+- [如何使用 `Instruments` 来配置您的 SwiftUI 代码并识 `identify` 布局？](example/tooling/demo5)
 
 ## 附录A
 
