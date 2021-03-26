@@ -190,6 +190,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何使用 `DisclosureGroup` 隐藏和显示内容？](example/containers/demo8)
 - [如何创建工具栏并向其中添加按钮？](example/containers/demo9)
 - [如何为 `iPadOS` 添加侧边栏？](example/containers/demo10)
+- [如何隐藏和显示 `NavigationView` 侧边栏？](example/containers/demo11)
 
 ## 对话框和菜单
 
