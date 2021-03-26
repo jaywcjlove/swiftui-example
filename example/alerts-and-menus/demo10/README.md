@@ -19,14 +19,17 @@ struct passwordApp: App {
                 }, label: {
                   Text("Menu Button")
                 })
+                .keyboardShortcut("b", modifiers: [.command, .shift, .control)
+                
                 Divider()
                 Button(action: {}) {
                     Text("MyApp Help")
                 }
+                .keyboardShortcut("b", modifiers: .control)
             }
             CommandMenu("Edit") {
-					
-				    }
+                
+            }
         }
     }
 }

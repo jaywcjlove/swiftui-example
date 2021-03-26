@@ -7,6 +7,27 @@
 
 import SwiftUI
 
+struct AppCommands: Commands {
+    
+    func action() {}
+    func anotherAction() {}
+    
+    @CommandsBuilder var body: some Commands {
+        CommandMenu("Menu") {
+            Button(action: {
+                action()
+            }) {
+                Text("Action")
+            }
+            Button(action: {
+                anotherAction()
+            }) {
+                Text("Another action")
+            }
+        }
+    }
+}
+
 struct MenuCommands: Commands {
     @Binding var toggleSetting: Bool
 
@@ -48,9 +69,12 @@ struct DemoApp: App {
                 EmptyView()
             }
             CommandGroup(replacing: CommandGroupPlacement.sidebar) {
-                Button(action: {}) {
+                Button(action: {
+                    print("Sidebar Help!")
+                }) {
                     Text("Sidebar Help")
                 }
+                .keyboardShortcut("b", modifiers: .control)
             }
 //            ToolbarCommands()
 //            CommandGroup(replacing: ToolbarCommands) {
@@ -88,6 +112,7 @@ struct DemoApp: App {
 //
 //                Divider()
 //            }
+            AppCommands()
             MenuCommands(toggleSetting: $toggleSetting)
         }
     }

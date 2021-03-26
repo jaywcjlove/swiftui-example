@@ -180,16 +180,16 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 
 将视图放置在导航控制器等中
 
-- [使用容器](example/forms/demo1)
-- [如何在导航视图中嵌入视图？](example/forms/demo2)
-- [如何将栏项目添加到导航视图？](example/forms/demo3)
-- [如何使用 `TabView` 将视图嵌入选项卡栏中？](example/forms/demo4)
-- [如何使用 `tabViewStyle()` 创建内容的滚动页面？](example/forms/demo5)
-- [如何将视图组合 `Group` 在一起？](example/forms/demo6)
-- [如何隐藏和显示状态栏？](example/forms/demo7)
-- [如何使用 `DisclosureGroup` 隐藏和显示内容？](example/forms/demo8)
-- [如何创建工具栏并向其中添加按钮？](example/forms/demo9)
-- [如何为 `iPadOS` 添加侧边栏？](example/forms/demo10)
+- [使用容器](example/containers/demo1)
+- [如何在导航视图中嵌入视图？](example/containers/demo2)
+- [如何将栏项目添加到导航视图？](example/containers/demo3)
+- [如何使用 `TabView` 将视图嵌入选项卡栏中？](example/containers/demo4)
+- [如何使用 `tabViewStyle()` 创建内容的滚动页面？](example/containers/demo5)
+- [如何将视图组合 `Group` 在一起？](example/containers/demo6)
+- [如何隐藏和显示状态栏？](example/containers/demo7)
+- [如何使用 `DisclosureGroup` 隐藏和显示内容？](example/containers/demo8)
+- [如何创建工具栏并向其中添加按钮？](example/containers/demo9)
+- [如何为 `iPadOS` 添加侧边栏？](example/containers/demo10)
 
 ## 对话框和菜单
 
