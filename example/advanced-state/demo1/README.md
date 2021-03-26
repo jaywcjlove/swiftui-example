@@ -3,6 +3,8 @@
 
 在任何现代应用中，状态都是不可避免的，但是使用 `SwiftUI` 时要记住，我们所有的视图只是其状态的简单功能-我们不直接更改视图，而是操纵状态并由其决定结果。
 
+![](imgs/1.jpg)
+
 `SwiftUI` 为我们提供了几种在应用程序中存储状态的方法，但是它们有些微的不同，因此，重要的是要了解它们的不同之处，以便正确使用框架。
 
 使用状态的最简单方法是 `@State` 属性包装器，其用法如下：
@@ -55,9 +57,12 @@ struct ContentView: View {
 
 ## 总结差异
 
+初始化 `ObservableObject` 时，应使用 `@StateObject` 而不是 `@ObservedObject`。 您的视图可以接收其他视图拥有的对象，例如 `@ObservedObject`或`@EnvironmentObject`，但是数据的所有者应始终使用 `@StateObject` 创建数据对象。
+
 - 将 `@State` 用于属于单个视图的简单属性。 通常应将其标记为私有。
 - 将 `@ObservedObject` 用于可能属于多个视图的复杂属性。 大多数情况下，您应该使用引用类型 `@ObservedObject` 。
 - 对于您使用的每个可观察对象，请使用 `@StateObject` 一次，无论代码的哪个部分负责创建它。
 - 将 `@EnvironmentObject` 用于在应用程序其他位置创建的属性，例如共享数据。
 
 在这四个中，您会发现 `@ObservedObject` 既最有用，也是最常用的，因此，如果不确定从哪个位置开始使用。
+

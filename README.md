@@ -204,7 +204,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何使用 `appStoreOverlay()` 推荐另一个应用程序？](example/alerts-and-menus/demo7)
 - [按下按钮时如何显示菜单？](example/alerts-and-menus/demo8)
 - [如何让用户从菜单中选择选项？](example/alerts-and-menus/demo9)
-
+- [如何更改 macOS 应用中主菜单？](example/alerts-and-menus/demo10)
 
 ## 切换界面
 
