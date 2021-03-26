@@ -44,6 +44,6 @@ Image(systemName: "person.crop.circle.fill.badge.plus")
     .font(.largeTitle)
 ```
 
-通过 Apple 提供的应用 [SF Symbols 2](https://developer.apple.com/sf-symbols/) 查看 [`SF Symbols`](https://developer.apple.com/sf-symbols/) 所有的图表名称。
+通过 Apple 提供的应用 [SF Symbols 2](https://developer.apple.com/sf-symbols/) 查看 [`SF Symbols`](https://developer.apple.com/sf-symbols/) 所有的图标名称。
 
 ![](imgs/1.jpg)
