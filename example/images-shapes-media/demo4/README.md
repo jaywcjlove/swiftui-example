@@ -1,9 +1,9 @@
 如何使用SF符号渲染图像？
 ----
 
-`SwiftUI` 的 `Image` 视图使我们可以从 `SF Symbols` 中加载任何 `2400+` 图标，其中许多图标也可以使用多色。
+`SwiftUI` 的 `Image` 视图使我们可以从 [`SF Symbols`](https://developer.apple.com/sf-symbols/) 中加载任何 [`2400+`](https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/) 图标，其中许多图标也可以使用多色。
 
-要从 Apple 的 `SF Symbols` 集中加载图标，请使用 `Image(systemName:)`初始化程序，并传入要加载的图标字符串，如下所示：
+要从 Apple 的 [`SF Symbols`](https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/) 集中加载图标，请使用 `Image(systemName:)`初始化程序，并传入要加载的图标字符串，如下所示：
 
 ```swift
 Image(systemName: "cloud.heavyrain.fill")
@@ -43,3 +43,7 @@ Image(systemName: "person.crop.circle.fill.badge.plus")
     .foregroundColor(.blue)
     .font(.largeTitle)
 ```
+
+通过 Apple 提供的应用 [SF Symbols 2](https://developer.apple.com/sf-symbols/) 查看 [`SF Symbols`](https://developer.apple.com/sf-symbols/) 所有的图表名称。
+
+![](imgs/1.jpg)
