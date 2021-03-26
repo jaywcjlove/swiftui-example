@@ -206,6 +206,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [按下按钮时如何显示菜单？](example/alerts-and-menus/demo8)
 - [如何让用户从菜单中选择选项？](example/alerts-and-menus/demo9)
 - [如何更改 macOS 应用中主菜单？](example/alerts-and-menus/demo10)
+- [如何添加偏好设置界面？](example/alerts-and-menus/demo11)
 
 ## 切换界面
 
