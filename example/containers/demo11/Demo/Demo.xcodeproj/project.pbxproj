@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D1F022B2610E40E0021302D /* PostNoSelectionPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1F022A2610E40E0021302D /* PostNoSelectionPlaceholder.swift */; };
+		7D1F022C2610E40E0021302D /* PostNoSelectionPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1F022A2610E40E0021302D /* PostNoSelectionPlaceholder.swift */; };
 		7D99C623260DE46300D0ECDD /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99C610260DE46200D0ECDD /* DemoApp.swift */; };
 		7D99C624260DE46300D0ECDD /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99C610260DE46200D0ECDD /* DemoApp.swift */; };
 		7D99C625260DE46300D0ECDD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D99C611260DE46200D0ECDD /* ContentView.swift */; };
@@ -16,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D1F022A2610E40E0021302D /* PostNoSelectionPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNoSelectionPlaceholder.swift; sourceTree = "<group>"; };
 		7D99C610260DE46200D0ECDD /* DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoApp.swift; sourceTree = "<group>"; };
 		7D99C611260DE46200D0ECDD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7D99C612260DE46300D0ECDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 				7D99C610260DE46200D0ECDD /* DemoApp.swift */,
 				7D99C611260DE46200D0ECDD /* ContentView.swift */,
 				7D99C612260DE46300D0ECDD /* Assets.xcassets */,
+				7D1F022A2610E40E0021302D /* PostNoSelectionPlaceholder.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -189,6 +193,7 @@
 			files = (
 				7D99C625260DE46300D0ECDD /* ContentView.swift in Sources */,
 				7D99C623260DE46300D0ECDD /* DemoApp.swift in Sources */,
+				7D1F022B2610E40E0021302D /* PostNoSelectionPlaceholder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +203,7 @@
 			files = (
 				7D99C626260DE46300D0ECDD /* ContentView.swift in Sources */,
 				7D99C624260DE46300D0ECDD /* DemoApp.swift in Sources */,
+				7D1F022C2610E40E0021302D /* PostNoSelectionPlaceholder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

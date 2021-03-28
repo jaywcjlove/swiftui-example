@@ -3,6 +3,8 @@
 
 在 `macOS` 中， 希望通过手动控制 `Sidebar` 的展示也隐藏。幸运的是，我们可以使用下面方法实现：
 
+![](imgs/1.png)
+
 ```swift
 struct ContentView: View {
     var body: some View {

@@ -77,6 +77,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何使用 `ScrollView` 和 `GeometryReader` 创建3D效果(如Cover Flow)？](example/stacks-grids-scrollviews/demo11)
 - [如何使用 `LazyVGrid` 和 `LazyHGrid` 在网格中放置视图？](example/stacks-grids-scrollviews/demo12)
 - [如何使用 `LazyVStack` 和 `LazyHStack` 延迟加载视图？](example/stacks-grids-scrollviews/demo13)
+- [如何使用 `HSplitViews` 创建左中右三栏布局？](example/stacks-grids-scrollviews/demo14)
 
 ## 用户界面控件
 
