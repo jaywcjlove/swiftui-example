@@ -13,7 +13,8 @@ struct ContentView: View {
             #if !os(macOS)
             Text("SwiftUI")
                 .navigationTitle("Welcome")
-                .navigationBarTitleDisplayMode(.inline)
+                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationBarHidden(false)
             #else
             Text("SwiftUI")
                 .navigationTitle("Welcome")

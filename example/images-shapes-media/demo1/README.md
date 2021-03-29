@@ -21,3 +21,30 @@ Image(systemName: "cloud.heavyrain.fill")
 ```
 
 请注意，如何使用 `font()` 修饰符来调整 `SF Symbols`，就好像它们是文本一样。
+
+异步加载网络图片
+
+```swift
+struct ContentView : View {
+    @State private var remoteImage : UIImage? = nil
+    let placeholderOne = UIImage(named: "Picture")
+    
+    var body: some View {
+        Image(uiImage: self.remoteImage ?? placeholderOne!)
+            .onAppear(perform: fetchRemoteImage)
+    }
+    
+    func fetchRemoteImage()
+    {
+        guard let url = URL(string: "https://avatars.githubusercontent.com/u/1680273?v=4") else { return }
+        URLSession.shared.dataTask(with: url){ (data, response, error) in
+            if let image = UIImage(data: data!){
+                self.remoteImage = image
+            }
+            else{
+                print(error ?? "")
+            }
+        }.resume()
+    }
+}
+```
