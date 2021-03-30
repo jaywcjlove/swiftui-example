@@ -18,12 +18,12 @@ SwiftUI 为我们的应用程序提供了 `17` 个属性包装器，每个属性
 - `@Namespace` 创建一个动画名称空间，以允许匹配的几何效果，该效果可以由其他视图共享。这拥有其数据。
 - `@NSApplicationDelegateAdaptor` 用于创建类并将其注册为 `macOS` 应用程序的应用程序委托。这拥有其数据。
 - `@ObservedObject` 引用符合 `ObservableObject` 协议的外部类的实例。这不拥有其数据。[更多信息](../demo6/README.md)。
-- `@Published` 附加到 `ObservableObject` 内的属性，并告诉 SwiftUI 它应该在更改此属性时刷新使用此属性的所有视图。这拥有其数据。更多信息。
-- `@ScaledMetric` 会读取用户的动态类型设置，并根据您提供的原始值向上或向下缩放数字。这拥有其数据。更多信息。
-- `@SceneStorage` 使我们可以保存和还原少量数据以进行状态还原。这拥有其数据。更多信息。
-- `@State` 允许我们在视图本地操作少量的值类型数据。这拥有其数据。更多信息。
-- `@StateObject` 用于存储符合 `ObservableObject` 协议的引用类型数据的新实例。这拥有其数据。更多信息。
-- `@UIApplicationDelegateAdaptor` 用于创建一个类并将其注册为iOS应用程序的应用程序委托。这拥有其数据。更多信息。
+- `@Published` 附加到 `ObservableObject` 内的属性，并告诉 SwiftUI 它应该在更改此属性时刷新使用此属性的所有视图。这拥有其数据。[更多信息](../demo5/README.md)。
+- `@ScaledMetric` 会读取用户的动态类型设置，并根据您提供的原始值向上或向下缩放数字。这拥有其数据。[更多信息](../demo14/README.md)。
+- `@SceneStorage` 使我们可以保存和还原少量数据以进行状态还原。这拥有其数据。[更多信息](../demo13/README.md)。
+- `@State` 允许我们在视图本地操作少量的值类型数据。这拥有其数据。[更多信息](../demo3/README.md)。
+- `@StateObject` 用于存储符合 `ObservableObject` 协议的引用类型数据的新实例。这拥有其数据。[更多信息](../demo4/README.md)。
+- `@UIApplicationDelegateAdaptor` 用于创建一个类并将其注册为iOS应用程序的应用程序委托。这拥有其数据。[更多信息](../demo15/README.md)。
 
 ## 存储临时数据
 

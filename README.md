@@ -5,6 +5,31 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 
 ⚠️ 注意：文字解释内容基于 Google 翻译，小部分经过了添加或者修改
 
+- [介绍](#介绍)
+- [建立一个完整的项目](#建立一个完整的项目)
+- [使用静态文本](#使用静态文本)
+- [图像形状和媒体](#图像形状和媒体)
+- [视图布局](#视图布局)
+- [堆栈网格滚动视图](#堆栈网格滚动视图)
+- [用户界面控件](#用户界面控件)
+- [响应事件](#响应事件)
+- [点击和手势](#点击和手势)
+- [状态](#状态)
+- [列表](#列表)
+- [表单](#表单)
+- [容器](#容器)
+- [对话框和菜单](#对话框和菜单)
+- [切换界面](#切换界面)
+- [转换视图](#转换视图)
+- [绘画](#绘画)
+- [动画](#动画)
+- [排版视图](#排版视图)
+- [跨平台-swiftui](#跨平台-swiftui)
+- [数据](#数据)
+- [辅助功能](#辅助功能)
+- [工具](#工具)
+- [附录a](#附录a)
+
 ## 介绍
 
 简要介绍 SwiftUI 的基础
@@ -296,17 +321,17 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 
 通过 `Core Data` 集成和更多功能处理数据
 
-- [在 `SwiftUI` 中使用 `Core Data` 的简介](example/animation/demo1)
-- [如何配置核心数据以与 `SwiftUI` 一起使用？](example/animation/demo2)
-- [如何从 `SwiftUI` 视图访问 `Core Data` 管理的对象上下文？](example/animation/demo3)
-- [如何使用 `@FetchRequest` 创建核心数据获取请求？](example/animation/demo4)
-- [如何使用 `predicate` 过滤核心数据获取请求？](example/animation/demo5)
-- [如何从 `SwiftUI` 视图添加 `Core Data` 对象？](example/animation/demo6)
-- [如何从 `SwiftUI` 视图中删除 `Core Data` 对象？](example/animation/demo7)
-- [如何限制获取请求中的项目数？](example/animation/demo8)
-- [如何使用 `FileDocument` 和 `DocumentGroup` 创建基于文档的应用程序？](example/animation/demo9)
-- [如何使用 `fileExporter()` 导出文件？](example/animation/demo10)
-- [How to continue an NSUserActivity in SwiftUI](example/animation/demo11)
+- [在 `SwiftUI` 中使用 `Core Data` 的简介](example/data/demo1)
+- [如何配置核心数据以与 `SwiftUI` 一起使用？](example/data/demo2)
+- [如何从 `SwiftUI` 视图访问 `Core Data` 管理的对象上下文？](example/data/demo3)
+- [如何使用 `@FetchRequest` 创建核心数据获取请求？](example/data/demo4)
+- [如何使用 `predicate` 过滤核心数据获取请求？](example/data/demo5)
+- [如何从 `SwiftUI` 视图添加 `Core Data` 对象？](example/data/demo6)
+- [如何从 `SwiftUI` 视图中删除 `Core Data` 对象？](example/data/demo7)
+- [如何限制获取请求中的项目数？](example/data/demo8)
+- [如何使用 `FileDocument` 和 `DocumentGroup` 创建基于文档的应用程序？](example/data/demo9)
+- [如何使用 `fileExporter()` 导出文件？](example/data/demo10)
+- [How to continue an NSUserActivity in SwiftUI](example/data/demo11)
 
 ## 辅助功能
 
