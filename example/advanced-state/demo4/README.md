@@ -68,6 +68,6 @@ struct ContentView_Previews: PreviewProvider {
 - 因为我们的详细信息视图显示在导航视图内部，所以它可以访问相同的环境，这又意味着它可以读取我们创建的 `GameSettings` 对象。
 - 我们不需要将环境中的 `GameSettings` 实例与 `ScoreView` 中的 `settings` 属性显式关联- `SwiftUI` 会自动发现它在环境中具有 `GameSettings` 实例，因此就是它所使用的实例。
 
-警告：既然我们的视图依赖于当前的环境对象，那么还必须更新预览代码以提供一些示例设置供您使用，这一点很重要。 例如，为预览使用诸如 `ScoreView()`。`environmentObject(GameSettings())` 之类的东西就可以做到。
+警告：既然我们的视图依赖于当前的环境对象，那么还必须更新预览代码以提供一些示例设置供您使用，这一点很重要。 例如，为预览使用诸如 `ScoreView().environmentObject(GameSettings())` 之类的东西就可以做到。
 
 如果需要向环境中添加多个对象，则应添加多个 `environmentObject()` 修饰符–只需一个接一个地调用它们即可。
