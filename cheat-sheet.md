@@ -107,6 +107,30 @@ var body: some View {
 }
 ```
 
+设置 `TextEditor` 背景颜色
+
+```swift
+extension NSTextView {
+    open override var frame: CGRect {
+        didSet {
+            backgroundColor = .clear
+//            drawsBackground = true
+        }
+
+    }
+}
+
+struct DetailContent: View {
+    @State private var profileText: String = "Enter your bio"
+    var body: some View {
+        VSplitView(){
+            TextEditor(text: $profileText)
+                .background(Color.red)
+        }
+    }
+}
+```
+
 Documentation - [TextEditor](https://developer.apple.com/documentation/swiftui/texteditor)
 
 </details>
@@ -1286,4 +1310,3 @@ struct SheetDetail: Identifiable {
 Documentation - [ActionSheet](https://developer.apple.com/documentation/swiftui/actionsheet)
 
 </details>
-

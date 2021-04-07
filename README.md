@@ -332,7 +332,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何限制获取请求中的项目数？](example/data/demo8)
 - [如何使用 `FileDocument` 和 `DocumentGroup` 创建基于文档的应用程序？](example/data/demo9)
 - [如何使用 `fileExporter()` 导出文件？](example/data/demo10)
-- [How to continue an NSUserActivity in SwiftUI](example/data/demo11)
+- [如何在 `SwiftUI` 中继续 `NSUserActivity`？](example/data/demo11)
 
 ## 辅助功能
 
@@ -355,6 +355,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何在不同的设备中预览布局？](example/tooling/demo3)
 - [如何在导航视图中预览布局?](example/tooling/demo4)
 - [如何使用 `Instruments` 来配置您的 SwiftUI 代码并识 `identify` 布局？](example/tooling/demo5)
+- [如何在 `SwiftUI` 中使用 `Touch ID` 和 `Face ID`?](example/tooling/demo6)
 
 ## 附录A
 
