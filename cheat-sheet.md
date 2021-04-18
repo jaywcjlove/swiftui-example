@@ -189,6 +189,17 @@ var body: some View {
 }
 ```
 
+取消编辑框焦点样式。
+
+```swift
+extension NSTextField { // << workaround !!!
+    open override var focusRingType: NSFocusRingType {
+        get { .none }
+        set { }
+    }
+}
+```
+
 Documentation - [TextField](https://developer.apple.com/documentation/swiftui/textfield)
 
 </details>
@@ -284,12 +295,14 @@ Button(
 Button("Click Me") {
     print("did tap")
 }
+```
 
 您可以通过此按钮了解一下
 
 ```swift
 Button(action: {
-                
+    // 退出应用
+    NSApplication.shared.terminate(self)
 }, label: {
     Image(systemName: "clock")
     Text("Click Me")
@@ -816,8 +829,7 @@ Documentation - [LazyHGrid](https://developer.apple.com/documentation/swiftui/la
 容器视图，将其子视图排列在垂直增长的网格中，仅在需要时创建项目。
 
 ```swift
-var columns: [GridItem] =
-        Array(repeating: .init(.fixed(20)), count: 5)
+var columns: [GridItem] = Array(repeating: .init(.fixed(20)), count: 5)
 
 ScrollView {
     LazyVGrid(columns: columns) {
