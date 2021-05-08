@@ -3,7 +3,7 @@ SwiftUI by Example
 
 SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问题以及了解 SwiftUI 的实际工作方式。主要内容来源 [`hackingwithswift.com`](https://www.hackingwithswift.com/quick-start/swiftui)，下面所有实例都是在 macOS Big Sur 系统上运行，基于 Xcode `12.4` 开发。
 
-⚠️ 注意：文字解释内容基于 Google 翻译，小部分经过了添加或者修改，简单的 Swift [语法入门](https://github.com/jaywcjlove/swift-tutorial)
+⚠️ 注意：文字解释内容基于 Google 翻译，小部分经过了添加或者修改，简单的 Swift [`语法入门`](https://github.com/jaywcjlove/swift-tutorial)
 
 [`SwiftUI 论坛`](https://github.com/jaywcjlove/swiftui-example/discussions)
 
