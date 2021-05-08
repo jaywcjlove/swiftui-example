@@ -5,6 +5,12 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 
 ⚠️ 注意：文字解释内容基于 Google 翻译，小部分经过了添加或者修改
 
+[`SwiftUI 讨论`](https://github.com/jaywcjlove/swiftui-example/discussions)
+
+> 只是讨论 SwiftUI 事物的地方。来源于 [sindresorhus/swiftui](https://github.com/sindresorhus/swiftui)
+
+只是讨论SwiftUI事物的地方。
+
 - [介绍](#介绍)
 - [建立一个完整的项目](#建立一个完整的项目)
 - [使用静态文本](#使用静态文本)
