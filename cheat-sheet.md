@@ -200,6 +200,19 @@ extension NSTextField { // << workaround !!!
 }
 ```
 
+如何居中放置 `TextField` 的文本
+
+```swift
+struct ContentView: View {
+    @State var text: String = "TextField Text"
+    var body: some View {
+        TextField("Placeholder Text", text: $text)
+            .padding(.all, 20)
+            .multilineTextAlignment(.center)
+    }
+}
+```
+
 Documentation - [TextField](https://developer.apple.com/documentation/swiftui/textfield)
 
 </details>
