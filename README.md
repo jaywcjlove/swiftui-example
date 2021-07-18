@@ -5,6 +5,8 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 
 ⚠️ 注意：示例适用于 macOS 的 Swift 编程，文字解释内容基于 Google 翻译，英文水平有限欢迎 RP 完善，小部分经过了添加或者修改，对部分内容进行了新增。如果对 Swift 语法不熟悉，这里有简单的  [`Swift 语法入门`](https://github.com/jaywcjlove/swift-tutorial)，对 SwiftUI 不熟悉，在这里提供了一个 [`SwiftUI 速查手册`](./cheat-sheet.md)。
 
+⚠️ 注意：版权归属 [`hackingwithswift.com`](https://www.hackingwithswift.com/quick-start/swiftui) 原作者，对任何法律问题及风险不承担任何责任，没有任何商业目的，如果认为侵犯了您的版权，请来信告知。同时我不能完全保证内容的正确性。通过使用本站内容带来的风险与我无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+
 为方便在 Swift 中颜色拾取，提供了一个小工具([UI-Color](https://uiwjs.github.io/ui-color/))，欢迎提出改进意见。
 
 [`SwiftUI 论坛`](https://github.com/jaywcjlove/swiftui-example/discussions)
