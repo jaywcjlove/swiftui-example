@@ -1,5 +1,4 @@
-SwiftUI by Example
----
+![SwiftUI by Example](assets/logo.jpg)
 
 SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问题以及了解 SwiftUI 的实际工作方式。主要内容来源 [`hackingwithswift.com`](https://www.hackingwithswift.com/quick-start/swiftui)，下面所有实例都是在 macOS Big Sur 系统上运行，基于 Xcode `12.4` 开发。
 
