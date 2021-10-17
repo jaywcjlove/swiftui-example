@@ -40,14 +40,14 @@ const options = {
     await fs.ensureDir(path.dirname(outputPath));
     if (/.md$/.test(item.path)) {
       let title = markdown.toString().match(/^([\s\S]*?)---/)
-      title = title ? title[1] : '';
+      title = title ? title[1].replace(/\n/, '') : '';
       const html = create({
         markdown, ...options,
         document: {
-          title: title ? `${title} - SwiftUI by Example` : 'SwiftUI by Example',
+          title: title ? `${title} - SwiftUI by Example v${pkg.version}` : `SwiftUI by Example v${pkg.version}`,
           ...options.document,
           meta: [
-            { description: `SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问题以及了解 SwiftUI 的实际工作方式。${title} - SwiftUI by Example` },
+            { description: `SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问题以及了解 SwiftUI 的实际工作方式。${title} - SwiftUI by Example v${pkg.version}` },
             { keywords: 'SwiftUI,swift,Example,SwiftUI Example' }
           ]
         }
