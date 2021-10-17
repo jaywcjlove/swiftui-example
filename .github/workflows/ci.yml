@@ -1,0 +1,17 @@
+name: Build Website
+on:
+  push:
+    branches:
+      - main
+
+env:
+  SKIP_PREFLIGHT_CHECK: true
+
+jobs:
+  Build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
