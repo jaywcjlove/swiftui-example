@@ -1,5 +1,5 @@
 使用 ToggleStyle 自定义 Toggle
-----
+===
 
 SwiftUI 为我们提供了 `ToggleStyle` 协议，以自定义 `Toggle` 开关的外观和工作方式。 符合此协议的任何结构都必须实现 `makeBody()` 方法，该方法可以根据需要呈现 `Toggle`，同时提供用于切换的标签和isOn绑定，您可以进行翻转来调整切换。
 

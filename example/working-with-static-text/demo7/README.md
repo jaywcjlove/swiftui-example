@@ -1,5 +1,5 @@
 如何使用 textCase() 使 TextField 大写或小写？
-----
+===
 
 SwiftUI 的 `TextField` 视图通常允许用户以他们希望的任何大小写文本，但是如果要控制，则可以使用 `textCase()` 修饰符强制使用大写或小写文本。
 

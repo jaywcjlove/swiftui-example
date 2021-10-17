@@ -1,5 +1,5 @@
 如何使用 `SpriteView` 集成 `SpriteKit`？
----
+===
 
 SwiftUI 的 `SpriteView` 使我们可以在 SwiftUI 内部渲染任何 `SKScene` 子类，如果您需要的话，它甚至可以调整场景的大小。
 

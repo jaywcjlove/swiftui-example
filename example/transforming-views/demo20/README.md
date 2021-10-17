@@ -1,5 +1,5 @@
 使用 ProgressViewStyle 自定义 ProgressView
-----
+===
 
 SwiftUI 为我们提供了 `ProgressViewStyle` 协议，可为 `ProgressView` 创建自定义设计，从而使我们能够阅读进度视图的完整程度，并在设计中将其考虑在内。
 

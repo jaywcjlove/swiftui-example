@@ -1,5 +1,5 @@
 如何使用 `VideoPlayer` 播放电影？
----
+===
 
 SwiftUI 的 `VideoPlayer` 视图使我们可以从本地或远程的任何URL播放电影。 它来自 `AVKit` 框架，因此在尝试之前，请确保并添加导入 `AVKit`。
 

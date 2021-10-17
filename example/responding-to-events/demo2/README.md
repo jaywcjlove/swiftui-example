@@ -1,5 +1,5 @@
 如何响应查看生命周期事件：`onAppear()` 和 `onDisappear()` ？
----
+===
 
 SwiftUI 以 `onAppear()` 和 `onDisappear()` 的形式为我们提供了 `UIKit` 的 `viewDidAppear()` 和 `viewDidDisappear()` 的等效项。 您可以将任何代码附加到所需的这两个事件上，`SwiftUI` 将在它们发生时执行它们。
 

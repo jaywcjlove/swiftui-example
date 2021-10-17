@@ -1,5 +1,5 @@
 如何从 `SwiftUI` 视图访问 `Core Data` 管理的对象上下文？
----
+===
 
 如果您按照[我的 `Core Data` 和 `SwiftUI` 设置说明](../demo2/README.md)进行操作，那么您已经将托管对象上下文注入到 `SwiftUI` 环境中。
 

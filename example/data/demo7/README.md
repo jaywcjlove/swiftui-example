@@ -1,5 +1,5 @@
 如何从 `SwiftUI` 视图中删除 `Core Data` 对象？
----
+===
 
 在 SwiftUI 中删除 `Core Data` 对象与在 `UIKit` 中删除它们基本相同，尽管要跳过几个特殊的步骤才能与 `SwiftUI` 的视图集成。
 

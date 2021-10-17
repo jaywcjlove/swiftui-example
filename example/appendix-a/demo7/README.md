@@ -1,5 +1,5 @@
 什么是 `@EnvironmentObject` 属性包装器？
----
+===
 
 SwiftUI 的 `@EnvironmentObject` 属性包装器使我们可以创建依赖共享数据的视图，这些视图通常跨整个 `SwiftUI` 应用程序。 例如，如果创建一个将在应用程序的许多部分之间共享的用户，则应使用 `@EnvironmentObject`。
 

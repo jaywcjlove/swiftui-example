@@ -1,5 +1,5 @@
 如何创建选择器 `Picker` 并从中读取值？
----
+===
 
 SwiftUI 的 `Picker` 视图设法将 `UIPickerView`，`UISegmentedControl` 和 `UITableView` 合并为一个，同时还可以适应其他操作系统上的其他样式。 很棒的是，我们真的不需要关心它的工作原理 – SwiftUI 在自动适应环境方面做得很好。
 

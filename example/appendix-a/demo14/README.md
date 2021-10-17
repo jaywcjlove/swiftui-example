@@ -1,5 +1,5 @@
 什么是 `@ScaledMetric` 属性包装器？
----
+===
 
 SwiftUI 为我们提供了 `@ScaledMetric` 属性包装器，以定义应根据用户的动态类型设置自动缩放的数字。
 

@@ -1,5 +1,5 @@
 如何检测设备旋转？
----
+===
 
 SwiftUI 没有内置的方法来检测用户在纵向和横向之间旋转设备，但是我们可以使用自定义修饰符来响应 `UIDevice.orientationDidChangeNotification` 通知。
 

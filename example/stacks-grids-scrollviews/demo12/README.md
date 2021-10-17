@@ -1,5 +1,5 @@
 如何使用 `LazyVGrid` 和 `LazyHGrid` 在网格中放置视图？
----
+===
 
 SwiftUI 的 `LazyVGrid` 和 `LazyHGrid` 为我们提供了相当多的灵活性的网格布局。 最简单的网格由三部分组成：原始数据，描述所需布局的 `GridItem` 数组以及将数据和布局组合在一起的 `LazyVGrid` 或 `LazyHGrid`。
 

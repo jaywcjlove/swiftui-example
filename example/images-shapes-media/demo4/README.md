@@ -1,5 +1,5 @@
 如何使用SF符号渲染图像？
-----
+===
 
 `SwiftUI` 的 `Image` 视图使我们可以从 [`SF Symbols`](https://developer.apple.com/sf-symbols/) 中加载任何 [`2400+`](https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/) 图标，其中许多图标也可以使用多色。
 

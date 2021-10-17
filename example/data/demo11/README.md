@@ -1,5 +1,5 @@
 如何在 `SwiftUI` 中继续 `NSUserActivity`？
----
+===
 
 SwiftUI 具有专用的 `onContinueUserActivity()`修饰符，可以捕获各种 `NSUserActivity` 类型 - 从 Web 单击，从 `Spotlight` 或 `Siri` 启动等等。 以前，您可能使用诸如 `application(_:continue: restorationHandler :)` 之类的东西在 `AppDelegate` 中进行了处理，但是 `SwiftUI` 的方法更细粒度，使我们可以更轻松地划分功能。
 

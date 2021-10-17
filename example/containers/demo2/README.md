@@ -1,5 +1,5 @@
 如何在导航视图中嵌入视图？
----
+===
 
 SwiftUI 的 `NavigationView` 或多或少地映射到 `UIKit` 的 `UINavigationController`，因为它可以显示内容，可以处理视图之间的导航，并将导航栏放置在屏幕顶部。
 

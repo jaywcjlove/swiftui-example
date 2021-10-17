@@ -1,5 +1,5 @@
 什么是 `@UIApplicationDelegateAdaptor` 属性包装器？
----
+===
 
 如果需要访问 `SwiftUI` 中的 `AppDelegate` 功能，则应创建一个继承自 `NSObject` 和 `UIApplicationDelegate` 的类，并为其提供所需的任何功能，例如：
 

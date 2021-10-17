@@ -1,5 +1,5 @@
 SwiftUI 的内置形状
-----
+===
 
 SwiftUI 为我们提供了五个常用的内置形状：矩形(rectangle)，圆角矩形(rounded rectangle)，圆形(circle)，椭圆形(ellipse)和胶囊形(capsule)。 根据提供的尺寸，最后三个尤其在行为上有细微的差别，但是我们可以通过一个示例来演示所有选项：
 

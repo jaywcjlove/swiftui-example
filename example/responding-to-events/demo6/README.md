@@ -1,5 +1,5 @@
 如何将 `AppDelegate` 添加到 SwiftUI 应用？
----
+===
 
 SwiftUI 应用程序使用符合 `App` 协议的自定义结构启动，但有时您可能想找回我们曾经拥有的旧 `UIApplicationDelegate` 功能 - 也许处理推送通知的注册，响应内存警告，检测时间变化， 等等。
 

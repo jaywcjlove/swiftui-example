@@ -251,7 +251,9 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何将新视图推送到 `NavigationView` 上？](example/presenting-views/demo1/README.md)
 - [点击列表行时如何推送新视图？](example/presenting-views/demo2/README.md)
 - [如何在 `SwiftUI` 中使用程序化导航？](example/presenting-views/demo3/README.md)
-- [如何显示弹出视图？](example/presenting-views/demo3/README.md)
+- [如何使用 `sheets` 呈现新视图？](example/presenting-views/demo4/README.md)
+- [如何使视图自行关闭？](example/presenting-views/demo5/README.md)
+- [如何显示弹出视图？](example/presenting-views/demo6/README.md)
 
 ## 转换视图
 

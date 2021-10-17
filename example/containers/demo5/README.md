@@ -1,5 +1,5 @@
 如何使用 `tabViewStyle()` 创建内容的滚动页面？
----
+===
 
 SwiftUI 的 `TabView` 相当于 `UIPageViewController` 的两倍，让我们可以在多个内容屏幕中滑动，底部的分页点可以向用户显示它们的位置。
 

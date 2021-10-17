@@ -1,5 +1,5 @@
 如何使用 matchedGeometryEffect() 将动画从一个视图同步到另一个视图？
-----
+===
 
 如果同一视图出现在视图层次结构的两个不同部分中，并且希望在它们之间进行动画处理（例如，从列表视图转到缩放的详细视图），则应使用 `SwiftUI` 的 `matchedGeometryEffect()` 修饰符，这有点 例如 `Keynote` 中的 `Magic Move`。
 

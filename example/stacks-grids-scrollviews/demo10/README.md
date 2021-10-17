@@ -1,5 +1,5 @@
 如何使用 `ScrollViewReader` 使滚动视图移动到某个位置？
----
+===
 
 如果您想以编程方式使 SwiftUI 的 `ScrollView` 移至特定位置，则应在其中嵌入 `ScrollViewReader`。 这提供了一个 `scrollTo()` 方法，仅通过提供其锚即可将其移动到父 `scrollview` 内部的任何视图。
 

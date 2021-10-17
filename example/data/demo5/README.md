@@ -1,5 +1,5 @@
 如何使用 `predicate` 过滤核心数据获取请求？
----
+===
 
 就像通过 `UIKit` 一样，核心数据获取请求可以在 `SwiftUI` 中使用谓词，所有这些都可以通过为 `@FetchRequest` 属性包装器提供 `predicate` 属性来实现。
 

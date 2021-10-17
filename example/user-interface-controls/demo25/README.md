@@ -1,5 +1,5 @@
 如何设置可编辑文本 `TextEditor` 背景颜色？
----
+===
 
 ```swift
 extension NSTextView {

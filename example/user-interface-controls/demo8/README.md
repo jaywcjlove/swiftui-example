@@ -1,5 +1,5 @@
 如何关闭 `TextField` 的键盘？
----
+===
 
 SwiftUI 的 `TextField` 会在激活后自动显示键盘，但是完成操作后很难隐藏键盘-尤其是当您将 `KeyboardType()` 修饰符与 `.numberPad`，`.decimalPad` 或 `.phonePad` 等一起使用时。
 

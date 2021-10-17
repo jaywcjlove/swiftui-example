@@ -1,5 +1,5 @@
 如何使用 `ProgressView` 显示任务的进度？
----
+===
 
 SwiftUI 的 `ProgressView` 可以绑定到 `Double` 以显示水平进度条。 例如，这将创建一个标题为 `Downloading` 的进度条，其显示为 `downloadAmount`，以确定进度条应有多满：
 

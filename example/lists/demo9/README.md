@@ -1,5 +1,5 @@
 如何创建分组和插入分组列表？
----
+===
 
 SwiftUI 的 List 视图有一个 `listStyle()` 修饰符来控制列表的外观，并且您可能需要两个选项：`GroupedListStyle()` 获取旧的项目分组，`InsetGroupedListStyle()` 获得新的 `iOS 13-style` 的项目分组。
 

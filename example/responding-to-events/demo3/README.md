@@ -1,5 +1,5 @@
 如何使用 `keyboardShortcut()` 添加键盘快捷键？
----
+===
 
 通过 `SwiftUI`，可以轻松地为所有支持它的设备（例如iPadOS和macOS）添加键盘快捷键，而这些快捷键都可以使用 `keyboardShortcut()` 修饰符。
 

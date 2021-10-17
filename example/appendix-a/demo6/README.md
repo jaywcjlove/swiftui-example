@@ -1,5 +1,5 @@
 什么是 `@ObservedObject` 属性包装器？
----
+===
 
 SwiftUI 为我们提供了 `@ObservedObject` 属性包装器，以便视图可以监视外部对象的状态，并在重要内容发生变化时得到通知。 它的行为与 `@StateObject` 相似，不同之处在于它不得用于创建对象–仅将 `@ObservableObject` 与在其他位置创建的对象一起使用，否则 SwiftUI 可能会意外破坏该对象。
 

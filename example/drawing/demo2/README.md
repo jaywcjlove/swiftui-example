@@ -1,5 +1,5 @@
 如何绘制自定义路径？
-----
+===
 
 `SwiftUI` 允许我们通过遵循 `Shape` 协议来绘制自定义路径，因此我们可以创建自己的形状，这些形状的作用与`Rectangle`，`Capsule` 和 `Circle` 相同。 遵守此协议并不难，因为您所要做的就是支持一个接受 `CGRect` 并返回 `Path` 的 `path(in:)` 方法。 更好的是，您可以使用以前使用 `CGPath` 或 `UIBezierPath` 构建的任何路径，然后将结果转换为 `SwiftUI` 路径。
 

@@ -1,5 +1,5 @@
 在 SwiftUI 中使用 Core Data 的简介
----
+===
 
 作为 Apple 软件平台的两个重要组成部分，得知 `Core Data` 和 SwiftUI 可以很好地协同工作就不会让您感到惊讶：我们获得了属性包装器，环境支持等，所有这些都确保我们可以集成 `Core Data` 轻松地加入我们的 `SwiftUI` 应用程序。
 

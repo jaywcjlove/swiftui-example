@@ -1,5 +1,5 @@
 如何使用 multilineTextAlignment() 调整文本对齐方式
----
+===
 
 当 `SwiftUI` 的 “Text” 视图跨多行换行时，默认情况下它们会对齐其前沿。 如果要更改此设置，请使用 `multilineTextAlignment()` 修饰符指定其他选项，例如 `.center` 或 `.trailing`。
 

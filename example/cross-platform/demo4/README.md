@@ -1,5 +1,5 @@
 如何使用 `digitalCrownRotation()` 在 `watchOS` 上读取 `Digital Crown`？
----
+===
 
 SwiftUI 通过两个修饰符将 `Digital Crown` 公开给我们的应用程序，必须同时使用两个修饰符才能将 `Crown` 用作我们应用程序的输入。 第一个是 `focusable()`，当您希望相关视图能够接收 `Digital Crown` 更新时，它应该为 `true`；以及 `digitalCrownRotation()`，它在 `Digital Crown` 和您选择的属性之间创建绑定。
 

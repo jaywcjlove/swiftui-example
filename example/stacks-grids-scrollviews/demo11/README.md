@@ -1,5 +1,5 @@
 如何使用 `ScrollView` 和 `GeometryReader` 创建3D效果(如Cover Flow)？
----
+===
 
 如果将 `GeometryReader` 与任何可以改变位置的视图（例如具有拖动手势或位于 `List` 内的视图）结合使用，我们可以创建在屏幕上看起来很棒的3D效果。`GeometryReader` 允许我们读取视图的坐标，并将这些值直接输入到 `rotation3DEffect()` 修饰符中。
 

@@ -1,5 +1,5 @@
 什么时候应该使用 `ContainerRelativeShape`？
----
+===
 
 SwiftUI 具有许多不言自明的内置形状，但其中一个引人注目：`ContainerRelativeShape`。 这不是固定的形状，而是旨在成为放置在其中的任何形状的固定版本，这在创建主屏幕小部件时尤其重要。
 

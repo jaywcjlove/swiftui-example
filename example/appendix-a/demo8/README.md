@@ -1,5 +1,5 @@
 什么是 `@Environment` 属性包装器？
----
+===
 
 SwiftUI 给我们提供了 `@Environment` 和 `@EnvironmentObject` 属性包装器，但是它们有些微的不同：`@EnvironmentObject` 允许我们向环境中注入任意值，而 `@Environment` 专门用于处理 SwiftUI 自己的预定义键。
 

@@ -1,5 +1,5 @@
 如何从 `TextField` 读取文本？
-----
+===
 
 SwiftUI 的 `TextField` 视图类似于 `UIKit` 中的 `UITextField`，尽管默认情况下看起来有点不同，并且在很大程度上依赖于绑定到状态。
 
