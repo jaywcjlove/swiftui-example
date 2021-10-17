@@ -26,4 +26,4 @@ ZStack(alignment: .leading) {
 }
 ```
 
-但是，它没有间距属性，因为它没有意义。 相反，您应该使用 `offset()` 修饰符，[如如何使用其偏移量调整视图的位置中所示](transforming-views/demo1)。
+但是，它没有间距属性，因为它没有意义。 相反，您应该使用 `offset()` 修饰符，[如如何使用其偏移量调整视图的位置中所示](../../transforming-views/demo1/README.md)。
