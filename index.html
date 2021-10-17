@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SwiftUI by Example v1.0.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta description="SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问题以及了解 SwiftUI 的实际工作方式。 - SwiftUI by Example v1.0.0">
+    <meta keywords="SwiftUI,swift,Example,SwiftUI Example">
+    <style>.task-list-item { list-style-type: none;}.task-list-item label { font-weight: 400;}.task-list-item.enabled label { cursor: pointer;}.task-list-item+.task-list-item { margin-top: 3px;}.task-list-item .handle { display: none;}.task-list-item-checkbox { margin: 0 .2em .25em -1.6em; vertical-align: middle;}.wmde-markdown h1,.wmde-markdown h2,.wmde-markdown h3,.wmde-markdown h4,.wmde-markdown h5,.wmde-markdown h6 { font-weight: 600; line-height: 1.25; margin-bottom: 16px; margin-top: 24px;}.wmde-markdown h1 .anchor,.wmde-markdown h2 .anchor,.wmde-markdown h3 .anchor,.wmde-markdown h4 .anchor,.wmde-markdown h5 .anchor,.wmde-markdown h6 .anchor { float: left; padding-right: 4px; margin-left: -20px; line-height: 1;}.wmde-markdown h1 .octicon-link,.wmde-markdown h2 .octicon-link,.wmde-markdown h3 .octicon-link,.wmde-markdown h4 .octicon-link,.wmde-markdown h5 .octicon-link,.wmde-markdown h6 .octicon-link { visibility: hidden; vertical-align: middle;}.wmde-markdown h1:hover .octicon-link,.wmde-markdown h2:hover .octicon-link,.wmde-markdown h3:hover .octicon-link,.wmde-markdown h4:hover .octicon-link,.wmde-markdown h5:hover .octicon-link,.wmde-markdown h6:hover .octicon-link { visibility: visible;}.github-corner:hover .octo-arm { -webkit-animation: octocat-wave .56s ease-in-out; animation: octocat-wave .56s ease-in-out;}@-webkit-keyframes octocat-wave { 0%, to { -webkit-transform: rotate(0); transform: rotate(0); } 20%, 60% { -webkit-transform: rotate(-25deg); transform: rotate(-25deg); } 40%, 80% { -webkit-transform: rotate(10deg); transform: rotate(10deg); }}@keyframes octocat-wave { 0%, to { -webkit-transform: rotate(0); transform: rotate(0) } 20%, 60% { -webkit-transform: rotate(-25deg); transform: rotate(-25deg); } 40%, 80% { -webkit-transform: rotate(10deg); transform: rotate(10deg); }}.wmde-markdown { font-size: 16px; line-height: 1.5; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji; max-width: 1024px; margin: 28px auto 60px auto;}.wmde-markdown > :first-child { margin-top: 0 !important;}.wmde-markdown > :last-child { margin-bottom: 0 !important;}.wmde-markdown code[class*="language-"],.wmde-markdown pre[class*="language-"] { color: black; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; word-wrap: normal; -webkit-hyphens: none; hyphens: none;}.wmde-markdown pre code { background: none; overflow-wrap: normal; white-space: inherit; -moz-tab-size: 2; tab-size: 2; padding: 16px; font-size: 95%; line-height: 1.5; display: block; text-shadow: 0 1px #fff;}.wmde-markdown pre { margin-bottom: 18px; font-size: 85%; line-height: 1.45; position: relative; overflow-x: auto; background-color: #f6f8fa; border-radius: 3px;}.wmde-markdown code,.wmde-markdown tt { background-color: rgba(27, 31, 35, 0.05); border-radius: 3px; font-size: 85%; margin: 0; padding: 0.2em 0.4em;}.wmde-markdown pre,.wmde-markdown code,.wmde-markdown tt { font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;}.wmde-markdown img { max-width: 100%;}.wmde-markdown input { vertical-align: middle; margin: 0 0.2em 0.25em -1.6em;}.wmde-markdown input + p { display: inline;}.wmde-markdown h1,.wmde-markdown h2 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em;}.wmde-markdown h1,.wmde-markdown h2,.wmde-markdown h3,.wmde-markdown h4,.wmde-markdown h5,.wmde-markdown h6 { font-weight: 600; line-height: 1.25; margin-bottom: 16px; margin-top: 24px;}.wmde-markdown h1 .anchor,.wmde-markdown h2 .anchor,.wmde-markdown h3 .anchor,.wmde-markdown h4 .anchor,.wmde-markdown h5 .anchor,.wmde-markdown h6 .anchor { float: left; padding-right: 4px; margin-left: -20px; line-height: 1;}.wmde-markdown h1 .octicon-link,.wmde-markdown h2 .octicon-link,.wmde-markdown h3 .octicon-link,.wmde-markdown h4 .octicon-link,.wmde-markdown h5 .octicon-link,.wmde-markdown h6 .octicon-link { visibility: hidden; vertical-align: middle;}.wmde-markdown h1:hover .octicon-link,.wmde-markdown h2:hover .octicon-link,.wmde-markdown h3:hover .octicon-link,.wmde-markdown h4:hover .octicon-link,.wmde-markdown h5:hover .octicon-link,.wmde-markdown h6:hover .octicon-link { visibility: visible;}.wmde-markdown h1 { font-size: 2em;}.wmde-markdown h2 { font-size: 1.5em;}.wmde-markdown h3 { font-size: 1.25em;}.wmde-markdown h4 { font-size: 1em;}.wmde-markdown h5 { font-size: 0.875em;}.wmde-markdown h6 { font-size: 0.85em;}.wmde-markdown ol,.wmde-markdown ul { padding-left: 2em;}.wmde-markdown ol > p,.wmde-markdown ul > p { margin-bottom: 0;}.wmde-markdown ul { margin-bottom: 16px; margin-top: 0; list-style: initial;}.wmde-markdown > blockquote,.wmde-markdown > blockquote blockquote { margin: 0; border-left: 0.25em solid #dfe2e5; color: #6a737d; padding: 0 1em;}.wmde-markdown > blockquote > :last-child,.wmde-markdown > blockquote blockquote > :last-child { margin-bottom: 0;}.wmde-markdown > blockquote > :first-child,.wmde-markdown > blockquote blockquote > :first-child { margin-top: 0;}.wmde-markdown hr { margin: 1.5em auto; border: 0; border-top: 2px dotted #eee; height: 1px;}.wmde-markdown > table,.wmde-markdown > blockquote table { display: block; overflow: auto; width: 100%; border-collapse: collapse; border-spacing: 0; font-size: 14px;}.wmde-markdown > table tr,.wmde-markdown > blockquote table tr { background-color: #fff; border-top: 1px solid #c6cbd1;}.wmde-markdown > table td,.wmde-markdown > blockquote table td,.wmde-markdown > table th,.wmde-markdown > blockquote table th { border: 1px solid #dfe2e5; padding: 6px 13px;}.wmde-markdown blockquote,.wmde-markdown details,.wmde-markdown dl,.wmde-markdown ol,.wmde-markdown p,.wmde-markdown pre,.wmde-markdown table,.wmde-markdown ul { margin-bottom: 16px; margin-top: 0;}.wmde-markdown a { color: #0366d6; text-decoration: none;}.wmde-markdown a:hover { text-decoration: underline;}.wmde-markdown .namespace { opacity: 0.7;}.wmde-markdown .token.important { font-weight: normal;}.wmde-markdown .token.bold { font-weight: bold;}.wmde-markdown .token.italic { font-style: italic;}.wmde-markdown .token.entity { cursor: help;}.wmde-markdown kbd { background-color: #fafbfc; border-bottom-color: #d1d5da; border: 1px solid #d1d5da; border-radius: 3px; box-shadow: inset 0 -1px 0 #d1d5da; color: #56595d; display: inline-block; font-size: 10px; font-family: ui-monospace, SFMono-Regular, SF Mono, Consolas, Liberation Mono, Menlo, monospace; line-height: 10px; padding: 2px 4px; vertical-align: middle;}.wmde-markdown .token.tag .attr-value { color: #032f62;}.wmde-markdown .token.property,.wmde-markdown .token.tag,.wmde-markdown .token.boolean,.wmde-markdown .token.number,.wmde-markdown .token.function-name,.wmde-markdown .token.constant,.wmde-markdown .token.symbol,.wmde-markdown .token.deleted { color: #0060c9;}.wmde-markdown .token.punctuation { color: #a0a0a0;}.wmde-markdown code[class*="language-"] { color: black;}.wmde-markdown code[class*="language-"] .token.selector,.wmde-markdown code[class*="language-"] .token.attr-name,.wmde-markdown code[class*="language-"] .token.string,.wmde-markdown code[class*="language-"] .token.char,.wmde-markdown code[class*="language-"] .token.function,.wmde-markdown code[class*="language-"] .token.builtin { color: #6f42c1;}.wmde-markdown code[class*="language-"] .token.inserted { color: #22863a; background-color: #f0fff4;}.wmde-markdown code[class*="language-"] .token.deleted { color: #b31d28; background-color: #ffeef0;}.wmde-markdown code[class*="language-"] .token.class-name { color: #6f42c1;}.wmde-markdown code[class*="language-"] .code-block { color: #032f62;}.wmde-markdown code[class*="language-"] .token.comment,.wmde-markdown code[class*="language-"] .token.block-comment,.wmde-markdown code[class*="language-"] .token.prolog,.wmde-markdown code[class*="language-"] .token.doctype,.wmde-markdown code[class*="language-"] .token.cdata { color: #7D8B99;}.wmde-markdown code[class*="language-"] .token.punctuation { color: #a0a0a0;}.wmde-markdown code[class*="language-"] .token.operator,.wmde-markdown code[class*="language-"] .token.entity,.wmde-markdown code[class*="language-"] .token.url,.wmde-markdown code[class*="language-"] .token.variable { color: #d73a49; background: rgba(255, 255, 255, 0.5);}.wmde-markdown code[class*="language-"] .token.atrule,.wmde-markdown code[class*="language-"] .token.attr-value { color: #004698;}.wmde-markdown code[class*="language-"] .token.keyword { color: #d63200;}.wmde-markdown code[class*="language-"] .token.regex,.wmde-markdown code[class*="language-"] .token.important { color: #e90;}.wmde-markdown code[class*="language-"] .token.string { color: #0a53c1;}</style>
+    <style></style>
+  </head>
+  <body id="totop"><a aria-label="View source on GitHub" target="__blank" class="github-corner" href="https://github.com/jaywcjlove/swiftui-example.git"><svg width="54" height="54" viewBox="0 0 250 250" aria-hidden="true" style="fill: rgb(32, 34, 37); color: rgb(255, 255, 255); position: fixed; z-index: 99999; border: 0px; top: 0px; right: 0px;">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path style="transform-origin: 130px 106px;" class="octo-arm" fill="currentColor" d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"></path>
+        <path class="octo-body" fill="currentColor" d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"></path>
+      </svg></a>
+    <div class="wmde-markdown">
+      <p>
+        <img src="assets/logo.jpg" alt="SwiftUI by Example">
+      </p>
+      <p>SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问题以及了解 SwiftUI 的实际工作方式。主要内容来源 <a href="https://www.hackingwithswift.com/quick-start/swiftui"><code>hackingwithswift.com</code></a>，下面所有实例都是在 macOS Big Sur 系统上运行，基于 Xcode <code>12.4</code> 开发。</p>
+      <p>⚠️ 注意：示例适用于 macOS 的 Swift 编程，文字解释内容基于 Google 翻译，英文水平有限欢迎 RP 完善，小部分经过了添加或者修改，对部分内容进行了新增。如果对 Swift 语法不熟悉，这里有简单的 <a href="https://github.com/jaywcjlove/swift-tutorial"><code>Swift 语法入门</code></a>，对 SwiftUI 不熟悉，在这里提供了一个 <a href="./cheat-sheet.html"><code>SwiftUI 速查手册</code></a>。</p>
+      <p>⚠️ 注意：版权归属 <a href="https://www.hackingwithswift.com/quick-start/swiftui"><code>hackingwithswift.com</code></a> 原作者，对任何法律问题及风险不承担任何责任，没有任何商业目的，如果认为侵犯了您的版权，请来信告知。同时我不能完全保证内容的正确性。通过使用本站内容带来的风险与我无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。</p>
+      <p>为方便在 Swift 中颜色拾取，提供了一个小工具(<a href="https://uiwjs.github.io/ui-color/">UI-Color</a>)，欢迎提出改进意见。</p>
+      <p><a href="https://github.com/jaywcjlove/swiftui-example/discussions"><code>SwiftUI 论坛</code></a></p>
+      <p>只是讨论 SwiftUI 事物的地方 <a href="https://github.com/jaywcjlove/swiftui-example/discussions">论坛→</a>。想法来源于 <a href="https://github.com/sindresorhus/swiftui">sindresorhus/swiftui</a></p>
+      <h2 id="示例目录"><a class="anchor" aria-hidden="true" tabindex="-1" href="#示例目录"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>示例目录</h2>
+      <ul>
+        <li><a href="#%E4%BB%8B%E7%BB%8D">介绍</a></li>
+        <li><a href="#%E5%BB%BA%E7%AB%8B%E4%B8%80%E4%B8%AA%E5%AE%8C%E6%95%B4%E7%9A%84%E9%A1%B9%E7%9B%AE">建立一个完整的项目</a></li>
+        <li><a href="#%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E6%96%87%E6%9C%AC">使用静态文本</a></li>
+        <li><a href="#%E5%9B%BE%E5%83%8F%E5%BD%A2%E7%8A%B6%E5%92%8C%E5%AA%92%E4%BD%93">图像形状和媒体</a></li>
+        <li><a href="#%E8%A7%86%E5%9B%BE%E5%B8%83%E5%B1%80">视图布局</a></li>
+        <li><a href="#%E5%A0%86%E6%A0%88%E7%BD%91%E6%A0%BC%E6%BB%9A%E5%8A%A8%E8%A7%86%E5%9B%BE">堆栈网格滚动视图</a></li>
+        <li><a href="#%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E6%8E%A7%E4%BB%B6">用户界面控件</a></li>
+        <li><a href="#%E5%93%8D%E5%BA%94%E4%BA%8B%E4%BB%B6">响应事件</a></li>
+        <li><a href="#%E7%82%B9%E5%87%BB%E5%92%8C%E6%89%8B%E5%8A%BF">点击和手势</a></li>
+        <li><a href="#%E7%8A%B6%E6%80%81">状态</a></li>
+        <li><a href="#%E5%88%97%E8%A1%A8">列表</a></li>
+        <li><a href="#%E8%A1%A8%E5%8D%95">表单</a></li>
+        <li><a href="#%E5%AE%B9%E5%99%A8">容器</a></li>
+        <li><a href="#%E5%AF%B9%E8%AF%9D%E6%A1%86%E5%92%8C%E8%8F%9C%E5%8D%95">对话框和菜单</a></li>
+        <li><a href="#%E5%88%87%E6%8D%A2%E7%95%8C%E9%9D%A2">切换界面</a></li>
+        <li><a href="#%E8%BD%AC%E6%8D%A2%E8%A7%86%E5%9B%BE">转换视图</a></li>
+        <li><a href="#%E7%BB%98%E7%94%BB">绘画</a></li>
+        <li><a href="#%E5%8A%A8%E7%94%BB">动画</a></li>
+        <li><a href="#%E6%8E%92%E7%89%88%E8%A7%86%E5%9B%BE">排版视图</a></li>
+        <li><a href="#%E8%B7%A8%E5%B9%B3%E5%8F%B0-swiftui">跨平台-swiftui</a></li>
+        <li><a href="#%E6%95%B0%E6%8D%AE">数据</a></li>
+        <li><a href="#%E8%BE%85%E5%8A%A9%E5%8A%9F%E8%83%BD">辅助功能</a></li>
+        <li><a href="#%E5%B7%A5%E5%85%B7">工具</a></li>
+        <li><a href="#%E9%99%84%E5%BD%95a">附录a</a></li>
+      </ul>
+      <h2 id="介绍"><a class="anchor" aria-hidden="true" tabindex="-1" href="#介绍"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>介绍</h2>
+      <p>简要介绍 SwiftUI 的基础</p>
+      <h2 id="建立一个完整的项目"><a class="anchor" aria-hidden="true" tabindex="-1" href="#建立一个完整的项目"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>建立一个完整的项目</h2>
+      <p>通过实际的应用程序项目学习SwiftUI</p>
+      <ul>
+        <li><a href="example/introduction/demo1/index.html">SwiftUI 教程：构建完整的项目</a></li>
+        <li><a href="example/introduction/demo2/index.html">使用列表构建菜单</a></li>
+      </ul>
+      <h2 id="使用静态文本"><a class="anchor" aria-hidden="true" tabindex="-1" href="#使用静态文本"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>使用静态文本</h2>
+      <p>整齐地布局文本</p>
+      <ul>
+        <li><a href="example/working-with-static-text/demo1/index.html">如何使用 <code>Text</code> 视图创建静态标签？</a></li>
+        <li><a href="example/working-with-static-text/demo2/index.html">如何使用字体，颜色，行距等为文本视图设置样式？</a></li>
+        <li><a href="example/working-with-static-text/demo3/index.html">如何使用 <code>multilineTextAlignment()</code> 调整文本对齐方式？</a></li>
+        <li><a href="example/working-with-static-text/demo4/index.html">如何在文本视图中设置文本格式？</a></li>
+        <li><a href="example/working-with-static-text/demo5/index.html">如何在文字中的字母之间增加空格？</a></li>
+        <li><a href="example/working-with-static-text/demo6/index.html">如何在文字检视中格式化日期？</a></li>
+        <li><a href="example/working-with-static-text/demo7/index.html">如何使用 <code>textCase()</code> 使 <code>TextField</code> 大写或小写？</a></li>
+        <li><a href="example/working-with-static-text/demo8/index.html">如何使用 <code>Label</code> 并排显示文本和图标？</a></li>
+        <li><a href="example/working-with-static-text/demo9/index.html">如何使用 <code>redacted()</code> 将内容标记为占位符？</a></li>
+      </ul>
+      <h2 id="图像形状和媒体"><a class="anchor" aria-hidden="true" tabindex="-1" href="#图像形状和媒体"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>图像，形状和媒体</h2>
+      <p>绘制图标，圆形，渐变等</p>
+      <ul>
+        <li><a href="example/images-shapes-media/demo1/index.html">如何使用图像视图绘制图像？</a></li>
+        <li><a href="example/images-shapes-media/demo2/index.html">如何调整图像适合其空间的展示方式？</a></li>
+        <li><a href="example/images-shapes-media/demo3/index.html">如何平铺图像？</a></li>
+        <li><a href="example/images-shapes-media/demo4/index.html">如何使用SF符号渲染图像？</a></li>
+        <li><a href="example/images-shapes-media/demo5/index.html">如何渲染渐变？</a></li>
+        <li><a href="example/images-shapes-media/demo6/index.html">如何使用图像和其他视图作为背景？</a></li>
+        <li><a href="example/images-shapes-media/demo7/index.html">如何显示实体形状？</a></li>
+        <li><a href="example/images-shapes-media/demo8/index.html">如何同时填充和描边形状？</a></li>
+        <li><a href="example/images-shapes-media/demo9/index.html">如何使用 <code>trim()</code> 绘制实体形状的一部分？</a></li>
+        <li><a href="example/images-shapes-media/demo10/index.html">什么时候应该使用 <code>ContainerRelativeShape</code>？</a></li>
+        <li><a href="example/images-shapes-media/demo11/index.html">如何使用 <code>VideoPlayer</code> 播放电影？</a></li>
+        <li><a href="example/images-shapes-media/demo12/index.html">如何使用 <code>SpriteView</code> 集成 <code>SpriteKit</code>？</a></li>
+      </ul>
+      <h2 id="视图布局"><a class="anchor" aria-hidden="true" tabindex="-1" href="#视图布局"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>视图布局</h2>
+      <p>布局大小，优先级和间距</p>
+      <ul>
+        <li><a href="example/view-layout/demo1/index.html">如何给视图定制 <code>frame</code>？</a></li>
+        <li><a href="example/view-layout/demo2/index.html">如何使用 <code>padding</code> 来控制各个视图之间的间距？</a></li>
+        <li><a href="example/view-layout/demo3/index.html">如何使用 <code>GeometryReader</code> 提供相对大小？</a></li>
+        <li><a href="example/view-layout/demo4/index.html">如何将内容放置在安全区域之外？</a></li>
+        <li><a href="example/view-layout/demo5/index.html">如何返回不同的视图类型？</a></li>
+        <li><a href="example/view-layout/demo6/index.html">如何使用 <code>ForEach</code> 循环创建视图？</a></li>
+        <li><a href="example/view-layout/demo7/index.html">如何使用 <code>layoutPriority()</code> 控制布局优先级？</a></li>
+        <li><a href="example/view-layout/demo8/index.html">如何使两个视图具有相同的宽度或高度？</a></li>
+      </ul>
+      <h2 id="堆栈网格滚动视图"><a class="anchor" aria-hidden="true" tabindex="-1" href="#堆栈网格滚动视图"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>堆栈，网格，滚动视图</h2>
+      <p>以结构化方式定位视图</p>
+      <ul>
+        <li><a href="example/stacks-grids-scrollviews/demo1/index.html">如何使用 <code>VStack</code> 和 <code>HStack</code> 创建堆栈？</a></li>
+        <li><a href="example/stacks-grids-scrollviews/demo2/index.html">如何使用对齐和间距自定义堆栈布局？</a></li>
+        <li><a href="example/stacks-grids-scrollviews/demo3/index.html">如何使用 <code>Spacer</code> 将视图强制移到堆栈中的一侧？</a></li>
+        <li><a href="example/stacks-grids-scrollviews/demo4/index.html">如何制作固定尺寸的 <code>Spacer</code>？</a></li>
+        <li><a href="example/stacks-grids-scrollviews/demo5/index.html">如何使用 <code>ZStack</code> 在彼此之上叠加视图？</a></li>
+        <li><a href="example/stacks-grids-scrollviews/demo6/index.html">如何使用 <code>zIndex</code> 更改视图分层的顺序？</a></li>
+        <li><a href="example/stacks-grids-scrollviews/demo7/index.html">如何使用尺寸类创建不同的布局？</a></li>
+        <li><a href="example/stacks-grids-scrollviews/demo8/index.html">如何根据大小类在 <code>HStack</code> 和 <code>VStack</code> 之间自动切换？</a></li>
+        <li><a href="example/stacks-grids-scrollviews/demo9/index.html">如何使用 <code>ScrollView</code> 添加水平和垂直滚动？</a></li>
+        <li><a href="example/stacks-grids-scrollviews/demo10/index.html">如何使用 <code>ScrollViewReader</code> 使滚动视图移动到某个位置？</a></li>
+        <li><a href="example/stacks-grids-scrollviews/demo11/index.html">如何使用 <code>ScrollView</code> 和 <code>GeometryReader</code> 创建3D效果(如Cover Flow)？</a></li>
+        <li><a href="example/stacks-grids-scrollviews/demo12/index.html">如何使用 <code>LazyVGrid</code> 和 <code>LazyHGrid</code> 在网格中放置视图？</a></li>
+        <li><a href="example/stacks-grids-scrollviews/demo13/index.html">如何使用 <code>LazyVStack</code> 和 <code>LazyHStack</code> 延迟加载视图？</a></li>
+        <li><a href="example/stacks-grids-scrollviews/demo14/index.html">如何使用 <code>HSplitViews</code> 创建左中右三栏布局？</a></li>
+      </ul>
+      <h2 id="用户界面控件"><a class="anchor" aria-hidden="true" tabindex="-1" href="#用户界面控件"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>用户界面控件</h2>
+      <p>响应交互并控制程序状态</p>
+      <ul>
+        <li><a href="example/user-interface-controls/demo1/index.html">使用状态</a></li>
+        <li><a href="example/user-interface-controls/demo2/index.html">如何创建可点击的按钮？</a></li>
+        <li><a href="example/user-interface-controls/demo3/index.html">如何禁用 <code>Button</code> 和 <code>NavigationLink</code> 中的图像的覆盖颜色？</a></li>
+        <li><a href="example/user-interface-controls/demo4/index.html">如何从 <code>TextField</code> 读取文本？</a></li>
+        <li><a href="example/user-interface-controls/demo5/index.html">如何在 <code>TextField</code> 上添加边框？</a></li>
+        <li><a href="example/user-interface-controls/demo6/index.html">如何将占位符添加到 <code>TextField</code>？</a></li>
+        <li><a href="example/user-interface-controls/demo7/index.html">如何在 <code>TextField</code> 中禁用自动更正？</a></li>
+        <li><a href="example/user-interface-controls/demo8/index.html">如何关闭 <code>TextField</code> 的键盘？</a></li>
+        <li><a href="example/user-interface-controls/demo9/index.html">如何格式化数字的 <code>TextField</code>？</a></li>
+        <li><a href="example/user-interface-controls/demo10/index.html">如何使用 <code>SecureField</code> 创建安全的文本字段？</a></li>
+        <li><a href="example/user-interface-controls/demo11/index.html">如何创建拨动开关？</a></li>
+        <li><a href="example/user-interface-controls/demo12/index.html">如何创建滑块 <code>Slider</code> 并从中读取值？</a></li>
+        <li><a href="example/user-interface-controls/demo13/index.html">如何创建选择器 <code>Picker</code> 并从中读取值？</a></li>
+        <li><a href="example/user-interface-controls/demo14/index.html">如何创建日期选择器 <code>DatePicker</code> 并从中读取值？</a></li>
+        <li><a href="example/user-interface-controls/demo15/index.html">如何创建分段控件并从中读取值？</a></li>
+        <li><a href="example/user-interface-controls/demo16/index.html">如何创建步进器 <code>Stepper</code> 并从中读取值？</a></li>
+        <li><a href="example/user-interface-controls/demo17/index.html">如何使用 <code>labelsHidden()</code> 隐藏 <code>Picker</code>，<code>Stepper</code>，<code>Toggle</code> 等标签？</a></li>
+        <li><a href="example/user-interface-controls/demo18/index.html">如何使用文本编辑器创建多行可编辑文本 <code>TextEditor</code>？</a></li>
+        <li><a href="example/user-interface-controls/demo19/index.html">如何让用户使用 <code>ColorPicker</code> 选择颜色？</a></li>
+        <li><a href="example/user-interface-controls/demo20/index.html">如何使用 <code>ProgressView</code> 显示任务的进度？</a></li>
+        <li><a href="example/user-interface-controls/demo21/index.html">如何使用 <code>ProgressView</code> 显示不确定的进度？</a></li>
+        <li><a href="example/user-interface-controls/demo22/index.html">如何显示地图 <code>Map</code> 视图？</a></li>
+        <li><a href="example/user-interface-controls/demo23/index.html">如何在地图 <code>Map</code> 视图中显示注释？</a></li>
+        <li><a href="example/user-interface-controls/demo24/index.html">如何在 <code>Safari</code> 中打开 Web 链接？</a></li>
+        <li><a href="example/user-interface-controls/demo25/index.html">如何设置可编辑文本 <code>TextEditor</code> 背景颜色？</a></li>
+      </ul>
+      <h2 id="响应事件"><a class="anchor" aria-hidden="true" tabindex="-1" href="#响应事件"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>响应事件</h2>
+      <p>快捷方式，旋转方式和外观</p>
+      <ul>
+        <li><a href="example/responding-to-events/demo1/index.html">如何使用 <code>scenePhase</code> 检测您的应用何时移至背景或前景？</a></li>
+        <li><a href="example/responding-to-events/demo2/index.html">如何响应查看生命周期事件：<code>onAppear()</code> 和 <code>onDisappear()</code> ？</a></li>
+        <li><a href="example/responding-to-events/demo3/index.html">如何使用 <code>keyboardShortcut()</code> 添加键盘快捷键？</a></li>
+        <li><a href="example/responding-to-events/demo4/index.html">如何控制应用启动时显示的视图？</a></li>
+        <li><a href="example/responding-to-events/demo5/index.html">应用启动时如何运行代码？</a></li>
+        <li><a href="example/responding-to-events/demo6/index.html">如何将 <code>AppDelegate</code> 添加到 SwiftUI 应用？</a></li>
+        <li><a href="example/responding-to-events/demo7/index.html">如何检测设备旋转？</a></li>
+      </ul>
+      <h2 id="点击和手势"><a class="anchor" aria-hidden="true" tabindex="-1" href="#点击和手势"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>点击和手势</h2>
+      <p>滑动，轻击，摇动和其他输入</p>
+      <ul>
+        <li><a href="example/taps-and-gestures/demo1/index.html">如何在视图中添加手势识别器？</a></li>
+        <li><a href="example/taps-and-gestures/demo2/index.html">如何阅读点击和双击手势？</a></li>
+        <li><a href="example/taps-and-gestures/demo3/index.html">如何使用 <code>highPriorityGesture()</code> 强制一个手势先识别另一个手势？</a></li>
+        <li><a href="example/taps-and-gestures/demo4/index.html">如何使用 <code>simultaneousGesture()</code> 同时识别两个手势？</a></li>
+        <li><a href="example/taps-and-gestures/demo5/index.html">如何使用 <code>sequenced(before:)</code> 创建手势链？</a></li>
+        <li><a href="example/taps-and-gestures/demo6/index.html">如何检测到用户将鼠标悬停在视图上？</a></li>
+        <li><a href="example/taps-and-gestures/demo7/index.html">如何检测摇动手势？</a></li>
+        <li><a href="example/taps-and-gestures/demo8/index.html">如何使用 <code>contentShape()</code> 控制视图的可点击区域？</a></li>
+        <li><a href="example/taps-and-gestures/demo9/index.html">如何使用 <code>allowsHitTesting()</code> 禁用视图的点击？</a></li>
+      </ul>
+      <h2 id="状态"><a class="anchor" aria-hidden="true" tabindex="-1" href="#状态"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>状态</h2>
+      <p>响应交互并控制程序状态</p>
+      <ul>
+        <li><a href="example/advanced-state/demo1/index.html"><code>@ObservedObject</code>，<code>@State</code> 和 <code>@EnvironmentObject</code> 有什么区别？</a></li>
+        <li><a href="example/advanced-state/demo2/index.html">如何使用 <code>@StateObject</code> 创建和监视外部对象？</a></li>
+        <li><a href="example/advanced-state/demo3/index.html">如何使用 <code>@ObservedObject</code> 管理外部对象的状态？</a></li>
+        <li><a href="example/advanced-state/demo4/index.html">如何使用 <code>@EnvironmentObject</code> 在视图之间共享数据？</a></li>
+        <li><a href="example/advanced-state/demo5/index.html">如何使用 <code>objectWillChange</code> 手动发送状态更新？</a></li>
+        <li><a href="example/advanced-state/demo6/index.html">如何创建常量绑定？</a></li>
+        <li><a href="example/advanced-state/demo7/index.html">如何创建自定义绑定？</a></li>
+        <li><a href="example/advanced-state/demo8/index.html">如何在 <code>SwiftUI</code> 中使用计时器？</a></li>
+        <li><a href="example/advanced-state/demo9/index.html">当使用 <code>onChange()</code> 改变状态时如何运行一些代码？</a></li>
+      </ul>
+      <h2 id="列表"><a class="anchor" aria-hidden="true" tabindex="-1" href="#列表"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>列表</h2>
+      <p>创建数据滚动表</p>
+      <ul>
+        <li><a href="example/lists/demo1/index.html">使用列表 <code>List</code></a></li>
+        <li><a href="example/lists/demo2/index.html">如何创建静态物品列表？</a></li>
+        <li><a href="example/lists/demo3/index.html">如何创建动态项目列表？</a></li>
+        <li><a href="example/lists/demo4/index.html">如何让用户从列表中删除行？</a></li>
+        <li><a href="example/lists/demo5/index.html">如何让用户在列表中移动行？</a></li>
+        <li><a href="example/lists/demo6/index.html">如何将 <code>Section</code> 添加到列表？</a></li>
+        <li><a href="example/lists/demo7/index.html">如何使用 <code>EditButton</code> 启用对列表的编辑？</a></li>
+        <li><a href="example/lists/demo8/index.html">如何使用 <code>listRowBackground()</code> 设置列表行的背景色？</a></li>
+        <li><a href="example/lists/demo9/index.html">如何创建分组和插入分组列表？</a></li>
+        <li><a href="example/lists/demo10/index.html">如何创建扩展列表？</a></li>
+        <li><a href="example/lists/demo11/index.html">如何滚动到列表中的特定行？</a></li>
+        <li><a href="example/lists/demo12/index.html">如何允许列表中的行选择？</a></li>
+        <li><a href="example/lists/demo13/index.html">如何使用隐式堆栈？</a></li>
+      </ul>
+      <h2 id="表单"><a class="anchor" aria-hidden="true" tabindex="-1" href="#表单"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>表单</h2>
+      <p>快速有效地获得用户输入</p>
+      <ul>
+        <li><a href="example/forms/demo1/index.html">使用表单 <code>Form</code></a></li>
+        <li><a href="example/forms/demo2/index.html">基本表格设计</a></li>
+        <li><a href="example/forms/demo3/index.html">将表格分为几个部分</a></li>
+        <li><a href="example/forms/demo4/index.html">表单选择器 <code>Pickers</code></a></li>
+        <li><a href="example/forms/demo5/index.html">启用和禁用表单中的元素</a></li>
+        <li><a href="example/forms/demo6/index.html">显示和隐藏表单行</a></li>
+      </ul>
+      <h2 id="容器"><a class="anchor" aria-hidden="true" tabindex="-1" href="#容器"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>容器</h2>
+      <p>将视图放置在导航控制器等中</p>
+      <ul>
+        <li><a href="example/containers/demo1/index.html">使用容器</a></li>
+        <li><a href="example/containers/demo2/index.html">如何在导航视图中嵌入视图？</a></li>
+        <li><a href="example/containers/demo3/index.html">如何将栏项目添加到导航视图？</a></li>
+        <li><a href="example/containers/demo4/index.html">如何使用 <code>TabView</code> 将视图嵌入选项卡栏中？</a></li>
+        <li><a href="example/containers/demo5/index.html">如何使用 <code>tabViewStyle()</code> 创建内容的滚动页面？</a></li>
+        <li><a href="example/containers/demo6/index.html">如何将视图组合 <code>Group</code> 在一起？</a></li>
+        <li><a href="example/containers/demo7/index.html">如何隐藏和显示状态栏？</a></li>
+        <li><a href="example/containers/demo8/index.html">如何使用 <code>DisclosureGroup</code> 隐藏和显示内容？</a></li>
+        <li><a href="example/containers/demo9/index.html">如何创建工具栏并向其中添加按钮？</a></li>
+        <li><a href="example/containers/demo10/index.html">如何为 <code>iPadOS</code> 添加侧边栏？</a></li>
+        <li><a href="example/containers/demo11/index.html">如何隐藏和显示 <code>NavigationView</code> 侧边栏？</a></li>
+      </ul>
+      <h2 id="对话框和菜单"><a class="anchor" aria-hidden="true" tabindex="-1" href="#对话框和菜单"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>对话框和菜单</h2>
+      <p>发生某些情况时显示模式通知</p>
+      <ul>
+        <li><a href="example/alerts-and-menus/demo1/index.html">使用简介</a></li>
+        <li><a href="example/alerts-and-menus/demo2/index.html">如何显示 <code>alert</code>？</a></li>
+        <li><a href="example/alerts-and-menus/demo3/index.html">如何为 <code>alert</code> 按钮添加动作？</a></li>
+        <li><a href="example/alerts-and-menus/demo4/index.html">如何在单个视图中显示多个 <code>alert</code>？</a></li>
+        <li><a href="example/alerts-and-menus/demo5/index.html">如何显示动作面板？</a></li>
+        <li><a href="example/alerts-and-menus/demo6/index.html">如何显示上下文菜单？</a></li>
+        <li><a href="example/alerts-and-menus/demo7/index.html">如何使用 <code>appStoreOverlay()</code> 推荐另一个应用程序？</a></li>
+        <li><a href="example/alerts-and-menus/demo8/index.html">按下按钮时如何显示菜单？</a></li>
+        <li><a href="example/alerts-and-menus/demo9/index.html">如何让用户从菜单中选择选项？</a></li>
+        <li><a href="example/alerts-and-menus/demo10/index.html">如何更改 macOS 应用中主菜单？</a></li>
+        <li><a href="example/alerts-and-menus/demo11/index.html">如何添加偏好设置界面？</a></li>
+      </ul>
+      <h2 id="切换界面"><a class="anchor" aria-hidden="true" tabindex="-1" href="#切换界面"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>切换界面</h2>
+      <p>将您的用户从一个视图移动到另一个视图</p>
+      <ul>
+        <li><a href="example/presenting-views/demo1/index.html">如何将新视图推送到 <code>NavigationView</code> 上？</a></li>
+        <li><a href="example/presenting-views/demo2/index.html">点击列表行时如何推送新视图？</a></li>
+        <li><a href="example/presenting-views/demo3/index.html">如何在 <code>SwiftUI</code> 中使用程序化导航？</a></li>
+        <li><a href="example/presenting-views/demo3/index.html">如何显示弹出视图？</a></li>
+      </ul>
+      <h2 id="转换视图"><a class="anchor" aria-hidden="true" tabindex="-1" href="#转换视图"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>转换视图</h2>
+      <p>剪辑，大小，比例，旋转等</p>
+      <ul>
+        <li><a href="example/transforming-views/demo1/index.html">如何使用其偏移量调整视图的位置 <code>offset</code>？</a></li>
+        <li><a href="example/transforming-views/demo2/index.html">如何为视图周围的填充着色？</a></li>
+        <li><a href="example/transforming-views/demo3/index.html">如何堆叠修改器以创建更高级的效果？</a></li>
+        <li><a href="example/transforming-views/demo4/index.html">如何在视图周围绘制边框？</a></li>
+        <li><a href="example/transforming-views/demo5/index.html">如何在视图内绘制边框？</a></li>
+        <li><a href="example/transforming-views/demo6/index.html">如何创建行军蚂蚁边框动画效果？</a></li>
+        <li><a href="example/transforming-views/demo7/index.html">如何在视图周围绘制阴影？</a></li>
+        <li><a href="example/transforming-views/demo8/index.html">如何裁剪视图，以便仅可见部分？</a></li>
+        <li><a href="example/transforming-views/demo9/index.html">如何旋转视图？</a></li>
+        <li><a href="example/transforming-views/demo10/index.html">如何旋转 3D 视图？</a></li>
+        <li><a href="example/transforming-views/demo11/index.html">如何放大或缩小视图？</a></li>
+        <li><a href="example/transforming-views/demo12/index.html">如何圆角化一个视图？</a></li>
+        <li><a href="example/transforming-views/demo13/index.html">如何调整视图的不透明度？</a></li>
+        <li><a href="example/transforming-views/demo14/index.html">如何调整视图的强调色？</a></li>
+        <li><a href="example/transforming-views/demo15/index.html">如何用一个视图掩盖另一个视图？</a></li>
+        <li><a href="example/transforming-views/demo16/index.html">如何模糊视图？</a></li>
+        <li><a href="example/transforming-views/demo17/index.html">如何将视图融合在一起？</a></li>
+        <li><a href="example/transforming-views/demo18/index.html">如何通过着色，去饱和等来调整视图？</a></li>
+        <li><a href="example/transforming-views/demo19/index.html">使用 <code>ButtonStyle</code> 自定义按钮</a></li>
+        <li><a href="example/transforming-views/demo20/index.html">使用 <code>ProgressViewStyle</code> 自定义 <code>ProgressView</code></a></li>
+        <li><a href="example/transforming-views/demo21/index.html">使用 <code>ToggleStyle</code> 自定义 <code>Toggle</code></a></li>
+      </ul>
+      <h2 id="绘画"><a class="anchor" aria-hidden="true" tabindex="-1" href="#绘画"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>绘画</h2>
+      <p>使用自定义形状控制渲染</p>
+      <ul>
+        <li><a href="example/drawing/demo1/index.html">SwiftUI 的内置形状</a></li>
+        <li><a href="example/drawing/demo2/index.html">如何绘制自定义路径？</a></li>
+        <li><a href="example/drawing/demo3/index.html">如何绘制多边形和星星？</a></li>
+        <li><a href="example/drawing/demo4/index.html">如何画一个棋盘？</a></li>
+      </ul>
+      <h2 id="动画"><a class="anchor" aria-hidden="true" tabindex="-1" href="#动画"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>动画</h2>
+      <p>通过运动使您的界面栩栩如生</p>
+      <ul>
+        <li><a href="example/animation/demo1/index.html">如何创建基本动画？</a></li>
+        <li><a href="example/animation/demo2/index.html">如何制作弹簧动画？</a></li>
+        <li><a href="example/animation/demo3/index.html">如何为绑定值的变化制作动画？</a></li>
+        <li><a href="example/animation/demo4/index.html">如何创建显式动画？</a></li>
+        <li><a href="example/animation/demo5/index.html">如何延迟动画？</a></li>
+        <li><a href="example/animation/demo6/index.html">视图出现后如何立即启动动画？</a></li>
+        <li><a href="example/animation/demo7/index.html">如何在一个视图中应用多个动画？</a></li>
+        <li><a href="example/animation/demo8/index.html">如何使用 matchedGeometryEffect() 将动画从一个视图同步到另一个视图？</a></li>
+        <li><a href="example/animation/demo9/index.html">如何通过过渡添加和删除视图？</a></li>
+        <li><a href="example/animation/demo10/index.html">如何创建不对称过渡？</a></li>
+        <li><a href="example/animation/demo11/index.html">如何创建自定义过渡？</a></li>
+        <li><a href="example/animation/demo12/index.html">如何设置文字大小的动画？</a></li>
+        <li><a href="example/animation/demo13/index.html">如何用事务覆盖动画？</a></li>
+      </ul>
+      <h2 id="排版视图"><a class="anchor" aria-hidden="true" tabindex="-1" href="#排版视图"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>排版视图</h2>
+      <p>使您的UI结构更易于理解</p>
+      <ul>
+        <li><a href="example/composing-views/demo1/index.html">如何创建和排版自定义视图？</a></li>
+        <li><a href="example/composing-views/demo2/index.html">如何将文本视图结合在一起？</a></li>
+        <li><a href="example/composing-views/demo3/index.html">如何将视图存储为属性？</a></li>
+        <li><a href="example/composing-views/demo4/index.html">如何创建自定义修改程序？</a></li>
+        <li><a href="example/composing-views/demo5/index.html">如何为 <code>SwiftUI</code> 包装自定义 <code>UIView</code>？</a></li>
+        <li><a href="example/composing-views/demo6/index.html">如何为 <code>UIViewRepresentable</code> 结构创建修饰符？</a></li>
+        <li><a href="example/composing-views/demo7/index.html">如何将图像插入文本？</a></li>
+      </ul>
+      <h2 id="跨平台-swiftui"><a class="anchor" aria-hidden="true" tabindex="-1" href="#跨平台-swiftui"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>跨平台 SwiftUI</h2>
+      <p>学习让您的应用在任何地方都看起来很棒</p>
+      <ul>
+        <li><a href="example/cross-platform/demo1/index.html">学习一次，随处应用</a></li>
+        <li><a href="example/cross-platform/demo2/index.html">如何在 <code>macOS</code> 上获取半透明列表？</a></li>
+        <li><a href="example/cross-platform/demo3/index.html">如何在 <code>watchOS</code> 上制作轮播列表？</a></li>
+        <li><a href="example/cross-platform/demo4/index.html">如何使用 <code>digitalCrownRotation()</code> 在 <code>watchOS</code> 上读取 <code>Digital Crown</code>？</a></li>
+      </ul>
+      <h2 id="数据"><a class="anchor" aria-hidden="true" tabindex="-1" href="#数据"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>数据</h2>
+      <p>通过 <code>Core Data</code> 集成和更多功能处理数据</p>
+      <ul>
+        <li><a href="example/data/demo1/index.html">在 <code>SwiftUI</code> 中使用 <code>Core Data</code> 的简介</a></li>
+        <li><a href="example/data/demo2/index.html">如何配置核心数据以与 <code>SwiftUI</code> 一起使用？</a></li>
+        <li><a href="example/data/demo3/index.html">如何从 <code>SwiftUI</code> 视图访问 <code>Core Data</code> 管理的对象上下文？</a></li>
+        <li><a href="example/data/demo4/index.html">如何使用 <code>@FetchRequest</code> 创建核心数据获取请求？</a></li>
+        <li><a href="example/data/demo5/index.html">如何使用 <code>predicate</code> 过滤核心数据获取请求？</a></li>
+        <li><a href="example/data/demo6/index.html">如何从 <code>SwiftUI</code> 视图添加 <code>Core Data</code> 对象？</a></li>
+        <li><a href="example/data/demo7/index.html">如何从 <code>SwiftUI</code> 视图中删除 <code>Core Data</code> 对象？</a></li>
+        <li><a href="example/data/demo8/index.html">如何限制获取请求中的项目数？</a></li>
+        <li><a href="example/data/demo9/index.html">如何使用 <code>FileDocument</code> 和 <code>DocumentGroup</code> 创建基于文档的应用程序？</a></li>
+        <li><a href="example/data/demo10/index.html">如何使用 <code>fileExporter()</code> 导出文件？</a></li>
+        <li><a href="example/data/demo11/index.html">如何在 <code>SwiftUI</code> 中继续 <code>NSUserActivity</code>？</a></li>
+      </ul>
+      <h2 id="辅助功能"><a class="anchor" aria-hidden="true" tabindex="-1" href="#辅助功能"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>辅助功能</h2>
+      <p>如何使每个人都能使用您的应用</p>
+      <ul>
+        <li><a href="example/accessibility/demo1/index.html">SwiftUI 的可访问性简介</a></li>
+        <li><a href="example/accessibility/demo2/index.html">如何使用带有自定义字体的动态类型？</a></li>
+        <li><a href="example/accessibility/demo3/index.html">如何检测“减少运动”辅助功能设置？</a></li>
+        <li><a href="example/accessibility/demo4/index.html">如何检测暗模式？</a></li>
+        <li><a href="example/accessibility/demo5/index.html">如何使用装饰性图像减少屏幕阅读器的混乱？</a></li>
+        <li><a href="example/accessibility/demo6/index.html">如何在请求时减少动画？</a></li>
+      </ul>
+      <h2 id="工具"><a class="anchor" aria-hidden="true" tabindex="-1" href="#工具"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>工具</h2>
+      <p>使用Xcode的帮助构建更好的应用程序</p>
+      <ul>
+        <li><a href="example/tooling/demo1/index.html">如何以不同的动态类型大小预览布局？</a></li>
+        <li><a href="example/tooling/demo2/index.html">如何在亮(light)和黑暗(dark)模式下预览布局？</a></li>
+        <li><a href="example/tooling/demo3/index.html">如何在不同的设备中预览布局？</a></li>
+        <li><a href="example/tooling/demo4/index.html">如何在导航视图中预览布局?</a></li>
+        <li><a href="example/tooling/demo5/index.html">如何使用 <code>Instruments</code> 来配置您的 SwiftUI 代码并识 <code>identify</code> 布局？</a></li>
+        <li><a href="example/tooling/demo6/index.html">如何在 <code>SwiftUI</code> 中使用 <code>Touch ID</code> 和 <code>Face ID</code>?</a></li>
+      </ul>
+      <h2 id="附录a"><a class="anchor" aria-hidden="true" tabindex="-1" href="#附录a"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>附录A</h2>
+      <p>如何使用每个 SwiftUI 属性包装器</p>
+      <ul>
+        <li><a href="example/appendix-a/demo1/index.html">了解 Swift 和 SwiftUI 中的属性包装器</a></li>
+        <li><a href="example/appendix-a/demo2/index.html">所有 SwiftUI 属性包装器都进行了解释和比较</a></li>
+        <li><a href="example/appendix-a/demo3/index.html">什么是 <code>@State</code> 属性包装器？</a></li>
+        <li><a href="example/appendix-a/demo4/index.html">什么是 <code>@StateObject</code> 属性包装器？</a></li>
+        <li><a href="example/appendix-a/demo5/index.html">什么是 <code>@Published</code> 属性包装器？</a></li>
+        <li><a href="example/appendix-a/demo6/index.html">什么是 <code>@ObservedObject</code> 属性包装器？</a></li>
+        <li><a href="example/appendix-a/demo7/index.html">什么是 <code>@EnvironmentObject</code> 属性包装器？</a></li>
+        <li><a href="example/appendix-a/demo8/index.html">什么是 <code>@Environment</code> 属性包装器？</a></li>
+        <li><a href="example/appendix-a/demo9/index.html">什么是 <code>@Binding</code> 属性包装器？</a></li>
+        <li><a href="example/appendix-a/demo10/index.html">什么是 <code>@GestureState</code> 属性包装器？</a></li>
+        <li><a href="example/appendix-a/demo11/index.html">什么是 <code>@FetchRequest</code> 属性包装器？</a></li>
+        <li><a href="example/appendix-a/demo12/index.html">什么是 <code>@AppStorage</code> 属性包装器？</a></li>
+        <li><a href="example/appendix-a/demo13/index.html">什么是 <code>@SceneStorage</code> 属性包装器？</a></li>
+        <li><a href="example/appendix-a/demo14/index.html">什么是 <code>@ScaledMetric</code> 属性包装器？</a></li>
+        <li><a href="example/appendix-a/demo15/index.html">什么是 <code>@UIApplicationDelegateAdaptor</code> 属性包装器？</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

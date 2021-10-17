@@ -1,0 +1,1076 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SwiftUI 速查手册 - SwiftUI by Example v1.0.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta description="SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问题以及了解 SwiftUI 的实际工作方式。SwiftUI 速查手册 - SwiftUI by Example v1.0.0">
+    <meta keywords="SwiftUI,swift,Example,SwiftUI Example">
+    <style>.task-list-item { list-style-type: none;}.task-list-item label { font-weight: 400;}.task-list-item.enabled label { cursor: pointer;}.task-list-item+.task-list-item { margin-top: 3px;}.task-list-item .handle { display: none;}.task-list-item-checkbox { margin: 0 .2em .25em -1.6em; vertical-align: middle;}.wmde-markdown h1,.wmde-markdown h2,.wmde-markdown h3,.wmde-markdown h4,.wmde-markdown h5,.wmde-markdown h6 { font-weight: 600; line-height: 1.25; margin-bottom: 16px; margin-top: 24px;}.wmde-markdown h1 .anchor,.wmde-markdown h2 .anchor,.wmde-markdown h3 .anchor,.wmde-markdown h4 .anchor,.wmde-markdown h5 .anchor,.wmde-markdown h6 .anchor { float: left; padding-right: 4px; margin-left: -20px; line-height: 1;}.wmde-markdown h1 .octicon-link,.wmde-markdown h2 .octicon-link,.wmde-markdown h3 .octicon-link,.wmde-markdown h4 .octicon-link,.wmde-markdown h5 .octicon-link,.wmde-markdown h6 .octicon-link { visibility: hidden; vertical-align: middle;}.wmde-markdown h1:hover .octicon-link,.wmde-markdown h2:hover .octicon-link,.wmde-markdown h3:hover .octicon-link,.wmde-markdown h4:hover .octicon-link,.wmde-markdown h5:hover .octicon-link,.wmde-markdown h6:hover .octicon-link { visibility: visible;}.github-corner:hover .octo-arm { -webkit-animation: octocat-wave .56s ease-in-out; animation: octocat-wave .56s ease-in-out;}@-webkit-keyframes octocat-wave { 0%, to { -webkit-transform: rotate(0); transform: rotate(0); } 20%, 60% { -webkit-transform: rotate(-25deg); transform: rotate(-25deg); } 40%, 80% { -webkit-transform: rotate(10deg); transform: rotate(10deg); }}@keyframes octocat-wave { 0%, to { -webkit-transform: rotate(0); transform: rotate(0) } 20%, 60% { -webkit-transform: rotate(-25deg); transform: rotate(-25deg); } 40%, 80% { -webkit-transform: rotate(10deg); transform: rotate(10deg); }}.wmde-markdown { font-size: 16px; line-height: 1.5; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji; max-width: 1024px; margin: 28px auto 60px auto;}.wmde-markdown > :first-child { margin-top: 0 !important;}.wmde-markdown > :last-child { margin-bottom: 0 !important;}.wmde-markdown code[class*="language-"],.wmde-markdown pre[class*="language-"] { color: black; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; word-wrap: normal; -webkit-hyphens: none; hyphens: none;}.wmde-markdown pre code { background: none; overflow-wrap: normal; white-space: inherit; -moz-tab-size: 2; tab-size: 2; padding: 16px; font-size: 95%; line-height: 1.5; display: block; text-shadow: 0 1px #fff;}.wmde-markdown pre { margin-bottom: 18px; font-size: 85%; line-height: 1.45; position: relative; overflow-x: auto; background-color: #f6f8fa; border-radius: 3px;}.wmde-markdown code,.wmde-markdown tt { background-color: rgba(27, 31, 35, 0.05); border-radius: 3px; font-size: 85%; margin: 0; padding: 0.2em 0.4em;}.wmde-markdown pre,.wmde-markdown code,.wmde-markdown tt { font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;}.wmde-markdown img { max-width: 100%;}.wmde-markdown input { vertical-align: middle; margin: 0 0.2em 0.25em -1.6em;}.wmde-markdown input + p { display: inline;}.wmde-markdown h1,.wmde-markdown h2 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em;}.wmde-markdown h1,.wmde-markdown h2,.wmde-markdown h3,.wmde-markdown h4,.wmde-markdown h5,.wmde-markdown h6 { font-weight: 600; line-height: 1.25; margin-bottom: 16px; margin-top: 24px;}.wmde-markdown h1 .anchor,.wmde-markdown h2 .anchor,.wmde-markdown h3 .anchor,.wmde-markdown h4 .anchor,.wmde-markdown h5 .anchor,.wmde-markdown h6 .anchor { float: left; padding-right: 4px; margin-left: -20px; line-height: 1;}.wmde-markdown h1 .octicon-link,.wmde-markdown h2 .octicon-link,.wmde-markdown h3 .octicon-link,.wmde-markdown h4 .octicon-link,.wmde-markdown h5 .octicon-link,.wmde-markdown h6 .octicon-link { visibility: hidden; vertical-align: middle;}.wmde-markdown h1:hover .octicon-link,.wmde-markdown h2:hover .octicon-link,.wmde-markdown h3:hover .octicon-link,.wmde-markdown h4:hover .octicon-link,.wmde-markdown h5:hover .octicon-link,.wmde-markdown h6:hover .octicon-link { visibility: visible;}.wmde-markdown h1 { font-size: 2em;}.wmde-markdown h2 { font-size: 1.5em;}.wmde-markdown h3 { font-size: 1.25em;}.wmde-markdown h4 { font-size: 1em;}.wmde-markdown h5 { font-size: 0.875em;}.wmde-markdown h6 { font-size: 0.85em;}.wmde-markdown ol,.wmde-markdown ul { padding-left: 2em;}.wmde-markdown ol > p,.wmde-markdown ul > p { margin-bottom: 0;}.wmde-markdown ul { margin-bottom: 16px; margin-top: 0; list-style: initial;}.wmde-markdown > blockquote,.wmde-markdown > blockquote blockquote { margin: 0; border-left: 0.25em solid #dfe2e5; color: #6a737d; padding: 0 1em;}.wmde-markdown > blockquote > :last-child,.wmde-markdown > blockquote blockquote > :last-child { margin-bottom: 0;}.wmde-markdown > blockquote > :first-child,.wmde-markdown > blockquote blockquote > :first-child { margin-top: 0;}.wmde-markdown hr { margin: 1.5em auto; border: 0; border-top: 2px dotted #eee; height: 1px;}.wmde-markdown > table,.wmde-markdown > blockquote table { display: block; overflow: auto; width: 100%; border-collapse: collapse; border-spacing: 0; font-size: 14px;}.wmde-markdown > table tr,.wmde-markdown > blockquote table tr { background-color: #fff; border-top: 1px solid #c6cbd1;}.wmde-markdown > table td,.wmde-markdown > blockquote table td,.wmde-markdown > table th,.wmde-markdown > blockquote table th { border: 1px solid #dfe2e5; padding: 6px 13px;}.wmde-markdown blockquote,.wmde-markdown details,.wmde-markdown dl,.wmde-markdown ol,.wmde-markdown p,.wmde-markdown pre,.wmde-markdown table,.wmde-markdown ul { margin-bottom: 16px; margin-top: 0;}.wmde-markdown a { color: #0366d6; text-decoration: none;}.wmde-markdown a:hover { text-decoration: underline;}.wmde-markdown .namespace { opacity: 0.7;}.wmde-markdown .token.important { font-weight: normal;}.wmde-markdown .token.bold { font-weight: bold;}.wmde-markdown .token.italic { font-style: italic;}.wmde-markdown .token.entity { cursor: help;}.wmde-markdown kbd { background-color: #fafbfc; border-bottom-color: #d1d5da; border: 1px solid #d1d5da; border-radius: 3px; box-shadow: inset 0 -1px 0 #d1d5da; color: #56595d; display: inline-block; font-size: 10px; font-family: ui-monospace, SFMono-Regular, SF Mono, Consolas, Liberation Mono, Menlo, monospace; line-height: 10px; padding: 2px 4px; vertical-align: middle;}.wmde-markdown .token.tag .attr-value { color: #032f62;}.wmde-markdown .token.property,.wmde-markdown .token.tag,.wmde-markdown .token.boolean,.wmde-markdown .token.number,.wmde-markdown .token.function-name,.wmde-markdown .token.constant,.wmde-markdown .token.symbol,.wmde-markdown .token.deleted { color: #0060c9;}.wmde-markdown .token.punctuation { color: #a0a0a0;}.wmde-markdown code[class*="language-"] { color: black;}.wmde-markdown code[class*="language-"] .token.selector,.wmde-markdown code[class*="language-"] .token.attr-name,.wmde-markdown code[class*="language-"] .token.string,.wmde-markdown code[class*="language-"] .token.char,.wmde-markdown code[class*="language-"] .token.function,.wmde-markdown code[class*="language-"] .token.builtin { color: #6f42c1;}.wmde-markdown code[class*="language-"] .token.inserted { color: #22863a; background-color: #f0fff4;}.wmde-markdown code[class*="language-"] .token.deleted { color: #b31d28; background-color: #ffeef0;}.wmde-markdown code[class*="language-"] .token.class-name { color: #6f42c1;}.wmde-markdown code[class*="language-"] .code-block { color: #032f62;}.wmde-markdown code[class*="language-"] .token.comment,.wmde-markdown code[class*="language-"] .token.block-comment,.wmde-markdown code[class*="language-"] .token.prolog,.wmde-markdown code[class*="language-"] .token.doctype,.wmde-markdown code[class*="language-"] .token.cdata { color: #7D8B99;}.wmde-markdown code[class*="language-"] .token.punctuation { color: #a0a0a0;}.wmde-markdown code[class*="language-"] .token.operator,.wmde-markdown code[class*="language-"] .token.entity,.wmde-markdown code[class*="language-"] .token.url,.wmde-markdown code[class*="language-"] .token.variable { color: #d73a49; background: rgba(255, 255, 255, 0.5);}.wmde-markdown code[class*="language-"] .token.atrule,.wmde-markdown code[class*="language-"] .token.attr-value { color: #004698;}.wmde-markdown code[class*="language-"] .token.keyword { color: #d63200;}.wmde-markdown code[class*="language-"] .token.regex,.wmde-markdown code[class*="language-"] .token.important { color: #e90;}.wmde-markdown code[class*="language-"] .token.string { color: #0a53c1;}</style>
+    <style></style>
+  </head>
+  <body id="totop"><a aria-label="View source on GitHub" target="__blank" class="github-corner" href="https://github.com/jaywcjlove/swiftui-example.git"><svg width="54" height="54" viewBox="0 0 250 250" aria-hidden="true" style="fill: rgb(32, 34, 37); color: rgb(255, 255, 255); position: fixed; z-index: 99999; border: 0px; top: 0px; right: 0px;">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path style="transform-origin: 130px 106px;" class="octo-arm" fill="currentColor" d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"></path>
+        <path class="octo-body" fill="currentColor" d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"></path>
+      </svg></a>
+    <div class="wmde-markdown">
+      <h2 id="swiftui-速查手册"><a class="anchor" aria-hidden="true" tabindex="-1" href="#swiftui-速查手册"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>SwiftUI 速查手册</h2>
+      <details>
+        <summary>SwiftUI 与 UIKit 效果一致</summary>
+        <table>
+          <thead>
+            <tr>
+              <th>UIKit</th>
+              <th><a href="https://developer.apple.com/xcode/swiftui/">SwiftUI</a></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>UILabel</td>
+              <td><a href="#user-content-text">Text</a> &#x26; <a href="#user-content-label">Label</a></td>
+            </tr>
+            <tr>
+              <td>UIImageView</td>
+              <td><a href="#user-content-image">Image</a></td>
+            </tr>
+            <tr>
+              <td>UITextField</td>
+              <td><a href="#user-content-textfield">TextField</a> / <a href="#user-content-securefield">SecureField</a></td>
+            </tr>
+            <tr>
+              <td>UITextView</td>
+              <td><a href="#user-content-texteditor">TextEditor</a></td>
+            </tr>
+            <tr>
+              <td>UISwitch</td>
+              <td><a href="#user-content-toggle">Toggle</a></td>
+            </tr>
+            <tr>
+              <td>UISlider</td>
+              <td><a href="#user-content-slider">Slider</a></td>
+            </tr>
+            <tr>
+              <td>UIButton</td>
+              <td><a href="#user-content-button">Button</a></td>
+            </tr>
+            <tr>
+              <td>UITableView</td>
+              <td><a href="#user-content-list">List</a></td>
+            </tr>
+            <tr>
+              <td>UICollectionView</td>
+              <td><a href="#user-content-lazyvgrid">LazyVGrid</a> / <a href="#user-content-lazyhgrid">LazyHGrid</a></td>
+            </tr>
+            <tr>
+              <td>UINavigationController</td>
+              <td><a href="#user-content-navigationview">NavigationView</a></td>
+            </tr>
+            <tr>
+              <td>UITabBarController</td>
+              <td><a href="#user-content-tabview">TabView</a></td>
+            </tr>
+            <tr>
+              <td>UIAlertController with style .alert</td>
+              <td><a href="#user-content-alerts-and-action-sheets">Alert</a></td>
+            </tr>
+            <tr>
+              <td>UIAlertController with style .actionSheet</td>
+              <td><a href="#user-content-alerts-and-action-sheets">ActionSheet</a></td>
+            </tr>
+            <tr>
+              <td>UIStackView with horizontal axis</td>
+              <td><a href="#user-content-hstack">HStack</a> / <a href="#user-content-lazyhstack">LazyHStack</a></td>
+            </tr>
+            <tr>
+              <td>UIStackView with vertical axis</td>
+              <td><a href="#user-content-vstack">VStack</a> / <a href="#user-content-lazyvstack">LazyVStack</a></td>
+            </tr>
+            <tr>
+              <td>UISegmentedControl</td>
+              <td><a href="#user-content-picker">Picker</a></td>
+            </tr>
+            <tr>
+              <td>UIStepper</td>
+              <td><a href="#user-content-stepper">Stepper</a></td>
+            </tr>
+            <tr>
+              <td>UIDatePicker</td>
+              <td><a href="#user-content-date-picker">DatePicker</a></td>
+            </tr>
+            <tr>
+              <td>NSAttributedString</td>
+              <td>No equivalent (use <a href="#user-content-text">Text</a>)</td>
+            </tr>
+            <tr>
+              <td>MapKit</td>
+              <td><a href="#user-content-map">Map</a></td>
+            </tr>
+            <tr>
+              <td>UIProgressView</td>
+              <td><a href="#user-content-progressview">ProgressView</a></td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td><a href="#user-content-modal">Modal</a></td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td><a href="#user-content-scrollview">ScrollView</a></td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td><a href="#user-content-form">Form</a></td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td><a href="#user-content-spacer">Spacer</a></td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td><a href="#user-content-divider">Divider</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+      <h2 id="view"><a class="anchor" aria-hidden="true" tabindex="-1" href="#view"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>View</h2>
+      <details>
+        <summary id="Text">Text</summary>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Hello World"</span></span><span class="token punctuation">)</span>
+</code></pre>
+        <p>添加样式</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Hello World"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">font</span><span class="token punctuation">(</span><span class="token punctuation">.</span>largeTitle<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">foregroundColor</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span>green<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">lineSpacing</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">lineLimit</span><span class="token punctuation">(</span><span class="token nil constant">nil</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">padding</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+        <p>在文本视图中格式化文本</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token keyword">static</span> <span class="token keyword">let</span> dateFormatter<span class="token punctuation">:</span> <span class="token class-name">DateFormatter</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> formatter <span class="token operator">=</span> <span class="token class-name">DateFormatter</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    formatter<span class="token punctuation">.</span>dateStyle <span class="token operator">=</span> <span class="token punctuation">.</span>long
+    <span class="token keyword">return</span> formatter
+<span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">var</span> now <span class="token operator">=</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> body<span class="token punctuation">:</span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Task due date: </span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation">now<span class="token punctuation">,</span> formatter<span class="token punctuation">:</span> <span class="token keyword">Self</span><span class="token punctuation">.</span>dateFormatter</span><span class="token interpolation-punctuation punctuation">)</span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+      </details>
+      <details>
+        <summary id="Label">Label</summary>
+        <p>可以使用以下代码行在文本旁边设置图标。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">Label</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"SwiftUI CheatSheet"</span></span><span class="token punctuation">,</span> systemImage<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"up.icloud"</span></span><span class="token punctuation">)</span>
+</code></pre>
+        <p>可以设置URL，单击后将重定向到浏览器。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">Link</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Click me"</span></span><span class="token punctuation">,</span> destination<span class="token punctuation">:</span> <span class="token function">URL</span><span class="token punctuation">(</span>string<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"your_url"</span></span><span class="token punctuation">)</span><span class="token operator">!</span><span class="token punctuation">)</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/label">Label</a></p>
+      </details>
+      <details>
+        <summary id="TextEditor">TextEditor 多行可滚动文本编辑器</summary>
+        <p>可以显示和编辑长格式文本的视图。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">private</span> <span class="token keyword">var</span> fullText<span class="token punctuation">:</span> <span class="token class-name">String</span> <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"This is some editable text..."</span></span>
+
+<span class="token keyword">var</span> body<span class="token punctuation">:</span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+    <span class="token class-name">TextEditor</span><span class="token punctuation">(</span>text<span class="token punctuation">:</span> $fullText<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>设置 <code>TextEditor</code> 背景颜色</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token keyword">extension</span> <span class="token class-name">NSTextView</span> <span class="token punctuation">{</span>
+    <span class="token keyword">open</span> <span class="token keyword">override</span> <span class="token keyword">var</span> frame<span class="token punctuation">:</span> <span class="token class-name">CGRect</span> <span class="token punctuation">{</span>
+        <span class="token keyword">didSet</span> <span class="token punctuation">{</span>
+            backgroundColor <span class="token operator">=</span> <span class="token punctuation">.</span>clear
+<span class="token comment">//            drawsBackground = true</span>
+        <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">struct</span> <span class="token class-name">DetailContent</span><span class="token punctuation">:</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+    <span class="token attribute atrule">@State</span> <span class="token keyword">private</span> <span class="token keyword">var</span> profileText<span class="token punctuation">:</span> <span class="token class-name">String</span> <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"Enter your bio"</span></span>
+    <span class="token keyword">var</span> body<span class="token punctuation">:</span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+        <span class="token class-name">VSplitView</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token class-name">TextEditor</span><span class="token punctuation">(</span>text<span class="token punctuation">:</span> $profileText<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">background</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span>red<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/texteditor">TextEditor</a></p>
+      </details>
+      <details>
+        <summary id="Image">Image</summary>
+        <p>显示与环境相关的图像的视图。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"foo"</span></span><span class="token punctuation">)</span> <span class="token comment">// 图像名称是foo</span>
+</code></pre>
+        <p>我们可以使用新的 <code>SF Symbols</code></p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">Image</span><span class="token punctuation">(</span>systemName<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"clock.fill"</span></span><span class="token punctuation">)</span>
+</code></pre>
+        <p>您可以向系统图标集添加样式以匹配您使用的字体</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">Image</span><span class="token punctuation">(</span>systemName<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"cloud.heavyrain.fill"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">foregroundColor</span><span class="token punctuation">(</span><span class="token punctuation">.</span>red<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">font</span><span class="token punctuation">(</span><span class="token punctuation">.</span>title<span class="token punctuation">)</span>
+<span class="token class-name">Image</span><span class="token punctuation">(</span>systemName<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"clock"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">foregroundColor</span><span class="token punctuation">(</span><span class="token punctuation">.</span>red<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">font</span><span class="token punctuation">(</span><span class="token class-name">Font</span><span class="token punctuation">.</span><span class="token function">system</span><span class="token punctuation">(</span><span class="token punctuation">.</span>largeTitle<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">bold</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+        <p>为图像添加样式</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"foo"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">resizable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 它将调整大小，以便填充所有可用空间</span>
+    <span class="token punctuation">.</span><span class="token function">aspectRatio</span><span class="token punctuation">(</span>contentMode<span class="token punctuation">:</span> <span class="token punctuation">.</span>fit<span class="token punctuation">)</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/image">Image</a></p>
+      </details>
+      <details>
+        <summary id="TextField">TextField</summary>
+        <p>显示可编辑文本界面的控件。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> name<span class="token punctuation">:</span> <span class="token class-name">String</span> <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"John"</span></span>    
+<span class="token keyword">var</span> body<span class="token punctuation">:</span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+    <span class="token class-name">TextField</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Name's placeholder"</span></span><span class="token punctuation">,</span> text<span class="token punctuation">:</span> $name<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">textFieldStyle</span><span class="token punctuation">(</span><span class="token class-name">RoundedBorderTextFieldStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">padding</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>取消编辑框焦点样式。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token keyword">extension</span> <span class="token class-name">NSTextField</span> <span class="token punctuation">{</span> <span class="token comment">// &#x3C;&#x3C; workaround !!!</span>
+    <span class="token keyword">open</span> <span class="token keyword">override</span> <span class="token keyword">var</span> focusRingType<span class="token punctuation">:</span> <span class="token class-name">NSFocusRingType</span> <span class="token punctuation">{</span>
+        <span class="token keyword">get</span> <span class="token punctuation">{</span> <span class="token punctuation">.</span><span class="token keyword">none</span> <span class="token punctuation">}</span>
+        <span class="token keyword">set</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>如何居中放置 <code>TextField</code> 的文本</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token keyword">struct</span> <span class="token class-name">ContentView</span><span class="token punctuation">:</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+    <span class="token attribute atrule">@State</span> <span class="token keyword">var</span> text<span class="token punctuation">:</span> <span class="token class-name">String</span> <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"TextField Text"</span></span>
+    <span class="token keyword">var</span> body<span class="token punctuation">:</span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+        <span class="token class-name">TextField</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Placeholder Text"</span></span><span class="token punctuation">,</span> text<span class="token punctuation">:</span> $text<span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">padding</span><span class="token punctuation">(</span><span class="token punctuation">.</span>all<span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">multilineTextAlignment</span><span class="token punctuation">(</span><span class="token punctuation">.</span>center<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/textfield">TextField</a></p>
+      </details>
+      <details>
+        <summary id="SecureField">SecureField</summary>
+        <p>用户安全地输入私人文本的控件。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> password<span class="token punctuation">:</span> <span class="token class-name">String</span> <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"1234"</span></span>    
+<span class="token keyword">var</span> body<span class="token punctuation">:</span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+    <span class="token class-name">SecureField</span><span class="token punctuation">(</span>$password<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">textFieldStyle</span><span class="token punctuation">(</span><span class="token class-name">RoundedBorderTextFieldStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">padding</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/securefield">SecureField</a></p>
+      </details>
+      <details>
+        <summary id="Toggle">Toggle</summary>
+        <p>在打开和关闭状态之间切换的控件。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> isShowing <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token comment">// toggle state</span>
+
+<span class="token class-name">Toggle</span><span class="token punctuation">(</span>isOn<span class="token punctuation">:</span> $isShowing<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Hello World"</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>如果您的 <code>Toggle</code> 的标签只有 <code>Text</code>，则可以使用此更简单的签名进行初始化。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">Toggle</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Hello World"</span></span><span class="token punctuation">,</span> isOn<span class="token punctuation">:</span> $isShowing<span class="token punctuation">)</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/toggle">Toggle</a></p>
+      </details>
+      <details>
+        <summary id="Slider">Slider</summary>
+        <p>用于从值的有界线性范围中选择一个值的控件。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> progress<span class="token punctuation">:</span> <span class="token class-name">Float</span> <span class="token operator">=</span> <span class="token number">0</span>
+
+<span class="token class-name">Slider</span><span class="token punctuation">(</span>value<span class="token punctuation">:</span> $progress<span class="token punctuation">,</span> from<span class="token punctuation">:</span> <span class="token number">0.0</span><span class="token punctuation">,</span> through<span class="token punctuation">:</span> <span class="token number">100.0</span><span class="token punctuation">,</span> by<span class="token punctuation">:</span> <span class="token number">5.0</span><span class="token punctuation">)</span>
+</code></pre>
+        <p>滑块缺少 <code>minimumValueImage</code> 和 <code>maximumValueImage</code>，但是我们可以通过 <code>HStack</code> 轻松地复制它</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> progress<span class="token punctuation">:</span> <span class="token class-name">Float</span> <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token class-name">HStack</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Image</span><span class="token punctuation">(</span>systemName<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"sun.min"</span></span><span class="token punctuation">)</span>
+    <span class="token class-name">Slider</span><span class="token punctuation">(</span>value<span class="token punctuation">:</span> $progress<span class="token punctuation">,</span> from<span class="token punctuation">:</span> <span class="token number">0.0</span><span class="token punctuation">,</span> through<span class="token punctuation">:</span> <span class="token number">100.0</span><span class="token punctuation">,</span> by<span class="token punctuation">:</span> <span class="token number">5.0</span><span class="token punctuation">)</span>
+    <span class="token class-name">Image</span><span class="token punctuation">(</span>systemName<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"sun.max.fill"</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">padding</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/slider">Slider</a></p>
+      </details>
+      <details>
+        <summary id="Slider">Button</summary>
+        <p>在触发时执行操作的控件。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">Button</span><span class="token punctuation">(</span>
+    action<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"did tap"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    label<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Click Me"</span></span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+</code></pre>
+        <p>如果 <code>Button</code> 的标签仅为 <code>Text</code>，则可以使用此更简单的签名进行初始化。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">Button</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Click Me"</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"did tap"</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>您可以通过此按钮了解一下</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">Button</span><span class="token punctuation">(</span>action<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 退出应用</span>
+    <span class="token class-name">NSApplication</span><span class="token punctuation">.</span>shared<span class="token punctuation">.</span><span class="token function">terminate</span><span class="token punctuation">(</span><span class="token keyword">self</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> label<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Image</span><span class="token punctuation">(</span>systemName<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"clock"</span></span><span class="token punctuation">)</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Click Me"</span></span><span class="token punctuation">)</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Subtitle"</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">foregroundColor</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span>white<span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">padding</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">background</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span>blue<span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">cornerRadius</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/button">Button</a></p>
+      </details>
+      <details>
+        <summary id="TabView">TabView</summary>
+        <p>一个视图，允许使用可交互的用户界面元素在多个子视图之间进行切换。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">TabView</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"First View"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">font</span><span class="token punctuation">(</span><span class="token punctuation">.</span>title<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">tabItem</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"First"</span></span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">tag</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Second View"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">font</span><span class="token punctuation">(</span><span class="token punctuation">.</span>title<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">tabItem</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Second"</span></span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">tag</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>图像和文本在一起。 您可以在此处使用 <code>SF Symbol</code>。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">TabView</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"First View"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">font</span><span class="token punctuation">(</span><span class="token punctuation">.</span>title<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">tabItem</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            <span class="token class-name">Image</span><span class="token punctuation">(</span>systemName<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"circle"</span></span><span class="token punctuation">)</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"First"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">tag</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Second View"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">font</span><span class="token punctuation">(</span><span class="token punctuation">.</span>title<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">tabItem</span><span class="token punctuation">(</span><span class="token class-name">VStack</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"second"</span></span><span class="token punctuation">)</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Second"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">tag</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+      </details>
+      <details>
+        <summary id="Picker">Picker</summary>
+        <p>用于从一组互斥值中进行选择的控件。</p>
+        <p>选择器样式的更改基于其祖先，在 <code>Form</code> 或 <code>List</code> 下，它显示为单个列表行，您可以点击以进入一个显示所有可能选项的新屏幕。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">NavigationView</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Form</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Section</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Picker</span><span class="token punctuation">(</span>selection<span class="token punctuation">:</span> $selection<span class="token punctuation">,</span> label<span class="token punctuation">:</span>
+                <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Picker Name"</span></span><span class="token punctuation">)</span>
+                <span class="token punctuation">,</span> content<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Value 1"</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">tag</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+                    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Value 2"</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">tag</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+                    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Value 3"</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">tag</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+                    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Value 4"</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">tag</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>您可以使用 <code>.pickerStyle(WheelPickerStyle())</code> 覆盖样式。</p>
+        <p>在 <code>SwiftUI</code> 中，<code>UISegmentedControl</code> 只是 <code>Picker</code>的另一种样式。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> mapChoioce <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">var</span> settings <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string-literal"><span class="token string">"Map"</span></span><span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">"Transit"</span></span><span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">"Satellite"</span></span><span class="token punctuation">]</span>
+<span class="token class-name">Picker</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Options"</span></span><span class="token punctuation">,</span> selection<span class="token punctuation">:</span> $mapChoioce<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">ForEach</span><span class="token punctuation">(</span><span class="token number">0</span> <span class="token operator">..&#x3C;</span> settings<span class="token punctuation">.</span>count<span class="token punctuation">)</span> <span class="token punctuation">{</span> index <span class="token keyword">in</span>
+        <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token keyword">self</span><span class="token punctuation">.</span>settings<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">tag</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">pickerStyle</span><span class="token punctuation">(</span><span class="token class-name">SegmentedPickerStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+        <p>分段控制(SegmentedControl)在 <code>iOS 13</code> 中也焕然一新</p>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/picker">Picker</a></p>
+      </details>
+      <details>
+        <summary id="Stepper">Stepper</summary>
+        <p>用于执行语义递增和递减操作的控件。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> quantity<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token class-name">Stepper</span><span class="token punctuation">(</span>value<span class="token punctuation">:</span> $quantity<span class="token punctuation">,</span> <span class="token keyword">in</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token operator">...</span><span class="token number">10</span><span class="token punctuation">,</span> label<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Quantity </span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation">quantity</span><span class="token interpolation-punctuation punctuation">)</span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+        <p>如果 <code>Stepper</code> 的标签只有 <code>Text</code>，则可以使用此更简单的签名进行初始化。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">Stepper</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Quantity </span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation">quantity</span><span class="token interpolation-punctuation punctuation">)</span><span class="token string">"</span></span><span class="token punctuation">,</span> value<span class="token punctuation">:</span> $quantity<span class="token punctuation">,</span> <span class="token keyword">in</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token operator">...</span><span class="token number">10</span><span class="token punctuation">)</span>
+</code></pre>
+        <p>如果要完全控制，他们可以提供裸机步进器，您可以在其中管理自己的数据源。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> quantity<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token class-name">Stepper</span><span class="token punctuation">(</span>onIncrement<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token keyword">self</span><span class="token punctuation">.</span>quantity <span class="token operator">+=</span> <span class="token number">1</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> onDecrement<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token keyword">self</span><span class="token punctuation">.</span>quantity <span class="token operator">-=</span> <span class="token number">1</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> label<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Quantity </span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation">quantity</span><span class="token interpolation-punctuation punctuation">)</span><span class="token string">"</span></span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+        <p>如果您还为带有 <code>step</code> 的初始化程序的每个步骤指定了一个值的数量。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">Stepper</span><span class="token punctuation">(</span>value<span class="token punctuation">:</span> $quantity<span class="token punctuation">,</span> <span class="token keyword">in</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token operator">...</span><span class="token number">10</span><span class="token punctuation">,</span> step<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Quantity </span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation">quantity</span><span class="token interpolation-punctuation punctuation">)</span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/stepper">Stepper</a></p>
+      </details>
+      <details>
+        <summary id="DatePicker">DatePicker</summary>
+        <p>用于选择绝对日期的控件。</p>
+        <p>日期选择器(DatePicker)的样式也会根据其祖先而改变。 在 <code>Form</code> 或 <code>List</code> 下，它显示为单个列表行，您可以点击以展开到日期选择器（就像日历应用程序一样）。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> selectedDate <span class="token operator">=</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">var</span> dateClosedRange<span class="token punctuation">:</span> <span class="token class-name">ClosedRange</span><span class="token operator">&#x3C;</span><span class="token class-name">Date</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> min <span class="token operator">=</span> <span class="token class-name">Calendar</span><span class="token punctuation">.</span>current<span class="token punctuation">.</span><span class="token function">date</span><span class="token punctuation">(</span>byAdding<span class="token punctuation">:</span> <span class="token punctuation">.</span>day<span class="token punctuation">,</span> value<span class="token punctuation">:</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> to<span class="token punctuation">:</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">!</span>
+    <span class="token keyword">let</span> max <span class="token operator">=</span> <span class="token class-name">Calendar</span><span class="token punctuation">.</span>current<span class="token punctuation">.</span><span class="token function">date</span><span class="token punctuation">(</span>byAdding<span class="token punctuation">:</span> <span class="token punctuation">.</span>day<span class="token punctuation">,</span> value<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> to<span class="token punctuation">:</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">!</span>
+    <span class="token keyword">return</span> min<span class="token operator">...</span>max
+<span class="token punctuation">}</span>
+<span class="token class-name">NavigationView</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Form</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Section</span> <span class="token punctuation">{</span>
+            <span class="token class-name">DatePicker</span><span class="token punctuation">(</span>
+                selection<span class="token punctuation">:</span> $selectedDate<span class="token punctuation">,</span>
+                <span class="token keyword">in</span><span class="token punctuation">:</span> dateClosedRange<span class="token punctuation">,</span>
+                displayedComponents<span class="token punctuation">:</span> <span class="token punctuation">.</span>date<span class="token punctuation">,</span>
+                label<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Due Date"</span></span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+            <span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>在表格和列表的外部，它显示为普通的轮式拾取器</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> selectedDate <span class="token operator">=</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">var</span> dateClosedRange<span class="token punctuation">:</span> <span class="token class-name">ClosedRange</span><span class="token operator">&#x3C;</span><span class="token class-name">Date</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> min <span class="token operator">=</span> <span class="token class-name">Calendar</span><span class="token punctuation">.</span>current<span class="token punctuation">.</span><span class="token function">date</span><span class="token punctuation">(</span>byAdding<span class="token punctuation">:</span> <span class="token punctuation">.</span>day<span class="token punctuation">,</span> value<span class="token punctuation">:</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> to<span class="token punctuation">:</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">!</span>
+    <span class="token keyword">let</span> max <span class="token operator">=</span> <span class="token class-name">Calendar</span><span class="token punctuation">.</span>current<span class="token punctuation">.</span><span class="token function">date</span><span class="token punctuation">(</span>byAdding<span class="token punctuation">:</span> <span class="token punctuation">.</span>day<span class="token punctuation">,</span> value<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> to<span class="token punctuation">:</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">!</span>
+    <span class="token keyword">return</span> min<span class="token operator">...</span>max
+<span class="token punctuation">}</span>
+
+<span class="token class-name">DatePicker</span><span class="token punctuation">(</span>
+    selection<span class="token punctuation">:</span> $selectedDate<span class="token punctuation">,</span>
+    <span class="token keyword">in</span><span class="token punctuation">:</span> dateClosedRange<span class="token punctuation">,</span>
+    displayedComponents<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">.</span>hourAndMinute<span class="token punctuation">,</span> <span class="token punctuation">.</span>date<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    label<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Due Date"</span></span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+</code></pre>
+        <p>如果 <code>DatePicker</code> 的标签仅是纯文本，则可以使用此更简单的签名进行初始化。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">DatePicker</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Due Date"</span></span><span class="token punctuation">,</span>
+            selection<span class="token punctuation">:</span> $selectedDate<span class="token punctuation">,</span>
+            <span class="token keyword">in</span><span class="token punctuation">:</span> dateClosedRange<span class="token punctuation">,</span>
+            displayedComponents<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">.</span>hourAndMinute<span class="token punctuation">,</span> <span class="token punctuation">.</span>date<span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+        <p>可以使用 <code>ClosedRange</code>，<code>PartialRangeThrough</code> 和 <code>PartialRangeFrom</code> 来设置 <code>minimumDate</code> 和 <code>maximumDate</code>。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">DatePicker</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Minimum Date"</span></span><span class="token punctuation">,</span>
+    selection<span class="token punctuation">:</span> $selectedDate<span class="token punctuation">,</span>
+    <span class="token keyword">in</span><span class="token punctuation">:</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">...</span><span class="token punctuation">,</span>
+    displayedComponents<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">.</span>date<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token class-name">DatePicker</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Maximum Date"</span></span><span class="token punctuation">,</span>
+    selection<span class="token punctuation">:</span> $selectedDate<span class="token punctuation">,</span>
+    <span class="token keyword">in</span><span class="token punctuation">:</span> <span class="token operator">...</span><span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    displayedComponents<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">.</span>date<span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/datepicker">DatePicker</a></p>
+      </details>
+      <details>
+        <summary id="Map">Map</summary>
+        <p>显示嵌入式地图界面的视图。</p>
+        <p>显示指定区域的地图</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token keyword">import</span> <span class="token class-name">MapKit</span>
+
+<span class="token attribute atrule">@State</span> <span class="token keyword">var</span> region <span class="token operator">=</span> <span class="token class-name">MKCoordinateRegion</span><span class="token punctuation">(</span>center<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token keyword">init</span><span class="token punctuation">(</span>latitude<span class="token punctuation">:</span> <span class="token number">37.334722</span><span class="token punctuation">,</span> longitude<span class="token punctuation">:</span> <span class="token operator">-</span><span class="token number">122.008889</span><span class="token punctuation">)</span><span class="token punctuation">,</span> latitudinalMeters<span class="token punctuation">:</span> <span class="token number">300</span><span class="token punctuation">,</span> longitudinalMeters<span class="token punctuation">:</span> <span class="token number">300</span><span class="token punctuation">)</span>
+    
+<span class="token class-name">Map</span><span class="token punctuation">(</span>coordinateRegion<span class="token punctuation">:</span> $region<span class="token punctuation">)</span>
+</code></pre>
+        <p>您可以通过指定 <code>interactionModes</code>（使用<code>[]</code>禁用所有交互）来控制地图的交互。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token keyword">struct</span> <span class="token class-name">PinItem</span><span class="token punctuation">:</span> <span class="token class-name">Identifiable</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> id <span class="token operator">=</span> <span class="token function">UUID</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">let</span> coordinate<span class="token punctuation">:</span> <span class="token class-name">CLLocationCoordinate2D</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Map</span><span class="token punctuation">(</span>coordinateRegion<span class="token punctuation">:</span> $region<span class="token punctuation">,</span> 
+    interactionModes<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> 
+    showsUserLocation<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> 
+    userTrackingMode<span class="token punctuation">:</span> <span class="token nil constant">nil</span><span class="token punctuation">,</span> 
+    annotationItems<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token class-name">PinItem</span><span class="token punctuation">(</span>coordinate<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token keyword">init</span><span class="token punctuation">(</span>latitude<span class="token punctuation">:</span> <span class="token number">37.334722</span><span class="token punctuation">,</span> longitude<span class="token punctuation">:</span> <span class="token operator">-</span><span class="token number">122.008889</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> item <span class="token keyword">in</span>                    
+    <span class="token class-name">MapMarker</span><span class="token punctuation">(</span>coordinate<span class="token punctuation">:</span> item<span class="token punctuation">.</span>coordinate<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/mapkit/map">Map</a></p>
+      </details>
+      <details>
+        <summary id="ProgressView">ProgressView</summary>
+        <p>显示任务完成进度的视图。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">private</span> <span class="token keyword">var</span> progress <span class="token operator">=</span> <span class="token number">0.5</span>
+
+<span class="token class-name">VStack</span> <span class="token punctuation">{</span>
+    <span class="token class-name">ProgressView</span><span class="token punctuation">(</span>value<span class="token punctuation">:</span> progress<span class="token punctuation">)</span>
+    <span class="token class-name">Button</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"More"</span></span><span class="token punctuation">,</span> action<span class="token punctuation">:</span> <span class="token punctuation">{</span> progress <span class="token operator">+=</span> <span class="token number">0.05</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>通过应用 <code>CircularProgressViewStyle</code>，可以将其用作 <code>UIActivityIndicatorView</code>。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">ProgressView</span><span class="token punctuation">(</span>value<span class="token punctuation">:</span> progress<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">progressViewStyle</span><span class="token punctuation">(</span><span class="token class-name">CircularProgressViewStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/progressview">ProgressView</a></p>
+      </details>
+      <h2 id="查看布局和演示"><a class="anchor" aria-hidden="true" tabindex="-1" href="#查看布局和演示"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>查看布局和演示</h2>
+      <details>
+        <summary id="HStack">HStack</summary>
+        <p>将其子级排列在一条水平线上的视图。</p>
+        <p>创建静态可滚动列表</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">HStack</span> <span class="token punctuation">(</span>alignment<span class="token punctuation">:</span> <span class="token punctuation">.</span>center<span class="token punctuation">,</span> spacing<span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Hello"</span></span><span class="token punctuation">)</span>
+    <span class="token class-name">Divider</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"World"</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>Documentation - HStack</p>
+      </details>
+      <details>
+        <summary id="LazyHStack">LazyHStack</summary>
+        <p>将子项排列在水平增长的线中的视图，仅在需要时创建项。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">ScrollView</span><span class="token punctuation">(</span><span class="token punctuation">.</span>horizontal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">LazyHStack</span><span class="token punctuation">(</span>alignment<span class="token punctuation">:</span> <span class="token punctuation">.</span>center<span class="token punctuation">,</span> spacing<span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ForEach</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">...</span><span class="token number">100</span><span class="token punctuation">,</span> id<span class="token punctuation">:</span> <span class="token punctuation">\</span><span class="token punctuation">.</span><span class="token keyword">self</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Column </span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation"><span class="token short-argument">$0</span></span><span class="token interpolation-punctuation punctuation">)</span><span class="token string">"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>Documentation - LazyHStack</p>
+      </details>
+      <details>
+        <summary id="VStack">VStack</summary>
+        <p>以垂直线排列其子项的视图。</p>
+        <p>创建静态可滚动列表</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">VStack</span> <span class="token punctuation">(</span>alignment<span class="token punctuation">:</span> <span class="token punctuation">.</span>center<span class="token punctuation">,</span> spacing<span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Hello"</span></span><span class="token punctuation">)</span>
+    <span class="token class-name">Divider</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"World"</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>Documentation - VStack</p>
+      </details>
+      <details>
+        <summary id="LazyVStack">LazyVStack</summary>
+        <p><code>iOS 14</code></p>
+        <p>一种视图，将其子级排列在垂直增长的线中，仅在需要时创建项。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">ScrollView</span> <span class="token punctuation">{</span>
+    <span class="token class-name">LazyVStack</span><span class="token punctuation">(</span>alignment<span class="token punctuation">:</span> <span class="token punctuation">.</span>leading<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ForEach</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">...</span><span class="token number">100</span><span class="token punctuation">,</span> id<span class="token punctuation">:</span> <span class="token punctuation">\</span><span class="token punctuation">.</span><span class="token keyword">self</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Row </span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation"><span class="token short-argument">$0</span></span><span class="token interpolation-punctuation punctuation">)</span><span class="token string">"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/lazyvstack">LazyVStack</a></p>
+      </details>
+      <details>
+        <summary id="ZStack">ZStack</summary>
+        <p>覆盖其子项的视图，使子项在两个轴上对齐。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">ZStack</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Hello"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">padding</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">background</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span>red<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">opacity</span><span class="token punctuation">(</span><span class="token number">0.8</span><span class="token punctuation">)</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"World"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">padding</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">background</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span>red<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">offset</span><span class="token punctuation">(</span>x<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> y<span class="token punctuation">:</span> <span class="token number">40</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>Documentation - ZStack</p>
+      </details>
+      <details>
+        <summary id="List">List</summary>
+        <p>一个容器，用于显示排列在单列中的数据行。</p>
+        <p>创建静态可滚动列表</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">List</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Hello world"</span></span><span class="token punctuation">)</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Hello world"</span></span><span class="token punctuation">)</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Hello world"</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>可混合的列表</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">List</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Hello world"</span></span><span class="token punctuation">)</span>
+    <span class="token class-name">Image</span><span class="token punctuation">(</span>systemName<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"clock"</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>创建动态列表</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token keyword">let</span> names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string-literal"><span class="token string">"John"</span></span><span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">"Apple"</span></span><span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">"Seed"</span></span><span class="token punctuation">]</span>
+<span class="token class-name">List</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span> <span class="token punctuation">{</span> name <span class="token keyword">in</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>添加 <code>Section</code></p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">List</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Section</span><span class="token punctuation">(</span>header<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"UIKit"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> footer<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"We will miss you"</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"UITableView"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token class-name">Section</span><span class="token punctuation">(</span>header<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"SwiftUI"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> footer<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"A lot to learn"</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"List"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>要使其分组，请添加 <code>.listStyle(GroupedListStyle())</code></p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">List</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Section</span><span class="token punctuation">(</span>header<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"UIKit"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> footer<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"We will miss you"</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"UITableView"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token class-name">Section</span><span class="token punctuation">(</span>header<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"SwiftUI"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> footer<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"A lot to learn"</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"List"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">listStyle</span><span class="token punctuation">(</span><span class="token class-name">GroupedListStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+        <p>要使其插入分组(<code>.insetGrouped</code>)，请添加 <code>.listStyle(GroupedListStyle())</code> 并强制使用常规水平尺寸类 <code>.environment(\.horizontalSizeClass, .regular)</code>。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">List</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Section</span><span class="token punctuation">(</span>header<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"UIKit"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> footer<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"We will miss you"</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"UITableView"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token class-name">Section</span><span class="token punctuation">(</span>header<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"SwiftUI"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> footer<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"A lot to learn"</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"List"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">listStyle</span><span class="token punctuation">(</span><span class="token class-name">GroupedListStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">environment</span><span class="token punctuation">(</span><span class="token punctuation">\</span><span class="token punctuation">.</span>horizontalSizeClass<span class="token punctuation">,</span> <span class="token punctuation">.</span>regular<span class="token punctuation">)</span>
+</code></pre>
+        <blockquote>
+          <p>插图分组已添加到 <code>iOS 13.2</code> 中的 <code>SwiftUI</code></p>
+        </blockquote>
+        <p><code>iOS 14</code></p>
+        <p>在 <code>iOS 14</code> 中，我们为此设置了专用样式。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token punctuation">.</span><span class="token function">listStyle</span><span class="token punctuation">(</span><span class="token class-name">InsetGroupedListStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/list">List</a></p>
+      </details>
+      <details>
+        <summary id="ScrollView">ScrollView</summary>
+        <p>滚动视图。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">ScrollView</span><span class="token punctuation">(</span>alwaysBounceVertical<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"foo"</span></span><span class="token punctuation">)</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Hello World"</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/scrollview">ScrollView</a></p>
+      </details>
+      <details>
+        <summary id="LazyHGrid">LazyHGrid</summary>
+        <p>一种容器视图，将其子视图排列在水平增长的网格中，仅在需要时创建项目。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token keyword">var</span> rows<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token class-name">GridItem</span><span class="token punctuation">]</span> <span class="token operator">=</span>
+        <span class="token class-name">Array</span><span class="token punctuation">(</span>repeating<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token keyword">init</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token function">fixed</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> count<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">)</span>
+
+<span class="token class-name">ScrollView</span><span class="token punctuation">(</span><span class="token punctuation">.</span>horizontal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">LazyHGrid</span><span class="token punctuation">(</span>rows<span class="token punctuation">:</span> rows<span class="token punctuation">,</span> alignment<span class="token punctuation">:</span> <span class="token punctuation">.</span>top<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ForEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token operator">...</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">,</span> id<span class="token punctuation">:</span> <span class="token punctuation">\</span><span class="token punctuation">.</span><span class="token keyword">self</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"</span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation"><span class="token short-argument">$0</span></span><span class="token interpolation-punctuation punctuation">)</span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">background</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span>pink<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/lazyhgrid">LazyHGrid</a></p>
+      </details>
+      <details>
+        <summary id="LazyVGrid">LazyVGrid</summary>
+        <p>容器视图，将其子视图排列在垂直增长的网格中，仅在需要时创建项目。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token keyword">var</span> columns<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token class-name">GridItem</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Array</span><span class="token punctuation">(</span>repeating<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token keyword">init</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token function">fixed</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> count<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">)</span>
+
+<span class="token class-name">ScrollView</span> <span class="token punctuation">{</span>
+    <span class="token class-name">LazyVGrid</span><span class="token punctuation">(</span>columns<span class="token punctuation">:</span> columns<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ForEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token operator">...</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">,</span> id<span class="token punctuation">:</span> <span class="token punctuation">\</span><span class="token punctuation">.</span><span class="token keyword">self</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"</span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation"><span class="token short-argument">$0</span></span><span class="token interpolation-punctuation punctuation">)</span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">background</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span>pink<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/lazyvgrid">LazyVGrid</a></p>
+      </details>
+      <details>
+        <summary id="Form">Form</summary>
+        <p>用于对用于数据输入的控件（例如在设置或检查器中）进行分组的容器。</p>
+        <p>您几乎可以在此表单中放入任何内容，它将为表单呈现适当的样式。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">NavigationView</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Form</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Section</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Plain Text"</span></span><span class="token punctuation">)</span>
+            <span class="token class-name">Stepper</span><span class="token punctuation">(</span>value<span class="token punctuation">:</span> $quantity<span class="token punctuation">,</span> <span class="token keyword">in</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token operator">...</span><span class="token number">10</span><span class="token punctuation">,</span> label<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Quantity"</span></span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token class-name">Section</span> <span class="token punctuation">{</span>
+            <span class="token class-name">DatePicker</span><span class="token punctuation">(</span>$date<span class="token punctuation">,</span> label<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Due Date"</span></span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            <span class="token class-name">Picker</span><span class="token punctuation">(</span>selection<span class="token punctuation">:</span> $selection<span class="token punctuation">,</span> label<span class="token punctuation">:</span>
+                <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Picker Name"</span></span><span class="token punctuation">)</span>
+                <span class="token punctuation">,</span> content<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Value 1"</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">tag</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+                    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Value 2"</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">tag</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+                    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Value 3"</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">tag</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+                    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Value 4"</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">tag</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/form">Form</a></p>
+      </details>
+      <details>
+        <summary id="Spacer">Spacer</summary>
+        <p>沿其包含的堆栈布局的主轴或如果不包含在堆栈中的两个轴上扩展的灵活空间。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">HStack</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Image</span><span class="token punctuation">(</span>systemName<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"clock"</span></span><span class="token punctuation">)</span>
+    <span class="token class-name">Spacer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Time"</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/spacer">Spacer</a></p>
+      </details>
+      <details>
+        <summary id="Divider">Divider</summary>
+        <p>可用于分隔其他内容的视觉元素。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">HStack</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Image</span><span class="token punctuation">(</span>systemName<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"clock"</span></span><span class="token punctuation">)</span>
+    <span class="token class-name">Divider</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Time"</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">fixedSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/divider">Divider</a></p>
+      </details>
+      <details>
+        <summary id="NavigationView">NavigationView</summary>
+        <p>用于呈现视图堆栈的视图，这些视图表示导航层次结构中的可见路径。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">NavigationView</span> <span class="token punctuation">{</span>            
+    <span class="token class-name">List</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Hello World"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">.</span><span class="token function">navigationBarTitle</span><span class="token punctuation">(</span><span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Navigation Title"</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// Default to large title style</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>对于旧样式标题</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">NavigationView</span> <span class="token punctuation">{</span>            
+    <span class="token class-name">List</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Hello World"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">.</span><span class="token function">navigationBarTitle</span><span class="token punctuation">(</span><span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Navigation Title"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> displayMode<span class="token punctuation">:</span> <span class="token punctuation">.</span>inline<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>添加 <code>UIBarButtonItem</code></p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">NavigationView</span> <span class="token punctuation">{</span>
+    <span class="token class-name">List</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Hello World"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">.</span><span class="token function">navigationBarItems</span><span class="token punctuation">(</span>trailing<span class="token punctuation">:</span>
+        <span class="token class-name">Button</span><span class="token punctuation">(</span>action<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token comment">// Add action</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> label<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Add"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">navigationBarTitle</span><span class="token punctuation">(</span><span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Navigation Title"</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>使用 <a href="https://fuckingswiftui.com/#navigationlink">NavigationLink</a> 添加显示/推送</p>
+        <p>用作 <code>UISplitViewController</code>。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">NavigationView</span> <span class="token punctuation">{</span>
+    <span class="token class-name">List</span> <span class="token punctuation">{</span>
+        <span class="token class-name">NavigationLink</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Go to detail"</span></span><span class="token punctuation">,</span> destination<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"New Detail"</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">navigationBarTitle</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Master"</span></span><span class="token punctuation">)</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Placeholder for Detail"</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>您可以使用两个新的样式属性为 <code>NavigationView</code> 设置样式：<code>stack和doubleColumn</code>。 默认情况下，<code>iPhone</code> 和 <code>Apple TV</code> 上的导航视图在视觉上反映了导航堆栈，而在 <code>iPad</code> 和 <code>Mac</code> 上，显示的是拆分视图样式的导航视图。</p>
+        <p>您可以使用 <code>.navigationViewStyle</code> 覆盖它。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">NavigationView</span> <span class="token punctuation">{</span>
+    <span class="token class-name">MyMasterView</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token class-name">MyDetailView</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span><span class="token function">navigationViewStyle</span><span class="token punctuation">(</span><span class="token class-name">StackNavigationViewStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+        <p><code>iOS 14</code></p>
+        <p>在 <code>iOS 14</code> 中，<code>UISplitViewController</code> 有新的侧边栏样式。 您也可以通过在 <code>NavigationView</code> 下放置三个视图来做到这一点。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">NavigationView</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Sidebar"</span></span><span class="token punctuation">)</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Primary"</span></span><span class="token punctuation">)</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Detail"</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/navigationview">NavigationView</a></p>
+        <p><code>iOS 14</code></p>
+        <p>在 <code>UIViewController</code> 中添加 <code>UIToolbar</code>，如 <code>toolbarItems</code>。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">NavigationView</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"SwiftUI"</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">padding</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span>toolbar <span class="token punctuation">{</span>
+            <span class="token class-name">ToolbarItem</span><span class="token punctuation">(</span>placement<span class="token punctuation">:</span> <span class="token punctuation">.</span>bottomBar<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token class-name">Button</span> <span class="token punctuation">{</span>
+
+                <span class="token punctuation">}</span> label<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                    <span class="token class-name">Image</span><span class="token punctuation">(</span>systemName<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"archivebox"</span></span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            
+            <span class="token class-name">ToolbarItem</span><span class="token punctuation">(</span>placement<span class="token punctuation">:</span> <span class="token punctuation">.</span>bottomBar<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token class-name">Spacer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+            
+            <span class="token class-name">ToolbarItem</span><span class="token punctuation">(</span>placement<span class="token punctuation">:</span> <span class="token punctuation">.</span>bottomBar<span class="token punctuation">)</span> <span class="token punctuation">{</span>                
+                <span class="token class-name">Button</span> <span class="token punctuation">{</span>
+                    
+                <span class="token punctuation">}</span> label<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                    <span class="token class-name">Image</span><span class="token punctuation">(</span>systemName<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"square.and.pencil"</span></span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>                
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/toolbaritem">ToolbarItem</a></p>
+      </details>
+      <details>
+        <summary id="TabView">TabView</summary>
+        <p>一个视图，允许使用可交互的用户界面元素在多个子视图之间进行切换。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">TabView</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"First View"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">font</span><span class="token punctuation">(</span><span class="token punctuation">.</span>title<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">tabItem</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"First"</span></span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">tag</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Second View"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">font</span><span class="token punctuation">(</span><span class="token punctuation">.</span>title<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">tabItem</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Second"</span></span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">tag</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>图像和文本在一起。 您可以在此处使用 <code>SF Symbol</code>。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">TabView</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"First View"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">font</span><span class="token punctuation">(</span><span class="token punctuation">.</span>title<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">tabItem</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            <span class="token class-name">Image</span><span class="token punctuation">(</span>systemName<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"circle"</span></span><span class="token punctuation">)</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"First"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">tag</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Second View"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">font</span><span class="token punctuation">(</span><span class="token punctuation">.</span>title<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">tabItem</span><span class="token punctuation">(</span><span class="token class-name">VStack</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"second"</span></span><span class="token punctuation">)</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Second"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">tag</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>或者您可以省略 <code>VStack</code></p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">TabView</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"First View"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">font</span><span class="token punctuation">(</span><span class="token punctuation">.</span>title<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">tabItem</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            <span class="token class-name">Image</span><span class="token punctuation">(</span>systemName<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"circle"</span></span><span class="token punctuation">)</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"First"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">tag</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Second View"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">font</span><span class="token punctuation">(</span><span class="token punctuation">.</span>title<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">tabItem</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            <span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"second"</span></span><span class="token punctuation">)</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Second"</span></span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">tag</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+      </details>
+      <details>
+        <summary id="Alert">Alert</summary>
+        <p>警报演示的容器。</p>
+        <p>我们可以根据布尔值显示Alert。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> isError<span class="token punctuation">:</span> <span class="token class-name">Bool</span> <span class="token operator">=</span> <span class="token boolean">false</span>
+
+<span class="token class-name">Button</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Alert"</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">self</span><span class="token punctuation">.</span>isError <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">alert</span><span class="token punctuation">(</span>isPresented<span class="token punctuation">:</span> $isError<span class="token punctuation">,</span> content<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Alert</span><span class="token punctuation">(</span>title<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Error"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> message<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Error Reason"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> dismissButton<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token keyword">default</span><span class="token punctuation">(</span><span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"OK"</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+        <p>它也与可识别项绑定。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> error<span class="token punctuation">:</span> <span class="token class-name">AlertError</span><span class="token operator">?</span>
+
+<span class="token keyword">var</span> body<span class="token punctuation">:</span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Button</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Alert Error"</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">self</span><span class="token punctuation">.</span>error <span class="token operator">=</span> <span class="token class-name">AlertError</span><span class="token punctuation">(</span>reason<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"Reason"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">alert</span><span class="token punctuation">(</span>item<span class="token punctuation">:</span> $error<span class="token punctuation">,</span> content<span class="token punctuation">:</span> <span class="token punctuation">{</span> error <span class="token keyword">in</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span>reason<span class="token punctuation">:</span> error<span class="token punctuation">.</span>reason<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>    
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function-definition function">alert</span><span class="token punctuation">(</span>reason<span class="token punctuation">:</span> <span class="token class-name">String</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token class-name">Alert</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Alert</span><span class="token punctuation">(</span>title<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Error"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            message<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span>reason<span class="token punctuation">)</span><span class="token punctuation">,</span>
+            dismissButton<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token keyword">default</span><span class="token punctuation">(</span><span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"OK"</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">struct</span> <span class="token class-name">AlertError</span><span class="token punctuation">:</span> <span class="token class-name">Identifiable</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> id<span class="token punctuation">:</span> <span class="token class-name">String</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> reason
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">let</span> reason<span class="token punctuation">:</span> <span class="token class-name">String</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/alert">Alert</a></p>
+      </details>
+      <details>
+        <summary id="Modal">Modal</summary>
+        <p>Modal 过渡。</p>
+        <p>我们可以显示基于布尔的 Modal。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> isModal<span class="token punctuation">:</span> <span class="token class-name">Bool</span> <span class="token operator">=</span> <span class="token boolean">false</span>
+
+<span class="token keyword">var</span> modal<span class="token punctuation">:</span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Modal"</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Button</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Modal"</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">self</span><span class="token punctuation">.</span>isModal <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">sheet</span><span class="token punctuation">(</span>isPresented<span class="token punctuation">:</span> $isModal<span class="token punctuation">,</span> content<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token keyword">self</span><span class="token punctuation">.</span>modal
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/view/3352791-sheet">Sheet</a></p>
+        <p>它也与可识别项绑定。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> detail<span class="token punctuation">:</span> <span class="token class-name">ModalDetail</span><span class="token operator">?</span>
+
+<span class="token keyword">var</span> body<span class="token punctuation">:</span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Button</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Modal"</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">self</span><span class="token punctuation">.</span>detail <span class="token operator">=</span> <span class="token class-name">ModalDetail</span><span class="token punctuation">(</span>body<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"Detail"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">sheet</span><span class="token punctuation">(</span>item<span class="token punctuation">:</span> $detail<span class="token punctuation">,</span> content<span class="token punctuation">:</span> <span class="token punctuation">{</span> detail <span class="token keyword">in</span>
+        <span class="token keyword">self</span><span class="token punctuation">.</span><span class="token function">modal</span><span class="token punctuation">(</span>detail<span class="token punctuation">:</span> detail<span class="token punctuation">.</span>body<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>    
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function-definition function">modal</span><span class="token punctuation">(</span>detail<span class="token punctuation">:</span> <span class="token class-name">String</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span>detail<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">struct</span> <span class="token class-name">ModalDetail</span><span class="token punctuation">:</span> <span class="token class-name">Identifiable</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> id<span class="token punctuation">:</span> <span class="token class-name">String</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> body
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">let</span> body<span class="token punctuation">:</span> <span class="token class-name">String</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/view/3352792-sheet">Sheet</a></p>
+        <p><code>iOS 14</code></p>
+        <p>如果要使用模式显示以全屏显示的旧模式显示，可以使用 <code>.fullScreenCover</code> 而不是 <code>.sheet</code>。</p>
+        <p>由于全屏封面样式不允许用户使用手势来消除模态，因此您必须添加一种方法来手动消除呈现的视图。 在下面的示例中，我们通过将 <code>isModal</code> 设置为 <code>false</code> 来添加一个按钮来消除显示的视图。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> isModal<span class="token punctuation">:</span> <span class="token class-name">Bool</span> <span class="token operator">=</span> <span class="token boolean">false</span>
+
+<span class="token keyword">var</span> modal<span class="token punctuation">:</span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+<span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Modal"</span></span><span class="token punctuation">)</span>
+      <span class="token class-name">Button</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Dismiss"</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">self</span><span class="token punctuation">.</span>isModal <span class="token operator">=</span> <span class="token boolean">false</span>
+      <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Button</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Fullscreen"</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">self</span><span class="token punctuation">.</span>isModal <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">fullScreenCover</span><span class="token punctuation">(</span>isPresented<span class="token punctuation">:</span> $isFullscreen<span class="token punctuation">,</span> content<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token keyword">self</span><span class="token punctuation">.</span>modal
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+        <p>如果您将自定义视图用作模式，则可以使用 <code>presentationMode</code> 环境键关闭显示的视图。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token keyword">struct</span> <span class="token class-name">Modal</span><span class="token punctuation">:</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+  <span class="token attribute atrule">@Environment</span><span class="token punctuation">(</span><span class="token punctuation">\</span><span class="token punctuation">.</span>presentationMode<span class="token punctuation">)</span> <span class="token keyword">var</span> presentationMode
+
+  <span class="token keyword">var</span> body<span class="token punctuation">:</span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Modal"</span></span><span class="token punctuation">)</span>
+    <span class="token class-name">Button</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Dismiss Modal"</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      presentationMode<span class="token punctuation">.</span>wrappedValue<span class="token punctuation">.</span><span class="token function">dismiss</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">struct</span> <span class="token class-name">ContentView</span><span class="token punctuation">:</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+    <span class="token attribute atrule">@State</span> <span class="token keyword">private</span> <span class="token keyword">var</span> isModal <span class="token operator">=</span> <span class="token boolean">false</span>
+
+    <span class="token keyword">var</span> body<span class="token punctuation">:</span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Button</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Fullscreen"</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            isModal <span class="token operator">=</span> <span class="token boolean">true</span>
+        <span class="token punctuation">}</span>
+        <span class="token punctuation">.</span><span class="token function">fullScreenCover</span><span class="token punctuation">(</span>isPresented<span class="token punctuation">:</span> $isFullscreen<span class="token punctuation">,</span> content<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token class-name">Modal</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/view/fullscreencover(ispresented:ondismiss:content:)">fullScreenCover</a></p>
+      </details>
+      <details>
+        <summary id="ActionSheet">ActionSheet</summary>
+        <p>操作表演示文稿的存储类型。</p>
+        <p>我们可以显示基于布尔值的 <code>ActionSheet</code>。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> isSheet<span class="token punctuation">:</span> <span class="token class-name">Bool</span> <span class="token operator">=</span> <span class="token boolean">false</span>
+
+<span class="token keyword">var</span> actionSheet<span class="token punctuation">:</span> <span class="token class-name">ActionSheet</span> <span class="token punctuation">{</span>
+    <span class="token class-name">ActionSheet</span><span class="token punctuation">(</span>title<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Action"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                message<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Description"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                buttons<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">.</span><span class="token keyword">default</span><span class="token punctuation">(</span><span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"OK"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> action<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                        
+                    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">.</span><span class="token function">destructive</span><span class="token punctuation">(</span><span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Delete"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> action<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                        
+                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                <span class="token punctuation">]</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Button</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Action Sheet"</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">self</span><span class="token punctuation">.</span>isSheet <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">actionSheet</span><span class="token punctuation">(</span>isPresented<span class="token punctuation">:</span> $isSheet<span class="token punctuation">,</span> content<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token keyword">self</span><span class="token punctuation">.</span>actionSheet
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+        <p>它也与可识别项绑定。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> sheetDetail<span class="token punctuation">:</span> <span class="token class-name">SheetDetail</span><span class="token operator">?</span>
+
+<span class="token keyword">var</span> body<span class="token punctuation">:</span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Button</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Action Sheet"</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">self</span><span class="token punctuation">.</span>sheetDetail <span class="token operator">=</span> <span class="token class-name">ModSheetDetail</span><span class="token punctuation">(</span>body<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"Detail"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">actionSheet</span><span class="token punctuation">(</span>item<span class="token punctuation">:</span> $sheetDetail<span class="token punctuation">,</span> content<span class="token punctuation">:</span> <span class="token punctuation">{</span> detail <span class="token keyword">in</span>
+        <span class="token keyword">self</span><span class="token punctuation">.</span><span class="token function">sheet</span><span class="token punctuation">(</span>detail<span class="token punctuation">:</span> detail<span class="token punctuation">.</span>body<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function-definition function">sheet</span><span class="token punctuation">(</span>detail<span class="token punctuation">:</span> <span class="token class-name">String</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token class-name">ActionSheet</span> <span class="token punctuation">{</span>
+    <span class="token class-name">ActionSheet</span><span class="token punctuation">(</span>title<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Action"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                message<span class="token punctuation">:</span> <span class="token class-name">Text</span><span class="token punctuation">(</span>detail<span class="token punctuation">)</span><span class="token punctuation">,</span>
+                buttons<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">.</span><span class="token keyword">default</span><span class="token punctuation">(</span><span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"OK"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> action<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                        
+                    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">.</span><span class="token function">destructive</span><span class="token punctuation">(</span><span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Delete"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> action<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                        
+                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                <span class="token punctuation">]</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">struct</span> <span class="token class-name">SheetDetail</span><span class="token punctuation">:</span> <span class="token class-name">Identifiable</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> id<span class="token punctuation">:</span> <span class="token class-name">String</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> body
+    <span class="token punctuation">}</span>
+    <span class="token keyword">let</span> body<span class="token punctuation">:</span> <span class="token class-name">String</span>
+<span class="token punctuation">}</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/actionsheet">ActionSheet</a></p>
+      </details>
+    </div>
+  </body>
+</html>

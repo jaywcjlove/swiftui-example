@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>如何使用 `Instruments` 来配置您的 SwiftUI 代码并识 `identify` 布局？ - SwiftUI by Example v1.0.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta description="SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问题以及了解 SwiftUI 的实际工作方式。如何使用 &#x60;Instruments&#x60; 来配置您的 SwiftUI 代码并识 &#x60;identify&#x60; 布局？ - SwiftUI by Example v1.0.0">
+    <meta keywords="SwiftUI,swift,Example,SwiftUI Example">
+    <style>.task-list-item { list-style-type: none;}.task-list-item label { font-weight: 400;}.task-list-item.enabled label { cursor: pointer;}.task-list-item+.task-list-item { margin-top: 3px;}.task-list-item .handle { display: none;}.task-list-item-checkbox { margin: 0 .2em .25em -1.6em; vertical-align: middle;}.wmde-markdown h1,.wmde-markdown h2,.wmde-markdown h3,.wmde-markdown h4,.wmde-markdown h5,.wmde-markdown h6 { font-weight: 600; line-height: 1.25; margin-bottom: 16px; margin-top: 24px;}.wmde-markdown h1 .anchor,.wmde-markdown h2 .anchor,.wmde-markdown h3 .anchor,.wmde-markdown h4 .anchor,.wmde-markdown h5 .anchor,.wmde-markdown h6 .anchor { float: left; padding-right: 4px; margin-left: -20px; line-height: 1;}.wmde-markdown h1 .octicon-link,.wmde-markdown h2 .octicon-link,.wmde-markdown h3 .octicon-link,.wmde-markdown h4 .octicon-link,.wmde-markdown h5 .octicon-link,.wmde-markdown h6 .octicon-link { visibility: hidden; vertical-align: middle;}.wmde-markdown h1:hover .octicon-link,.wmde-markdown h2:hover .octicon-link,.wmde-markdown h3:hover .octicon-link,.wmde-markdown h4:hover .octicon-link,.wmde-markdown h5:hover .octicon-link,.wmde-markdown h6:hover .octicon-link { visibility: visible;}.github-corner:hover .octo-arm { -webkit-animation: octocat-wave .56s ease-in-out; animation: octocat-wave .56s ease-in-out;}@-webkit-keyframes octocat-wave { 0%, to { -webkit-transform: rotate(0); transform: rotate(0); } 20%, 60% { -webkit-transform: rotate(-25deg); transform: rotate(-25deg); } 40%, 80% { -webkit-transform: rotate(10deg); transform: rotate(10deg); }}@keyframes octocat-wave { 0%, to { -webkit-transform: rotate(0); transform: rotate(0) } 20%, 60% { -webkit-transform: rotate(-25deg); transform: rotate(-25deg); } 40%, 80% { -webkit-transform: rotate(10deg); transform: rotate(10deg); }}.wmde-markdown { font-size: 16px; line-height: 1.5; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji; max-width: 1024px; margin: 28px auto 60px auto;}.wmde-markdown > :first-child { margin-top: 0 !important;}.wmde-markdown > :last-child { margin-bottom: 0 !important;}.wmde-markdown code[class*="language-"],.wmde-markdown pre[class*="language-"] { color: black; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; word-wrap: normal; -webkit-hyphens: none; hyphens: none;}.wmde-markdown pre code { background: none; overflow-wrap: normal; white-space: inherit; -moz-tab-size: 2; tab-size: 2; padding: 16px; font-size: 95%; line-height: 1.5; display: block; text-shadow: 0 1px #fff;}.wmde-markdown pre { margin-bottom: 18px; font-size: 85%; line-height: 1.45; position: relative; overflow-x: auto; background-color: #f6f8fa; border-radius: 3px;}.wmde-markdown code,.wmde-markdown tt { background-color: rgba(27, 31, 35, 0.05); border-radius: 3px; font-size: 85%; margin: 0; padding: 0.2em 0.4em;}.wmde-markdown pre,.wmde-markdown code,.wmde-markdown tt { font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;}.wmde-markdown img { max-width: 100%;}.wmde-markdown input { vertical-align: middle; margin: 0 0.2em 0.25em -1.6em;}.wmde-markdown input + p { display: inline;}.wmde-markdown h1,.wmde-markdown h2 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em;}.wmde-markdown h1,.wmde-markdown h2,.wmde-markdown h3,.wmde-markdown h4,.wmde-markdown h5,.wmde-markdown h6 { font-weight: 600; line-height: 1.25; margin-bottom: 16px; margin-top: 24px;}.wmde-markdown h1 .anchor,.wmde-markdown h2 .anchor,.wmde-markdown h3 .anchor,.wmde-markdown h4 .anchor,.wmde-markdown h5 .anchor,.wmde-markdown h6 .anchor { float: left; padding-right: 4px; margin-left: -20px; line-height: 1;}.wmde-markdown h1 .octicon-link,.wmde-markdown h2 .octicon-link,.wmde-markdown h3 .octicon-link,.wmde-markdown h4 .octicon-link,.wmde-markdown h5 .octicon-link,.wmde-markdown h6 .octicon-link { visibility: hidden; vertical-align: middle;}.wmde-markdown h1:hover .octicon-link,.wmde-markdown h2:hover .octicon-link,.wmde-markdown h3:hover .octicon-link,.wmde-markdown h4:hover .octicon-link,.wmde-markdown h5:hover .octicon-link,.wmde-markdown h6:hover .octicon-link { visibility: visible;}.wmde-markdown h1 { font-size: 2em;}.wmde-markdown h2 { font-size: 1.5em;}.wmde-markdown h3 { font-size: 1.25em;}.wmde-markdown h4 { font-size: 1em;}.wmde-markdown h5 { font-size: 0.875em;}.wmde-markdown h6 { font-size: 0.85em;}.wmde-markdown ol,.wmde-markdown ul { padding-left: 2em;}.wmde-markdown ol > p,.wmde-markdown ul > p { margin-bottom: 0;}.wmde-markdown ul { margin-bottom: 16px; margin-top: 0; list-style: initial;}.wmde-markdown > blockquote,.wmde-markdown > blockquote blockquote { margin: 0; border-left: 0.25em solid #dfe2e5; color: #6a737d; padding: 0 1em;}.wmde-markdown > blockquote > :last-child,.wmde-markdown > blockquote blockquote > :last-child { margin-bottom: 0;}.wmde-markdown > blockquote > :first-child,.wmde-markdown > blockquote blockquote > :first-child { margin-top: 0;}.wmde-markdown hr { margin: 1.5em auto; border: 0; border-top: 2px dotted #eee; height: 1px;}.wmde-markdown > table,.wmde-markdown > blockquote table { display: block; overflow: auto; width: 100%; border-collapse: collapse; border-spacing: 0; font-size: 14px;}.wmde-markdown > table tr,.wmde-markdown > blockquote table tr { background-color: #fff; border-top: 1px solid #c6cbd1;}.wmde-markdown > table td,.wmde-markdown > blockquote table td,.wmde-markdown > table th,.wmde-markdown > blockquote table th { border: 1px solid #dfe2e5; padding: 6px 13px;}.wmde-markdown blockquote,.wmde-markdown details,.wmde-markdown dl,.wmde-markdown ol,.wmde-markdown p,.wmde-markdown pre,.wmde-markdown table,.wmde-markdown ul { margin-bottom: 16px; margin-top: 0;}.wmde-markdown a { color: #0366d6; text-decoration: none;}.wmde-markdown a:hover { text-decoration: underline;}.wmde-markdown .namespace { opacity: 0.7;}.wmde-markdown .token.important { font-weight: normal;}.wmde-markdown .token.bold { font-weight: bold;}.wmde-markdown .token.italic { font-style: italic;}.wmde-markdown .token.entity { cursor: help;}.wmde-markdown kbd { background-color: #fafbfc; border-bottom-color: #d1d5da; border: 1px solid #d1d5da; border-radius: 3px; box-shadow: inset 0 -1px 0 #d1d5da; color: #56595d; display: inline-block; font-size: 10px; font-family: ui-monospace, SFMono-Regular, SF Mono, Consolas, Liberation Mono, Menlo, monospace; line-height: 10px; padding: 2px 4px; vertical-align: middle;}.wmde-markdown .token.tag .attr-value { color: #032f62;}.wmde-markdown .token.property,.wmde-markdown .token.tag,.wmde-markdown .token.boolean,.wmde-markdown .token.number,.wmde-markdown .token.function-name,.wmde-markdown .token.constant,.wmde-markdown .token.symbol,.wmde-markdown .token.deleted { color: #0060c9;}.wmde-markdown .token.punctuation { color: #a0a0a0;}.wmde-markdown code[class*="language-"] { color: black;}.wmde-markdown code[class*="language-"] .token.selector,.wmde-markdown code[class*="language-"] .token.attr-name,.wmde-markdown code[class*="language-"] .token.string,.wmde-markdown code[class*="language-"] .token.char,.wmde-markdown code[class*="language-"] .token.function,.wmde-markdown code[class*="language-"] .token.builtin { color: #6f42c1;}.wmde-markdown code[class*="language-"] .token.inserted { color: #22863a; background-color: #f0fff4;}.wmde-markdown code[class*="language-"] .token.deleted { color: #b31d28; background-color: #ffeef0;}.wmde-markdown code[class*="language-"] .token.class-name { color: #6f42c1;}.wmde-markdown code[class*="language-"] .code-block { color: #032f62;}.wmde-markdown code[class*="language-"] .token.comment,.wmde-markdown code[class*="language-"] .token.block-comment,.wmde-markdown code[class*="language-"] .token.prolog,.wmde-markdown code[class*="language-"] .token.doctype,.wmde-markdown code[class*="language-"] .token.cdata { color: #7D8B99;}.wmde-markdown code[class*="language-"] .token.punctuation { color: #a0a0a0;}.wmde-markdown code[class*="language-"] .token.operator,.wmde-markdown code[class*="language-"] .token.entity,.wmde-markdown code[class*="language-"] .token.url,.wmde-markdown code[class*="language-"] .token.variable { color: #d73a49; background: rgba(255, 255, 255, 0.5);}.wmde-markdown code[class*="language-"] .token.atrule,.wmde-markdown code[class*="language-"] .token.attr-value { color: #004698;}.wmde-markdown code[class*="language-"] .token.keyword { color: #d63200;}.wmde-markdown code[class*="language-"] .token.regex,.wmde-markdown code[class*="language-"] .token.important { color: #e90;}.wmde-markdown code[class*="language-"] .token.string { color: #0a53c1;}</style>
+    <style></style>
+  </head>
+  <body id="totop"><a aria-label="View source on GitHub" target="__blank" class="github-corner" href="https://github.com/jaywcjlove/swiftui-example.git"><svg width="54" height="54" viewBox="0 0 250 250" aria-hidden="true" style="fill: rgb(32, 34, 37); color: rgb(255, 255, 255); position: fixed; z-index: 99999; border: 0px; top: 0px; right: 0px;">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path style="transform-origin: 130px 106px;" class="octo-arm" fill="currentColor" d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"></path>
+        <path class="octo-body" fill="currentColor" d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"></path>
+      </svg></a>
+    <div class="wmde-markdown">
+      <h2 id="如何使用-instruments-来配置您的-swiftui-代码并识-identify-布局"><a class="anchor" aria-hidden="true" tabindex="-1" href="#如何使用-instruments-来配置您的-swiftui-代码并识-identify-布局"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>如何使用 <code>Instruments</code> 来配置您的 SwiftUI 代码并识 <code>identify</code> 布局？</h2>
+      <p>Xcode 的仪器工具有一个梦幻般的 <code>SwiftUI</code> 的分析，允许我们识别次删除的频率，计算身体的速度较慢，甚至我们的国家如何随时间变化。</p>
+      <p>首先，我们需要一些能够提供有趣的结果，我们可以在乐器中看待。 因此，此代码创建一个计时器，触发每 <code>0.01</code>秒，并具有显示随机 <code>UUID</code>和按钮的正文视图，该按钮增加其显示它显示的值：</p>
+      <pre class="language-swift"><code class="language-swift"><span class="token keyword">import</span> <span class="token class-name">Combine</span>
+<span class="token keyword">import</span> <span class="token class-name">SwiftUI</span>
+
+<span class="token keyword">class</span> <span class="token class-name">FrequentUpdater</span><span class="token punctuation">:</span> <span class="token class-name">ObservableObject</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> objectWillChange <span class="token operator">=</span> <span class="token class-name">PassthroughSubject</span><span class="token operator">&#x3C;</span><span class="token class-name">Void</span><span class="token punctuation">,</span> <span class="token class-name">Never</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">var</span> timer<span class="token punctuation">:</span> <span class="token class-name">Timer</span><span class="token operator">?</span>
+
+    <span class="token keyword">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        timer <span class="token operator">=</span> <span class="token class-name">Timer</span><span class="token punctuation">.</span><span class="token function">scheduledTimer</span><span class="token punctuation">(</span>
+            withTimeInterval<span class="token punctuation">:</span> <span class="token number">0.01</span><span class="token punctuation">,</span>
+            repeats<span class="token punctuation">:</span> <span class="token boolean">true</span>
+        <span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token omit keyword">_</span> <span class="token keyword">in</span>
+            <span class="token keyword">self</span><span class="token punctuation">.</span>objectWillChange<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">struct</span> <span class="token class-name">ContentView</span><span class="token punctuation">:</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+    <span class="token attribute atrule">@ObservedObject</span> <span class="token keyword">var</span> updater <span class="token operator">=</span> <span class="token class-name">FrequentUpdater</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token attribute atrule">@State</span> <span class="token keyword">private</span> <span class="token keyword">var</span> tapCount <span class="token operator">=</span> <span class="token number">0</span>
+
+    <span class="token keyword">var</span> body<span class="token punctuation">:</span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+        <span class="token class-name">VStack</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"</span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation"><span class="token function">UUID</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>uuidString</span><span class="token interpolation-punctuation punctuation">)</span><span class="token string">"</span></span><span class="token punctuation">)</span>
+
+            <span class="token class-name">Button</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Tap count: </span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation">tapCount</span><span class="token interpolation-punctuation punctuation">)</span><span class="token string">"</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                tapCount <span class="token operator">+=</span> <span class="token number">1</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+      <p>如果您在模拟器中运行该代码，则会看到它不断重绘，因为它具有始终更改的值。</p>
+      <p>注意：这是一个专门设计的压力测试，使 <code>SwiftUI</code> 进行大量工作，以便仪器显示我们有趣的数据 - 您不想在实际应用中使用上面的代码。</p>
+      <h2 id="检测我们的代码"><a class="anchor" aria-hidden="true" tabindex="-1" href="#检测我们的代码"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>检测我们的代码</h2>
+      <p>现在按 <code>Cmd+I</code> 通过仪器运行代码，然后选择 <code>SwiftUI</code> 仪器。 出现时，按 <code>Record</code> 按钮使其启动应用程序并开始观看。 现在让它在点击按钮10左右时运行几秒钟，然后在仪器中按停止 - 我们有足够的数据来使用。</p>
+      <p>默认情况下，<code>SwiftUI</code>仪器告诉我们各种各样的事情：</p>
+      <ol>
+        <li>在此期间创建了多少次观看以及创建它们需要多长时间（“查看body View Body”）</li>
+        <li>观点的属性是什么以及它们如何随时间改变（“查看属性 View Properties”）</li>
+        <li>发生了多少核心动画（“核心动画提交 Core Animation Commits”）</li>
+        <li>正是每个函数调用所花费的时间（“时间剖析器 Time Profiler”）</li>
+      </ol>
+      <p>这些仪器中的每一个都可以帮助您诊断和解决您的SWIFTUI应用程序中的性能问题，因此值得花时间尝试。</p>
+      <p>对于我们的小压力测试沙箱，您将看到视图身体，查看属性和核心动画提交的固体墙壁，这是一个直接的红旗。 它告诉我们，不仅是Swifui不得不经常重新创建观点，但我们的房产经常更改，因此核心动画必须加班以便跟上。</p>
+      <p>
+        <img src="imgs/1.png" alt="">
+      </p>
+      <h2 id="监测-body-调用"><a class="anchor" aria-hidden="true" tabindex="-1" href="#监测-body-调用"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>监测 body 调用</h2>
+      <p>如果您选择 <code>View Body</code> 轨迹 - 这是仪器列表的第一行-您应该能够看到 Instruments 将结果分解为 SwiftUI 和您的项目，其中前者是原始类型，例如文本视图和按钮，后者包含您的自定义视图类型。在我们的情况下，这意味着 <code>ContentView</code> 应出现在自定义视图中，因为这就是我们的视图名称。</p>
+      <p>现在，您将在这里看不到的是代码到 <code>SwiftUI</code> 视图的完美一对一映射，因为 <code>SwiftUI</code> 会主动折叠其视图层次结构以减少工作量。因此，不要期望在代码中看到任何 <code>VStack</code> 创建内容-该应用程序实际上是免费的。</p>
+      <p>在此屏幕上，重要的数字是“计数”和“平均持续时间” –每件事创建了多少次，花费了多长时间。由于这是一个压力测试，您应该会看到Count的数字很高，但是我们的布局微不足道，因此Avg Duration可能只有几十微秒。</p>
+      <p>
+        <img src="imgs/2.png" alt="">
+      </p>
+      <h2 id="跟踪状态变化-tracking-state-changes"><a class="anchor" aria-hidden="true" tabindex="-1" href="#跟踪状态变化-tracking-state-changes"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>跟踪状态变化 Tracking state changes</h2>
+      <p>接下来，选择<code>View Properties</code> 轨道，它是仪器列表中的第二行。这将显示所有视图的所有属性，包括它们的当前值和所有先前的值。</p>
+      <p>我们的示例应用程序具有一个按钮，可在点击时通过将一个数字添加一个按钮来更改其标签，并且该按钮在此工具中就可见了-查找视图类型 <code>ContentView</code> 和属性类型 <code>State&#x3C;Int></code>。</p>
+      <p>遗憾的是，Instruments无法（尚未？）向我们显示确切的属性名称，如果您要跟踪几条整数状态，则可能会更加令人困惑。但是，它确实有一个不同的技巧：在记录窗口的顶部是一个标记当前视图位置的箭头，如果在周围拖动它，您将确切地看到应用程序状态随时间的变化–每次您轻按按钮，您将看到状态整数加1，并且您可以向前和向后滚动以查看它的发生。</p>
+      <p>这可以释放巨大的力量，因为它可以让我们直接查看状态更改何时导致缓慢的重绘或其他工作-就像是在时光机中，您可以在其运行期间随时检查应用程序的确切状态。</p>
+      <p>
+        <img src="imgs/3.png" alt="">
+      </p>
+      <h2 id="识别慢绘制-identifying-slow-draws"><a class="anchor" aria-hidden="true" tabindex="-1" href="#识别慢绘制-identifying-slow-draws"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>识别慢绘制 Identifying slow draws</h2>
+      <p>尽管 <code>SwiftUI</code> 可以直接使用 <code>Metal</code> 来提高性能，但大多数情况下，它更喜欢使用 <code>Core Animation</code> 进行渲染。 这意味着我们会自动从 <code>Instruments</code> 获得内置的 <code>Core Animation</code> 分析工具，包括检测昂贵提交的功能。</p>
+      <p>当将多个更改放到一个组中（称为事务）时，<code>Core Animation</code>效果最佳。 我们有效地在一个事务中堆叠了一部分工作，然后要求 <code>CA</code> 继续进行工作-称为提交事务。</p>
+      <p>因此，当 <code>Instruments</code> 向我们展示昂贵的 <code>Core Animation</code> 提交时，真正向我们展示的是 <code>SwiftUI</code> 由于更新而被迫在屏幕上重新绘制像素的次数。 从理论上讲，这仅应在应用程序的实际状态导致不同的视图层次结构时发生，因为 <code>SwiftUI</code> 应该能够将 <code>body</code> 属性的新输出与先前的输出进行比较。</p>
+      <p>
+        <img src="imgs/4.png" alt="">
+      </p>
+      <h2 id="寻找慢速功能调用-looking-for-slow-function-calls"><a class="anchor" aria-hidden="true" tabindex="-1" href="#寻找慢速功能调用-looking-for-slow-function-calls"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>寻找慢速功能调用 Looking for slow function calls</h2>
+      <p>最后一个重要的轨道是最后一个轨道，即 <code>Time Profiler</code>，它向我们显示了在代码的每个部分中花费了多少时间。 该工具的工作方式与 <code>Instruments</code> 中的常规时间分析器相同，但是如果您以前没有尝试过，则至少需要了解以下内容：</p>
+      <ol>
+        <li>右侧的扩展详细信息窗口默认显示最重的堆栈跟踪，这是运行时间最长的一段代码。明亮的代码（白色或黑色，具体取决于您的macOS配色方案）是您编写的代码；暗淡的代码（灰色）是系统库代码。</li>
+        <li>在左侧，您可以看到所有创建的线程，以及显示指示器，可让您深入了解它们调用的功能以及这些功能调用的功能，等等。大多数工作将在“开始”内部进行。</li>
+        <li>为避免混乱，您可能需要单击底部的“调用树”按钮，然后选择“隐藏系统库”。这只会显示您编写的代码，但是，如果您的问题是您严重使用了系统库，则可能无济于事。</li>
+        <li>要直接了解特定细节，您还可以单击“调用树”，然后选择“反转调用树”来翻转内容，以便在顶部显示叶子功能（位于树末端的功能），并且现在可以使用公开指示器来进行向下钻取。 （向上钻取？）调用它们的功能。</li>
+      </ol>
+      <p>尽管时间分析器对于识别性能问题非常有用，但是通常只要查看最重的堆栈跟踪就会突出显示最大的问题。</p>
+      <p>
+        <img src="imgs/5.png" alt="">
+      </p>
+      <h2 id="最后提示-last-tips"><a class="anchor" aria-hidden="true" tabindex="-1" href="#最后提示-last-tips"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+          </svg></a>最后提示 Last tips</h2>
+      <p>在冲销概要分析自己的代码之前，需要注意以下几点：</p>
+      <ol>
+        <li>在检查应用程序性能的一小部分时，应在相关范围内单击并拖动，以便仅查看该应用程序那部分的统计信息。这使您可以专注于特定操作的性能，例如响应按钮按下。</li>
+        <li>即使您在 <code>Instruments</code> 中看到了纯色条，它们也只能从远处观看-您可以通过按住 <code>Cmd</code> 并按 <code>-</code> 和 <code>+</code> 进行缩放以查看更多详细信息</li>
+        <li>为了获得最准确的数字，请始终在真实设备上进行剖析。</li>
+        <li>如果要由于对代码进行概要分析而进行更改，请始终一次进行一次更改。如果您进行两项更改，则有可能一种将性能提高20％，另一项将性能降低10％，但是一起进行意味着您可能认为它们总体上将性能提高了10％。</li>
+        <li>Instruments在发布模式下运行您的代码，该模式可实现Swift的所有优化。这也会影响您添加到代码中的所有调试标志，因此请务必小心。</li>
+      </ol>
+    </div>
+  </body>
+</html>
