@@ -36,7 +36,7 @@ const options = {
   });
   await Promise.all(files.map(async (item) => {
     const markdown = await fs.readFile(item.path);
-    const outputPath = path.join('build', path.relative(process.cwd(), item.path).replace(/README.md$/, 'index.html'));
+    const outputPath = path.join('build', path.relative(process.cwd(), item.path).replace(/README.md$/, 'index.html').replace(/.md$/, '.html'));
     await fs.ensureDir(path.dirname(outputPath));
     if (/.md$/.test(item.path)) {
       let title = markdown.toString().match(/^([\s\S]*?)---/)
