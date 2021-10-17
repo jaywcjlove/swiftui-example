@@ -1,0 +1,20 @@
+{
+  "name": "swiftui-example",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SwiftUI by Example",
+  "scripts": {
+    "start": "node scripts/build.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaywcjlove/swiftui-example.git"
+  },
+  "author": "jaywcjlove",
+  "license": "MIT",
+  "homepage": "https://jaywcjlove.github.io/swiftui-example",
+  "devDependencies": {
+    "markdown-to-html-cli": "2.2.4",
+    "recursive-readdir-files": "2.0.7"
+  }
+}
