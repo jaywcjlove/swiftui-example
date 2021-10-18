@@ -6,32 +6,33 @@ SwiftUI 速查手册
 
 | UIKit | [SwiftUI](https://developer.apple.com/xcode/swiftui/) |
 | ----------- | ----------- |
-| UILabel | [Text](#user-content-text) & [Label](#user-content-label)|
-| UIImageView | [Image](#user-content-image) |
-| UITextField | [TextField](#user-content-textfield) / [SecureField](#user-content-securefield) |
-| UITextView | [TextEditor](#user-content-texteditor) |
-| UISwitch | [Toggle](#user-content-toggle) |
-| UISlider | [Slider](#user-content-slider) |
-| UIButton | [Button](#user-content-button) |
-| UITableView | [List](#user-content-list) |
-| UICollectionView | [LazyVGrid](#user-content-lazyvgrid) / [LazyHGrid](#user-content-lazyhgrid) |
-| UINavigationController | [NavigationView](#user-content-navigationview) |
-| UITabBarController | [TabView](#user-content-tabview) |
-| UIAlertController with style .alert | [Alert](#user-content-alerts-and-action-sheets) |
-| UIAlertController with style .actionSheet | [ActionSheet](#user-content-alerts-and-action-sheets) |
-| UIStackView with horizontal axis| [HStack](#user-content-hstack) / [LazyHStack](#user-content-lazyhstack) |
-| UIStackView with vertical axis| [VStack](#user-content-vstack) / [LazyVStack](#user-content-lazyvstack) |
-| UISegmentedControl | [Picker](#user-content-picker) |
-| UIStepper | [Stepper](#user-content-stepper) |
-| UIDatePicker | [DatePicker](#user-content-date-picker) |
-| NSAttributedString | No equivalent (use [Text](#user-content-text)) |
-| MapKit | [Map](#user-content-map) |
-| UIProgressView | [ProgressView](#user-content-progressview) |
-| - | [Modal](#user-content-modal) |
-| - | [ScrollView](#user-content-scrollview) |
-| - | [Form](#user-content-form) |
-| - | [Spacer](#user-content-spacer) |
-| - | [Divider](#user-content-divider) |
+| UILabel | [Text](#text) & [Label](#label)|
+| UIImageView | [Image](#image) |
+| UITextField | [TextField](#textfield) / [SecureField](#securefield) |
+| UITextView | [TextEditor](#texteditor) |
+| UISwitch | [Toggle](#toggle) |
+| UISlider | [Slider](#slider) |
+| UIButton | [Button](#button) |
+| UITableView | [List](#list) |
+| UICollectionView | [LazyVGrid](#lazyvgrid) / [LazyHGrid](#lazyhgrid) |
+| UINavigationController | [NavigationView](#navigationview) |
+| UITabBarController | [TabView](#tabview) |
+| UIAlertController with style .alert | [Alert](#alerts) |
+| UIAlertController with style .actionSheet | [ActionSheet](#action-sheets) |
+| UIStackView with horizontal axis| [HStack](#hstack) / [LazyHStack](#lazyhstack) |
+| UIStackView with vertical axis| [VStack](#vstack) / [LazyVStack](#lazyvstack) |
+| Aligning them in both axes. | [ZStack](#zstack) |
+| UISegmentedControl | [Picker](#picker) |
+| UIStepper | [Stepper](#stepper) |
+| UIDatePicker | [DatePicker](#date-picker) |
+| NSAttributedString | No equivalent (use [Text](#text)) |
+| MapKit | [Map](#map) |
+| UIProgressView | [ProgressView](#progressview) |
+| - | [Modal](#modal) |
+| - | [ScrollView](#scrollview) |
+| - | [Form](#form) |
+| - | [Spacer](#spacer) |
+| - | [Divider](#divider) |
 
 
 </details>
@@ -39,7 +40,7 @@ SwiftUI 速查手册
 ## View
 
 <details>
-<summary id="Text">Text</summary>
+<summary id="text">Text</summary>
 
 ```swift
 Text("Hello World")
@@ -75,7 +76,7 @@ var body: some View {
 
 
 <details>
-<summary id="Label">Label</summary>
+<summary id="label">Label</summary>
 
 可以使用以下代码行在文本旁边设置图标。
 
@@ -95,7 +96,7 @@ Documentation - [Label](https://developer.apple.com/documentation/swiftui/label)
 
 
 <details>
-<summary id="TextEditor">TextEditor 多行可滚动文本编辑器</summary>
+<summary id="texteditor">TextEditor 多行可滚动文本编辑器</summary>
 
 可以显示和编辑长格式文本的视图。
 
@@ -176,7 +177,7 @@ Documentation - [Image](https://developer.apple.com/documentation/swiftui/image)
 
 
 <details>
-<summary id="TextField">TextField</summary>
+<summary id="texteditor">TextField</summary>
 
 显示可编辑文本界面的控件。
 
@@ -219,7 +220,7 @@ Documentation - [TextField](https://developer.apple.com/documentation/swiftui/te
 
 
 <details>
-<summary id="SecureField">SecureField</summary>
+<summary id="securefield">SecureField</summary>
 
 用户安全地输入私人文本的控件。
 
@@ -238,7 +239,7 @@ Documentation - [SecureField](https://developer.apple.com/documentation/swiftui/
 
 
 <details>
-<summary id="Toggle">Toggle</summary>
+<summary id="toggle">Toggle</summary>
 
 在打开和关闭状态之间切换的控件。
 
@@ -262,7 +263,7 @@ Documentation - [Toggle](https://developer.apple.com/documentation/swiftui/toggl
 
 
 <details>
-<summary id="Slider">Slider</summary>
+<summary id="slider">Slider</summary>
 
 用于从值的有界线性范围中选择一个值的控件。
 
@@ -289,7 +290,7 @@ Documentation - [Slider](https://developer.apple.com/documentation/swiftui/slide
 
 
 <details>
-<summary id="Slider">Button</summary>
+<summary id="button">Button</summary>
 
 在触发时执行操作的控件。
 
@@ -333,49 +334,7 @@ Documentation - [Button](https://developer.apple.com/documentation/swiftui/butto
 
 
 <details>
-<summary id="TabView">TabView</summary>
-
-一个视图，允许使用可交互的用户界面元素在多个子视图之间进行切换。
-
-```swift
-TabView {
-    Text("First View")
-        .font(.title)
-        .tabItem({ Text("First") })
-        .tag(0)
-    Text("Second View")
-        .font(.title)
-        .tabItem({ Text("Second") })
-        .tag(1)
-}
-```
-
-图像和文本在一起。 您可以在此处使用 `SF Symbol`。
-
-```swift
-TabView {
-    Text("First View")
-        .font(.title)
-        .tabItem({
-            Image(systemName: "circle")
-            Text("First")
-        })
-        .tag(0)
-    Text("Second View")
-        .font(.title)
-        .tabItem(VStack {
-            Image("second")
-            Text("Second")
-        })
-        .tag(1)
-}
-```
-
-</details>
-
-
-<details>
-<summary id="Picker">Picker</summary>
+<summary id="picker">Picker</summary>
 
 用于从一组互斥值中进行选择的控件。
 
@@ -421,7 +380,7 @@ Documentation - [Picker](https://developer.apple.com/documentation/swiftui/picke
 
 
 <details>
-<summary id="Stepper">Stepper</summary>
+<summary id="stepper">Stepper</summary>
 
 用于执行语义递增和递减操作的控件。
 
@@ -461,7 +420,7 @@ Documentation - [Stepper](https://developer.apple.com/documentation/swiftui/step
 
 
 <details>
-<summary id="DatePicker">DatePicker</summary>
+<summary id="date-picker">DatePicker</summary>
 
 用于选择绝对日期的控件。
 
@@ -537,7 +496,7 @@ Documentation - [DatePicker](https://developer.apple.com/documentation/swiftui/d
 
 
 <details>
-<summary id="Map">Map</summary>
+<summary id="map">Map</summary>
 
 显示嵌入式地图界面的视图。
 
@@ -574,7 +533,7 @@ Documentation - [Map](https://developer.apple.com/documentation/mapkit/map)
 
 
 <details>
-<summary id="ProgressView">ProgressView</summary>
+<summary id="progressview">ProgressView</summary>
 
 显示任务完成进度的视图。
 
@@ -601,7 +560,7 @@ Documentation - [ProgressView](https://developer.apple.com/documentation/swiftui
 ## 查看布局和演示
 
 <details>
-<summary id="HStack">HStack</summary>
+<summary id="hstack">HStack</summary>
 
 将其子级排列在一条水平线上的视图。
 
@@ -615,13 +574,13 @@ HStack (alignment: .center, spacing: 20){
 }
 ```
 
-Documentation - HStack
+Documentation - [HStack](https://developer.apple.com/documentation/swiftui/hstack)
 
 </details>
 
 
 <details>
-<summary id="LazyHStack">LazyHStack</summary>
+<summary id="lazyhstack">LazyHStack</summary>
 
 将子项排列在水平增长的线中的视图，仅在需要时创建项。
 
@@ -635,13 +594,13 @@ ScrollView(.horizontal) {
 }
 ```
 
-Documentation - LazyHStack
+Documentation - [LazyHStack](https://developer.apple.com/documentation/swiftui/lazyhstack)
 
 </details>
 
 
 <details>
-<summary id="VStack">VStack</summary>
+<summary id="vstack">VStack</summary>
 
 以垂直线排列其子项的视图。
 
@@ -655,13 +614,13 @@ VStack (alignment: .center, spacing: 20){
 }
 ```
 
-Documentation - VStack
+Documentation - [VStack](https://developer.apple.com/documentation/swiftui/vstack)
 
 </details>
 
 
 <details>
-<summary id="LazyVStack">LazyVStack</summary>
+<summary id="lazyvstack">LazyVStack</summary>
 
 `iOS 14`
 
@@ -683,7 +642,7 @@ Documentation - [LazyVStack](https://developer.apple.com/documentation/swiftui/l
 
 
 <details>
-<summary id="ZStack">ZStack</summary>
+<summary id="zstack">ZStack</summary>
 
 覆盖其子项的视图，使子项在两个轴上对齐。
 
@@ -700,13 +659,13 @@ ZStack {
 }
 ```
 
-Documentation - ZStack
+Documentation - [ZStack](https://developer.apple.com/documentation/swiftui/zstack)
 
 </details>
 
 
 <details>
-<summary id="List">List</summary>
+<summary id="list">List</summary>
 
 一个容器，用于显示排列在单列中的数据行。
 
@@ -797,7 +756,7 @@ Documentation - [List](https://developer.apple.com/documentation/swiftui/list)
 
 
 <details>
-<summary id="ScrollView">ScrollView</summary>
+<summary id="scrollview">ScrollView</summary>
 
 滚动视图。
 
@@ -814,7 +773,7 @@ Documentation - [ScrollView](https://developer.apple.com/documentation/swiftui/s
 
 
 <details>
-<summary id="LazyHGrid">LazyHGrid</summary>
+<summary id="lazyhgrid">LazyHGrid</summary>
 
 一种容器视图，将其子视图排列在水平增长的网格中，仅在需要时创建项目。
 
@@ -837,7 +796,7 @@ Documentation - [LazyHGrid](https://developer.apple.com/documentation/swiftui/la
 
 
 <details>
-<summary id="LazyVGrid">LazyVGrid</summary>
+<summary id="lazyvgrid">LazyVGrid</summary>
 
 容器视图，将其子视图排列在垂直增长的网格中，仅在需要时创建项目。
 
@@ -859,7 +818,7 @@ Documentation - [LazyVGrid](https://developer.apple.com/documentation/swiftui/la
 
 
 <details>
-<summary id="Form">Form</summary>
+<summary id="form">Form</summary>
 
 用于对用于数据输入的控件（例如在设置或检查器中）进行分组的容器。
 
@@ -893,7 +852,7 @@ Documentation - [Form](https://developer.apple.com/documentation/swiftui/form)
 
 
 <details>
-<summary id="Spacer">Spacer</summary>
+<summary id="spacer">Spacer</summary>
 
 沿其包含的堆栈布局的主轴或如果不包含在堆栈中的两个轴上扩展的灵活空间。
 
@@ -911,7 +870,7 @@ Documentation - [Spacer](https://developer.apple.com/documentation/swiftui/space
 
 
 <details>
-<summary id="Divider">Divider</summary>
+<summary id="divider">Divider</summary>
 
 可用于分隔其他内容的视觉元素。
 
@@ -929,7 +888,7 @@ Documentation - [Divider](https://developer.apple.com/documentation/swiftui/divi
 
 
 <details>
-<summary id="NavigationView">NavigationView</summary>
+<summary id="navigationview">NavigationView</summary>
 
 用于呈现视图堆栈的视图，这些视图表示导航层次结构中的可见路径。
 
@@ -1047,7 +1006,7 @@ Documentation - [ToolbarItem](https://developer.apple.com/documentation/swiftui/
 
 
 <details>
-<summary id="TabView">TabView</summary>
+<summary id="tabview">TabView</summary>
 
 一个视图，允许使用可交互的用户界面元素在多个子视图之间进行切换。
 
@@ -1110,7 +1069,7 @@ TabView {
 
 
 <details>
-<summary id="Alert">Alert</summary>
+<summary id="alerts">Alert</summary>
 
 警报演示的容器。
 
@@ -1161,7 +1120,7 @@ Documentation - [Alert](https://developer.apple.com/documentation/swiftui/alert)
 
 
 <details>
-<summary id="Modal">Modal</summary>
+<summary id="modal">Modal</summary>
 
 Modal 过渡。
 
@@ -1267,7 +1226,7 @@ Documentation - [fullScreenCover](https://developer.apple.com/documentation/swif
 
 
 <details>
-<summary id="ActionSheet">ActionSheet</summary>
+<summary id="action-sheets">ActionSheet</summary>
 
 操作表演示文稿的存储类型。
 
