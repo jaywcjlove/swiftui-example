@@ -39,7 +39,7 @@ const options = {
     const outputPath = path.join('build', path.relative(process.cwd(), item.path).replace(/README.md$/, 'index.html').replace(/.md$/, '.html'));
     await fs.ensureDir(path.dirname(outputPath));
     if (/.md$/.test(item.path)) {
-      let title = markdown.toString().match(/^([\s\S]*?)---/)
+      let title = markdown.toString().match(/^([\s\S]*?)===/)
       title = title ? title[1].replace(/\n/, '') : '';
       const html = create({
         markdown, ...options,
