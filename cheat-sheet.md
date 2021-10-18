@@ -177,7 +177,7 @@ Documentation - [Image](https://developer.apple.com/documentation/swiftui/image)
 
 
 <details>
-<summary id="texteditor">TextField</summary>
+<summary id="textfield">TextField</summary>
 
 显示可编辑文本界面的控件。
 
@@ -290,7 +290,7 @@ Documentation - [Slider](https://developer.apple.com/documentation/swiftui/slide
 
 
 <details>
-<summary id="button">Button</summary>
+<summary id="button">Button 按钮控件</summary>
 
 在触发时执行操作的控件。
 
@@ -334,7 +334,7 @@ Documentation - [Button](https://developer.apple.com/documentation/swiftui/butto
 
 
 <details>
-<summary id="picker">Picker</summary>
+<summary id="picker">Picker 选择控件</summary>
 
 用于从一组互斥值中进行选择的控件。
 
@@ -380,7 +380,7 @@ Documentation - [Picker](https://developer.apple.com/documentation/swiftui/picke
 
 
 <details>
-<summary id="stepper">Stepper</summary>
+<summary id="stepper">Stepper 用于执行语义递增和递减操作的控件</summary>
 
 用于执行语义递增和递减操作的控件。
 
@@ -420,10 +420,7 @@ Documentation - [Stepper](https://developer.apple.com/documentation/swiftui/step
 
 
 <details>
-<summary id="date-picker">DatePicker</summary>
-
-用于选择绝对日期的控件。
-
+<summary id="date-picker">DatePicker 用于选择绝对日期的控件</summary>
 
 日期选择器(DatePicker)的样式也会根据其祖先而改变。 在 `Form` 或 `List` 下，它显示为单个列表行，您可以点击以展开到日期选择器（就像日历应用程序一样）。
 
@@ -496,9 +493,7 @@ Documentation - [DatePicker](https://developer.apple.com/documentation/swiftui/d
 
 
 <details>
-<summary id="map">Map</summary>
-
-显示嵌入式地图界面的视图。
+<summary id="map">Map 显示嵌入式地图界面的视图</summary>
 
 显示指定区域的地图
 
@@ -533,7 +528,7 @@ Documentation - [Map](https://developer.apple.com/documentation/mapkit/map)
 
 
 <details>
-<summary id="progressview">ProgressView</summary>
+<summary id="progressview">ProgressView 进度视图</summary>
 
 显示任务完成进度的视图。
 
