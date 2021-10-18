@@ -233,7 +233,7 @@
         <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/image">Image</a></p>
       </details>
       <details>
-        <summary id="texteditor">TextField</summary>
+        <summary id="textfield">TextField</summary>
         <p>显示可编辑文本界面的控件。</p>
         <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> name<span class="token punctuation">:</span> <span class="token class-name">String</span> <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"John"</span></span>    
 <span class="token keyword">var</span> body<span class="token punctuation">:</span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
@@ -306,7 +306,7 @@
         <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/slider">Slider</a></p>
       </details>
       <details>
-        <summary id="button">Button</summary>
+        <summary id="button">Button 按钮控件</summary>
         <p>在触发时执行操作的控件。</p>
         <pre class="language-swift"><code class="language-swift"><span class="token class-name">Button</span><span class="token punctuation">(</span>
     action<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -337,7 +337,7 @@
         <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/button">Button</a></p>
       </details>
       <details>
-        <summary id="picker">Picker</summary>
+        <summary id="picker">Picker 选择控件</summary>
         <p>用于从一组互斥值中进行选择的控件。</p>
         <p>选择器样式的更改基于其祖先，在 <code>Form</code> 或 <code>List</code> 下，它显示为单个列表行，您可以点击以进入一个显示所有可能选项的新屏幕。</p>
         <pre class="language-swift"><code class="language-swift"><span class="token class-name">NavigationView</span> <span class="token punctuation">{</span>
@@ -371,7 +371,7 @@
         <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/picker">Picker</a></p>
       </details>
       <details>
-        <summary id="stepper">Stepper</summary>
+        <summary id="stepper">Stepper 用于执行语义递增和递减操作的控件</summary>
         <p>用于执行语义递增和递减操作的控件。</p>
         <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> quantity<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token operator">=</span> <span class="token number">0</span>
 <span class="token class-name">Stepper</span><span class="token punctuation">(</span>value<span class="token punctuation">:</span> $quantity<span class="token punctuation">,</span> <span class="token keyword">in</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token operator">...</span><span class="token number">10</span><span class="token punctuation">,</span> label<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Quantity </span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation">quantity</span><span class="token interpolation-punctuation punctuation">)</span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
@@ -395,8 +395,7 @@
         <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/stepper">Stepper</a></p>
       </details>
       <details>
-        <summary id="date-picker">DatePicker</summary>
-        <p>用于选择绝对日期的控件。</p>
+        <summary id="date-picker">DatePicker 用于选择绝对日期的控件</summary>
         <p>日期选择器(DatePicker)的样式也会根据其祖先而改变。 在 <code>Form</code> 或 <code>List</code> 下，它显示为单个列表行，您可以点击以展开到日期选择器（就像日历应用程序一样）。</p>
         <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> selectedDate <span class="token operator">=</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
@@ -453,8 +452,7 @@
         <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/datepicker">DatePicker</a></p>
       </details>
       <details>
-        <summary id="map">Map</summary>
-        <p>显示嵌入式地图界面的视图。</p>
+        <summary id="map">Map 显示嵌入式地图界面的视图</summary>
         <p>显示指定区域的地图</p>
         <pre class="language-swift"><code class="language-swift"><span class="token keyword">import</span> <span class="token class-name">MapKit</span>
 
@@ -479,7 +477,7 @@
         <p>Documentation - <a href="https://developer.apple.com/documentation/mapkit/map">Map</a></p>
       </details>
       <details>
-        <summary id="progressview">ProgressView</summary>
+        <summary id="progressview">ProgressView 进度视图</summary>
         <p>显示任务完成进度的视图。</p>
         <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">private</span> <span class="token keyword">var</span> progress <span class="token operator">=</span> <span class="token number">0.5</span>
 
