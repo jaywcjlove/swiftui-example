@@ -40,7 +40,7 @@ SwiftUI 速查手册
 ## View
 
 <details>
-<summary id="text">Text</summary>
+<summary id="text">Text - 文本</summary>
 
 ```swift
 Text("Hello World")
@@ -96,7 +96,7 @@ Documentation - [Label](https://developer.apple.com/documentation/swiftui/label)
 
 
 <details>
-<summary id="texteditor">TextEditor 多行可滚动文本编辑器</summary>
+<summary id="texteditor">TextEditor - 多行可滚动文本编辑器</summary>
 
 可以显示和编辑长格式文本的视图。
 
@@ -138,46 +138,7 @@ Documentation - [TextEditor](https://developer.apple.com/documentation/swiftui/t
 
 
 <details>
-<summary id="Image">Image</summary>
-
-显示与环境相关的图像的视图。
-
-```swift
-Image("foo") // 图像名称是foo
-```
-
-我们可以使用新的 `SF Symbols`
-
-```swift
-Image(systemName: "clock.fill")
-```
-
-您可以向系统图标集添加样式以匹配您使用的字体
-
-```swift
-Image(systemName: "cloud.heavyrain.fill")
-    .foregroundColor(.red)
-    .font(.title)
-Image(systemName: "clock")
-    .foregroundColor(.red)
-    .font(Font.system(.largeTitle).bold())
-```
-
-为图像添加样式
-
-```swift
-Image("foo")
-    .resizable() // 它将调整大小，以便填充所有可用空间
-    .aspectRatio(contentMode: .fit)
-```
-
-Documentation - [Image](https://developer.apple.com/documentation/swiftui/image)
-
-</details>
-
-
-<details>
-<summary id="textfield">TextField</summary>
+<summary id="textfield">TextField 输入框</summary>
 
 显示可编辑文本界面的控件。
 
@@ -220,7 +181,46 @@ Documentation - [TextField](https://developer.apple.com/documentation/swiftui/te
 
 
 <details>
-<summary id="securefield">SecureField</summary>
+<summary id="Image">Image - 图片</summary>
+
+显示与环境相关的图像的视图。
+
+```swift
+Image("foo") // 图像名称是foo
+```
+
+我们可以使用新的 `SF Symbols`
+
+```swift
+Image(systemName: "clock.fill")
+```
+
+您可以向系统图标集添加样式以匹配您使用的字体
+
+```swift
+Image(systemName: "cloud.heavyrain.fill")
+    .foregroundColor(.red)
+    .font(.title)
+Image(systemName: "clock")
+    .foregroundColor(.red)
+    .font(Font.system(.largeTitle).bold())
+```
+
+为图像添加样式
+
+```swift
+Image("foo")
+    .resizable() // 它将调整大小，以便填充所有可用空间
+    .aspectRatio(contentMode: .fit)
+```
+
+Documentation - [Image](https://developer.apple.com/documentation/swiftui/image)
+
+</details>
+
+
+<details>
+<summary id="securefield">SecureField - 密码输入框</summary>
 
 用户安全地输入私人文本的控件。
 
@@ -239,7 +239,7 @@ Documentation - [SecureField](https://developer.apple.com/documentation/swiftui/
 
 
 <details>
-<summary id="toggle">Toggle</summary>
+<summary id="toggle">Toggle - 开关选择器</summary>
 
 在打开和关闭状态之间切换的控件。
 
@@ -263,7 +263,7 @@ Documentation - [Toggle](https://developer.apple.com/documentation/swiftui/toggl
 
 
 <details>
-<summary id="slider">Slider</summary>
+<summary id="slider">Slider - 滑动输入条</summary>
 
 用于从值的有界线性范围中选择一个值的控件。
 
@@ -290,7 +290,7 @@ Documentation - [Slider](https://developer.apple.com/documentation/swiftui/slide
 
 
 <details>
-<summary id="button">Button 按钮控件</summary>
+<summary id="button">Button - 按钮控件</summary>
 
 在触发时执行操作的控件。
 
@@ -334,7 +334,7 @@ Documentation - [Button](https://developer.apple.com/documentation/swiftui/butto
 
 
 <details>
-<summary id="picker">Picker 选择控件</summary>
+<summary id="picker">Picker - 选择控件</summary>
 
 用于从一组互斥值中进行选择的控件。
 
@@ -380,7 +380,7 @@ Documentation - [Picker](https://developer.apple.com/documentation/swiftui/picke
 
 
 <details>
-<summary id="stepper">Stepper 用于执行语义递增和递减操作的控件</summary>
+<summary id="stepper">Stepper - 用于执行语义递增和递减操作的控件</summary>
 
 用于执行语义递增和递减操作的控件。
 
@@ -420,7 +420,7 @@ Documentation - [Stepper](https://developer.apple.com/documentation/swiftui/step
 
 
 <details>
-<summary id="date-picker">DatePicker 用于选择绝对日期的控件</summary>
+<summary id="date-picker">DatePicker - 日期控件</summary>
 
 日期选择器(DatePicker)的样式也会根据其祖先而改变。 在 `Form` 或 `List` 下，它显示为单个列表行，您可以点击以展开到日期选择器（就像日历应用程序一样）。
 
@@ -493,7 +493,7 @@ Documentation - [DatePicker](https://developer.apple.com/documentation/swiftui/d
 
 
 <details>
-<summary id="map">Map 显示嵌入式地图界面的视图</summary>
+<summary id="map">Map - 显示嵌入式地图界面的视图</summary>
 
 显示指定区域的地图
 
@@ -528,7 +528,7 @@ Documentation - [Map](https://developer.apple.com/documentation/mapkit/map)
 
 
 <details>
-<summary id="progressview">ProgressView 进度视图</summary>
+<summary id="progressview">ProgressView - 进度视图</summary>
 
 显示任务完成进度的视图。
 
@@ -660,7 +660,7 @@ Documentation - [ZStack](https://developer.apple.com/documentation/swiftui/zstac
 
 
 <details>
-<summary id="list">List</summary>
+<summary id="list">List - 列表</summary>
 
 一个容器，用于显示排列在单列中的数据行。
 
@@ -751,7 +751,7 @@ Documentation - [List](https://developer.apple.com/documentation/swiftui/list)
 
 
 <details>
-<summary id="scrollview">ScrollView</summary>
+<summary id="scrollview">ScrollView - 滚动视图</summary>
 
 滚动视图。
 
