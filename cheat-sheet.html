@@ -143,7 +143,7 @@
             <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
           </svg></a>View</h2>
       <details>
-        <summary id="text">Text</summary>
+        <summary id="text">Text - 文本</summary>
         <pre class="language-swift"><code class="language-swift"><span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Hello World"</span></span><span class="token punctuation">)</span>
 </code></pre>
         <p>添加样式</p>
@@ -178,7 +178,7 @@
         <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/label">Label</a></p>
       </details>
       <details>
-        <summary id="texteditor">TextEditor 多行可滚动文本编辑器</summary>
+        <summary id="texteditor">TextEditor - 多行可滚动文本编辑器</summary>
         <p>可以显示和编辑长格式文本的视图。</p>
         <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">private</span> <span class="token keyword">var</span> fullText<span class="token punctuation">:</span> <span class="token class-name">String</span> <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"This is some editable text..."</span></span>
 
@@ -210,30 +210,7 @@
         <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/texteditor">TextEditor</a></p>
       </details>
       <details>
-        <summary id="Image">Image</summary>
-        <p>显示与环境相关的图像的视图。</p>
-        <pre class="language-swift"><code class="language-swift"><span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"foo"</span></span><span class="token punctuation">)</span> <span class="token comment">// 图像名称是foo</span>
-</code></pre>
-        <p>我们可以使用新的 <code>SF Symbols</code></p>
-        <pre class="language-swift"><code class="language-swift"><span class="token class-name">Image</span><span class="token punctuation">(</span>systemName<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"clock.fill"</span></span><span class="token punctuation">)</span>
-</code></pre>
-        <p>您可以向系统图标集添加样式以匹配您使用的字体</p>
-        <pre class="language-swift"><code class="language-swift"><span class="token class-name">Image</span><span class="token punctuation">(</span>systemName<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"cloud.heavyrain.fill"</span></span><span class="token punctuation">)</span>
-    <span class="token punctuation">.</span><span class="token function">foregroundColor</span><span class="token punctuation">(</span><span class="token punctuation">.</span>red<span class="token punctuation">)</span>
-    <span class="token punctuation">.</span><span class="token function">font</span><span class="token punctuation">(</span><span class="token punctuation">.</span>title<span class="token punctuation">)</span>
-<span class="token class-name">Image</span><span class="token punctuation">(</span>systemName<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"clock"</span></span><span class="token punctuation">)</span>
-    <span class="token punctuation">.</span><span class="token function">foregroundColor</span><span class="token punctuation">(</span><span class="token punctuation">.</span>red<span class="token punctuation">)</span>
-    <span class="token punctuation">.</span><span class="token function">font</span><span class="token punctuation">(</span><span class="token class-name">Font</span><span class="token punctuation">.</span><span class="token function">system</span><span class="token punctuation">(</span><span class="token punctuation">.</span>largeTitle<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">bold</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-</code></pre>
-        <p>为图像添加样式</p>
-        <pre class="language-swift"><code class="language-swift"><span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"foo"</span></span><span class="token punctuation">)</span>
-    <span class="token punctuation">.</span><span class="token function">resizable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 它将调整大小，以便填充所有可用空间</span>
-    <span class="token punctuation">.</span><span class="token function">aspectRatio</span><span class="token punctuation">(</span>contentMode<span class="token punctuation">:</span> <span class="token punctuation">.</span>fit<span class="token punctuation">)</span>
-</code></pre>
-        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/image">Image</a></p>
-      </details>
-      <details>
-        <summary id="textfield">TextField</summary>
+        <summary id="textfield">TextField 输入框</summary>
         <p>显示可编辑文本界面的控件。</p>
         <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> name<span class="token punctuation">:</span> <span class="token class-name">String</span> <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"John"</span></span>    
 <span class="token keyword">var</span> body<span class="token punctuation">:</span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
@@ -263,7 +240,30 @@
         <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/textfield">TextField</a></p>
       </details>
       <details>
-        <summary id="securefield">SecureField</summary>
+        <summary id="Image">Image - 图片</summary>
+        <p>显示与环境相关的图像的视图。</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"foo"</span></span><span class="token punctuation">)</span> <span class="token comment">// 图像名称是foo</span>
+</code></pre>
+        <p>我们可以使用新的 <code>SF Symbols</code></p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">Image</span><span class="token punctuation">(</span>systemName<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"clock.fill"</span></span><span class="token punctuation">)</span>
+</code></pre>
+        <p>您可以向系统图标集添加样式以匹配您使用的字体</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">Image</span><span class="token punctuation">(</span>systemName<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"cloud.heavyrain.fill"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">foregroundColor</span><span class="token punctuation">(</span><span class="token punctuation">.</span>red<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">font</span><span class="token punctuation">(</span><span class="token punctuation">.</span>title<span class="token punctuation">)</span>
+<span class="token class-name">Image</span><span class="token punctuation">(</span>systemName<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"clock"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">foregroundColor</span><span class="token punctuation">(</span><span class="token punctuation">.</span>red<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">font</span><span class="token punctuation">(</span><span class="token class-name">Font</span><span class="token punctuation">.</span><span class="token function">system</span><span class="token punctuation">(</span><span class="token punctuation">.</span>largeTitle<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">bold</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+        <p>为图像添加样式</p>
+        <pre class="language-swift"><code class="language-swift"><span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"foo"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">resizable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 它将调整大小，以便填充所有可用空间</span>
+    <span class="token punctuation">.</span><span class="token function">aspectRatio</span><span class="token punctuation">(</span>contentMode<span class="token punctuation">:</span> <span class="token punctuation">.</span>fit<span class="token punctuation">)</span>
+</code></pre>
+        <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/image">Image</a></p>
+      </details>
+      <details>
+        <summary id="securefield">SecureField - 密码输入框</summary>
         <p>用户安全地输入私人文本的控件。</p>
         <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> password<span class="token punctuation">:</span> <span class="token class-name">String</span> <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"1234"</span></span>    
 <span class="token keyword">var</span> body<span class="token punctuation">:</span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
@@ -275,7 +275,7 @@
         <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/securefield">SecureField</a></p>
       </details>
       <details>
-        <summary id="toggle">Toggle</summary>
+        <summary id="toggle">Toggle - 开关选择器</summary>
         <p>在打开和关闭状态之间切换的控件。</p>
         <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> isShowing <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token comment">// toggle state</span>
 
@@ -289,7 +289,7 @@
         <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/toggle">Toggle</a></p>
       </details>
       <details>
-        <summary id="slider">Slider</summary>
+        <summary id="slider">Slider - 滑动输入条</summary>
         <p>用于从值的有界线性范围中选择一个值的控件。</p>
         <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> progress<span class="token punctuation">:</span> <span class="token class-name">Float</span> <span class="token operator">=</span> <span class="token number">0</span>
 
@@ -306,7 +306,7 @@
         <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/slider">Slider</a></p>
       </details>
       <details>
-        <summary id="button">Button 按钮控件</summary>
+        <summary id="button">Button - 按钮控件</summary>
         <p>在触发时执行操作的控件。</p>
         <pre class="language-swift"><code class="language-swift"><span class="token class-name">Button</span><span class="token punctuation">(</span>
     action<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -337,7 +337,7 @@
         <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/button">Button</a></p>
       </details>
       <details>
-        <summary id="picker">Picker 选择控件</summary>
+        <summary id="picker">Picker - 选择控件</summary>
         <p>用于从一组互斥值中进行选择的控件。</p>
         <p>选择器样式的更改基于其祖先，在 <code>Form</code> 或 <code>List</code> 下，它显示为单个列表行，您可以点击以进入一个显示所有可能选项的新屏幕。</p>
         <pre class="language-swift"><code class="language-swift"><span class="token class-name">NavigationView</span> <span class="token punctuation">{</span>
@@ -371,7 +371,7 @@
         <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/picker">Picker</a></p>
       </details>
       <details>
-        <summary id="stepper">Stepper 用于执行语义递增和递减操作的控件</summary>
+        <summary id="stepper">Stepper - 用于执行语义递增和递减操作的控件</summary>
         <p>用于执行语义递增和递减操作的控件。</p>
         <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> quantity<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token operator">=</span> <span class="token number">0</span>
 <span class="token class-name">Stepper</span><span class="token punctuation">(</span>value<span class="token punctuation">:</span> $quantity<span class="token punctuation">,</span> <span class="token keyword">in</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token operator">...</span><span class="token number">10</span><span class="token punctuation">,</span> label<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Quantity </span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation">quantity</span><span class="token interpolation-punctuation punctuation">)</span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
@@ -395,7 +395,7 @@
         <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/stepper">Stepper</a></p>
       </details>
       <details>
-        <summary id="date-picker">DatePicker 用于选择绝对日期的控件</summary>
+        <summary id="date-picker">DatePicker - 日期控件</summary>
         <p>日期选择器(DatePicker)的样式也会根据其祖先而改变。 在 <code>Form</code> 或 <code>List</code> 下，它显示为单个列表行，您可以点击以展开到日期选择器（就像日历应用程序一样）。</p>
         <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> selectedDate <span class="token operator">=</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
@@ -452,7 +452,7 @@
         <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/datepicker">DatePicker</a></p>
       </details>
       <details>
-        <summary id="map">Map 显示嵌入式地图界面的视图</summary>
+        <summary id="map">Map - 显示嵌入式地图界面的视图</summary>
         <p>显示指定区域的地图</p>
         <pre class="language-swift"><code class="language-swift"><span class="token keyword">import</span> <span class="token class-name">MapKit</span>
 
@@ -477,7 +477,7 @@
         <p>Documentation - <a href="https://developer.apple.com/documentation/mapkit/map">Map</a></p>
       </details>
       <details>
-        <summary id="progressview">ProgressView 进度视图</summary>
+        <summary id="progressview">ProgressView - 进度视图</summary>
         <p>显示任务完成进度的视图。</p>
         <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">private</span> <span class="token keyword">var</span> progress <span class="token operator">=</span> <span class="token number">0.5</span>
 
@@ -563,7 +563,7 @@
         <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/zstack">ZStack</a></p>
       </details>
       <details>
-        <summary id="list">List</summary>
+        <summary id="list">List - 列表</summary>
         <p>一个容器，用于显示排列在单列中的数据行。</p>
         <p>创建静态可滚动列表</p>
         <pre class="language-swift"><code class="language-swift"><span class="token class-name">List</span> <span class="token punctuation">{</span>
@@ -628,7 +628,7 @@
         <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/list">List</a></p>
       </details>
       <details>
-        <summary id="scrollview">ScrollView</summary>
+        <summary id="scrollview">ScrollView - 滚动视图</summary>
         <p>滚动视图。</p>
         <pre class="language-swift"><code class="language-swift"><span class="token class-name">ScrollView</span><span class="token punctuation">(</span>alwaysBounceVertical<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"foo"</span></span><span class="token punctuation">)</span>
