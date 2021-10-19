@@ -41,8 +41,7 @@ public func printLog(message: Any, file: String = #file, method: String = #funct
 
 选择添加自定义的 `MySamplePackage` 包，如下图：
 
-![](./imgs/005.png)
-<!--rehype:width=320-->
+![](./imgs/005.png)<!--rehype:width=320-->
 
 ## 添加测试代码
 
