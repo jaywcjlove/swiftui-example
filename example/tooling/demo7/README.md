@@ -11,7 +11,7 @@ Xcode 内置了一个依赖管理器，称为 Swift Package Manager (SPM)。 你
 
 在 Xcode 菜单 `File` -> `New` -> `Packages...` 创建一个名为 `MySamplePackage` 的包。
 
-![](./imgs/002.png)
+![](./imgs/002.png)<!--rehype:style=max-width:650px-->
 
 在 `MySamplePackage/Sources/MySamplePackage/MySamplePackage.swift` 中添加一个测试方法。
 
