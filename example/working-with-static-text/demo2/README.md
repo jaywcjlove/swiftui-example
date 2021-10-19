@@ -31,3 +31,10 @@ Text("The best laid plans")
 提示：您可能想知道为什么我们使用 `foregroundColor()` 的名称具有颜色，而 `background()` 却没有颜色。 这是因为SwiftUI允许我们根据需要为文本重新着色，但是它必须始终是简单的颜色，而您可以在背景中放置任何类型的视图-颜色，是，还可以是形状，其他一些文本等等。
 
 还有更多选择。 例如，我们可以调整文本中的行距。 默认值为0，表示没有应用额外的行距，但是您也可以指定位置值以在行之间添加额外的行距：
+
+```swift
+Text("This is an extremely long text string that will never fit even the widest of phones without wrapping")
+    .font(.largeTitle)
+    .lineSpacing(50)
+    .frame(width: 300)
+```
