@@ -30,18 +30,18 @@ public func printLog(message: Any, file: String = #file, method: String = #funct
 
 通过项目工程文件目录，点击右键 `Add packages...` 将本地报源文件添加到 `Demo` 工程中。
 
-![](./imgs/003.png)
+![](./imgs/003.png)<!--rehype:style=max-width:650px-->
 
 > 🚧 注意：在添加包之前，先关闭 `MySamplePackage` 包的工程
 <!--rehype:style=border-left: 8px solid #ffe564;background-color: #ffe56440;padding: 12px 16px;-->
 
 在新工程 `Demo` -> `TARGETS` -> `General` -> `Frameworks, Libraries, and Embedded Content` 中添加 `package`，如下图：
 
-![](./imgs/004.png)
+![](./imgs/004.png)<!--rehype:style=max-width:650px-->
 
 选择添加自定义的 `MySamplePackage` 包，如下图：
 
-![](./imgs/005.png)<!--rehype:width=320-->
+![](./imgs/005.png)<!--rehype:style=max-width:320px-->
 
 ## 添加测试代码
 
@@ -74,4 +74,4 @@ struct ContentView_Previews: PreviewProvider {
 }
 ```
 
-![](./imgs/006.png)
+![](./imgs/006.png)<!--rehype:style=max-width:650px-->
