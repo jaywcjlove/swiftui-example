@@ -354,6 +354,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何使用 `FileDocument` 和 `DocumentGroup` 创建基于文档的应用程序？](example/data/demo9/README.md)
 - [如何使用 `fileExporter()` 导出文件？](example/data/demo10/README.md)
 - [如何在 `SwiftUI` 中继续 `NSUserActivity`？](example/data/demo11/README.md)
+- [如何使用 `LocationButton` 读取用户的位置？](example/data/demo12/README.md)
 
 ## 辅助功能
 
