@@ -96,6 +96,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何使用 `ForEach` 循环创建视图？](example/view-layout/demo6/README.md)
 - [如何使用 `layoutPriority()` 控制布局优先级？](example/view-layout/demo7/README.md)
 - [如何使两个视图具有相同的宽度或高度？](example/view-layout/demo8/README.md)
+- [如何使用 `foregroundStyle()` 提供视觉结构？](example/view-layout/demo9/README.md)
 
 ## 堆栈，网格，滚动视图
 
@@ -358,7 +359,6 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何检测暗模式？](example/accessibility/demo4/README.md)
 - [如何使用装饰性图像减少屏幕阅读器的混乱？](example/accessibility/demo5/README.md)
 - [如何在请求时减少动画？](example/accessibility/demo6/README.md)
-
 
 ## 工具
 
