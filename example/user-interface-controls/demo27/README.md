@@ -1,4 +1,4 @@
-当用户提交 `TextField` 时如何采取事件？
+当用户提交 TextField 时如何执行事件？
 ===
 
 ![Updated for Xcode 13.0](https://img.shields.io/static/v1?label=&message=Updated%20for%20Xcode%2013.0&color=blue&logo=Xcode&logoColor=white)

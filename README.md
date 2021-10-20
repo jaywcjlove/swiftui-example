@@ -148,7 +148,8 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何在 `Safari` 中打开 Web 链接？](example/user-interface-controls/demo24/README.md)
 - [如何设置可编辑文本 `TextEditor` 背景颜色？](example/user-interface-controls/demo25/README.md)
 - [如何自定义 `TextField`、`SecureField` 和 `TextEditor` 的提交按钮？](example/user-interface-controls/demo26/README.md)
-- [当用户提交 TextField 时如何采取事件？](example/user-interface-controls/demo27/README.md)
+- [当用户提交 TextField 时如何执行事件？](example/user-interface-controls/demo27/README.md)
+- [如何获得突出的边框按钮？](example/user-interface-controls/demo28/README.md)
 
 ## 响应事件
 
