@@ -27,10 +27,10 @@ struct ContentView: View {
 
 如果 `Xcode` 的预览区域停止（这会经常发生），则可以按 <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>p</kbd> 使其恢复显示布局。
 
-![](imgs/1.png)
+![](imgs/1.png)<!--rehype:style=max-width:650px-->
 
-⚠️ 这真的很重要，因此我要重复一遍：按下 <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>p</kbd> 将更新您的 `SwiftUI` 预览。
-
+> 🚧  这真的很重要，因此我要重复一遍：按下 <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>p</kbd> 将更新您的 `SwiftUI` 预览。
+<!--rehype:style=border-left: 8px solid #ffe564;background-color: #ffe56440;padding: 12px 16px;-->
 
 `Xcode` 为我们创建的基本内容视图是一个单独的文本视图，上面写着 `Hello World`，并带有一些填充-多余的边距阻止了我们添加的任何其他视图之间的距离过近。 在我们的应用程序中，这实际上将向我们显示菜单中的项目列表，因此我们将改用列表视图。
 
