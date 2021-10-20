@@ -35,7 +35,7 @@ const options = {
   const pkg = await fs.readJson('package.json');
   const files = await recursiveReaddirFiles(process.cwd(), {
     ignored: /\/(node_modules|\.git|build)/,
-    filter: (item) => /(.md|.jpg|.png)$/.test(item.path)
+    filter: (item) => /(.md|.jpg|.png|.mp4)$/.test(item.path)
   });
   await Promise.all(files.map(async (item) => {
     const markdown = await fs.readFile(item.path);
