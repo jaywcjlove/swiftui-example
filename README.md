@@ -81,6 +81,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [什么时候应该使用 `ContainerRelativeShape`？](example/images-shapes-media/demo10/README.md)
 - [如何使用 `VideoPlayer` 播放电影？](example/images-shapes-media/demo11/README.md)
 - [如何使用 `SpriteView` 集成 `SpriteKit`？](example/images-shapes-media/demo12/README.md)
+- [如何从 URL 加载远程图像？](example/images-shapes-media/demo13/README.md)
 
 ## 视图布局
 
