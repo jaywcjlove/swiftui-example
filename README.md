@@ -147,6 +147,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何在地图 `Map` 视图中显示注释？](example/user-interface-controls/demo23/README.md)
 - [如何在 `Safari` 中打开 Web 链接？](example/user-interface-controls/demo24/README.md)
 - [如何设置可编辑文本 `TextEditor` 背景颜色？](example/user-interface-controls/demo25/README.md)
+- [如何自定义 `TextField`、`SecureField` 和 `TextEditor` 的提交按钮？](example/user-interface-controls/demo26/README.md)
 
 ## 响应事件
 
