@@ -3,7 +3,7 @@
 
 到目前为止，我们一直在编码的所有东西都是我们从头开始构建的，因此您可以确切地看到它是如何工作的，并将这些技能应用到您自己的项目中。 但是，有时从头开始编写一些东西是有风险的：也许代码很复杂，也许很容易出错，也许经常更改，或者任何其他无数的原因，这就是存在依赖关系的原因——获取第三方代码的能力 并在我们的项目中使用它。
 
-Xcode 内置了一个依赖管理器，称为 Swift Package Manager (SPM)。 你可以告诉 Xcode 一些在线存储的代码的 URL，它会为你下载它。 您甚至可以告诉它下载哪个版本，这意味着如果远程代码在未来某个时候发生变化，您可以确保它不会破坏您现有的代码。
+Xcode 内置了一个依赖管理器，称为 Swift Package Manager (SPM)。 你可以告诉 Xcode 一些在线存储的代码的 URL，它会为你下载它。 您甚至可以告诉它下载哪个版本，这意味着如果远程代码在未来某个时候发生变化，您可以确保它不会破坏您现有的代码。同时您也可以将常用方法或者一些有趣的处理抽离出来，创建成一个包，在您的项目中使用这个包。
 
 为了尝试这个，我们使用 Xcode 创建一个 `MySamplePackage` 包，和一个 `Demo` 的工程。在 `Demo` 工程中使用 `MySamplePackage` 包进行本地开发调试。
 
@@ -16,6 +16,8 @@ Xcode 内置了一个依赖管理器，称为 Swift Package Manager (SPM)。 你
 在 `MySamplePackage/Sources/MySamplePackage/MySamplePackage.swift` 中添加一个测试方法。
 
 ```swift
+import SwiftUI
+
 public func printLog(message: Any, file: String = #file, method: String = #function, line: Int = #line) {
   #if DEBUG
     print("🍺🍺🍺\n\((file as NSString).lastPathComponent)[\(line)], \(method): \n\(message)\n🍺🍺🍺\n")
