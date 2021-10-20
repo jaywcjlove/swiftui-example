@@ -3,7 +3,7 @@
 
 使用 `HSplitViews` 布局容器，将其子级排列在一条水平线上，并允许用户使用放置在它们之间的分隔符来调整它们的大小。
 
-![](imgs/1.png)
+![](imgs/1.png)<!--rehype:style=max-width:320px-->
 
 ```swift
 struct ContentView: View {

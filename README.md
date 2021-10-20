@@ -103,7 +103,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 以结构化方式定位视图
 
 - [如何使用 `VStack` 和 `HStack` 创建堆栈？](example/stacks-grids-scrollviews/demo1/README.md)
-- [如何使用对齐和间距自定义堆栈布局？](example/stacks-grids-scrollviews/demo2/README.md)
+- [如何使用对齐 `alignment` 和间距 `spacing` 自定义堆栈布局？](example/stacks-grids-scrollviews/demo2/README.md)
 - [如何使用 `Spacer` 将视图强制移到堆栈中的一侧？](example/stacks-grids-scrollviews/demo3/README.md)
 - [如何制作固定尺寸的 `Spacer`？](example/stacks-grids-scrollviews/demo4/README.md)
 - [如何使用 `ZStack` 在彼此之上叠加视图？](example/stacks-grids-scrollviews/demo5/README.md)
@@ -116,6 +116,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何使用 `LazyVGrid` 和 `LazyHGrid` 在网格中放置视图？](example/stacks-grids-scrollviews/demo12/README.md)
 - [如何使用 `LazyVStack` 和 `LazyHStack` 延迟加载视图？](example/stacks-grids-scrollviews/demo13/README.md)
 - [如何使用 `HSplitViews` 创建左中右三栏布局？](example/stacks-grids-scrollviews/demo14/README.md)
+- [如何添加视觉效果模糊？](example/stacks-grids-scrollviews/demo15/README.md)
 
 ## 用户界面控件
 
