@@ -70,4 +70,4 @@ NavigationView {
 }
 ```
 
-![](imgs/2.png)
+![](imgs/2.png)<!--rehype:style=max-width:650px-->

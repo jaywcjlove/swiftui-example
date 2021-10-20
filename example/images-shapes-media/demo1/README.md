@@ -11,7 +11,7 @@ Image("dog")
 
 需要在 `Assets.xcassets` 里面添加 `dog` 的图片。
 
-![](imgs/1.png)
+![](imgs/1.png)<!--rehype:style=max-width:650px-->
 
 如果要使用 `Apple` 的 `SF Symbols` 图标集，则应使用 `Image(systemName:)` 初始化程序，如下所示：
 
