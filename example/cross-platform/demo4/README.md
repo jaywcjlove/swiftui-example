@@ -1,7 +1,7 @@
 如何使用 `digitalCrownRotation()` 在 `watchOS` 上读取 `Digital Crown`？
 ===
 
-![Updated for Xcode 13.0](https://img.shields.io/static/v1?label=&message=Updated%20for%20Xcode%2013.0&color=success&logo=Xcode&logoColor=white)
+![Updated for Xcode 13.0](https://img.shields.io/static/v1?label=&message=Updated%20for%20Xcode%2013.0&color=blue&logo=Xcode&logoColor=white)
 ![New in watchOS 8](https://img.shields.io/static/v1?label=&message=New%20in%20watchOS%207&color=lightgrey&logo=apple)
 
 `SwiftUI` 通过两个修饰符向我们的应用程序公开数字表冠，必须同时使用这两个修饰符才能将表冠用作我们应用程序的输入。 第一个是 `focusable()`，当您希望有问题的视图能够接收 `Digital Crown` 更新时，它应该为 `true`，而 `digitalCrownRotation()` 则在 `Digital Crown` 和您选择的属性之间创建绑定。
@@ -20,7 +20,7 @@ struct ContentView: View {
 }
 ```
 
-https://wangchujiang.com/swiftui-example/example/cross-platform/demo4/01.mp4
+https://user-images.githubusercontent.com/1680273/138087654-3816683c-c965-416b-a29a-00a233794cc9.mp4
 
 这将从负无穷大滚动到正无穷大，在文本视图中显示当前滚动值。
 
@@ -42,8 +42,8 @@ https://wangchujiang.com/swiftui-example/example/cross-platform/demo4/01.mp4
 
 例如，此修改器以 `0.1` 的增量从 `1` 到 `5` 步进，灵敏度较低，从头到尾环绕，带有触觉反馈：
 
-```swift0
+```swift
 .digitalCrownRotation($scrollAmount, from: 1, through: 5, by: 0.1, sensitivity: .low, isContinuous: true, isHapticFeedbackEnabled: true)
 ```
 
-https://wangchujiang.com/swiftui-example/example/cross-platform/demo4/02.mp4
+https://user-images.githubusercontent.com/1680273/138087702-1eb0c2bf-08b6-4ebe-80d2-42e46c56476a.mp4
