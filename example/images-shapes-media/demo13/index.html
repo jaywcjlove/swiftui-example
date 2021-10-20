@@ -45,11 +45,11 @@
       <p>因为 <code>SwiftUI</code> 不知道下载的图像有多大，默认情况下 <code>AsyncImage</code> 在加载时具有灵活的宽度和高度。 因此，除非您另外指定，否则在加载图像时它会在您的 UI 中占用大量空间，然后在加载图像后立即跳转到正确的大小。</p>
       <p>尽管您可以将框架附加到您的图像，但默认情况下它只会影响占位符 - 如果您完成的图像以不同的尺寸到达，您的 UI 将不得不进行调整以适应它。</p>
       <p>更好的解决方案是添加函数来控制结果图像的显示方式以及您想要的占位符类型。 例如，这会获取我们的图像并使其可调整大小，但在加载时使用红色占位符颜色：</p>
-      <pre class="language-swift"><code class="language-swift"><span class="token class-name">AsyncImage</span><span class="token punctuation">(</span>url<span class="token punctuation">:</span> <span class="token function">URL</span><span class="token punctuation">(</span>string<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"https://jaywcjlove.github.io/swiftui-example/example/images-shapes-media/demo13/avatars.png"</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> image <span class="token keyword">in</span>
-    image<span class="token punctuation">.</span><span class="token function">resizable</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-      <span class="token punctuation">.</span><span class="token function">aspectRatio</span><span class="token punctuation">(</span>contentMode<span class="token punctuation">:</span> <span class="token punctuation">.</span>fit<span class="token punctuation">)</span>
-      <span class="token punctuation">.</span><span class="token function">clipShape</span><span class="token punctuation">(</span><span class="token class-name">RoundedRectangle</span><span class="token punctuation">(</span>cornerRadius<span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-      <span class="token punctuation">.</span><span class="token function">padding</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <pre class="language-swift"><code class="language-swift"><span class="token class-name">AsyncImage</span><span class="token punctuation">(</span>url<span class="token punctuation">:</span> <span class="token function">URL</span><span class="token punctuation">(</span>string<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"https://jaywcjlove.github.io/swiftui-example/example/images-shapes-media/demo13/imgs/avatars.png"</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> image <span class="token keyword">in</span>
+  image<span class="token punctuation">.</span><span class="token function">resizable</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">aspectRatio</span><span class="token punctuation">(</span>contentMode<span class="token punctuation">:</span> <span class="token punctuation">.</span>fit<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">clipShape</span><span class="token punctuation">(</span><span class="token class-name">RoundedRectangle</span><span class="token punctuation">(</span>cornerRadius<span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">padding</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span> placeholder<span class="token punctuation">:</span> <span class="token punctuation">{</span>
     <span class="token class-name">Color</span><span class="token punctuation">.</span>red
 <span class="token punctuation">}</span>
@@ -61,8 +61,86 @@
       </p>
       <p>因为生成的图像和占位符颜色现在都可以调整大小，所以 <code>frame()</code> 修饰符能够确保我们的 <code>AsyncImage</code> 始终保持正确的大小。 在你问之前：不，<code>AsyncImage</code> 上没有直接可用的 <code>resizable()</code> 修饰符。</p>
       <p>注意：默认情况下，假设图像的比例为 <code>1</code>，这意味着专为非视网膜屏幕设计。 但是，如果您已经知道正确的比例，您也可以使用第二个参数控制比例：</p>
-      <pre class="language-swift"><code class="language-swift"><span class="token class-name">AsyncImage</span><span class="token punctuation">(</span>url<span class="token punctuation">:</span> <span class="token function">URL</span><span class="token punctuation">(</span>string<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"https://jaywcjlove.github.io/swiftui-example/example/images-shapes-media/demo13/avatars@2x.png"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> scale<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">)</span>
+      <pre class="language-swift"><code class="language-swift"><span class="token class-name">AsyncImage</span><span class="token punctuation">(</span>url<span class="token punctuation">:</span> <span class="token function">URL</span><span class="token punctuation">(</span>string<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"https://jaywcjlove.github.io/swiftui-example/example/images-shapes-media/demo13/imgs/avatars@2x.png"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span> scale<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">)</span>
 </code></pre>
+      <h2 id="图像加载过度效果"><a class="anchor" aria-hidden="true" tabindex="-1" href="#图像加载过度效果"><span class="octicon octicon-link"></span></a>图像加载过度效果</h2>
+      <p>AsyncImage 有另一个初始化器，它允许分阶段获取图像加载结果：</p>
+      <pre class="language-swift"><code class="language-swift"><span class="token keyword">public</span> <span class="token keyword">init</span><span class="token punctuation">(</span>url<span class="token punctuation">:</span> <span class="token constant">URL</span><span class="token operator">?</span><span class="token punctuation">,</span> scale<span class="token punctuation">:</span> <span class="token class-name">CGFloat</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> transaction<span class="token punctuation">:</span> <span class="token class-name">Transaction</span> <span class="token operator">=</span> <span class="token class-name">Transaction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token attribute atrule">@ViewBuilder</span> content<span class="token punctuation">:</span> <span class="token attribute atrule">@escaping</span> <span class="token punctuation">(</span><span class="token class-name">AsyncImagePhase</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token class-name">Content</span><span class="token punctuation">)</span>
+</code></pre>
+      <p>请参阅以下示例：</p>
+      <pre class="language-swift"><code class="language-swift"><span class="token keyword">import</span> <span class="token class-name">SwiftUI</span>
+
+<span class="token attribute atrule">@ViewBuilder</span>
+<span class="token keyword">func</span> <span class="token function-definition function">waitView</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+  <span class="token class-name">VStack</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token other-directive property">#available</span><span class="token punctuation">(</span>iOS <span class="token number">15.0</span><span class="token punctuation">,</span> <span class="token operator">*</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token class-name">ProgressView</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">progressViewStyle</span><span class="token punctuation">(</span><span class="token class-name">CircularProgressViewStyle</span><span class="token punctuation">(</span>tint<span class="token punctuation">:</span> <span class="token punctuation">.</span>indigo<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token comment">// Fallback on earlier versions</span>
+    <span class="token punctuation">}</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Fetching image..."</span></span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">struct</span> <span class="token class-name">AvatarsView</span><span class="token punctuation">:</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> body<span class="token punctuation">:</span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token other-directive property">#available</span><span class="token punctuation">(</span>iOS <span class="token number">15.0</span><span class="token punctuation">,</span> <span class="token operator">*</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token class-name">AsyncImage</span><span class="token punctuation">(</span>
+        url<span class="token punctuation">:</span> <span class="token function">URL</span><span class="token punctuation">(</span>string<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"https://avatars.githubusercontent.com/u/1680273?v=4"</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        transaction<span class="token punctuation">:</span> <span class="token class-name">Transaction</span><span class="token punctuation">(</span>animation<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token function">easeInOut</span><span class="token punctuation">(</span>duration<span class="token punctuation">:</span> <span class="token number">2.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">)</span> <span class="token punctuation">{</span> phase <span class="token keyword">in</span>
+        <span class="token keyword">switch</span> phase <span class="token punctuation">{</span>
+          <span class="token keyword">case</span> <span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token keyword">let</span> image<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            image
+              <span class="token punctuation">.</span><span class="token function">resizable</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+              <span class="token punctuation">.</span><span class="token function">aspectRatio</span><span class="token punctuation">(</span>contentMode<span class="token punctuation">:</span> <span class="token punctuation">.</span>fit<span class="token punctuation">)</span>
+              <span class="token punctuation">.</span><span class="token function">clipShape</span><span class="token punctuation">(</span><span class="token class-name">RoundedRectangle</span><span class="token punctuation">(</span>cornerRadius<span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+              <span class="token punctuation">.</span><span class="token function">padding</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  
+          <span class="token keyword">case</span> <span class="token punctuation">.</span><span class="token function">failure</span><span class="token punctuation">(</span><span class="token keyword">let</span> error<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token class-name">Text</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span>localizedDescription<span class="token punctuation">)</span>
+    
+          <span class="token keyword">case</span> <span class="token punctuation">.</span>empty<span class="token punctuation">:</span>
+            <span class="token function">waitView</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    
+          <span class="token attribute atrule">@unknown</span> <span class="token keyword">default</span><span class="token punctuation">:</span>
+            <span class="token class-name">EmptyView</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+      <span class="token punctuation">.</span><span class="token function">frame</span><span class="token punctuation">(</span>width<span class="token punctuation">:</span> <span class="token number">128</span><span class="token punctuation">,</span> height<span class="token punctuation">:</span> <span class="token number">128</span><span class="token punctuation">)</span>
+
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token comment">// Fallback on earlier versions</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+      <p>这里我只提供 <code>URL</code> 和 <code>content</code> 参数，这是一个闭包。 闭包的参数是一个 <code>AsyncImagePhase</code> 值，其中 <code>AsyncImagePhase</code> 是一个枚举，包含代表某些加载阶段的案例。</p>
+      <p>实际上，您可以在上方的 <code>switch</code> 语句中看到 <code>AsyncImagePhase</code> 的所有可用情况。 第一种是已经成功获取图像的情况。 <code>case</code> 的关联值是一个 <code>SwiftUI Image</code> 视图，我们可以使用任何必要的视图修饰符来装饰它。</p>
+      <p>第二种情况包含可能发生的潜在错误。 在这个例子中，我只是在文本视图中呈现错误描述。</p>
+      <p>最后一个名为 <code>.empty</code> 的情况表示当还没有加载图像时 <code>AsyncImage</code> 视图的状态。 在这里，我们可以添加占位符视图、进度视图或适合应用程序的任何其他内容。 在上面的示例中，我调用了 <code>waitView()</code> 方法，如下所示：</p>
+      <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@ViewBuilder</span>
+<span class="token keyword">func</span> <span class="token function-definition function">waitView</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+  <span class="token class-name">VStack</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token other-directive property">#available</span><span class="token punctuation">(</span>iOS <span class="token number">15.0</span><span class="token punctuation">,</span> <span class="token operator">*</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token class-name">ProgressView</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">progressViewStyle</span><span class="token punctuation">(</span><span class="token class-name">CircularProgressViewStyle</span><span class="token punctuation">(</span>tint<span class="token punctuation">:</span> <span class="token punctuation">.</span>indigo<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token comment">// Fallback on earlier versions</span>
+    <span class="token punctuation">}</span>
+    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Fetching image..."</span></span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+      <p>其目的是与文本一起呈现进度视图。</p>
+      <p>看到 <code>switch</code> 语句中还有一个 <code>@unknown default case;</code> 这是处理将来可能添加到 <code>AsyncImagePhase</code> 枚举的任何新值所必需的。 <code>EmptyView</code> 是处理这种情况的最佳候选者。</p>
+      <p>上面的 <code>AsyncImage</code> 实现结果如下：</p>
+      <p>
+        <img src="./imgs/004.gif" alt="" style="max-width:320px"><!--rehype:style=max-width:320px-->
+      </p>
+      <p>通常，请注意上述初始化 <code>AsyncImage</code> 视图的方法可以更好地控制视图的结果。 特别是，我们实际上可以检测到此错误何时发生，从而显示不同的视图； 使用上一部分中遇到的占位符初始值设定项我们无法做到的事情。</p>
+      <p>但这并不是这个初始化程序的唯一好处。 通过 transaction 参数，我们可以传递一个动画，该动画将在阶段变化时启动。 接下来你可以看到和之前一样的例子，这次只为事务参数提供了一个动画实例：</p>
     </div>
   </body>
 </html>
