@@ -13,7 +13,7 @@ SwiftUI教程：构建完整的项目
 
 ![](imgs/3.png)
 
-现在你可以点击 `▶︎` 运行起来，也可以通过快捷键 <kbd>⌘</kbd> + <kbd>r</kbd>
+现在你可以点击 <kbd>▶︎</kbd> 运行起来，也可以通过快捷键 <kbd>⌘</kbd> + <kbd>r</kbd>
 
 ![](imgs/4.png)
 
