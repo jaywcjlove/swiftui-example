@@ -162,6 +162,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [应用启动时如何运行代码？](example/responding-to-events/demo5/README.md)
 - [如何将 `AppDelegate` 添加到 SwiftUI 应用？](example/responding-to-events/demo6/README.md)
 - [如何检测设备旋转？](example/responding-to-events/demo7/README.md)
+- [如何在键盘上添加工具栏？](example/responding-to-events/demo8/README.md)
 
 ## 点击和手势
 
