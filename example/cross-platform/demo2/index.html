@@ -17,15 +17,20 @@
       </svg></a>
     <div class="markdown-body">
       <h1 id="如何在-macos-上获取半透明列表"><a class="anchor" aria-hidden="true" tabindex="-1" href="#如何在-macos-上获取半透明列表"><span class="octicon octicon-link"></span></a>如何在 <code>macOS</code> 上获取半透明列表？</h1>
+      <p>
+        <img src="https://img.shields.io/static/v1?label=&#x26;message=Updated%20for%20Xcode%2013.0&#x26;color=success&#x26;logo=Xcode&#x26;logoColor=white" alt="Updated for Xcode 13">
+        <img src="https://img.shields.io/static/v1?label=&#x26;message=New%20in%20macOS%2011.6&#x26;color=lightgrey&#x26;logo=apple" alt="New in macOS 11.6">
+      </p>
       <p>macOS 的一个微妙但重要的功能是，当一个窗口处于活动状态时，侧边栏会自动变得稍微透明，然后在窗口移至背景时变为不透明，这是向用户的一个小提示，但该窗口还是有一点 展示他们的背景，让他们对周围环境有一点了解。</p>
       <p>SwiftUI 允许我们使用 <code>List</code> 上的 <code>listStyle()</code> 修饰符创建这些半透明边栏，并传入 <code>SidebarListStyle()</code>，如下所示：</p>
       <pre class="language-swift"><code class="language-swift"><span class="token class-name">List</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">..&#x3C;</span><span class="token number">51</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"</span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation"><span class="token short-argument">$0</span></span><span class="token interpolation-punctuation punctuation">)</span><span class="token string">"</span></span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
-<span class="token punctuation">.</span><span class="token function">listStyle</span><span class="token punctuation">(</span><span class="token class-name">SidebarListStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">listStyle</span><span class="token punctuation">(</span><span class="token punctuation">.</span>sidebar<span class="token punctuation">)</span>
 </code></pre>
-      <p>没有什么可以阻止您将其与任何列表一起使用，但是线索就在名字中：它是专门为显示在主窗口侧面的列表而设计的，正如您在Xcode的导航器中所看到的那样。</p>
-      <p>注意：在 <code>iOS</code> 和 <code>iPadOS</code> 上，<code>SidebarListStyle()</code> 不提供半透明背景，但会影响单元格样式。</p>
+      <p>🚧 重要提示：如果您使用 <code>Xcode 12</code>，则需要使用 <code>SidebarListStyle()</code> 而不是 <code>.sidebar</code>。</p>
+      <p>没有什么可以阻止您将其与任何列表一起使用，但是线索就在名字中：它是专门为显示在主窗口侧面的列表而设计的，正如您在 <code>Xcode</code> 的导航器中所看到的那样。</p>
+      <p>🚧 注意：在 <code>iOS</code> 和 <code>iPadOS</code> 上，<code>.sidebar</code> 不提供半透明背景，但会影响单元格样式。</p>
     </div>
   </body>
 </html>

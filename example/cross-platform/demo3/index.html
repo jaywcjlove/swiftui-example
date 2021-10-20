@@ -17,14 +17,19 @@
       </svg></a>
     <div class="markdown-body">
       <h1 id="如何在watchos上制作轮播列表"><a class="anchor" aria-hidden="true" tabindex="-1" href="#如何在watchos上制作轮播列表"><span class="octicon octicon-link"></span></a>如何在watchOS上制作轮播列表？</h1>
-      <p>watchOS 具有一种特别常见的列表样式，可以使用 <code>List</code> 轻松复制：列表中的行在移至屏幕上时会滑动并按比例放大，然后在移离屏幕时会滑动并按比例缩小。 这对于较大的图形行特别有效 - 几乎就像 Apple 以前的<code>Cover Flow</code> 效果一样。</p>
-      <p>要启用这种轮播效果，请将 <code>.listStyle()</code> 修饰符与 <code>CarouselListStyle</code> 的新实例一起使用，如下所示：</p>
+      <p>
+        <img src="https://img.shields.io/static/v1?label=&#x26;message=Updated%20for%20Xcode%2013.0&#x26;color=success&#x26;logo=Xcode&#x26;logoColor=white" alt="Updated for Xcode 13">
+        <img src="https://img.shields.io/static/v1?label=&#x26;message=New%20in%20watchOS%207&#x26;color=lightgrey&#x26;logo=apple" alt="New in watchOS 8">
+      </p>
+      <p><code>watchOS</code> 有一种特别常见的列表样式，可以使用 <code>List</code> 轻松复制：列表中的行在移动到屏幕上时滑动并放大，然后在移出屏幕时滑动并缩小。 这对于更粗的图形行特别有效 - 它几乎就像 <code>Apple</code> 旧的 <code>Cover Flow</code> 效果。</p>
+      <p>要启用此轮播效果，请将 <code>.listStyle()</code> 修饰符与 <code>.carousel</code> 一起使用，如下所示：</p>
       <pre class="language-swift"><code class="language-swift"><span class="token class-name">List</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">..&#x3C;</span><span class="token number">51</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"</span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation"><span class="token short-argument">$0</span></span><span class="token interpolation-punctuation punctuation">)</span><span class="token string">"</span></span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
-<span class="token punctuation">.</span><span class="token function">listStyle</span><span class="token punctuation">(</span><span class="token class-name">CarouselListStyle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">listStyle</span><span class="token punctuation">(</span><span class="token punctuation">.</span>carousel<span class="token punctuation">)</span>
 </code></pre>
-      <p>注意：仅在watchOS上可用。</p>
+      <p>🚧 重要提示：如果您使用 <code>Xcode 12</code>，则需要使用 <code>CarouselListStyle()</code> 而不是 <code>.carousel</code>。</p>
+      <p>🚧 注意：这仅在 <code>watchOS</code> 上可用。</p>
     </div>
   </body>
 </html>
