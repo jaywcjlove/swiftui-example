@@ -18,7 +18,7 @@
     <div class="markdown-body">
       <h1 id="如何使用-digitalcrownrotation-在-watchos-上读取-digital-crown"><a class="anchor" aria-hidden="true" tabindex="-1" href="#如何使用-digitalcrownrotation-在-watchos-上读取-digital-crown"><span class="octicon octicon-link"></span></a>如何使用 <code>digitalCrownRotation()</code> 在 <code>watchOS</code> 上读取 <code>Digital Crown</code>？</h1>
       <p>
-        <img src="https://img.shields.io/static/v1?label=&#x26;message=Updated%20for%20Xcode%2013.0&#x26;color=success&#x26;logo=Xcode&#x26;logoColor=white" alt="Updated for Xcode 13.0">
+        <img src="https://img.shields.io/static/v1?label=&#x26;message=Updated%20for%20Xcode%2013.0&#x26;color=blue&#x26;logo=Xcode&#x26;logoColor=white" alt="Updated for Xcode 13.0">
         <img src="https://img.shields.io/static/v1?label=&#x26;message=New%20in%20watchOS%207&#x26;color=lightgrey&#x26;logo=apple" alt="New in watchOS 8">
       </p>
       <p><code>SwiftUI</code> 通过两个修饰符向我们的应用程序公开数字表冠，必须同时使用这两个修饰符才能将表冠用作我们应用程序的输入。 第一个是 <code>focusable()</code>，当您希望有问题的视图能够接收 <code>Digital Crown</code> 更新时，它应该为 <code>true</code>，而 <code>digitalCrownRotation()</code> 则在 <code>Digital Crown</code> 和您选择的属性之间创建绑定。</p>
@@ -33,7 +33,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-      <p><a href="https://wangchujiang.com/swiftui-example/example/cross-platform/demo4/01.mp4">https://wangchujiang.com/swiftui-example/example/cross-platform/demo4/01.mp4</a></p>
+      <p><a href="https://user-images.githubusercontent.com/1680273/138087654-3816683c-c965-416b-a29a-00a233794cc9.mp4">https://user-images.githubusercontent.com/1680273/138087654-3816683c-c965-416b-a29a-00a233794cc9.mp4</a></p>
       <p>这将从负无穷大滚动到正无穷大，在文本视图中显示当前滚动值。</p>
       <p>提示：如果将 <code>focusable()</code> 放在 <code>digitalCrownRotation()</code> 之后，您会发现它不再起作用。</p>
       <p><code>digitalCrownRotation()</code> 修饰符有几种其他形式，可以让您更好地控制其行为方式。 例如，最长的品种让我们：</p>
@@ -48,9 +48,9 @@
         <li><code>isHapticFeedbackEnabled</code> 确定是否在转弯时触发触觉反馈。</li>
       </ol>
       <p>例如，此修改器以 <code>0.1</code> 的增量从 <code>1</code> 到 <code>5</code> 步进，灵敏度较低，从头到尾环绕，带有触觉反馈：</p>
-      <pre class="language-swift0"><code class="language-swift0">.digitalCrownRotation($scrollAmount, from: 1, through: 5, by: 0.1, sensitivity: .low, isContinuous: true, isHapticFeedbackEnabled: true)
+      <pre class="language-swift"><code class="language-swift"><span class="token punctuation">.</span><span class="token function">digitalCrownRotation</span><span class="token punctuation">(</span>$scrollAmount<span class="token punctuation">,</span> from<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> through<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span> by<span class="token punctuation">:</span> <span class="token number">0.1</span><span class="token punctuation">,</span> sensitivity<span class="token punctuation">:</span> <span class="token punctuation">.</span>low<span class="token punctuation">,</span> isContinuous<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> isHapticFeedbackEnabled<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
 </code></pre>
-      <p><a href="https://wangchujiang.com/swiftui-example/example/cross-platform/demo4/02.mp4">https://wangchujiang.com/swiftui-example/example/cross-platform/demo4/02.mp4</a></p>
+      <p><a href="https://user-images.githubusercontent.com/1680273/138087702-1eb0c2bf-08b6-4ebe-80d2-42e46c56476a.mp4">https://user-images.githubusercontent.com/1680273/138087702-1eb0c2bf-08b6-4ebe-80d2-42e46c56476a.mp4</a></p>
     </div>
   </body>
 </html>
