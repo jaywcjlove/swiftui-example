@@ -48,7 +48,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 
 通过实际的应用程序项目学习SwiftUI
 
-- [SwiftUI 教程：构建完整的项目](example/introduction/demo1/README.md)
+- [创建一个 `SwiftUI` 项目](example/introduction/demo1/README.md)
 - [使用列表构建菜单](example/introduction/demo2/README.md)
 
 ## 使用静态文本

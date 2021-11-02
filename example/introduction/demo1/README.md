@@ -1,5 +1,8 @@
-SwiftUI教程：构建完整的项目
+创建一个 `SwiftUI` 项目
 ===
+
+![Updated for Xcode 13](https://img.shields.io/static/v1?label=&message=Updated%20for%20Xcode%2013.1&color=blue&logo=Xcode&logoColor=white)
+![New in macOS 12](https://img.shields.io/static/v1?label=&message=New%20in%20macOS%2012&color=lightgrey&logo=apple)
 
 首先，打开 `Xcode` 创建一下新的 `Xcode` 工程。
 
