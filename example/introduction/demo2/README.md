@@ -1,6 +1,9 @@
 使用列表构建菜单
 ===
 
+![Updated for Xcode 13](https://img.shields.io/static/v1?label=&message=Updated%20for%20Xcode%2013.1&color=blue&logo=Xcode&logoColor=white)
+![New in macOS 12](https://img.shields.io/static/v1?label=&message=New%20in%20macOS%2012&color=lightgrey&logo=apple)
+
 我们将从简单开始，然后逐步发展。 在此过程中，将开始看到 `SwiftUI` 使某些事情变得容易的事情，以及有些困难的事情。
 
 在 `ContentView.swift` 中是一个基本结构，代表我们应用程序中唯一的屏幕：`ContentView`。 看起来像这样：
