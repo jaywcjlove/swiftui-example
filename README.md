@@ -44,15 +44,15 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 
 简要介绍 SwiftUI 的基础
 
-- [不要惊慌!](example/quick-start/不要惊慌!.md)
-- [什么是 SwiftUI?](example/quick-start/什么是%20SwiftUI%20?.md)
-- [SwiftUI vs Interface Builder 和 storyboards](example/quick-start/SwiftUI%20vs%20Interface%20Builder%20和%20storyboards.md)
-- [有关 SwiftUI 的常见问题](example/quick-start/有关%20SwiftUI%20的常见问题.md)
-- [回答这个大问题：你应该学习 SwiftUI，UIKit，还是两者都学？](example/quick-start/回答这个大问题：你应该学习%20SwiftUI，UIKit，还是两者都学？.md)
-- [如何遵循这个快速入门指南](example/quick-start/如何遵循这个快速入门指南.md)
-- [从 UIKit 迁移到 SwiftUI](example/quick-start/从%20UIKit%20迁移到%20SwiftUI.md)
-- [基本模板是什么？](example/quick-start/基本模板是什么？.md)
-- [贡献](example/quick-start/贡献.md)
+- [不要惊慌！](example/quick-start/dont-panic.md)
+- [什么是 SwiftUI?](example/quick-start/what-is-swiftui.md)
+- [SwiftUI 与 Interface Builder 和 storyboards](example/quick-start/swiftui-vs-interface-builder-and-storyboards.md)
+- [有关 SwiftUI 的常见问题](example/quick-start/frequently-asked-questions-about-swiftui.md)
+- [回答这个大问题：你应该学习 SwiftUI，UIKit，还是两者都学？](example/quick-start/answering-the-big-question-should-you-learn-swiftui-uikit-or-both.md)
+- [如何遵循这个快速入门指南？](example/quick-start/how-to-follow-this-quick-start-guide.md)
+- [从 UIKit 迁移到 SwiftUI](example/quick-start/migrating-from-uikit-to-swiftui.md)
+- [基本模板是什么？](example/quick-start/whats-in-the-basic-template.md)
+- [贡献](example/quick-start/dedication.md)
 
 ## 建立一个完整的项目
 
