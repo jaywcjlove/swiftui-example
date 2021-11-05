@@ -81,6 +81,10 @@ padding-top: 5px;
       </svg></a>
     <div class="markdown-body">
       <h1 id="如何在-swiftui-中使用-touch-id-和-face-id"><a class="anchor" aria-hidden="true" tabindex="-1" href="#如何在-swiftui-中使用-touch-id-和-face-id"><span class="octicon octicon-link"></span></a>如何在 <code>SwiftUI</code> 中使用 <code>Touch ID</code> 和 <code>Face ID</code>?</h1>
+      <p>
+        <img src="https://img.shields.io/static/v1?label=&#x26;message=Updated%20for%20Xcode%2013.1&#x26;color=blue&#x26;logo=Xcode&#x26;logoColor=white" alt="Updated for Xcode 13">
+        <img src="https://img.shields.io/static/v1?label=&#x26;message=New%20in%20macOS%2012&#x26;color=lightgrey&#x26;logo=apple" alt="New in macOS 12">
+      </p>
       <p>苹果公司的绝大多数设备都标配有生物识别认证，这意味着它们使用指纹和面部识别来解锁。我们也可以使用此功能，这意味着我们可以确保仅当有效用户解锁后才能读取敏感数据。</p>
       <p>
         <img src="imgs/1.png" alt="">
@@ -93,6 +97,62 @@ padding-top: 5px;
       <p>现在回到 <code>ContentView.swift</code>，并在文件顶部附近添加以下导入：</p>
       <pre class="language-swift"><code class="language-swift"><span class="token keyword">import</span> <span class="token class-name">LocalAuthentication</span>
 </code></pre>
+      <p>好的，我们都准备好使用生物识别技术了。我之前提到过这“只是有点令人不快”，这就是它的来源：<code>Swift</code> 开发人员使用 <code>Error</code> 协议来表示运行时发生的错误，但 <code>Objective-C</code> 使用一个名为 <code>NSError</code> 的特殊类。因为这是一个 <code>Objective-C API</code>，我们需要使用 <code>NSError</code> 来处理问题，并像常规的 <code>inout</code> 参数一样使用 <code>&#x26;</code> 传递它。</p>
+      <p>我们将编写一个 <code>authenticate()</code> 方法，将所有生物识别功能隔离在一个地方。要做到这一点，需要四个步骤：</p>
+      <ol>
+        <li>创建 <code>LAContext</code> 的实例，它允许我们查询生物特征状态并执行身份验证检查。</li>
+        <li>询问上下文是否能够执行生物识别认证——这很重要，因为 <code>iPod touch</code> 既没有 <code>Touch ID</code> 也没有 <code>Face ID</code>。</li>
+        <li>如果生物识别是可能的，那么我们开始实际的身份验证请求，传入一个闭包以在身份验证完成时运行。</li>
+        <li>当用户通过身份验证与否时，我们的完成闭包将被调用并告诉我们它是否有效，如果不是，错误是什么。这个闭包会从主线程调用，所以我们需要将任何与 UI 相关的工作推回到主线程。</li>
+      </ol>
+      <p>请继续将此方法添加到 <code>ContentView</code>：</p>
+      <pre class="language-swift"><code class="language-swift"><span class="token keyword">func</span> <span class="token function-definition function">authenticate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> context <span class="token operator">=</span> <span class="token class-name">LAContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">var</span> error<span class="token punctuation">:</span> <span class="token class-name">NSError</span><span class="token operator">?</span>
+    <span class="token comment">// 检查是否可以进行生物特征认证</span>
+    <span class="token keyword">if</span> context<span class="token punctuation">.</span><span class="token function">canEvaluatePolicy</span><span class="token punctuation">(</span><span class="token punctuation">.</span>deviceOwnerAuthenticationWithBiometrics<span class="token punctuation">,</span> error<span class="token punctuation">:</span> <span class="token operator">&#x26;</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 有可能，所以继续使用它</span>
+        <span class="token keyword">let</span> reason <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"We need to unlock your data."</span></span>
+        context<span class="token punctuation">.</span><span class="token function">evaluatePolicy</span><span class="token punctuation">(</span><span class="token punctuation">.</span>deviceOwnerAuthenticationWithBiometrics<span class="token punctuation">,</span> localizedReason<span class="token punctuation">:</span> reason<span class="token punctuation">)</span> <span class="token punctuation">{</span> success<span class="token punctuation">,</span> authenticationError <span class="token keyword">in</span>
+            <span class="token comment">// 身份验证现已完成</span>
+            <span class="token class-name">DispatchQueue</span><span class="token punctuation">.</span>main<span class="token punctuation">.</span><span class="token keyword">async</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> success <span class="token punctuation">{</span>
+                    <span class="token comment">// authenticated successfully</span>
+                    <span class="token keyword">self</span><span class="token punctuation">.</span>isUnlocked <span class="token operator">=</span> <span class="token boolean">true</span>
+                    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"成功认证"</span></span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    <span class="token comment">// there was a problem</span>
+                    <span class="token keyword">self</span><span class="token punctuation">.</span>isUnlocked <span class="token operator">=</span> <span class="token boolean">false</span>
+                    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"有个问题"</span></span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"没有生物识别"</span></span><span class="token punctuation">)</span>
+        <span class="token comment">// 没有生物识别</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+      <p>该方法本身不会做任何事情，因为它根本没有连接到 <code>SwiftUI</code>。 为了解决这个问题，我们需要添加一些状态，我们可以在身份验证成功时进行调整，以及一个 <code>onAppear()</code> 修饰符来触发身份验证。</p>
+      <p>因此，首先将此属性添加到 <code>ContentView</code>：</p>
+      <pre class="language-swift"><code class="language-swift"><span class="token attribute atrule">@State</span> <span class="token keyword">private</span> <span class="token keyword">var</span> isUnlocked <span class="token operator">=</span> <span class="token boolean">false</span>
+</code></pre>
+      <p>这个简单的布尔值将存储应用程序是否显示其受保护的数据，因此我们将在身份验证成功时将其翻转为 true。 将 <code>// authenticated successfully</code> 的注释替换为：</p>
+      <pre class="language-swift"><code class="language-swift"><span class="token keyword">self</span><span class="token punctuation">.</span>isUnlocked <span class="token operator">=</span> <span class="token boolean">true</span>
+</code></pre>
+      <p>最后，我们可以显示当前的身份验证状态并在 body 属性中开始身份验证过程，如下所示：</p>
+      <pre class="language-swift"><code class="language-swift"><span class="token class-name">VStack</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token keyword">self</span><span class="token punctuation">.</span>isUnlocked <span class="token punctuation">{</span>
+        <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Unlocked"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Locked"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span><span class="token function">onAppear</span><span class="token punctuation">(</span>perform<span class="token punctuation">:</span> authenticate<span class="token punctuation">)</span>
+</code></pre>
+      <p>如果您运行该应用程序，很有可能您只会看到 <code>Locked</code> 而没有其他内容。 这是因为模拟器默认情况下没有选择生物识别，而且我们没有提供任何错误消息，所以它默默地失败了。</p>
+      <p>要使用 <code>Face ID</code> 进行试用，请转到 <code>Hardware</code> 菜单并选择 <code>Face ID</code>> <code>Enrolled(已注册)</code>，然后再次启动该应用程序。 这次您应该会看到 <code>Face ID</code> 提示出现，您可以通过返回硬件菜单并选择 <code>Face ID</code> > <code>Matching Face</code> 或 <code>Non-matching Face</code> 来触发成功或失败的身份验证。</p>
+      <p>一切顺利，您应该会看到 <code>Face ID</code> 提示消失，其下方将是 <code>Unlocked</code> 文本视图——我们的应用程序已检测到身份验证，现在可以使用了。</p>
       <p>完整代码如下：</p>
       <pre class="language-swift"><code class="language-swift"><span class="token keyword">import</span> <span class="token class-name">SwiftUI</span>
 <span class="token keyword">import</span> <span class="token class-name">LocalAuthentication</span>
