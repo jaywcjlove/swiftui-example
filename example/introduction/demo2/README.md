@@ -37,7 +37,7 @@ struct ContentView: View {
 
 `Xcode` 为我们创建的基本内容视图是一个单独的文本视图，上面写着 `Hello World`，并带有一些填充-多余的边距阻止了我们添加的任何其他视图之间的距离过近。 在我们的应用程序中，这实际上将向我们显示菜单中的项目列表，因此我们将改用列表视图。
 
-将 [下面代码在工程中](https://github.com/jaywcjlove/swiftui-example/blob/ce7d93191e80cf8214ce04d917827fc36bb1091b/example/demo2/Demo/Demo/ContentView.swift#L12-L16) 替换当前的文本视图，：
+将 [下面代码在工程中](https://github.com/jaywcjlove/swiftui-example/blob/ce7d93191e80cf8214ce04d917827fc36bb1091b/example/demo2/Demo/Demo/ContentView.swift#L12-L16) 替换当前的文本视图：
 
 ```swift
 List {
