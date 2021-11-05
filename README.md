@@ -389,6 +389,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何在 `SwiftUI` 中使用 `Touch ID` 和 `Face ID`？](example/tooling/demo6/README.md)
 - [如何在 Xcode 中添加创建 `Swift` 包依赖？](example/tooling/demo7/README.md)
 - [如何以纵向或横向预览布局？](example/tooling/demo8/README.md)
+- [如何查找导致 SwiftUI 视图更新的数据更改？](example/tooling/demo9/README.md)
 
 ## 附录A
 

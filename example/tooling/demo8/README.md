@@ -1,6 +1,9 @@
 如何以纵向或横向预览布局？
 ===
 
+![Updated for Xcode 13](https://img.shields.io/static/v1?label=&message=Updated%20for%20Xcode%2013.1&color=blue&logo=Xcode&logoColor=white)
+![New in iOS 15](https://img.shields.io/static/v1?label=&message=New%20in%20iOS%2015&color=lightgrey&logo=apple)
+
 `SwiftUI` 有一个专用的 `previewInterfaceOrientation()` 修饰符，用于控制设备预览在 `Xcode` 画布中的显示方式。 要使用它，请传递四个设备旋转选项之一：`.portrait`、`.portraitUpsideDown`、`.landscapeLeft` 或 `.landscapeRight`。
 
 例如，这将显示横向左侧预览：
