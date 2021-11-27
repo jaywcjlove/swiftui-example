@@ -1,6 +1,9 @@
 如何使用 Text 视图创建静态标签？
 ===
 
+![Updated for Xcode 13](https://img.shields.io/static/v1?label=&message=Updated%20for%20Xcode%2013.1&color=blue&logo=Xcode&logoColor=white)
+![New in macOS 12](https://img.shields.io/static/v1?label=&message=New%20in%20macOS%2012&color=lightgrey&logo=apple)
+
 文本视图在屏幕上显示静态文本，等效于 `UIKit` 中的 `UILabel`。 从最基本的角度来看，它们看起来像这样：
 
 ```swift
