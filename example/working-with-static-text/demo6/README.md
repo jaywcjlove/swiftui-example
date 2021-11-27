@@ -1,6 +1,9 @@
 如何在文字检视中格式化日期？
 ===
 
+![Updated for Xcode 13](https://img.shields.io/static/v1?label=&message=Updated%20for%20Xcode%2013.1&color=blue&logo=Xcode&logoColor=white)
+![New in macOS 12](https://img.shields.io/static/v1?label=&message=New%20in%20macOS%2012&color=lightgrey&logo=apple)
+
 SwiftUI 的文本视图带有两个特定的日期格式化程序，以使日期在屏幕上看起来更好：一个用于处理单个日期，另一个用于处理日期范围。
 
 日期范围版本实际上更简单，因为您只提供了一个封闭的日期范围，并且可以确保根据用户的区域设置对日期范围进行了适当的格式化：

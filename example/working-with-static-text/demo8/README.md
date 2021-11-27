@@ -1,6 +1,9 @@
 如何使用 Label 并排显示文本和图标？
 ===
 
+![Updated for Xcode 13](https://img.shields.io/static/v1?label=&message=Updated%20for%20Xcode%2013.1&color=blue&logo=Xcode&logoColor=white)
+![New in macOS 12](https://img.shields.io/static/v1?label=&message=New%20in%20macOS%2012&color=lightgrey&logo=apple)
+
 SwiftUI 具有专用的视图类型，用于并排显示文本和图标，这对于菜单，列表等尤其有用。
 
 要使用标签，您可以使用 SF 符号，如下所示：

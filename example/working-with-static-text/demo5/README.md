@@ -1,6 +1,9 @@
 如何在文字中的字母之间增加空格？
 ===
 
+![Updated for Xcode 13](https://img.shields.io/static/v1?label=&message=Updated%20for%20Xcode%2013.1&color=blue&logo=Xcode&logoColor=white)
+![New in macOS 12](https://img.shields.io/static/v1?label=&message=New%20in%20macOS%2012&color=lightgrey&logo=apple)
+
 SwiftUI 为我们提供了两个修饰符来控制文本视图内字符的间距，从而使我们可以根据需要将字母间距更紧密或更远。
 
 这两个修饰符是 `tracking()` 和 `kerning()`：两者都增加了字母之间的间距，但是 `tracking` 会拉开连字，而 `kerning` 不会，而 `kerning` 会留下一些尾随空白，而 `tracking` 不会。

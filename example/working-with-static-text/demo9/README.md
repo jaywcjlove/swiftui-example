@@ -1,6 +1,9 @@
 如何使用 redacted() 将内容标记为占位符？
 ===
 
+![Updated for Xcode 13](https://img.shields.io/static/v1?label=&message=Updated%20for%20Xcode%2013.1&color=blue&logo=Xcode&logoColor=white)
+![New in macOS 12](https://img.shields.io/static/v1?label=&message=New%20in%20macOS%2012&color=lightgrey&logo=apple)
+
 SwiftUI 允许我们在视图中将文本标记为占位符，这意味着它会被渲染，但会被灰色掩盖以表明它不是最终内容。 这是通过 `redacted(reason:)` 修饰符以及 `unredacted()` 修饰符提供的，您可以根据需要使用它们覆盖重写。
 
 它在代码中的外观如下：
