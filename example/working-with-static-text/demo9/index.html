@@ -81,6 +81,10 @@ padding-top: 5px;
       </svg></a>
     <div class="markdown-body">
       <h1 id="如何使用-redacted-将内容标记为占位符"><a class="anchor" aria-hidden="true" tabindex="-1" href="#如何使用-redacted-将内容标记为占位符"><span class="octicon octicon-link"></span></a>如何使用 redacted() 将内容标记为占位符？</h1>
+      <p>
+        <img src="https://img.shields.io/static/v1?label=&#x26;message=Updated%20for%20Xcode%2013.1&#x26;color=blue&#x26;logo=Xcode&#x26;logoColor=white" alt="Updated for Xcode 13">
+        <img src="https://img.shields.io/static/v1?label=&#x26;message=New%20in%20macOS%2012&#x26;color=lightgrey&#x26;logo=apple" alt="New in macOS 12">
+      </p>
       <p>SwiftUI 允许我们在视图中将文本标记为占位符，这意味着它会被渲染，但会被灰色掩盖以表明它不是最终内容。 这是通过 <code>redacted(reason:)</code> 修饰符以及 <code>unredacted()</code> 修饰符提供的，您可以根据需要使用它们覆盖重写。</p>
       <p>它在代码中的外观如下：</p>
       <pre class="language-swift"><code class="language-swift"><span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"This is placeholder text"</span></span><span class="token punctuation">)</span>

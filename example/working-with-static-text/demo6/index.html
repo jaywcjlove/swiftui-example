@@ -81,6 +81,10 @@ padding-top: 5px;
       </svg></a>
     <div class="markdown-body">
       <h1 id="如何在文字检视中格式化日期"><a class="anchor" aria-hidden="true" tabindex="-1" href="#如何在文字检视中格式化日期"><span class="octicon octicon-link"></span></a>如何在文字检视中格式化日期？</h1>
+      <p>
+        <img src="https://img.shields.io/static/v1?label=&#x26;message=Updated%20for%20Xcode%2013.1&#x26;color=blue&#x26;logo=Xcode&#x26;logoColor=white" alt="Updated for Xcode 13">
+        <img src="https://img.shields.io/static/v1?label=&#x26;message=New%20in%20macOS%2012&#x26;color=lightgrey&#x26;logo=apple" alt="New in macOS 12">
+      </p>
       <p>SwiftUI 的文本视图带有两个特定的日期格式化程序，以使日期在屏幕上看起来更好：一个用于处理单个日期，另一个用于处理日期范围。</p>
       <p>日期范围版本实际上更简单，因为您只提供了一个封闭的日期范围，并且可以确保根据用户的区域设置对日期范围进行了适当的格式化：</p>
       <pre class="language-swift"><code class="language-swift"><span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">...</span><span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addingTimeInterval</span><span class="token punctuation">(</span><span class="token number">600</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
