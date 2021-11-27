@@ -1,6 +1,9 @@
 如何使用 multilineTextAlignment() 调整文本对齐方式
 ===
 
+![Updated for Xcode 13](https://img.shields.io/static/v1?label=&message=Updated%20for%20Xcode%2013.1&color=blue&logo=Xcode&logoColor=white)
+![New in macOS 12](https://img.shields.io/static/v1?label=&message=New%20in%20macOS%2012&color=lightgrey&logo=apple)
+
 当 `SwiftUI` 的 “Text” 视图跨多行换行时，默认情况下它们会对齐其前沿。 如果要更改此设置，请使用 `multilineTextAlignment()` 修饰符指定其他选项，例如 `.center` 或 `.trailing`。
 
 例如，这将使多行文本跨行居中：

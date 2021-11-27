@@ -1,6 +1,9 @@
 如何使用字体，颜色，行距等为文本视图设置样式？
 ===
 
+![Updated for Xcode 13](https://img.shields.io/static/v1?label=&message=Updated%20for%20Xcode%2013.1&color=blue&logo=Xcode&logoColor=white)
+![New in macOS 12](https://img.shields.io/static/v1?label=&message=New%20in%20macOS%2012&color=lightgrey&logo=apple)
+
 文本视图不仅在外观上为我们提供了可预期的广泛控制，而且还旨在与Apple核心技术（例如Dynamic Type）无缝地协同工作。
 
 默认情况下，“Text”视图具有“正文”动态类型样式，但是您可以通过在其上调用 `.font()` 来从其他大小和权重中进行选择，如下所示：
