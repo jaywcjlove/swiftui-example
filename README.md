@@ -75,6 +75,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何使用 `Label` 并排显示文本和图标？](example/working-with-static-text/demo8/README.md)
 - [如何使用 `redacted()` 将内容标记为占位符？](example/working-with-static-text/demo9/README.md)
 - [如何使用 `privacySensitive()` 将内容标记为私有?](example/working-with-static-text/demo10/README.md)
+- [如何在文本中呈现 `Markdown` 内容？](example/working-with-static-text/demo11/README.md)
 
 ## 图像，形状和媒体
 
