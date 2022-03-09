@@ -413,3 +413,13 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [什么是 `@SceneStorage` 属性包装器？](example/appendix-a/demo13/README.md)
 - [什么是 `@ScaledMetric` 属性包装器？](example/appendix-a/demo14/README.md)
 - [什么是 `@UIApplicationDelegateAdaptor` 属性包装器？](example/appendix-a/demo15/README.md)
+
+## 工具推荐
+
+- [Swift 语法入门](https://github.com/jaywcjlove/swift-tutorial)
+- [Swift 包索引](https://swiftpackageindex.com/)
+- [hackingwithswift.com](https://www.hackingwithswift.com/quick-start/swiftui)
+
+## License
+
+Licensed under the MIT License.
