@@ -16,7 +16,7 @@ VStack {
 }
 ```
 
-![](./imgs/001.png)
+![](./imgs/001.png)<!--rehype:style=max-width:386px-->
 
 是的，该链接是自动可点击的。
 
