@@ -19,7 +19,7 @@ function createOption(editPath) {
       ]
     },
     rewrite: (node) => {
-      if (node.type === 'element' && node.properties.href && !node.properties['data-edit'] && /.md$/.test(node.properties.href)) {
+      if (node.type === 'element' && node.properties && node.properties.href && !node.properties['data-edit'] && /.md$/.test(node.properties.href)) {
         if (/readme.md$/.test(node.properties.href.toLocaleLowerCase())) {
           node.properties.href = node.properties.href.toLocaleLowerCase().replace(/readme.md$/, 'index.html');
         } else {

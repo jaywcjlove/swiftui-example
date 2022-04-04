@@ -44,9 +44,7 @@ export const header = (homeUrl) => {
               properties: {
                 className: 'nav',
               },
-              children: [
-                
-              ]
+              children: []
             }
           ]
         }
