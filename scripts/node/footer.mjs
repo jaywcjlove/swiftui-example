@@ -54,6 +54,17 @@ export const footer = (editPath) => {
         children: [
           { type: 'text', value: 'Copyright © 2021. All rights reserved.' }
         ]
+      },
+      {
+        type: 'element',
+        tagName: 'a',
+        properties: {
+          href: '#totop',
+          className: 'gototop',
+        },
+        children: [
+          { type: 'text', value: 'top' }
+        ]
       }
     ]
   }
