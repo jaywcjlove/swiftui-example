@@ -1,11 +1,8 @@
-name: Build Website
+name: CI
 on:
   push:
     branches:
       - main
-
-env:
-  SKIP_PREFLIGHT_CHECK: true
 
 jobs:
   Build:
@@ -22,5 +19,6 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
+          commit_message: ${{steps.tag_version.outputs.tag}} ${{ github.event.head_commit.message }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
