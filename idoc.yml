@@ -3,6 +3,8 @@ dir: 'example'
 logo: ./assets/logo.svg
 favicon: ./assets/logo.svg
 
+tocs: false
+
 menus:
   Home: index.html
   Cheat Sheet: cheat-sheet.html
