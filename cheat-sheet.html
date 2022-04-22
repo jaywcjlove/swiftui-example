@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SwiftUI 速查手册 SwiftUI Example </title>
   
-  <meta name="description" content="SwiftUI 速查手册">
+  <meta name="description" content="添加样式">
   
   
-  <link rel="stylesheet" type="text/css" href="css/main.css?v=1650617981096">
-  <link rel="stylesheet" type="text/css" href="css/tocbot.css?v=1650617981096">
-  <link rel="stylesheet" type="text/css" href="css/media.css?v=1650617981096">
-  <link rel="stylesheet" type="text/css" href="css/sidebar.css?v=1650617981096">
-  <link rel="stylesheet" type="text/css" href="css/copy.css?v=1650617981096">
+  <link rel="stylesheet" type="text/css" href="css/main.css?v=1650623564033">
+  <link rel="stylesheet" type="text/css" href="css/tocbot.css?v=1650623564033">
+  <link rel="stylesheet" type="text/css" href="css/media.css?v=1650623564033">
+  <link rel="stylesheet" type="text/css" href="css/sidebar.css?v=1650623564033">
+  <link rel="stylesheet" type="text/css" href="css/copy.css?v=1650623564033">
   
     <link rel="icon" href="assets/logo.svg" type="image/x-icon">
   
@@ -1187,6 +1187,9 @@
 
   <markdown-style>
     <h1 id="swiftui-速查手册"><a aria-hidden="true" tabindex="-1" href="#swiftui-速查手册" class="anchor"><span class="icon icon-link"></span></a>SwiftUI 速查手册</h1>
+<!--idoc:config:
+tocs: true
+-->
 <details>
 <summary>SwiftUI 与 UIKit 效果一致</summary>
 
@@ -1306,11 +1309,10 @@
 
 
 
-<table><thead><tr><th>UIKit</th><th><a href="https://developer.apple.com/xcode/swiftui/">SwiftUI</a></th></tr></thead><tbody><tr><td>UILabel</td><td><a href="#text">Text</a> &#x26; <a href="#label">Label</a></td></tr><tr><td>UIImageView</td><td><a href="#image">Image</a></td></tr><tr><td>UITextField</td><td><a href="#textfield">TextField</a> / <a href="#securefield">SecureField</a></td></tr><tr><td>UITextView</td><td><a href="#texteditor">TextEditor</a></td></tr><tr><td>UISwitch</td><td><a href="#toggle">Toggle</a></td></tr><tr><td>UISlider</td><td><a href="#slider">Slider</a></td></tr><tr><td>UIButton</td><td><a href="#button">Button</a></td></tr><tr><td>UITableView</td><td><a href="#list">List</a></td></tr><tr><td>UICollectionView</td><td><a href="#lazyvgrid">LazyVGrid</a> / <a href="#lazyhgrid">LazyHGrid</a></td></tr><tr><td>UINavigationController</td><td><a href="#navigationview">NavigationView</a></td></tr><tr><td>UITabBarController</td><td><a href="#tabview">TabView</a></td></tr><tr><td>UIAlertController with style .alert</td><td><a href="#alerts">Alert</a></td></tr><tr><td>UIAlertController with style .actionSheet</td><td><a href="#action-sheets">ActionSheet</a></td></tr><tr><td>UIStackView with horizontal axis</td><td><a href="#hstack">HStack</a> / <a href="#lazyhstack">LazyHStack</a></td></tr><tr><td>UIStackView with vertical axis</td><td><a href="#vstack">VStack</a> / <a href="#lazyvstack">LazyVStack</a></td></tr><tr><td>Aligning them in both axes.</td><td><a href="#zstack">ZStack</a></td></tr><tr><td>UISegmentedControl</td><td><a href="#picker">Picker</a></td></tr><tr><td>UIStepper</td><td><a href="#stepper">Stepper</a></td></tr><tr><td>UIDatePicker</td><td><a href="#date-picker">DatePicker</a></td></tr><tr><td>NSAttributedString</td><td>No equivalent (use <a href="#text">Text</a>)</td></tr><tr><td>MapKit</td><td><a href="#map">Map</a></td></tr><tr><td>UIProgressView</td><td><a href="#progressview">ProgressView</a></td></tr><tr><td>-</td><td><a href="#modal">Modal</a></td></tr><tr><td>-</td><td><a href="#scrollview">ScrollView</a></td></tr><tr><td>-</td><td><a href="#form">Form</a></td></tr><tr><td>-</td><td><a href="#spacer">Spacer</a></td></tr><tr><td>-</td><td><a href="#divider">Divider</a></td></tr></tbody></table>
+<table><thead><tr><th>UIKit</th><th><a href="https://developer.apple.com/xcode/swiftui/">SwiftUI</a></th></tr></thead><tbody><tr><td>UILabel</td><td><a href="#text-%E6%96%87%E6%9C%AC">Text</a> &#x26; <a href="#label">Label</a></td></tr><tr><td>UIImageView</td><td><a href="#image-%E5%9B%BE%E7%89%87">Image</a></td></tr><tr><td>UITextField</td><td><a href="#textfield-%E8%BE%93%E5%85%A5%E6%A1%86">TextField</a> / <a href="#securefield-%E5%AF%86%E7%A0%81%E8%BE%93%E5%85%A5%E6%A1%86">SecureField</a></td></tr><tr><td>UITextView</td><td><a href="#texteditor-%E5%A4%9A%E8%A1%8C%E5%8F%AF%E6%BB%9A%E5%8A%A8%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8">TextEditor</a></td></tr><tr><td>UISwitch</td><td><a href="#toggle-%E5%BC%80%E5%85%B3%E9%80%89%E6%8B%A9%E5%99%A8">Toggle</a></td></tr><tr><td>UISlider</td><td><a href="#slider-%E6%BB%91%E5%8A%A8%E8%BE%93%E5%85%A5%E6%9D%A1">Slider</a></td></tr><tr><td>UIButton</td><td><a href="#button-%E6%8C%89%E9%92%AE%E6%8E%A7%E4%BB%B6">Button</a></td></tr><tr><td>UITableView</td><td><a href="#list-%E5%88%97%E8%A1%A8">List</a></td></tr><tr><td>UICollectionView</td><td><a href="#lazyvgrid">LazyVGrid</a> / <a href="#lazyhgrid">LazyHGrid</a></td></tr><tr><td>UINavigationController</td><td><a href="#navigationview">NavigationView</a></td></tr><tr><td>UITabBarController</td><td><a href="#tabview">TabView</a></td></tr><tr><td>UIAlertController with style .alert</td><td><a href="#alert">Alert</a></td></tr><tr><td>UIAlertController with style .actionSheet</td><td><a href="#actionsheet">ActionSheet</a></td></tr><tr><td>UIStackView with horizontal axis</td><td><a href="#hstack">HStack</a> / <a href="#lazyhstack">LazyHStack</a></td></tr><tr><td>UIStackView with vertical axis</td><td><a href="#vstack">VStack</a> / <a href="#lazyvstack">LazyVStack</a></td></tr><tr><td>Aligning them in both axes.</td><td><a href="#zstack">ZStack</a></td></tr><tr><td>UISegmentedControl</td><td><a href="#picker-%E9%80%89%E6%8B%A9%E6%8E%A7%E4%BB%B6">Picker</a></td></tr><tr><td>UIStepper</td><td><a href="#stepper-%E6%89%A7%E8%A1%8C%E8%AF%AD%E4%B9%89%E9%80%92%E5%A2%9E%E5%92%8C%E9%80%92%E5%87%8F%E6%93%8D%E4%BD%9C%E7%9A%84%E6%8E%A7%E4%BB%B6">Stepper</a></td></tr><tr><td>UIDatePicker</td><td><a href="#datepicker-%E6%97%A5%E6%9C%9F%E6%8E%A7%E4%BB%B6">DatePicker</a></td></tr><tr><td>NSAttributedString</td><td>No equivalent (use <a href="#text-%E6%96%87%E6%9C%AC">Text</a>)</td></tr><tr><td>MapKit</td><td><a href="#map-%E5%9C%B0%E5%9B%BE%E7%95%8C%E9%9D%A2%E7%9A%84%E8%A7%86%E5%9B%BE">Map</a></td></tr><tr><td>UIProgressView</td><td><a href="#progressview-%E8%BF%9B%E5%BA%A6%E8%A7%86%E5%9B%BE">ProgressView</a></td></tr><tr><td>-</td><td><a href="#modal">Modal</a></td></tr><tr><td>-</td><td><a href="#scrollview-%E6%BB%9A%E5%8A%A8%E8%A7%86%E5%9B%BE">ScrollView</a></td></tr><tr><td>-</td><td><a href="#form">Form</a></td></tr><tr><td>-</td><td><a href="#spacer">Spacer</a></td></tr><tr><td>-</td><td><a href="#divider">Divider</a></td></tr></tbody></table>
 </details>
 <h2 id="view"><a aria-hidden="true" tabindex="-1" href="#view" class="anchor"><span class="icon icon-link"></span></a>View</h2>
-<details>
-<summary id="text">Text - 文本</summary>
+<h3 id="text-文本"><a aria-hidden="true" tabindex="-1" href="#text-文本" class="anchor"><span class="icon icon-link"></span></a>Text 文本</h3>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Hello World"</span></span><span class="token punctuation">)</span>
 </span></code><div onclick="copied(this)" data-code="Text(&#x22;Hello World&#x22;)
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
@@ -1350,9 +1352,7 @@ var body: some View {
     Text(&#x22;Task due date: \(now, formatter: Self.dateFormatter)&#x22;)
 }
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
-</details>
-<details>
-<summary id="label">Label</summary>
+<h3 id="label"><a aria-hidden="true" tabindex="-1" href="#label" class="anchor"><span class="icon icon-link"></span></a>Label</h3>
 <p>可以使用以下代码行在文本旁边设置图标。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token class-name">Label</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"SwiftUI CheatSheet"</span></span><span class="token punctuation">,</span> systemImage<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"up.icloud"</span></span><span class="token punctuation">)</span>
 </span></code><div onclick="copied(this)" data-code="Label(&#x22;SwiftUI CheatSheet&#x22;, systemImage: &#x22;up.icloud&#x22;)
@@ -1362,9 +1362,7 @@ var body: some View {
 </span></code><div onclick="copied(this)" data-code="Link(&#x22;Click me&#x22;, destination: URL(string: &#x22;your_url&#x22;)!)
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/label">Label</a></p>
-</details>
-<details>
-<summary id="texteditor">TextEditor - 多行可滚动文本编辑器</summary>
+<h3 id="texteditor-多行可滚动文本编辑器"><a aria-hidden="true" tabindex="-1" href="#texteditor-多行可滚动文本编辑器" class="anchor"><span class="icon icon-link"></span></a>TextEditor 多行可滚动文本编辑器</h3>
 <p>可以显示和编辑长格式文本的视图。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token attribute atrule">@State</span> <span class="token keyword">private</span> <span class="token keyword">var</span> fullText<span class="token punctuation">:</span> <span class="token class-name">String</span> <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"This is some editable text..."</span></span>
 </span><span class="code-line">
@@ -1418,9 +1416,7 @@ struct DetailContent: View {
 }
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/texteditor">TextEditor</a></p>
-</details>
-<details>
-<summary id="textfield">TextField 输入框</summary>
+<h3 id="textfield-输入框"><a aria-hidden="true" tabindex="-1" href="#textfield-输入框" class="anchor"><span class="icon icon-link"></span></a>TextField 输入框</h3>
 <p>显示可编辑文本界面的控件。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> name<span class="token punctuation">:</span> <span class="token class-name">String</span> <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"John"</span></span>    
 </span><span class="code-line"><span class="token keyword">var</span> body<span class="token punctuation">:</span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
@@ -1468,9 +1464,7 @@ var body: some View {
 }
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/textfield">TextField</a></p>
-</details>
-<details>
-<summary id="Image">Image - 图片</summary>
+<h3 id="image-图片"><a aria-hidden="true" tabindex="-1" href="#image-图片" class="anchor"><span class="icon icon-link"></span></a>Image 图片</h3>
 <p>显示与环境相关的图像的视图。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"foo"</span></span><span class="token punctuation">)</span> <span class="token comment">// 图像名称是foo</span>
 </span></code><div onclick="copied(this)" data-code="Image(&#x22;foo&#x22;) // 图像名称是foo
@@ -1502,9 +1496,7 @@ Image(systemName: &#x22;clock&#x22;)
     .aspectRatio(contentMode: .fit)
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/image">Image</a></p>
-</details>
-<details>
-<summary id="securefield">SecureField - 密码输入框</summary>
+<h3 id="securefield-密码输入框"><a aria-hidden="true" tabindex="-1" href="#securefield-密码输入框" class="anchor"><span class="icon icon-link"></span></a>SecureField 密码输入框</h3>
 <p>用户安全地输入私人文本的控件。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> password<span class="token punctuation">:</span> <span class="token class-name">String</span> <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"1234"</span></span>    
 </span><span class="code-line"><span class="token keyword">var</span> body<span class="token punctuation">:</span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
@@ -1520,9 +1512,7 @@ var body: some View {
 }
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/securefield">SecureField</a></p>
-</details>
-<details>
-<summary id="toggle">Toggle - 开关选择器</summary>
+<h3 id="toggle-开关选择器"><a aria-hidden="true" tabindex="-1" href="#toggle-开关选择器" class="anchor"><span class="icon icon-link"></span></a>Toggle 开关选择器</h3>
 <p>在打开和关闭状态之间切换的控件。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> isShowing <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token comment">// toggle state</span>
 </span><span class="code-line">
@@ -1540,9 +1530,7 @@ Toggle(isOn: $isShowing) {
 </span></code><div onclick="copied(this)" data-code="Toggle(&#x22;Hello World&#x22;, isOn: $isShowing)
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/toggle">Toggle</a></p>
-</details>
-<details>
-<summary id="slider">Slider - 滑动输入条</summary>
+<h3 id="slider-滑动输入条"><a aria-hidden="true" tabindex="-1" href="#slider-滑动输入条" class="anchor"><span class="icon icon-link"></span></a>Slider 滑动输入条</h3>
 <p>用于从值的有界线性范围中选择一个值的控件。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> progress<span class="token punctuation">:</span> <span class="token class-name">Float</span> <span class="token operator">=</span> <span class="token number">0</span>
 </span><span class="code-line">
@@ -1566,9 +1554,7 @@ HStack {
 }.padding()
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/slider">Slider</a></p>
-</details>
-<details>
-<summary id="button">Button - 按钮控件</summary>
+<h3 id="button-按钮控件"><a aria-hidden="true" tabindex="-1" href="#button-按钮控件" class="anchor"><span class="icon icon-link"></span></a>Button 按钮控件</h3>
 <p>在触发时执行操作的控件。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token class-name">Button</span><span class="token punctuation">(</span>
 </span><span class="code-line">    action<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -1618,9 +1604,7 @@ HStack {
 .cornerRadius(5)
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/button">Button</a></p>
-</details>
-<details>
-<summary id="picker">Picker - 选择控件</summary>
+<h3 id="picker-选择控件"><a aria-hidden="true" tabindex="-1" href="#picker-选择控件" class="anchor"><span class="icon icon-link"></span></a>Picker 选择控件</h3>
 <p>用于从一组互斥值中进行选择的控件。</p>
 <p>选择器样式的更改基于其祖先，在 <code>Form</code> 或 <code>List</code> 下，它显示为单个列表行，您可以点击以进入一个显示所有可能选项的新屏幕。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token class-name">NavigationView</span> <span class="token punctuation">{</span>
@@ -1675,9 +1659,7 @@ Picker(&#x22;Options&#x22;, selection: $mapChoioce) {
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>分段控制(SegmentedControl)在 <code>iOS 13</code> 中也焕然一新</p>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/picker">Picker</a></p>
-</details>
-<details>
-<summary id="stepper">Stepper - 用于执行语义递增和递减操作的控件</summary>
+<h3 id="stepper-执行语义递增和递减操作的控件"><a aria-hidden="true" tabindex="-1" href="#stepper-执行语义递增和递减操作的控件" class="anchor"><span class="icon icon-link"></span></a>Stepper 执行语义递增和递减操作的控件</h3>
 <p>用于执行语义递增和递减操作的控件。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> quantity<span class="token punctuation">:</span> <span class="token class-name">Int</span> <span class="token operator">=</span> <span class="token number">0</span>
 </span><span class="code-line"><span class="token class-name">Stepper</span><span class="token punctuation">(</span>value<span class="token punctuation">:</span> $quantity<span class="token punctuation">,</span> <span class="token keyword">in</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token operator">...</span><span class="token number">10</span><span class="token punctuation">,</span> label<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Quantity </span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation">quantity</span><span class="token interpolation-punctuation punctuation">)</span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
@@ -1711,9 +1693,7 @@ Stepper(onIncrement: {
 }
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/stepper">Stepper</a></p>
-</details>
-<details>
-<summary id="date-picker">DatePicker - 日期控件</summary>
+<h3 id="datepicker-日期控件"><a aria-hidden="true" tabindex="-1" href="#datepicker-日期控件" class="anchor"><span class="icon icon-link"></span></a>DatePicker 日期控件</h3>
 <p>日期选择器(DatePicker)的样式也会根据其祖先而改变。 在 <code>Form</code> 或 <code>List</code> 下，它显示为单个列表行，您可以点击以展开到日期选择器（就像日历应用程序一样）。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> selectedDate <span class="token operator">=</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 </span><span class="code-line">
@@ -1813,9 +1793,7 @@ DatePicker(&#x22;Maximum Date&#x22;,
     displayedComponents: [.date])
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/datepicker">DatePicker</a></p>
-</details>
-<details>
-<summary id="map">Map - 显示嵌入式地图界面的视图</summary>
+<h3 id="map-地图界面的视图"><a aria-hidden="true" tabindex="-1" href="#map-地图界面的视图" class="anchor"><span class="icon icon-link"></span></a>Map 地图界面的视图</h3>
 <p>显示指定区域的地图</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token keyword">import</span> <span class="token class-name">MapKit</span>
 </span><span class="code-line">
@@ -1855,9 +1833,7 @@ Map(coordinateRegion: $region,
 }
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/mapkit/map">Map</a></p>
-</details>
-<details>
-<summary id="progressview">ProgressView - 进度视图</summary>
+<h3 id="progressview-进度视图"><a aria-hidden="true" tabindex="-1" href="#progressview-进度视图" class="anchor"><span class="icon icon-link"></span></a>ProgressView 进度视图</h3>
 <p>显示任务完成进度的视图。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token attribute atrule">@State</span> <span class="token keyword">private</span> <span class="token keyword">var</span> progress <span class="token operator">=</span> <span class="token number">0.5</span>
 </span><span class="code-line">
@@ -1879,10 +1855,8 @@ VStack {
     .progressViewStyle(CircularProgressViewStyle())
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/progressview">ProgressView</a></p>
-</details>
 <h2 id="查看布局和演示"><a aria-hidden="true" tabindex="-1" href="#查看布局和演示" class="anchor"><span class="icon icon-link"></span></a>查看布局和演示</h2>
-<details>
-<summary id="hstack">HStack</summary>
+<h3 id="hstack"><a aria-hidden="true" tabindex="-1" href="#hstack" class="anchor"><span class="icon icon-link"></span></a>HStack</h3>
 <p>将其子级排列在一条水平线上的视图。</p>
 <p>创建静态可滚动列表</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token class-name">HStack</span> <span class="token punctuation">(</span>alignment<span class="token punctuation">:</span> <span class="token punctuation">.</span>center<span class="token punctuation">,</span> spacing<span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -1897,9 +1871,7 @@ VStack {
 }
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/hstack">HStack</a></p>
-</details>
-<details>
-<summary id="lazyhstack">LazyHStack</summary>
+<h3 id="lazyhstack"><a aria-hidden="true" tabindex="-1" href="#lazyhstack" class="anchor"><span class="icon icon-link"></span></a>LazyHStack</h3>
 <p>将子项排列在水平增长的线中的视图，仅在需要时创建项。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token class-name">ScrollView</span><span class="token punctuation">(</span><span class="token punctuation">.</span>horizontal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 </span><span class="code-line">    <span class="token class-name">LazyHStack</span><span class="token punctuation">(</span>alignment<span class="token punctuation">:</span> <span class="token punctuation">.</span>center<span class="token punctuation">,</span> spacing<span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1917,9 +1889,7 @@ VStack {
 }
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/lazyhstack">LazyHStack</a></p>
-</details>
-<details>
-<summary id="vstack">VStack</summary>
+<h3 id="vstack"><a aria-hidden="true" tabindex="-1" href="#vstack" class="anchor"><span class="icon icon-link"></span></a>VStack</h3>
 <p>以垂直线排列其子项的视图。</p>
 <p>创建静态可滚动列表</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token class-name">VStack</span> <span class="token punctuation">(</span>alignment<span class="token punctuation">:</span> <span class="token punctuation">.</span>center<span class="token punctuation">,</span> spacing<span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -1934,9 +1904,7 @@ VStack {
 }
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/vstack">VStack</a></p>
-</details>
-<details>
-<summary id="lazyvstack">LazyVStack</summary>
+<h3 id="lazyvstack"><a aria-hidden="true" tabindex="-1" href="#lazyvstack" class="anchor"><span class="icon icon-link"></span></a>LazyVStack</h3>
 <p><code>iOS 14</code></p>
 <p>一种视图，将其子级排列在垂直增长的线中，仅在需要时创建项。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token class-name">ScrollView</span> <span class="token punctuation">{</span>
@@ -1955,9 +1923,7 @@ VStack {
 }
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/lazyvstack">LazyVStack</a></p>
-</details>
-<details>
-<summary id="zstack">ZStack</summary>
+<h3 id="zstack"><a aria-hidden="true" tabindex="-1" href="#zstack" class="anchor"><span class="icon icon-link"></span></a>ZStack</h3>
 <p>覆盖其子项的视图，使子项在两个轴上对齐。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token class-name">ZStack</span> <span class="token punctuation">{</span>
 </span><span class="code-line">    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Hello"</span></span><span class="token punctuation">)</span>
@@ -1981,9 +1947,7 @@ VStack {
 }
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/zstack">ZStack</a></p>
-</details>
-<details>
-<summary id="list">List - 列表</summary>
+<h3 id="list-列表"><a aria-hidden="true" tabindex="-1" href="#list-列表" class="anchor"><span class="icon icon-link"></span></a>List 列表</h3>
 <p>一个容器，用于显示排列在单列中的数据行。</p>
 <p>创建静态可滚动列表</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token class-name">List</span> <span class="token punctuation">{</span>
@@ -2088,9 +2052,7 @@ List(names) { name in
 </span></code><div onclick="copied(this)" data-code=".listStyle(InsetGroupedListStyle())
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/list">List</a></p>
-</details>
-<details>
-<summary id="scrollview">ScrollView - 滚动视图</summary>
+<h3 id="scrollview-滚动视图"><a aria-hidden="true" tabindex="-1" href="#scrollview-滚动视图" class="anchor"><span class="icon icon-link"></span></a>ScrollView 滚动视图</h3>
 <p>滚动视图。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token class-name">ScrollView</span><span class="token punctuation">(</span>alwaysBounceVertical<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 </span><span class="code-line">    <span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"foo"</span></span><span class="token punctuation">)</span>
@@ -2102,9 +2064,7 @@ List(names) { name in
 }
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/scrollview">ScrollView</a></p>
-</details>
-<details>
-<summary id="lazyhgrid">LazyHGrid</summary>
+<h3 id="lazyhgrid"><a aria-hidden="true" tabindex="-1" href="#lazyhgrid" class="anchor"><span class="icon icon-link"></span></a>LazyHGrid</h3>
 <p>一种容器视图，将其子视图排列在水平增长的网格中，仅在需要时创建项目。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token keyword">var</span> rows<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token class-name">GridItem</span><span class="token punctuation">]</span> <span class="token operator">=</span>
 </span><span class="code-line">        <span class="token class-name">Array</span><span class="token punctuation">(</span>repeating<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token keyword">init</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token function">fixed</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> count<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">)</span>
@@ -2128,9 +2088,7 @@ ScrollView(.horizontal) {
 }
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/lazyhgrid">LazyHGrid</a></p>
-</details>
-<details>
-<summary id="lazyvgrid">LazyVGrid</summary>
+<h3 id="lazyvgrid"><a aria-hidden="true" tabindex="-1" href="#lazyvgrid" class="anchor"><span class="icon icon-link"></span></a>LazyVGrid</h3>
 <p>容器视图，将其子视图排列在垂直增长的网格中，仅在需要时创建项目。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token keyword">var</span> columns<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token class-name">GridItem</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token class-name">Array</span><span class="token punctuation">(</span>repeating<span class="token punctuation">:</span> <span class="token punctuation">.</span><span class="token keyword">init</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token function">fixed</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> count<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">)</span>
 </span><span class="code-line">
@@ -2152,9 +2110,7 @@ ScrollView {
 }
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/lazyvgrid">LazyVGrid</a></p>
-</details>
-<details>
-<summary id="form">Form</summary>
+<h3 id="form"><a aria-hidden="true" tabindex="-1" href="#form" class="anchor"><span class="icon icon-link"></span></a>Form</h3>
 <p>用于对用于数据输入的控件（例如在设置或检查器中）进行分组的容器。</p>
 <p>您几乎可以在此表单中放入任何内容，它将为表单呈现适当的样式。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token class-name">NavigationView</span> <span class="token punctuation">{</span>
@@ -2197,9 +2153,7 @@ ScrollView {
 }
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/form">Form</a></p>
-</details>
-<details>
-<summary id="spacer">Spacer</summary>
+<h3 id="spacer"><a aria-hidden="true" tabindex="-1" href="#spacer" class="anchor"><span class="icon icon-link"></span></a>Spacer</h3>
 <p>沿其包含的堆栈布局的主轴或如果不包含在堆栈中的两个轴上扩展的灵活空间。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token class-name">HStack</span> <span class="token punctuation">{</span>
 </span><span class="code-line">    <span class="token class-name">Image</span><span class="token punctuation">(</span>systemName<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"clock"</span></span><span class="token punctuation">)</span>
@@ -2213,9 +2167,7 @@ ScrollView {
 }
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/spacer">Spacer</a></p>
-</details>
-<details>
-<summary id="divider">Divider</summary>
+<h3 id="divider"><a aria-hidden="true" tabindex="-1" href="#divider" class="anchor"><span class="icon icon-link"></span></a>Divider</h3>
 <p>可用于分隔其他内容的视觉元素。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token class-name">HStack</span> <span class="token punctuation">{</span>
 </span><span class="code-line">    <span class="token class-name">Image</span><span class="token punctuation">(</span>systemName<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"clock"</span></span><span class="token punctuation">)</span>
@@ -2229,9 +2181,7 @@ ScrollView {
 }.fixedSize()
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/divider">Divider</a></p>
-</details>
-<details>
-<summary id="navigationview">NavigationView</summary>
+<h3 id="navigationview"><a aria-hidden="true" tabindex="-1" href="#navigationview" class="anchor"><span class="icon icon-link"></span></a>NavigationView</h3>
 <p>用于呈现视图堆栈的视图，这些视图表示导航层次结构中的可见路径。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token class-name">NavigationView</span> <span class="token punctuation">{</span>            
 </span><span class="code-line">    <span class="token class-name">List</span> <span class="token punctuation">{</span>
@@ -2382,9 +2332,7 @@ ScrollView {
 }
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/toolbaritem">ToolbarItem</a></p>
-</details>
-<details>
-<summary id="tabview">TabView</summary>
+<h3 id="tabview"><a aria-hidden="true" tabindex="-1" href="#tabview" class="anchor"><span class="icon icon-link"></span></a>TabView</h3>
 <p>一个视图，允许使用可交互的用户界面元素在多个子视图之间进行切换。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token class-name">TabView</span> <span class="token punctuation">{</span>
 </span><span class="code-line">    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"First View"</span></span><span class="token punctuation">)</span>
@@ -2475,9 +2423,7 @@ ScrollView {
         .tag(1)
 }
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
-</details>
-<details>
-<summary id="alerts">Alert</summary>
+<h3 id="alert"><a aria-hidden="true" tabindex="-1" href="#alert" class="anchor"><span class="icon icon-link"></span></a>Alert</h3>
 <p>警报演示的容器。</p>
 <p>我们可以根据布尔值显示Alert。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> isError<span class="token punctuation">:</span> <span class="token class-name">Bool</span> <span class="token operator">=</span> <span class="token boolean">false</span>
@@ -2546,9 +2492,7 @@ struct AlertError: Identifiable {
 }
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/alert">Alert</a></p>
-</details>
-<details>
-<summary id="modal">Modal</summary>
+<h3 id="modal"><a aria-hidden="true" tabindex="-1" href="#modal" class="anchor"><span class="icon icon-link"></span></a>Modal</h3>
 <p>Modal 过渡。</p>
 <p>我们可以显示基于布尔的 Modal。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> isModal<span class="token punctuation">:</span> <span class="token class-name">Bool</span> <span class="token operator">=</span> <span class="token boolean">false</span>
@@ -2699,9 +2643,7 @@ struct ContentView: View {
 }
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/view/fullscreencover(ispresented:ondismiss:content:)">fullScreenCover</a></p>
-</details>
-<details>
-<summary id="action-sheets">ActionSheet</summary>
+<h3 id="actionsheet"><a aria-hidden="true" tabindex="-1" href="#actionsheet" class="anchor"><span class="icon icon-link"></span></a>ActionSheet</h3>
 <p>操作表演示文稿的存储类型。</p>
 <p>我们可以显示基于布尔值的 <code>ActionSheet</code>。</p>
 <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line"><span class="token attribute atrule">@State</span> <span class="token keyword">var</span> isSheet<span class="token punctuation">:</span> <span class="token class-name">Bool</span> <span class="token operator">=</span> <span class="token boolean">false</span>
@@ -2810,10 +2752,11 @@ struct SheetDetail: Identifiable {
 }
 " class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>Documentation - <a href="https://developer.apple.com/documentation/swiftui/actionsheet">ActionSheet</a></p>
-</details>
     
 
 <div class="previous">
+  
+    <span></span>
   
   
   <a class="next" href="quick-start/dont-panic.html">
@@ -2872,7 +2815,7 @@ tocbot.init({
 
 <div class="footer warpper">
   Released under the MIT License. Copyright © 2022 Kenny Wong<br />
-Generated by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a> v1.13.1
+Generated by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a> v1.13.3
 
 </div>
 
