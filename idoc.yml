@@ -1,5 +1,8 @@
 dir: 'example'
 
+logo: ./assets/logo.svg
+favicon: ./assets/logo.svg
+
 menus:
   Home: index.html
   Cheat Sheet: cheat-sheet.html
