@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>所有 SwiftUI 属性包装器都进行了解释和比较 SwiftUI Example </title>
+  
+  <meta name="description" content="SwiftUI 为我们的应用程序提供了 17 个属性包装器，每个属性包装器都提供不同的功能。知道使用哪个以及何时使用对正确处理至关重要，因此在本文中，我将向您介绍其中的每一个，并为您提供明确的使用指南。">
+  
+  
+  <link rel="stylesheet" type="text/css" href="../../css/main.css?v=1650616959497">
+  <link rel="stylesheet" type="text/css" href="../../css/tocbot.css?v=1650616959497">
+  <link rel="stylesheet" type="text/css" href="../../css/media.css?v=1650616959497">
+  <link rel="stylesheet" type="text/css" href="../../css/sidebar.css?v=1650616959497">
+  <link rel="stylesheet" type="text/css" href="../../css/copy.css?v=1650616959497">
+  
+    <link rel="icon" href="data:image/png;base64,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" type="image/x-icon">
+  
+  <script src="../../js/copy.js"></script>
+  <script src="../../js/dark-mode.js"></script>
+  <script src="../../js/markdown-style.js"></script>
+</head>
+<body id="idoctotop">
+  <a href="#idoctotop" class="gototop">top</a>
+<header class="header">
+  <article class="inner warpper">
+    <a class="logo" href="../../index.html">
+      
+        <img alt="SwiftUI Example logo" src="data:image/png;base64,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">
+      
+      <span class="title">SwiftUI Example</span>
+    </a>
+    <div class="content">
+      <ul class="menu">
+        
+        <li>
+          <a href="../../index.html" target="" class=""> Home </a>
+        </li>
+        
+        <li>
+          <a href="../../cheat-sheet.html" target="" class=""> Cheat Sheet </a>
+        </li>
+        
+        <li>
+          <a href="https://jaywcjlove.gitee.io/swiftui-example/" target="__blank" class=""> 🇨🇳 </a>
+        </li>
+        
+      </ul>
+      
+        <a href="https://github.com/jaywcjlove/swiftui-example.git" target="_blank" rel="noopener noreferrer" title="Github" name="Github" class="github">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+        </a>
+      
+      <dark-mode permanent></dark-mode>
+    </div>
+  </article>
+</header>
+
+<div class="warpper-content warpper sidebar ">
+  
+<div class="sidebar-border">
+  <aside class="sidebar" role="navigation">
+    <div>
+    
+      
+        <label>介绍</label>
+      
+    
+      
+        <a href="../../quick-start/dont-panic.html" class="">不要惊慌！</a>
+      
+    
+      
+        <a href="../../quick-start/what-is-swiftui.html" class="">什么是 SwiftUI?</a>
+      
+    
+      
+        <a href="../../quick-start/swiftui-vs-interface-builder-and-storyboards.html" class="">SwiftUI 与 Interface Builder 和 storyboards</a>
+      
+    
+      
+        <a href="../../quick-start/frequently-asked-questions-about-swiftui.html" class="">有关 SwiftUI 的常见问题</a>
+      
+    
+      
+        <a href="../../quick-start/answering-the-big-question-should-you-learn-swiftui-uikit-or-both.html" class="">回答这个大问题：你应该学习 SwiftUI，UIKit，还是两者都学？</a>
+      
+    
+      
+        <a href="../../quick-start/how-to-follow-this-quick-start-guide.html" class="">如何遵循这个快速入门指南？</a>
+      
+    
+      
+        <a href="../../quick-start/migrating-from-uikit-to-swiftui.html" class="">从 UIKit 迁移到 SwiftUI</a>
+      
+    
+      
+        <a href="../../quick-start/whats-in-the-basic-template.html" class="">基本模板是什么？</a>
+      
+    
+      
+        <a href="../../quick-start/dedication.html" class="">贡献</a>
+      
+    
+      
+        <label>建立一个完整的项目</label>
+      
+    
+      
+        <a href="../../introduction/demo1/index.html" class="">创建一个 `SwiftUI` 项目</a>
+      
+    
+      
+        <a href="../../introduction/demo2/index.html" class="">使用列表构建菜单</a>
+      
+    
+      
+        <label>使用静态文本</label>
+      
+    
+      
+        <a href="../../working-with-static-text/demo1/index.html" class="">如何使用 `Text` 视图创建静态标签？</a>
+      
+    
+      
+        <a href="../../working-with-static-text/demo2/index.html" class="">如何使用字体，颜色，行距等为文本视图设置样式？</a>
+      
+    
+      
+        <a href="../../working-with-static-text/demo3/index.html" class="">如何使用 `multilineTextAlignment()` 调整文本对齐方式？</a>
+      
+    
+      
+        <a href="../../working-with-static-text/demo4/index.html" class="">如何在文本视图中设置文本格式？</a>
+      
+    
+      
+        <a href="../../working-with-static-text/demo5/index.html" class="">如何在文字中的字母之间增加空格？</a>
+      
+    
+      
+        <a href="../../working-with-static-text/demo6/index.html" class="">如何在文字检视中格式化日期？</a>
+      
+    
+      
+        <a href="../../working-with-static-text/demo7/index.html" class="">如何使用 `textCase()` 使 `TextField` 大写或小写？</a>
+      
+    
+      
+        <a href="../../working-with-static-text/demo8/index.html" class="">如何使用 `Label` 并排显示文本和图标？</a>
+      
+    
+      
+        <a href="../../working-with-static-text/demo9/index.html" class="">如何使用 `redacted()` 将内容标记为占位符？</a>
+      
+    
+      
+        <a href="../../working-with-static-text/demo10/index.html" class="">如何使用 `privacySensitive()` 将内容标记为私有?</a>
+      
+    
+      
+        <a href="../../working-with-static-text/demo11/index.html" class="">如何在文本中呈现 `Markdown` 内容？</a>
+      
+    
+      
+        <a href="../../working-with-static-text/demo12/index.html" class="">如何让用户选择文本？</a>
+      
+    
+      
+        <label>图像，形状和媒体</label>
+      
+    
+      
+        <a href="../../images-shapes-media/demo1/index.html" class="">如何使用图像视图绘制图像？</a>
+      
+    
+      
+        <a href="../../images-shapes-media/demo2/index.html" class="">如何调整图像适合其空间的展示方式？</a>
+      
+    
+      
+        <a href="../../images-shapes-media/demo3/index.html" class="">如何平铺图像？</a>
+      
+    
+      
+        <a href="../../images-shapes-media/demo4/index.html" class="">如何使用SF符号渲染图像？</a>
+      
+    
+      
+        <a href="../../images-shapes-media/demo5/index.html" class="">如何渲染渐变？</a>
+      
+    
+      
+        <a href="../../images-shapes-media/demo6/index.html" class="">如何使用图像和其他视图作为背景？</a>
+      
+    
+      
+        <a href="../../images-shapes-media/demo7/index.html" class="">如何显示实体形状？</a>
+      
+    
+      
+        <a href="../../images-shapes-media/demo8/index.html" class="">如何同时填充和描边形状？</a>
+      
+    
+      
+        <a href="../../images-shapes-media/demo9/index.html" class="">如何使用 `trim()` 绘制实体形状的一部分？</a>
+      
+    
+      
+        <a href="../../images-shapes-media/demo10/index.html" class="">什么时候应该使用 `ContainerRelativeShape`？</a>
+      
+    
+      
+        <a href="../../images-shapes-media/demo11/index.html" class="">如何使用 `VideoPlayer` 播放电影？</a>
+      
+    
+      
+        <a href="../../images-shapes-media/demo12/index.html" class="">如何使用 `SpriteView` 集成 `SpriteKit`？</a>
+      
+    
+      
+        <a href="../../images-shapes-media/demo13/index.html" class="">如何从 URL 加载远程图像？</a>
+      
+    
+      
+        <a href="../../images-shapes-media/demo14/index.html" class="">如何使用 SF Symbols 获得自定义颜色和透明度？</a>
+      
+    
+      
+        <label>视图布局</label>
+      
+    
+      
+        <a href="../../view-layout/demo1/index.html" class="">如何给视图定制 `frame`？</a>
+      
+    
+      
+        <a href="../../view-layout/demo2/index.html" class="">如何使用 `padding` 来控制各个视图之间的间距？</a>
+      
+    
+      
+        <a href="../../view-layout/demo3/index.html" class="">如何使用 `GeometryReader` 提供相对大小？</a>
+      
+    
+      
+        <a href="../../view-layout/demo4/index.html" class="">如何将内容放置在安全区域之外？</a>
+      
+    
+      
+        <a href="../../view-layout/demo5/index.html" class="">如何返回不同的视图类型？</a>
+      
+    
+      
+        <a href="../../view-layout/demo6/index.html" class="">如何使用 `ForEach` 循环创建视图？</a>
+      
+    
+      
+        <a href="../../view-layout/demo7/index.html" class="">如何使用 `layoutPriority()` 控制布局优先级？</a>
+      
+    
+      
+        <a href="../../view-layout/demo8/index.html" class="">如何使两个视图具有相同的宽度或高度？</a>
+      
+    
+      
+        <a href="../../view-layout/demo9/index.html" class="">如何使用 `foregroundStyle()` 提供视觉结构？</a>
+      
+    
+      
+        <label>堆栈，网格，滚动视图</label>
+      
+    
+      
+        <a href="../../stacks-grids-scrollviews/demo1/index.html" class="">如何使用 `VStack` 和 `HStack` 创建堆栈？</a>
+      
+    
+      
+        <a href="../../stacks-grids-scrollviews/demo2/index.html" class="">如何使用对齐 `alignment` 和间距 `spacing` 自定义堆栈布局？</a>
+      
+    
+      
+        <a href="../../stacks-grids-scrollviews/demo3/index.html" class="">如何使用 `Spacer` 将视图强制移到堆栈中的一侧？</a>
+      
+    
+      
+        <a href="../../stacks-grids-scrollviews/demo4/index.html" class="">如何制作固定尺寸的 `Spacer`？</a>
+      
+    
+      
+        <a href="../../stacks-grids-scrollviews/demo5/index.html" class="">如何使用 `ZStack` 在彼此之上叠加视图？</a>
+      
+    
+      
+        <a href="../../stacks-grids-scrollviews/demo6/index.html" class="">如何使用 `zIndex` 更改视图分层的顺序？</a>
+      
+    
+      
+        <a href="../../stacks-grids-scrollviews/demo7/index.html" class="">如何使用尺寸类创建不同的布局？</a>
+      
+    
+      
+        <a href="../../stacks-grids-scrollviews/demo8/index.html" class="">如何根据大小类在 `HStack` 和 `VStack` 之间自动切换？</a>
+      
+    
+      
+        <a href="../../stacks-grids-scrollviews/demo9/index.html" class="">如何使用 `ScrollView` 添加水平和垂直滚动？</a>
+      
+    
+      
+        <a href="../../stacks-grids-scrollviews/demo10/index.html" class="">如何使用 `ScrollViewReader` 使滚动视图移动到某个位置？</a>
+      
+    
+      
+        <a href="../../stacks-grids-scrollviews/demo11/index.html" class="">如何使用 `ScrollView` 和 `GeometryReader` 创建3D效果(如Cover Flow)？</a>
+      
+    
+      
+        <a href="../../stacks-grids-scrollviews/demo12/index.html" class="">如何使用 `LazyVGrid` 和 `LazyHGrid` 在网格中放置视图？</a>
+      
+    
+      
+        <a href="../../stacks-grids-scrollviews/demo13/index.html" class="">如何使用 `LazyVStack` 和 `LazyHStack` 延迟加载视图？</a>
+      
+    
+      
+        <a href="../../stacks-grids-scrollviews/demo14/index.html" class="">如何使用 `HSplitViews` 创建左中右三栏布局？</a>
+      
+    
+      
+        <a href="../../stacks-grids-scrollviews/demo15/index.html" class="">如何添加视觉效果模糊？</a>
+      
+    
+      
+        <label>用户界面控件</label>
+      
+    
+      
+        <a href="../../user-interface-controls/demo1/index.html" class="">使用状态</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo2/index.html" class="">如何创建可点击的按钮？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo3/index.html" class="">如何禁用 `Button` 和 `NavigationLink` 中的图像的覆盖颜色？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo4/index.html" class="">如何从 `TextField` 读取文本？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo5/index.html" class="">如何在 `TextField` 上添加边框？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo6/index.html" class="">如何将占位符添加到 `TextField`？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo7/index.html" class="">如何在 `TextField` 中禁用自动更正？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo8/index.html" class="">如何关闭 `TextField` 的键盘？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo9/index.html" class="">如何格式化数字的 `TextField`？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo10/index.html" class="">如何使用 `SecureField` 创建安全的文本字段？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo11/index.html" class="">如何创建拨动开关？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo12/index.html" class="">如何创建滑块 `Slider` 并从中读取值？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo13/index.html" class="">如何创建选择器 `Picker` 并从中读取值？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo14/index.html" class="">如何创建日期选择器 `DatePicker` 并从中读取值？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo15/index.html" class="">如何创建分段控件并从中读取值？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo16/index.html" class="">如何创建步进器 `Stepper` 并从中读取值？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo17/index.html" class="">如何使用 `labelsHidden()` 隐藏 `Picker`，`Stepper`，`Toggle` 等标签？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo18/index.html" class="">如何使用文本编辑器创建多行可编辑文本 `TextEditor`？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo19/index.html" class="">如何让用户使用 `ColorPicker` 选择颜色？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo20/index.html" class="">如何使用 `ProgressView` 显示任务的进度？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo21/index.html" class="">如何使用 `ProgressView` 显示不确定的进度？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo22/index.html" class="">如何显示地图 `Map` 视图？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo23/index.html" class="">如何在地图 `Map` 视图中显示注释？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo24/index.html" class="">如何在 `Safari` 中打开 Web 链接？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo25/index.html" class="">如何设置可编辑文本 `TextEditor` 背景颜色？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo26/index.html" class="">如何自定义 `TextField`、`SecureField` 和 `TextEditor` 的提交按钮？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo27/index.html" class="">当用户提交 TextField 时如何执行事件？</a>
+      
+    
+      
+        <a href="../../user-interface-controls/demo28/index.html" class="">如何获得突出的边框按钮？</a>
+      
+    
+      
+        <label>响应事件</label>
+      
+    
+      
+        <a href="../../responding-to-events/demo1/index.html" class="">如何使用 `scenePhase` 检测您的应用何时移至背景或前景？</a>
+      
+    
+      
+        <a href="../../responding-to-events/demo2/index.html" class="">如何响应查看生命周期事件：`onAppear()` 和 `onDisappear()` ？</a>
+      
+    
+      
+        <a href="../../responding-to-events/demo3/index.html" class="">如何使用 `keyboardShortcut()` 添加键盘快捷键？</a>
+      
+    
+      
+        <a href="../../responding-to-events/demo4/index.html" class="">如何控制应用启动时显示的视图？</a>
+      
+    
+      
+        <a href="../../responding-to-events/demo5/index.html" class="">应用启动时如何运行代码？</a>
+      
+    
+      
+        <a href="../../responding-to-events/demo6/index.html" class="">如何将 `AppDelegate` 添加到 SwiftUI 应用？</a>
+      
+    
+      
+        <a href="../../responding-to-events/demo7/index.html" class="">如何检测设备旋转？</a>
+      
+    
+      
+        <a href="../../responding-to-events/demo8/index.html" class="">如何在键盘上添加工具栏？</a>
+      
+    
+      
+        <a href="../../responding-to-events/demo9/index.html" class="">显示视图时如何运行异步任务？</a>
+      
+    
+      
+        <label>点击和手势</label>
+      
+    
+      
+        <a href="../../taps-and-gestures/demo1/index.html" class="">如何在视图中添加手势识别器？</a>
+      
+    
+      
+        <a href="../../taps-and-gestures/demo2/index.html" class="">如何阅读点击和双击手势？</a>
+      
+    
+      
+        <a href="../../taps-and-gestures/demo3/index.html" class="">如何使用 `highPriorityGesture()` 强制一个手势先识别另一个手势？</a>
+      
+    
+      
+        <a href="../../taps-and-gestures/demo4/index.html" class="">如何使用 `simultaneousGesture()` 同时识别两个手势？</a>
+      
+    
+      
+        <a href="../../taps-and-gestures/demo5/index.html" class="">如何使用 `sequenced(before:)` 创建手势链？</a>
+      
+    
+      
+        <a href="../../taps-and-gestures/demo6/index.html" class="">如何检测到用户将鼠标悬停在视图上？</a>
+      
+    
+      
+        <a href="../../taps-and-gestures/demo7/index.html" class="">如何检测摇动手势？</a>
+      
+    
+      
+        <a href="../../taps-and-gestures/demo8/index.html" class="">如何使用 `contentShape()` 控制视图的可点击区域？</a>
+      
+    
+      
+        <a href="../../taps-and-gestures/demo9/index.html" class="">如何使用 `allowsHitTesting()` 禁用视图的点击？</a>
+      
+    
+      
+        <label>状态</label>
+      
+    
+      
+        <a href="../../advanced-state/demo1/index.html" class="">`@ObservedObject`，`@State` 和 `@EnvironmentObject` 有什么区别？</a>
+      
+    
+      
+        <a href="../../advanced-state/demo2/index.html" class="">如何使用 `@StateObject` 创建和监视外部对象？</a>
+      
+    
+      
+        <a href="../../advanced-state/demo3/index.html" class="">如何使用 `@ObservedObject` 管理外部对象的状态？</a>
+      
+    
+      
+        <a href="../../advanced-state/demo4/index.html" class="">如何使用 `@EnvironmentObject` 在视图之间共享数据？</a>
+      
+    
+      
+        <a href="../../advanced-state/demo5/index.html" class="">如何使用 `objectWillChange` 手动发送状态更新？</a>
+      
+    
+      
+        <a href="../../advanced-state/demo6/index.html" class="">如何创建常量绑定？</a>
+      
+    
+      
+        <a href="../../advanced-state/demo7/index.html" class="">如何创建自定义绑定？</a>
+      
+    
+      
+        <a href="../../advanced-state/demo8/index.html" class="">如何在 `SwiftUI` 中使用计时器？</a>
+      
+    
+      
+        <a href="../../advanced-state/demo9/index.html" class="">当使用 `onChange()` 改变状态时如何运行一些代码？</a>
+      
+    
+      
+        <label>列表</label>
+      
+    
+      
+        <a href="../../lists/demo1/index.html" class="">使用列表 `List`</a>
+      
+    
+      
+        <a href="../../lists/demo2/index.html" class="">如何创建静态物品列表？</a>
+      
+    
+      
+        <a href="../../lists/demo3/index.html" class="">如何创建动态项目列表？</a>
+      
+    
+      
+        <a href="../../lists/demo4/index.html" class="">如何让用户从列表中删除行？</a>
+      
+    
+      
+        <a href="../../lists/demo5/index.html" class="">如何让用户在列表中移动行？</a>
+      
+    
+      
+        <a href="../../lists/demo6/index.html" class="">如何将 `Section` 添加到列表？</a>
+      
+    
+      
+        <a href="../../lists/demo7/index.html" class="">如何使用 `EditButton` 启用对列表的编辑？</a>
+      
+    
+      
+        <a href="../../lists/demo8/index.html" class="">如何使用 `listRowBackground()` 设置列表行的背景色？</a>
+      
+    
+      
+        <a href="../../lists/demo9/index.html" class="">如何创建分组和插入分组列表？</a>
+      
+    
+      
+        <a href="../../lists/demo10/index.html" class="">如何创建扩展列表？</a>
+      
+    
+      
+        <a href="../../lists/demo11/index.html" class="">如何滚动到列表中的特定行？</a>
+      
+    
+      
+        <a href="../../lists/demo12/index.html" class="">如何允许列表中的行选择？</a>
+      
+    
+      
+        <a href="../../lists/demo13/index.html" class="">如何使用隐式堆栈？</a>
+      
+    
+      
+        <label>表单</label>
+      
+    
+      
+        <a href="../../forms/demo1/index.html" class="">使用表单 `Form`</a>
+      
+    
+      
+        <a href="../../forms/demo2/index.html" class="">基本表格设计</a>
+      
+    
+      
+        <a href="../../forms/demo3/index.html" class="">将表格分为几个部分</a>
+      
+    
+      
+        <a href="../../forms/demo4/index.html" class="">表单选择器 `Pickers`</a>
+      
+    
+      
+        <a href="../../forms/demo5/index.html" class="">启用和禁用表单中的元素</a>
+      
+    
+      
+        <a href="../../forms/demo6/index.html" class="">显示和隐藏表单行</a>
+      
+    
+      
+        <label>容器</label>
+      
+    
+      
+        <a href="../../containers/demo1/index.html" class="">使用容器</a>
+      
+    
+      
+        <a href="../../containers/demo2/index.html" class="">如何在导航视图中嵌入视图？</a>
+      
+    
+      
+        <a href="../../containers/demo3/index.html" class="">如何将栏项目添加到导航视图？</a>
+      
+    
+      
+        <a href="../../containers/demo4/index.html" class="">如何使用 `TabView` 将视图嵌入选项卡栏中？</a>
+      
+    
+      
+        <a href="../../containers/demo5/index.html" class="">如何使用 `tabViewStyle()` 创建内容的滚动页面？</a>
+      
+    
+      
+        <a href="../../containers/demo6/index.html" class="">如何将视图组合 `Group` 在一起？</a>
+      
+    
+      
+        <a href="../../containers/demo7/index.html" class="">如何隐藏和显示状态栏？</a>
+      
+    
+      
+        <a href="../../containers/demo8/index.html" class="">如何使用 `DisclosureGroup` 隐藏和显示内容？</a>
+      
+    
+      
+        <a href="../../containers/demo9/index.html" class="">如何创建工具栏并向其中添加按钮？</a>
+      
+    
+      
+        <a href="../../containers/demo10/index.html" class="">如何为 `iPadOS` 添加侧边栏？</a>
+      
+    
+      
+        <a href="../../containers/demo11/index.html" class="">如何隐藏和显示 `NavigationView` 侧边栏？</a>
+      
+    
+      
+        <label>对话框和菜单</label>
+      
+    
+      
+        <a href="../../alerts-and-menus/demo1/index.html" class="">使用简介</a>
+      
+    
+      
+        <a href="../../alerts-and-menus/demo2/index.html" class="">如何显示 `alert`？</a>
+      
+    
+      
+        <a href="../../alerts-and-menus/demo3/index.html" class="">如何为 `alert` 按钮添加动作？</a>
+      
+    
+      
+        <a href="../../alerts-and-menus/demo4/index.html" class="">如何在单个视图中显示多个 `alert`？</a>
+      
+    
+      
+        <a href="../../alerts-and-menus/demo5/index.html" class="">如何显示动作面板？</a>
+      
+    
+      
+        <a href="../../alerts-and-menus/demo6/index.html" class="">如何显示上下文菜单？</a>
+      
+    
+      
+        <a href="../../alerts-and-menus/demo7/index.html" class="">如何使用 `appStoreOverlay()` 推荐另一个应用程序？</a>
+      
+    
+      
+        <a href="../../alerts-and-menus/demo8/index.html" class="">按下按钮时如何显示菜单？</a>
+      
+    
+      
+        <a href="../../alerts-and-menus/demo9/index.html" class="">如何让用户从菜单中选择选项？</a>
+      
+    
+      
+        <a href="../../alerts-and-menus/demo10/index.html" class="">如何更改 macOS 应用中主菜单？</a>
+      
+    
+      
+        <a href="../../alerts-and-menus/demo11/index.html" class="">如何添加偏好设置界面？</a>
+      
+    
+      
+        <label>切换界面</label>
+      
+    
+      
+        <a href="../../presenting-views/demo1/index.html" class="">如何将新视图推送到 `NavigationView` 上？</a>
+      
+    
+      
+        <a href="../../presenting-views/demo2/index.html" class="">点击列表行时如何推送新视图？</a>
+      
+    
+      
+        <a href="../../presenting-views/demo3/index.html" class="">如何在 `SwiftUI` 中使用程序化导航？</a>
+      
+    
+      
+        <a href="../../presenting-views/demo4/index.html" class="">如何使用 `sheets` 呈现新视图？</a>
+      
+    
+      
+        <a href="../../presenting-views/demo5/index.html" class="">如何使视图自行关闭？</a>
+      
+    
+      
+        <a href="../../presenting-views/demo6/index.html" class="">如何显示弹出视图？</a>
+      
+    
+      
+        <label>转换视图</label>
+      
+    
+      
+        <a href="../../transforming-views/demo1/index.html" class="">如何使用其偏移量调整视图的位置 `offset`？</a>
+      
+    
+      
+        <a href="../../transforming-views/demo2/index.html" class="">如何为视图周围的填充着色？</a>
+      
+    
+      
+        <a href="../../transforming-views/demo3/index.html" class="">如何堆叠修改器以创建更高级的效果？</a>
+      
+    
+      
+        <a href="../../transforming-views/demo4/index.html" class="">如何在视图周围绘制边框？</a>
+      
+    
+      
+        <a href="../../transforming-views/demo5/index.html" class="">如何在视图内绘制边框？</a>
+      
+    
+      
+        <a href="../../transforming-views/demo6/index.html" class="">如何创建行军蚂蚁边框动画效果？</a>
+      
+    
+      
+        <a href="../../transforming-views/demo7/index.html" class="">如何在视图周围绘制阴影？</a>
+      
+    
+      
+        <a href="../../transforming-views/demo8/index.html" class="">如何裁剪视图，以便仅可见部分？</a>
+      
+    
+      
+        <a href="../../transforming-views/demo9/index.html" class="">如何旋转视图？</a>
+      
+    
+      
+        <a href="../../transforming-views/demo10/index.html" class="">如何旋转 3D 视图？</a>
+      
+    
+      
+        <a href="../../transforming-views/demo11/index.html" class="">如何放大或缩小视图？</a>
+      
+    
+      
+        <a href="../../transforming-views/demo12/index.html" class="">如何圆角化一个视图？</a>
+      
+    
+      
+        <a href="../../transforming-views/demo13/index.html" class="">如何调整视图的不透明度？</a>
+      
+    
+      
+        <a href="../../transforming-views/demo14/index.html" class="">如何调整视图的强调色？</a>
+      
+    
+      
+        <a href="../../transforming-views/demo15/index.html" class="">如何用一个视图掩盖另一个视图？</a>
+      
+    
+      
+        <a href="../../transforming-views/demo16/index.html" class="">如何模糊视图？</a>
+      
+    
+      
+        <a href="../../transforming-views/demo17/index.html" class="">如何将视图融合在一起？</a>
+      
+    
+      
+        <a href="../../transforming-views/demo18/index.html" class="">如何通过着色，去饱和等来调整视图？</a>
+      
+    
+      
+        <a href="../../transforming-views/demo19/index.html" class="">使用 `ButtonStyle` 自定义按钮</a>
+      
+    
+      
+        <a href="../../transforming-views/demo20/index.html" class="">使用 `ProgressViewStyle` 自定义 `ProgressView`</a>
+      
+    
+      
+        <a href="../../transforming-views/demo21/index.html" class="">使用 `ToggleStyle` 自定义 `Toggle`</a>
+      
+    
+      
+        <label>绘画</label>
+      
+    
+      
+        <a href="../../drawing/demo1/index.html" class="">SwiftUI 的内置形状</a>
+      
+    
+      
+        <a href="../../drawing/demo2/index.html" class="">如何绘制自定义路径？</a>
+      
+    
+      
+        <a href="../../drawing/demo3/index.html" class="">如何绘制多边形和星星？</a>
+      
+    
+      
+        <a href="../../drawing/demo4/index.html" class="">如何画一个棋盘？</a>
+      
+    
+      
+        <label>动画</label>
+      
+    
+      
+        <a href="../../animation/demo1/index.html" class="">如何创建基本动画？</a>
+      
+    
+      
+        <a href="../../animation/demo2/index.html" class="">如何制作弹簧动画？</a>
+      
+    
+      
+        <a href="../../animation/demo3/index.html" class="">如何为绑定值的变化制作动画？</a>
+      
+    
+      
+        <a href="../../animation/demo4/index.html" class="">如何创建显式动画？</a>
+      
+    
+      
+        <a href="../../animation/demo5/index.html" class="">如何延迟动画？</a>
+      
+    
+      
+        <a href="../../animation/demo6/index.html" class="">视图出现后如何立即启动动画？</a>
+      
+    
+      
+        <a href="../../animation/demo7/index.html" class="">如何在一个视图中应用多个动画？</a>
+      
+    
+      
+        <a href="../../animation/demo8/index.html" class="">如何使用 matchedGeometryEffect() 将动画从一个视图同步到另一个视图？</a>
+      
+    
+      
+        <a href="../../animation/demo9/index.html" class="">如何通过过渡添加和删除视图？</a>
+      
+    
+      
+        <a href="../../animation/demo10/index.html" class="">如何创建不对称过渡？</a>
+      
+    
+      
+        <a href="../../animation/demo11/index.html" class="">如何创建自定义过渡？</a>
+      
+    
+      
+        <a href="../../animation/demo12/index.html" class="">如何设置文字大小的动画？</a>
+      
+    
+      
+        <a href="../../animation/demo13/index.html" class="">如何用事务覆盖动画？</a>
+      
+    
+      
+        <label>排版视图</label>
+      
+    
+      
+        <a href="../../composing-views/demo1/index.html" class="">如何创建和排版自定义视图？</a>
+      
+    
+      
+        <a href="../../composing-views/demo2/index.html" class="">如何将文本视图结合在一起？</a>
+      
+    
+      
+        <a href="../../composing-views/demo3/index.html" class="">如何将视图存储为属性？</a>
+      
+    
+      
+        <a href="../../composing-views/demo4/index.html" class="">如何创建自定义修改程序？</a>
+      
+    
+      
+        <a href="../../composing-views/demo5/index.html" class="">如何为 `SwiftUI` 包装自定义 `UIView`？</a>
+      
+    
+      
+        <a href="../../composing-views/demo6/index.html" class="">如何为 `UIViewRepresentable` 结构创建修饰符？</a>
+      
+    
+      
+        <a href="../../composing-views/demo7/index.html" class="">如何将图像插入文本？</a>
+      
+    
+      
+        <label>跨平台 SwiftUI</label>
+      
+    
+      
+        <a href="../../cross-platform/demo1/index.html" class="">学习一次，随处应用</a>
+      
+    
+      
+        <a href="../../cross-platform/demo2/index.html" class="">如何在 `macOS` 上获取半透明列表？</a>
+      
+    
+      
+        <a href="../../cross-platform/demo3/index.html" class="">如何在 `watchOS` 上制作轮播列表？</a>
+      
+    
+      
+        <a href="../../cross-platform/demo4/index.html" class="">如何使用 `digitalCrownRotation()` 在 `watchOS` 上读取 `Digital Crown`？</a>
+      
+    
+      
+        <label>数据</label>
+      
+    
+      
+        <a href="../../data/demo1/index.html" class="">在 `SwiftUI` 中使用 `Core Data` 的简介</a>
+      
+    
+      
+        <a href="../../data/demo2/index.html" class="">如何配置核心数据以与 `SwiftUI` 一起使用？</a>
+      
+    
+      
+        <a href="../../data/demo3/index.html" class="">如何从 `SwiftUI` 视图访问 `Core Data` 管理的对象上下文？</a>
+      
+    
+      
+        <a href="../../data/demo4/index.html" class="">如何使用 `@FetchRequest` 创建核心数据获取请求？</a>
+      
+    
+      
+        <a href="../../data/demo5/index.html" class="">如何使用 `predicate` 过滤核心数据获取请求？</a>
+      
+    
+      
+        <a href="../../data/demo6/index.html" class="">如何从 `SwiftUI` 视图添加 `Core Data` 对象？</a>
+      
+    
+      
+        <a href="../../data/demo7/index.html" class="">如何从 `SwiftUI` 视图中删除 `Core Data` 对象？</a>
+      
+    
+      
+        <a href="../../data/demo8/index.html" class="">如何限制获取请求中的项目数？</a>
+      
+    
+      
+        <a href="../../data/demo9/index.html" class="">如何使用 `FileDocument` 和 `DocumentGroup` 创建基于文档的应用程序？</a>
+      
+    
+      
+        <a href="../../data/demo10/index.html" class="">如何使用 `fileExporter()` 导出文件？</a>
+      
+    
+      
+        <a href="../../data/demo11/index.html" class="">如何在 `SwiftUI` 中继续 `NSUserActivity`？</a>
+      
+    
+      
+        <a href="../../data/demo12/index.html" class="">如何使用 `LocationButton` 读取用户的位置？</a>
+      
+    
+      
+        <label>辅助功能</label>
+      
+    
+      
+        <a href="../../accessibility/demo1/index.html" class="">SwiftUI 的可访问性简介</a>
+      
+    
+      
+        <a href="../../accessibility/demo2/index.html" class="">如何使用带有自定义字体的动态类型？</a>
+      
+    
+      
+        <a href="../../accessibility/demo3/index.html" class="">如何检测“减少运动”辅助功能设置？</a>
+      
+    
+      
+        <a href="../../accessibility/demo4/index.html" class="">如何检测暗模式？</a>
+      
+    
+      
+        <a href="../../accessibility/demo5/index.html" class="">如何使用装饰性图像减少屏幕阅读器的混乱？</a>
+      
+    
+      
+        <a href="../../accessibility/demo6/index.html" class="">如何在请求时减少动画？</a>
+      
+    
+      
+        <label>工具</label>
+      
+    
+      
+        <a href="../../tooling/demo1/index.html" class="">如何以不同的动态类型大小预览布局？</a>
+      
+    
+      
+        <a href="../../tooling/demo2/index.html" class="">如何在亮(light)和黑暗(dark)模式下预览布局？</a>
+      
+    
+      
+        <a href="../../tooling/demo3/index.html" class="">如何在不同的设备中预览布局？</a>
+      
+    
+      
+        <a href="../../tooling/demo4/index.html" class="">如何在导航视图中预览布局?</a>
+      
+    
+      
+        <a href="../../tooling/demo5/index.html" class="">如何使用 `Instruments` 来配置您的 SwiftUI 代码并识 `identify` 布局？</a>
+      
+    
+      
+        <a href="../../tooling/demo6/index.html" class="">如何在 `SwiftUI` 中使用 `Touch ID` 和 `Face ID`？</a>
+      
+    
+      
+        <a href="../../tooling/demo7/index.html" class="">如何在 Xcode 中添加创建 `Swift` 包依赖？</a>
+      
+    
+      
+        <a href="../../tooling/demo8/index.html" class="">如何以纵向或横向预览布局？</a>
+      
+    
+      
+        <a href="../../tooling/demo9/index.html" class="">如何查找导致 SwiftUI 视图更新的数据更改？</a>
+      
+    
+      
+        <label>附录A</label>
+      
+    
+      
+        <a href="../demo1/index.html" class="">了解 Swift 和 SwiftUI 中的属性包装器</a>
+      
+    
+      
+        <a href="index.html" class="active">所有 SwiftUI 属性包装器都进行了解释和比较</a>
+      
+    
+      
+        <a href="../demo3/index.html" class="">什么是 `@State` 属性包装器？</a>
+      
+    
+      
+        <a href="../demo4/index.html" class="">什么是 `@StateObject` 属性包装器？</a>
+      
+    
+      
+        <a href="../demo5/index.html" class="">什么是 `@Published` 属性包装器？</a>
+      
+    
+      
+        <a href="../demo6/index.html" class="">什么是 `@ObservedObject` 属性包装器？</a>
+      
+    
+      
+        <a href="../demo7/index.html" class="">什么是 `@EnvironmentObject` 属性包装器？</a>
+      
+    
+      
+        <a href="../demo8/index.html" class="">什么是 `@Environment` 属性包装器？</a>
+      
+    
+      
+        <a href="../demo9/index.html" class="">什么是 `@Binding` 属性包装器？</a>
+      
+    
+      
+        <a href="../demo10/index.html" class="">什么是 `@GestureState` 属性包装器？</a>
+      
+    
+      
+        <a href="../demo11/index.html" class="">什么是 `@FetchRequest` 属性包装器？</a>
+      
+    
+      
+        <a href="../demo12/index.html" class="">什么是 `@AppStorage` 属性包装器？</a>
+      
+    
+      
+        <a href="../demo13/index.html" class="">什么是 `@SceneStorage` 属性包装器？</a>
+      
+    
+      
+        <a href="../demo14/index.html" class="">什么是 `@ScaledMetric` 属性包装器？</a>
+      
+    
+      
+        <a href="../demo15/index.html" class="">什么是 `@UIApplicationDelegateAdaptor` 属性包装器？</a>
+      
+    
+    </div>
+  </aside>
+</div>
+
+  <markdown-style>
+    <h1 id="所有-swiftui-属性包装器都进行了解释和比较"><a aria-hidden="true" tabindex="-1" href="#所有-swiftui-属性包装器都进行了解释和比较" class="anchor"><span class="icon icon-link"></span></a>所有 SwiftUI 属性包装器都进行了解释和比较</h1>
+<p>SwiftUI 为我们的应用程序提供了 <code>17</code> 个属性包装器，每个属性包装器都提供不同的功能。知道使用哪个以及何时使用对正确处理至关重要，因此在本文中，我将向您介绍其中的每一个，并为您提供明确的使用指南。</p>
+<h2 id="tldr"><a aria-hidden="true" tabindex="-1" href="#tldr" class="anchor"><span class="icon icon-link"></span></a>TL;DR</h2>
+<p>我将在稍后解释更多，但这是 <code>too long; didn’t read</code> 摘要，大致描述了每个包装程序的工作，是否拥有数据（即数据是否属于它并由它管理）以及指向更多内容的链接：</p>
+<ul>
+<li><code>@AppStorage</code> 从 <code>UserDefaults</code> 读取和写入值。这拥有其数据。<a href="../demo12/index.html">更多信息</a>。</li>
+<li><code>@Binding</code> 引用另一个视图拥有的值类型数据。在本地更改绑定也会更改远程数据。这不拥有其数据。<a href="../demo9/index.html">更多信息</a>。</li>
+<li><code>@Environment</code> 允许我们从系统读取数据，例如配色方案，可访问性选项和特征集，但是如果需要，您可以在此处添加自己的密钥。这不拥有其数据。<a href="../demo8/index.html">更多信息</a>。</li>
+<li><code>@EnvironmentObject</code> 读取我们放入环境中的共享对象。这不拥有其数据。<a href="../demo7/index.html">更多信息</a>。</li>
+<li><code>@FetchRequest</code> 为特定实体启动核心数据获取请求。这拥有其数据。<a href="../demo11/index.html">更多信息</a>。</li>
+<li><code>@FocusedBinding</code> 旨在监视键窗口中的值，例如当前选定的文本字段。这不拥有其数据。</li>
+<li><code>@FocusedValue</code> 是 <code>@FocusedBinding</code> 的简单版本，不会为您解开绑定值。这不拥有其数据。</li>
+<li><code>@GestureState</code> 存储与当前正在进行的手势关联的值，例如您滑动了多远，除非在手势停止时它将重置为其默认值。这拥有其数据。<a href="../demo10/index.html">更多信息</a>。</li>
+<li><code>@Namespace</code> 创建一个动画名称空间，以允许匹配的几何效果，该效果可以由其他视图共享。这拥有其数据。</li>
+<li><code>@NSApplicationDelegateAdaptor</code> 用于创建类并将其注册为 <code>macOS</code> 应用程序的应用程序委托。这拥有其数据。</li>
+<li><code>@ObservedObject</code> 引用符合 <code>ObservableObject</code> 协议的外部类的实例。这不拥有其数据。<a href="../demo6/index.html">更多信息</a>。</li>
+<li><code>@Published</code> 附加到 <code>ObservableObject</code> 内的属性，并告诉 SwiftUI 它应该在更改此属性时刷新使用此属性的所有视图。这拥有其数据。<a href="../demo5/index.html">更多信息</a>。</li>
+<li><code>@ScaledMetric</code> 会读取用户的动态类型设置，并根据您提供的原始值向上或向下缩放数字。这拥有其数据。<a href="../demo14/index.html">更多信息</a>。</li>
+<li><code>@SceneStorage</code> 使我们可以保存和还原少量数据以进行状态还原。这拥有其数据。<a href="../demo13/index.html">更多信息</a>。</li>
+<li><code>@State</code> 允许我们在视图本地操作少量的值类型数据。这拥有其数据。<a href="../demo3/index.html">更多信息</a>。</li>
+<li><code>@StateObject</code> 用于存储符合 <code>ObservableObject</code> 协议的引用类型数据的新实例。这拥有其数据。<a href="../demo4/index.html">更多信息</a>。</li>
+<li><code>@UIApplicationDelegateAdaptor</code> 用于创建一个类并将其注册为iOS应用程序的应用程序委托。这拥有其数据。<a href="../demo15/index.html">更多信息</a>。</li>
+</ul>
+<h2 id="存储临时数据"><a aria-hidden="true" tabindex="-1" href="#存储临时数据" class="anchor"><span class="icon icon-link"></span></a>存储临时数据</h2>
+<p>在将数据存储到应用程序中时，最简单的属性包装器是<code>@State</code>。它旨在存储视图本地使用的值类型，因此非常适合存储整数，布尔值，甚至存储结构的本地实例。</p>
+<p>相比之下，<code>@Binding</code>用于要更改的简单数据，但不属于您的视图。例如，考虑一下内置的 <code>Toggle</code> 开关是如何工作的：它需要在打开和关闭状态之间移动，但是它不想自己存储该值，因此它绑定了我们拥有的某个外部值。因此，我们的视图具有<code>@State</code>属性，而 <code>Toggle</code> 具有<code>@Binding</code>属性。</p>
+<p><code>@State</code>有一个称为<code>@GestureState</code>的变体，专门用于跟踪活动手势。这种用法很少使用，但是它的好处是，手势结束后，您可以将其属性设置回其初始值。</p>
+<p>为了更高级的目的（即处理类或在许多地方共享数据），您不应使用<code>@State</code>和<code>@Binding</code>。相反，您应该使用<code>@StateObject</code> 在某个位置创建对象，然后将其与<code>@ObservedObject</code>在其他视图中使用。</p>
+<p>一个简单的规则是：如果在属性包装器的名称中看到 <code>state</code>，则意味着视图绝对拥有数据。</p>
+<p>因此，<code>@State</code>表示在本地创建和管理的简单值类型数据，但可能使用<code>@Binding</code>在其他地方共享，<code>@StateObject</code>表示在本地创建和管理的引用类型数据，但可能在其他地方使用<code>@ObservedObject</code>之类共享。</p>
+<p>这很重要：如果您看到<code>@ObservedObject var something = SomeType()</code> ，那么几乎应该肯定是<code>@StateObject</code>，以便 <code>SwiftUI</code> 知道视图应该拥有数据，而不仅仅是在其他地方引用它。在这里使用 <code>@ObservedObject</code> 有时会导致您的应用程序崩溃，因为该对象被过早破坏了。</p>
+<p>如果您发现自己从一个视图到另一个视图处理相同的数据，则会发现 <code>@EnvironmentObject</code> 属性包装器很有用。这使您可以从共享环境中读取引用类型对象，而不是显式传递它。</p>
+<p>就像 <code>@ObservableObject</code> 一样，<code>@EnvironmentObject</code> 最初不应该用于创建对象。而是在另一个视图中创建它，并使用 <code>environmentObject()</code> 修饰符将其注入到环境中。尽管环境会自动保留对象的所有权，但是您也可以使用 <code>@StateObject</code> 将其存储在最初创建的位置。但是，这不是必需的：将对象放入环境中足以使它保持活动状态，而无需进一步的所有权。</p>
+<p>最终的基于状态的属性包装器是 <code>@Published</code>，它在引用类型内部用于注释属性。标记为 <code>@Published</code> 的任何属性都将导致其父类宣布发生了更改，这又将导致任何观察该对象的视图进行所需的任何更改。</p>
+<h2 id="存储长期数据"><a aria-hidden="true" tabindex="-1" href="#存储长期数据" class="anchor"><span class="icon icon-link"></span></a>存储长期数据</h2>
+<p>SwiftUI具有三个用于存储和/或检索数据的属性包装器。</p>
+<p>第一个是 <code>@AppStorage</code>，它是 <code>UserDefaults</code> 的包装。每次您从应用存储中读取或写入值时，实际上就是在从 <code>UserDefaults</code> 中读取或写入值。</p>
+<p>第二个是 <code>@SceneStorage</code>，它是 <code>Apple</code> 状态恢复API的包装。状态恢复允许关闭和重新加载应用程序，并使其恢复到用户停止使用的相同状态-使得我们的应用程序始终处于运行状态，即使它们已被静默终止。</p>
+<p><code>@AppStorage</code> 和 <code>@SceneStorage</code>不安全，不应用于存储敏感数据。</p>
+<p>尽管<code>@AppStorage</code>和 <code>@SceneStorage</code> 听起来一样，但它们却不一样：<code>@AppStorage</code>为整个应用程序存储一个值，而<code> </code>会在用户多次打开您的应用程序窗口时自动为同一数据保存多个值 – 考虑一下 <code>iPadOS</code> 和 <code>macOS</code> 。</p>
+<p>因此，您可以使用<code>@AppStorage</code>存储全局值，例如“用户的最高分数是多少？”，并且可以使用 <code>@SceneStorage</code> 存储“用户现在正在阅读的页面是什么？”</p>
+<p>第三个数据属性包装器是 <code>@FetchRequest</code>，用于从 <code>Core Data</code> 检索信息。这将自动使用环境中的任何托管对象上下文，并在基础数据发生更改时自动更新。</p>
+<h2 id="读取环境数据"><a aria-hidden="true" tabindex="-1" href="#读取环境数据" class="anchor"><span class="icon icon-link"></span></a>读取环境数据</h2>
+<p>SwiftUI 具有两个用于读取用户环境的属性包装器：<code>@Environment</code> 和 <code>@ScaledMetric</code>。</p>
+<p><code>@Environment</code>用于读取各种数据，例如当前正在启用哪些特征收集，是否使用2x或3x屏幕，处于什么时区等等。 它还具有一些特殊的应用程序操作，例如导出文件和在系统注册的 Web浏览器中打开 URL。</p>
+<p><code>@ScaledMetric</code> 更为简单，它使我们能够根据用户的动态类型设置来调整用户界面的大小。 例如，使用系统默认大小，100x100点的盒子可能看起来不错，但是使用 <code>@ScaledMetric</code> 时，启用较大的 <code>Dynamic Type</code> 设置时，它会自动变为200x200。</p>
+<h2 id="引用视图"><a aria-hidden="true" tabindex="-1" href="#引用视图" class="anchor"><span class="icon icon-link"></span></a>引用视图</h2>
+<p>SwiftUI 提供了 <code>@Namespace</code> 属性包装器，该包装器为动画创建了一个新的命名空间。动画名称空间让我们说“动画ID为5的视图”，并且该名称空间中ID为5的所有视图都将被动画化。</p>
+<p>您可以使用属性类型 <code>Namespace.ID</code> 并从创建视图的任何视图中注入 <code>@Namespace</code> 值，从而在视图之间共享名称空间。 这使您可以跨视图创建匹配的几何效果动画，而不是将所有数据存储在当前视图中。</p>
+<h2 id="申请处理"><a aria-hidden="true" tabindex="-1" href="#申请处理" class="anchor"><span class="icon icon-link"></span></a>申请处理</h2>
+<p>如果您需要访问旧的 <code>UIApplicationDelegate</code> 和 <code>NSApplicationDelegate</code>方法和通知，则应分别使用<code>@UIApplicationDelegateAdaptor</code> 和 <code>@NSApplicationDelegateAdaptor</code>属性包装器。</p>
+<p>您为它们提供应用程序委托的类，它们将确保创建实例并发送所有适当的通知。</p>
+<h2 id="真理之源"><a aria-hidden="true" tabindex="-1" href="#真理之源" class="anchor"><span class="icon icon-link"></span></a>真理之源</h2>
+<p>早些时候，我描述了哪些属性包装器拥有它们的数据，而实际上这涉及到您的应用程序中的真理来源：拥有它们的数据的包装器是真理的源头，因为它们创建和管理值，而没有拥有数据的包装器不是源头。 的确如此，因为他们从其他地方获得了价值。</p>
+<p>财产包装是真理的源头</p>
+<p>这些直接创建和管理值：</p>
+<ul>
+<li><code>@AppStorage</code></li>
+<li><code>@FetchRequest</code></li>
+<li><code>@GestureState</code></li>
+<li><code>@Namespace</code></li>
+<li><code>@NSApplicationDelegateAdaptor</code></li>
+<li><code>@Published</code></li>
+<li><code>@ScaledMetric</code></li>
+<li><code>@SceneStorage</code></li>
+<li><code>@State</code></li>
+<li><code>@StateObject</code></li>
+<li><code>@UIApplicationDelegateAdaptor</code></li>
+</ul>
+<p>不是事实来源的属性包装器</p>
+<p>这些是从其他地方获取价值的：</p>
+<ul>
+<li><code>@Binding</code></li>
+<li><code>@Environment</code></li>
+<li><code>@EnvironmentObject</code></li>
+<li><code>@FocusedBinding</code></li>
+<li><code>@FocusedValue</code></li>
+<li><code>@ObservedObject</code></li>
+</ul>
+<p>如果您什么都不记得了...</p>
+<p>我想创建一个由当前视图拥有的新属性。 您应该将 <code>@State</code> 用作值类型，并将 <code>@StateObject</code> 用作引用类型。</p>
+<p>我想引用在其他地方创建的值。 您应该将 <code>@Binding</code> 用于值类型，并将 <code>@ObservedObject</code>或 <code>@EnvironmentObject</code> 用于引用类型。</p>
+    
+
+<div class="previous">
+  
+  <a class="prev" href="../demo1/index.html">
+    <svg viewBox="0 0 1024 1024" width="16" height="16" fill="currentColor">
+      <path d="M842.666667 864c-8.533333 0-14.933333-2.133333-21.333334-8.533333l-341.333333-309.333334c-6.4-6.4-10.666667-14.933333-10.666667-23.466666 0-8.533333 4.266667-17.066667 10.666667-23.466667l341.333333-309.333333c12.8-12.8 34.133333-10.666667 44.8 2.133333 12.8 12.8 10.666667 34.133333-2.133333 44.8L548.266667 522.666667l315.733333 285.866666c12.8 10.666667 14.933333 32 2.133333 44.8-6.4 6.4-14.933333 10.666667-23.466666 10.666667z"></path>
+      <path d="M512 864c-8.533333 0-14.933333-2.133333-21.333333-8.533333L149.333333 546.133333c-6.4-6.4-10.666667-14.933333-10.666666-23.466666 0-8.533333 4.266667-17.066667 10.666666-23.466667L490.666667 189.866667c12.8-12.8 34.133333-10.666667 44.8 2.133333 12.8 12.8 10.666667 34.133333-2.133334 44.8L217.6 522.666667 533.333333 808.533333c12.8 12.8 14.933333 32 2.133334 44.8-6.4 6.4-14.933333 10.666667-23.466667 10.666667z"></path>
+    </svg>
+    <span>
+      了解 Swift 和 SwiftUI 中的属性包装器
+    </span>
+  </a>
+  
+  
+  <a class="next" href="../demo3/index.html">
+    <span>
+      什么是 `@State` 属性包装器？
+    </span>
+    <svg viewBox="0 0 1024 1024" width="16" height="16" fill="currentColor">
+      <path d="M544 522.666667c0-8.533333-4.266667-17.066667-10.666667-23.466667L192 189.866667c-12.8-12.8-34.133333-10.666667-44.8 2.133333-12.8 12.8-10.666667 34.133333 2.133333 44.8l315.733334 285.866667L149.333333 808.533333c-12.8 12.8-14.933333 32-2.133333 44.8 6.4 6.4 14.933333 10.666667 23.466667 10.666667 8.533333 0 14.933333-2.133333 21.333333-8.533333l341.333333-309.333334c6.4-6.4 10.666667-14.933333 10.666667-23.466666z"></path>
+      <path d="M864 499.2l-341.333333-309.333333c-12.8-12.8-34.133333-10.666667-44.8 2.133333-12.8 12.8-10.666667 34.133333 2.133333 44.8l315.733333 285.866667-315.733333 285.866666c-12.8 12.8-14.933333 32-2.133333 44.8 6.4 6.4 14.933333 10.666667 23.466666 10.666667 8.533333 0 14.933333-2.133333 21.333334-8.533333l341.333333-309.333334c6.4-6.4 10.666667-14.933333 10.666667-23.466666 0-8.533333-4.266667-17.066667-10.666667-23.466667z"></path>
+    </svg>
+  </a>
+  
+</div>
+
+
+
+<section class="article-footer">
+  <a href="https://github.com/jaywcjlove/swiftui-example/blob/master/example/appendix-a/demo2/README.md" class="edit-button" target="_blank" rel="noopener noreferrer">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+    </svg>
+    <span>Edit this page on GitHub</span>
+  </a>
+  
+  <span class="atime">2022/04/22</span>
+  
+</section>
+
+  </markdown-style>
+  
+<nav class="tocs">
+  <aside class="inner toc"></aside>
+</nav>
+
+
+<script src="../../js/tocbot.min.js?v=4.18.2"></script>
+<script>
+tocbot.init({
+  tocSelector: 'aside.inner',
+  contentSelector: 'markdown-style',
+  positionFixedSelector: 'aside.inner',
+  headingSelector: 'h1, h2, h3, h4',
+  collapseDepth: 2,
+
+  includeHtml: true,
+  includeTitleTags: false,
+  hasInnerContainers: true,
+  onClick: (e) => { console.log('you clicked a link', e) },
+  headingsOffset: 40,
+  scrollSmoothOffset: -40,
+});
+</script>
+
+</div>
+
+
+<div class="footer warpper">
+  Released under the MIT License. Copyright © 2022 Kenny Wong<br />
+Generated by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a> v1.13.1
+
+</div>
+
+</body>
+</html>
