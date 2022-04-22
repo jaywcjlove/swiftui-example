@@ -12,6 +12,8 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 
 只是讨论 SwiftUI 事物的地方 [论坛→](https://github.com/jaywcjlove/swiftui-example/discussions)。想法来源于 [sindresorhus/swiftui](https://github.com/sindresorhus/swiftui)
 
+<!--idoc:ignore:start-->
+
 ## 示例目录
 
 - [介绍](#介绍)
@@ -39,6 +41,8 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [工具](#工具)
 - [附录a](#附录a)
 - [`速查手册`](./cheat-sheet.md)
+
+<!--idoc:ignore:end-->
 
 ## 介绍
 
