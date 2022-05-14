@@ -5,6 +5,10 @@ favicon: ./assets/logo.svg
 
 tocs: false
 
+cacheFileStat: true
+
+homepage: https://wangchujiang.com/swiftui-example/
+
 menus:
   Home: index.html
   Cheat Sheet: cheat-sheet.html
