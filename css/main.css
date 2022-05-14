@@ -23,6 +23,15 @@
 body {
   margin: 0;
   font-size: 14px;
+  font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-accent-fg);
+}
+a:hover {
+  text-decoration: underline;
 }
 
 .warpper {
@@ -67,7 +76,6 @@ nav.tocs .is-position-fixed {
   max-height: calc(100% - 68px);
 }
 nav.tocs {
-  line-height: 26px;
   position: relative;
   grid-area: toc;
 }
@@ -87,13 +95,6 @@ nav.tocs .inner {
   width: 240px;
 }
 
-a {
-  text-decoration: none;
-  color: var(--color-accent-fg);
-}
-a:hover {
-  text-decoration: underline;
-}
 a.gototop {
   position: fixed;
   bottom: 10px;
@@ -162,7 +163,7 @@ a.gototop:hover {
   font-weight: bold;
 }
 .header .menu a {
-  padding: 1px 7px;
+  padding: 3px 7px;
   font-size: 14px;
   border-radius: 2px;
 }
@@ -219,9 +220,6 @@ section.article-footer .atime {
   display: flex;
   align-items: center;
 }
-.previous a svg {
-  margin-top: 1px;
-}
 .previous a.prev svg {
   margin-right: 3px;
 }
@@ -232,8 +230,6 @@ section.article-footer .atime {
 .footer {
   text-align: center;
   border-top: 1px solid var(--color-header-border);
-  max-width: 960px;
-  margin: 0 auto 0 auto;
   padding: 32px 0 110px 0;
   color: var(--color-fg-muted);
   font-size: 14px;
