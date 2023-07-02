@@ -66,7 +66,7 @@ struct ContentView_Previews: PreviewProvider {
 
 **重要**。返回 `some View` 意味着 `body` 属性将返回遵守 `View` 协议的东西。你不能忘记返回任何东西--否则 Swift 编译器会拒绝构建你的代码。
 
-第四，在 `body` 属性里面有 `Text("Hello World")`，它创建了一个文本 "Hello World "的标签。
+第四，在 `body` 属性里面有 `Text("Hello World")`，它创建了一个文本 "Hello World"的标签。
 
 第五，`Text` 视图下面有一个 `padding()` 方法调用。在 SwiftUI 中，这实际上创建了一个新的视图，周围有填充物，而不是改变现有的 `Text` 视图。因此，我们称这些修饰符（modifiers）而不是方法，是因为它们创建了修改过的内容。
 
