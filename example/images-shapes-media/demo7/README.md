@@ -27,7 +27,7 @@ RoundedRectangle(cornerRadius: 25)
     .frame(width: 150, height: 100)
 ```
 
-最后，SwiftUI 提供 `Capsule()` 形状作为圆角矩形的一种特殊形式，其中矩形的最短边始终是完全圆角的。 这是带有按钮的流行样式，因为只需几行代码就可以得到菱形的按钮：
+最后，SwiftUI 提供 `Capsule()` 形状作为圆角矩形的一种特殊形式，其中矩形的最短边始终是完全圆角的。 这是带有按钮的流行样式，因为只需几行代码就可以得到胶囊形的按钮：
 
 ```swift
 Capsule()
