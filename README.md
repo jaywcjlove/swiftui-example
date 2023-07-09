@@ -424,6 +424,16 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [Swift 包索引](https://swiftpackageindex.com/)
 - [hackingwithswift.com](https://www.hackingwithswift.com/quick-start/swiftui)
 
+## 贡献者
+
+一如既往，感谢我们出色的贡献者！
+
+<a href="https://github.com/jaywcjlove/swiftui-example/graphs/contributors">
+  <img src="https://jaywcjlove.github.io/swiftui-example/CONTRIBUTORS.svg" />
+</a>
+
+使用 [action-contributors](https://github.com/jaywcjlove/github-action-contributors) 制作。
+
 ## License
 
 Licensed under the MIT License.
