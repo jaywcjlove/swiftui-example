@@ -25,9 +25,9 @@ https://wangchujiang.com/swiftui-example/advanced-state/demo8/index.html
 https://wangchujiang.com/swiftui-example/advanced-state/demo9/index.html
 https://wangchujiang.com/swiftui-example/alerts-and-menus/demo1/index.html
 https://wangchujiang.com/swiftui-example/alerts-and-menus/demo10/index.html
-https://wangchujiang.com/swiftui-example/alerts-and-menus/demo11/index.html
 https://wangchujiang.com/swiftui-example/alerts-and-menus/demo2/index.html
 https://wangchujiang.com/swiftui-example/alerts-and-menus/demo3/index.html
+https://wangchujiang.com/swiftui-example/alerts-and-menus/demo11/index.html
 https://wangchujiang.com/swiftui-example/alerts-and-menus/demo4/index.html
 https://wangchujiang.com/swiftui-example/alerts-and-menus/demo5/index.html
 https://wangchujiang.com/swiftui-example/alerts-and-menus/demo6/index.html
