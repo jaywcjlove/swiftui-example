@@ -191,8 +191,8 @@
 
 - forms/: 表单
 - forms/demo1/README.md: 使用表单 `Form`
-- forms/demo2/README.md: 基本表格设计
-- forms/demo3/README.md: 将表格分为几个部分
+- forms/demo2/README.md: 基本表单设计
+- forms/demo3/README.md: 将表单分为几个部分
 - forms/demo4/README.md: 表单选择器 `Pickers`
 - forms/demo5/README.md: 启用和禁用表单中的元素
 - forms/demo6/README.md: 显示和隐藏表单行
