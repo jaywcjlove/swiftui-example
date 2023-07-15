@@ -4,7 +4,11 @@
 基本的SwiftUI警报如下所示：
 
 ```swift
-Alert(title: Text("Important message"), message: Text("Wear sunscreen"), dismissButton: .default(Text("Got it!")))
+Alert(
+    title: Text("Important message"),
+    message: Text("Wear sunscreen"),
+    dismissButton: .default(Text("Got it!"))
+)
 ```
 
 但是，您经常需要将动作附加到按钮上，以便在点击它们时执行特定的动作。 为此，请在您的按钮上附加一个闭包，当您点击按钮时将其关闭，如下所示：
