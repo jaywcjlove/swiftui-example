@@ -293,7 +293,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [如何在视图内绘制边框？](example/transforming-views/demo5/README.md)
 - [如何创建行军蚂蚁边框动画效果？](example/transforming-views/demo6/README.md)
 - [如何在视图周围绘制阴影？](example/transforming-views/demo7/README.md)
-- [如何裁剪视图，以便仅可见部分？](example/transforming-views/demo8/README.md)
+- [如何裁剪视图，以便仅部分可见？](example/transforming-views/demo8/README.md)
 - [如何旋转视图？](example/transforming-views/demo9/README.md)
 - [如何旋转 3D 视图？](example/transforming-views/demo10/README.md)
 - [如何放大或缩小视图？](example/transforming-views/demo11/README.md)

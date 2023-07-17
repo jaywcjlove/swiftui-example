@@ -255,7 +255,7 @@
 - transforming-views/demo5/README.md: 如何在视图内绘制边框？
 - transforming-views/demo6/README.md: 如何创建行军蚂蚁边框动画效果？
 - transforming-views/demo7/README.md: 如何在视图周围绘制阴影？
-- transforming-views/demo8/README.md: 如何裁剪视图，以便仅可见部分？
+- transforming-views/demo8/README.md: 如何裁剪视图，以便仅部分可见？
 - transforming-views/demo9/README.md: 如何旋转视图？
 - transforming-views/demo10/README.md: 如何旋转 3D 视图？
 - transforming-views/demo11/README.md: 如何放大或缩小视图？
