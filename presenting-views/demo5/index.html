@@ -325,7 +325,7 @@
       <markdown-style>
         <h1 id="如何使视图自行关闭"><a aria-hidden="true" tabindex="-1" href="#如何使视图自行关闭" class="anchor"><span class="icon icon-link"></span></a>如何使视图自行关闭？</h1>
         <p>当您使用工作表显示 <code>SwiftUI</code> 视图时，通常会在发生某些情况（例如，用户点击按钮）时关闭该视图。 在 <code>SwiftUI</code> 中，有两种解决方法，下面将向您展示两种方法，以便您确定最适合自己的需求。</p>
-        <p>第一种选择是告诉视图使用其表示模式环境键关闭视图。 任何视图都可以使用 <code>@Environment(\。presentationMode)</code> 读取其演示模式，并在该视图上调用 <code>wrappedValue.dismiss()</code>将导致该视图被关闭。</p>
+        <p>第一种选择是告诉视图使用其表示模式环境键关闭视图。 任何视图都可以使用 <code>@Environment(\.presentationMode)</code> 读取其演示模式，并在该视图上调用 <code>wrappedValue.dismiss()</code>将导致该视图被关闭。</p>
         <p>例如，我们可以创建一个详细信息视图，该视图能够使用其演示模式环境密钥自行关闭，然后从 <code>ContentView</code> 呈现该视图。</p>
         <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line line-number" line="1"><span class="token keyword">struct</span> <span class="token class-name">DismissingView1</span><span class="token punctuation">:</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
 </span><span class="code-line line-number" line="2">    <span class="token attribute atrule">@Environment</span><span class="token punctuation">(</span><span class="token punctuation">\</span><span class="token punctuation">.</span>presentationMode<span class="token punctuation">)</span> <span class="token keyword">var</span> presentationMode
