@@ -24,7 +24,6 @@ https://wangchujiang.com/swiftui-example/advanced-state/demo7/index.html
 https://wangchujiang.com/swiftui-example/advanced-state/demo8/index.html
 https://wangchujiang.com/swiftui-example/advanced-state/demo9/index.html
 https://wangchujiang.com/swiftui-example/alerts-and-menus/demo1/index.html
-https://wangchujiang.com/swiftui-example/alerts-and-menus/demo10/index.html
 https://wangchujiang.com/swiftui-example/alerts-and-menus/demo11/index.html
 https://wangchujiang.com/swiftui-example/alerts-and-menus/demo2/index.html
 https://wangchujiang.com/swiftui-example/alerts-and-menus/demo3/index.html
@@ -34,6 +33,7 @@ https://wangchujiang.com/swiftui-example/alerts-and-menus/demo6/index.html
 https://wangchujiang.com/swiftui-example/alerts-and-menus/demo7/index.html
 https://wangchujiang.com/swiftui-example/alerts-and-menus/demo8/index.html
 https://wangchujiang.com/swiftui-example/alerts-and-menus/demo9/index.html
+https://wangchujiang.com/swiftui-example/alerts-and-menus/demo10/index.html
 https://wangchujiang.com/swiftui-example/animation/demo1/index.html
 https://wangchujiang.com/swiftui-example/animation/demo10/index.html
 https://wangchujiang.com/swiftui-example/animation/demo11/index.html
@@ -109,12 +109,12 @@ https://wangchujiang.com/swiftui-example/images-shapes-media/demo12/index.html
 https://wangchujiang.com/swiftui-example/images-shapes-media/demo13/index.html
 https://wangchujiang.com/swiftui-example/images-shapes-media/demo14/index.html
 https://wangchujiang.com/swiftui-example/images-shapes-media/demo2/index.html
-https://wangchujiang.com/swiftui-example/images-shapes-media/demo3/index.html
 https://wangchujiang.com/swiftui-example/images-shapes-media/demo4/index.html
 https://wangchujiang.com/swiftui-example/images-shapes-media/demo5/index.html
 https://wangchujiang.com/swiftui-example/images-shapes-media/demo6/index.html
 https://wangchujiang.com/swiftui-example/images-shapes-media/demo7/index.html
 https://wangchujiang.com/swiftui-example/images-shapes-media/demo8/index.html
+https://wangchujiang.com/swiftui-example/images-shapes-media/demo3/index.html
 https://wangchujiang.com/swiftui-example/images-shapes-media/demo9/index.html
 https://wangchujiang.com/swiftui-example/introduction/demo1/index.html
 https://wangchujiang.com/swiftui-example/introduction/demo2/index.html
@@ -207,8 +207,8 @@ https://wangchujiang.com/swiftui-example/user-interface-controls/demo2/index.htm
 https://wangchujiang.com/swiftui-example/user-interface-controls/demo20/index.html
 https://wangchujiang.com/swiftui-example/user-interface-controls/demo21/index.html
 https://wangchujiang.com/swiftui-example/user-interface-controls/demo22/index.html
-https://wangchujiang.com/swiftui-example/user-interface-controls/demo24/index.html
 https://wangchujiang.com/swiftui-example/user-interface-controls/demo23/index.html
+https://wangchujiang.com/swiftui-example/user-interface-controls/demo24/index.html
 https://wangchujiang.com/swiftui-example/user-interface-controls/demo25/index.html
 https://wangchujiang.com/swiftui-example/user-interface-controls/demo26/index.html
 https://wangchujiang.com/swiftui-example/user-interface-controls/demo27/index.html
@@ -228,10 +228,6 @@ https://wangchujiang.com/swiftui-example/view-layout/demo6/index.html
 https://wangchujiang.com/swiftui-example/view-layout/demo7/index.html
 https://wangchujiang.com/swiftui-example/view-layout/demo8/index.html
 https://wangchujiang.com/swiftui-example/view-layout/demo9/index.html
-https://wangchujiang.com/swiftui-example/cross-platform/demo1/index.html
-https://wangchujiang.com/swiftui-example/cross-platform/demo2/index.html
-https://wangchujiang.com/swiftui-example/cross-platform/demo3/index.html
-https://wangchujiang.com/swiftui-example/cross-platform/demo4/index.html
 https://wangchujiang.com/swiftui-example/tooling/demo1/index.html
 https://wangchujiang.com/swiftui-example/tooling/demo2/index.html
 https://wangchujiang.com/swiftui-example/tooling/demo3/index.html
@@ -254,4 +250,8 @@ https://wangchujiang.com/swiftui-example/working-with-static-text/demo7/index.ht
 https://wangchujiang.com/swiftui-example/working-with-static-text/demo8/index.html
 https://wangchujiang.com/swiftui-example/working-with-static-text/demo9/index.html
 https://wangchujiang.com/swiftui-example/working-with-static-text/demo12/index.html
+https://wangchujiang.com/swiftui-example/cross-platform/demo1/index.html
+https://wangchujiang.com/swiftui-example/cross-platform/demo2/index.html
+https://wangchujiang.com/swiftui-example/cross-platform/demo4/index.html
+https://wangchujiang.com/swiftui-example/cross-platform/demo3/index.html
 https://wangchujiang.com/swiftui-example/index.html
