@@ -18,62 +18,62 @@ struct Star: Shape {
         // 从矩形的中心绘制
         let center = CGPoint(x: rect.width / 2, y: rect.height / 2)
 
-        // start from directly upwards (as opposed to down or to the right)
+        // 从直接向上开始（与向下或向右相反）
         var currentAngle = -CGFloat.pi / 2
 
-        // calculate how much we need to move with each star corner
+        // 计算每个星形角落需要移动多少。
         let angleAdjustment = .pi * 2 / CGFloat(corners * 2)
 
-        // figure out how much we need to move X/Y for the inner points of the star
+        // 计算星形的内部点需要在X和Y方向上移动多少。
         let innerX = center.x * smoothness
         let innerY = center.y * smoothness
 
-        // we're ready to start with our path now
+        // 我们现在准备好开始绘制路径了。
         var path = Path()
 
-        // move to our initial position
+        // 移动到我们的初始位置。
         path.move(to: CGPoint(x: center.x * cos(currentAngle), y: center.y * sin(currentAngle)))
 
-        // track the lowest point we draw to, so we can center later
+        // 跟踪我们绘制的最低点，以便稍后进行居中处理。
         var bottomEdge: CGFloat = 0
 
-        // loop over all our points/inner points
+        // 循环遍历所有的点/内部点。
         for corner in 0..<corners * 2  {
-            // figure out the location of this point
+            // 确定该点的位置。
             let sinAngle = sin(currentAngle)
             let cosAngle = cos(currentAngle)
             let bottom: CGFloat
 
-            // if we're a multiple of 2 we are drawing the outer edge of the star
+            // 如果我们是2的倍数，那么我们正在绘制星形的外边缘。
             if corner.isMultiple(of: 2) {
-                // store this Y position
+                // 保存这个 Y 位置
                 bottom = center.y * sinAngle
 
-                // …and add a line to there
+                // ...并添加一条线到那里。
                 path.addLine(to: CGPoint(x: center.x * cosAngle, y: bottom))
             } else {
-                // we're not a multiple of 2, which means we're drawing an inner point
+                // 我们不是2的倍数，这意味着我们正在绘制一个内部点。
 
-                // store this Y position
+                // 保存这个 Y 位置
                 bottom = innerY * sinAngle
 
-                // …and add a line to there
+                // ...并添加一条线到那里。
                 path.addLine(to: CGPoint(x: innerX * cosAngle, y: bottom))
             }
 
-            // if this new bottom point is our lowest, stash it away for later
+            // 如果这个新的底部点是我们最低的点，将其保存供以后使用。
             if bottom > bottomEdge {
                 bottomEdge = bottom
             }
 
-            // move on to the next corner
+            // 继续下一个角落。
             currentAngle += angleAdjustment
         }
 
-        // figure out how much unused space we have at the bottom of our drawing rectangle
+        // 计算我们绘图矩形底部剩余的未使用空间。
         let unusedSpace = (rect.height / 2 - bottomEdge) / 2
 
-        // create and apply a transform that moves our path down by that amount, centering the shape vertically
+        // 创建并应用一个变换，将我们的路径向下移动相应的距离，垂直居中形状。
         let transform = CGAffineTransform(translationX: center.x, y: center.y + unusedSpace)
         return path.applying(transform)
     }
