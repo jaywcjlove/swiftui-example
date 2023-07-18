@@ -38,3 +38,29 @@ struct ContentView: View {
     }
 }
 ```
+我们传递的按钮配置包括按钮当前是否被按下，因此我们可以使用它来调整按钮。
+
+例如，我们可以创建第二种样式，使按钮在按下时变大：
+
+```swift
+struct GrowingButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding()
+            .background(.blue)
+            .foregroundStyle(.white)
+            .clipShape(Capsule())
+            .scaleEffect(configuration.isPressed ? 1.2 : 1)
+            .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
+    }
+}
+
+struct ContentView: View {
+    var body: some View {
+        Button("Press Me") {
+            print("Button pressed!")
+        }
+        .buttonStyle(GrowingButton())
+    }
+}
+```
