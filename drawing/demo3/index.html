@@ -338,62 +338,62 @@
 </span><span class="code-line line-number" line="10">        <span class="token comment">// 从矩形的中心绘制</span>
 </span><span class="code-line line-number" line="11">        <span class="token keyword">let</span> center <span class="token operator">=</span> <span class="token class-name">CGPoint</span><span class="token punctuation">(</span>x<span class="token punctuation">:</span> rect<span class="token punctuation">.</span>width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> y<span class="token punctuation">:</span> rect<span class="token punctuation">.</span>height <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span>
 </span><span class="code-line line-number" line="12">
-</span><span class="code-line line-number" line="13">        <span class="token comment">// start from directly upwards (as opposed to down or to the right)</span>
+</span><span class="code-line line-number" line="13">        <span class="token comment">// 从直接向上开始（与向下或向右相反）</span>
 </span><span class="code-line line-number" line="14">        <span class="token keyword">var</span> currentAngle <span class="token operator">=</span> <span class="token operator">-</span><span class="token class-name">CGFloat</span><span class="token punctuation">.</span>pi <span class="token operator">/</span> <span class="token number">2</span>
 </span><span class="code-line line-number" line="15">
-</span><span class="code-line line-number" line="16">        <span class="token comment">// calculate how much we need to move with each star corner</span>
+</span><span class="code-line line-number" line="16">        <span class="token comment">// 计算每个星形角落需要移动多少。</span>
 </span><span class="code-line line-number" line="17">        <span class="token keyword">let</span> angleAdjustment <span class="token operator">=</span> <span class="token punctuation">.</span>pi <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">/</span> <span class="token class-name">CGFloat</span><span class="token punctuation">(</span>corners <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span>
 </span><span class="code-line line-number" line="18">
-</span><span class="code-line line-number" line="19">        <span class="token comment">// figure out how much we need to move X/Y for the inner points of the star</span>
+</span><span class="code-line line-number" line="19">        <span class="token comment">// 计算星形的内部点需要在X和Y方向上移动多少。</span>
 </span><span class="code-line line-number" line="20">        <span class="token keyword">let</span> innerX <span class="token operator">=</span> center<span class="token punctuation">.</span>x <span class="token operator">*</span> smoothness
 </span><span class="code-line line-number" line="21">        <span class="token keyword">let</span> innerY <span class="token operator">=</span> center<span class="token punctuation">.</span>y <span class="token operator">*</span> smoothness
 </span><span class="code-line line-number" line="22">
-</span><span class="code-line line-number" line="23">        <span class="token comment">// we're ready to start with our path now</span>
+</span><span class="code-line line-number" line="23">        <span class="token comment">// 我们现在准备好开始绘制路径了。</span>
 </span><span class="code-line line-number" line="24">        <span class="token keyword">var</span> path <span class="token operator">=</span> <span class="token class-name">Path</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 </span><span class="code-line line-number" line="25">
-</span><span class="code-line line-number" line="26">        <span class="token comment">// move to our initial position</span>
+</span><span class="code-line line-number" line="26">        <span class="token comment">// 移动到我们的初始位置。</span>
 </span><span class="code-line line-number" line="27">        path<span class="token punctuation">.</span><span class="token function">move</span><span class="token punctuation">(</span>to<span class="token punctuation">:</span> <span class="token class-name">CGPoint</span><span class="token punctuation">(</span>x<span class="token punctuation">:</span> center<span class="token punctuation">.</span>x <span class="token operator">*</span> <span class="token function">cos</span><span class="token punctuation">(</span>currentAngle<span class="token punctuation">)</span><span class="token punctuation">,</span> y<span class="token punctuation">:</span> center<span class="token punctuation">.</span>y <span class="token operator">*</span> <span class="token function">sin</span><span class="token punctuation">(</span>currentAngle<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 </span><span class="code-line line-number" line="28">
-</span><span class="code-line line-number" line="29">        <span class="token comment">// track the lowest point we draw to, so we can center later</span>
+</span><span class="code-line line-number" line="29">        <span class="token comment">// 跟踪我们绘制的最低点，以便稍后进行居中处理。</span>
 </span><span class="code-line line-number" line="30">        <span class="token keyword">var</span> bottomEdge<span class="token punctuation">:</span> <span class="token class-name">CGFloat</span> <span class="token operator">=</span> <span class="token number">0</span>
 </span><span class="code-line line-number" line="31">
-</span><span class="code-line line-number" line="32">        <span class="token comment">// loop over all our points/inner points</span>
+</span><span class="code-line line-number" line="32">        <span class="token comment">// 循环遍历所有的点/内部点。</span>
 </span><span class="code-line line-number" line="33">        <span class="token keyword">for</span> corner <span class="token keyword">in</span> <span class="token number">0</span><span class="token operator">..&#x3C;</span>corners <span class="token operator">*</span> <span class="token number">2</span>  <span class="token punctuation">{</span>
-</span><span class="code-line line-number" line="34">            <span class="token comment">// figure out the location of this point</span>
+</span><span class="code-line line-number" line="34">            <span class="token comment">// 确定该点的位置。</span>
 </span><span class="code-line line-number" line="35">            <span class="token keyword">let</span> sinAngle <span class="token operator">=</span> <span class="token function">sin</span><span class="token punctuation">(</span>currentAngle<span class="token punctuation">)</span>
 </span><span class="code-line line-number" line="36">            <span class="token keyword">let</span> cosAngle <span class="token operator">=</span> <span class="token function">cos</span><span class="token punctuation">(</span>currentAngle<span class="token punctuation">)</span>
 </span><span class="code-line line-number" line="37">            <span class="token keyword">let</span> bottom<span class="token punctuation">:</span> <span class="token class-name">CGFloat</span>
 </span><span class="code-line line-number" line="38">
-</span><span class="code-line line-number" line="39">            <span class="token comment">// if we're a multiple of 2 we are drawing the outer edge of the star</span>
+</span><span class="code-line line-number" line="39">            <span class="token comment">// 如果我们是2的倍数，那么我们正在绘制星形的外边缘。</span>
 </span><span class="code-line line-number" line="40">            <span class="token keyword">if</span> corner<span class="token punctuation">.</span><span class="token function">isMultiple</span><span class="token punctuation">(</span>of<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-</span><span class="code-line line-number" line="41">                <span class="token comment">// store this Y position</span>
+</span><span class="code-line line-number" line="41">                <span class="token comment">// 保存这个 Y 位置</span>
 </span><span class="code-line line-number" line="42">                bottom <span class="token operator">=</span> center<span class="token punctuation">.</span>y <span class="token operator">*</span> sinAngle
 </span><span class="code-line line-number" line="43">
-</span><span class="code-line line-number" line="44">                <span class="token comment">// …and add a line to there</span>
+</span><span class="code-line line-number" line="44">                <span class="token comment">// ...并添加一条线到那里。</span>
 </span><span class="code-line line-number" line="45">                path<span class="token punctuation">.</span><span class="token function">addLine</span><span class="token punctuation">(</span>to<span class="token punctuation">:</span> <span class="token class-name">CGPoint</span><span class="token punctuation">(</span>x<span class="token punctuation">:</span> center<span class="token punctuation">.</span>x <span class="token operator">*</span> cosAngle<span class="token punctuation">,</span> y<span class="token punctuation">:</span> bottom<span class="token punctuation">)</span><span class="token punctuation">)</span>
 </span><span class="code-line line-number" line="46">            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-</span><span class="code-line line-number" line="47">                <span class="token comment">// we're not a multiple of 2, which means we're drawing an inner point</span>
+</span><span class="code-line line-number" line="47">                <span class="token comment">// 我们不是2的倍数，这意味着我们正在绘制一个内部点。</span>
 </span><span class="code-line line-number" line="48">
-</span><span class="code-line line-number" line="49">                <span class="token comment">// store this Y position</span>
+</span><span class="code-line line-number" line="49">                <span class="token comment">// 保存这个 Y 位置</span>
 </span><span class="code-line line-number" line="50">                bottom <span class="token operator">=</span> innerY <span class="token operator">*</span> sinAngle
 </span><span class="code-line line-number" line="51">
-</span><span class="code-line line-number" line="52">                <span class="token comment">// …and add a line to there</span>
+</span><span class="code-line line-number" line="52">                <span class="token comment">// ...并添加一条线到那里。</span>
 </span><span class="code-line line-number" line="53">                path<span class="token punctuation">.</span><span class="token function">addLine</span><span class="token punctuation">(</span>to<span class="token punctuation">:</span> <span class="token class-name">CGPoint</span><span class="token punctuation">(</span>x<span class="token punctuation">:</span> innerX <span class="token operator">*</span> cosAngle<span class="token punctuation">,</span> y<span class="token punctuation">:</span> bottom<span class="token punctuation">)</span><span class="token punctuation">)</span>
 </span><span class="code-line line-number" line="54">            <span class="token punctuation">}</span>
 </span><span class="code-line line-number" line="55">
-</span><span class="code-line line-number" line="56">            <span class="token comment">// if this new bottom point is our lowest, stash it away for later</span>
+</span><span class="code-line line-number" line="56">            <span class="token comment">// 如果这个新的底部点是我们最低的点，将其保存供以后使用。</span>
 </span><span class="code-line line-number" line="57">            <span class="token keyword">if</span> bottom <span class="token operator">></span> bottomEdge <span class="token punctuation">{</span>
 </span><span class="code-line line-number" line="58">                bottomEdge <span class="token operator">=</span> bottom
 </span><span class="code-line line-number" line="59">            <span class="token punctuation">}</span>
 </span><span class="code-line line-number" line="60">
-</span><span class="code-line line-number" line="61">            <span class="token comment">// move on to the next corner</span>
+</span><span class="code-line line-number" line="61">            <span class="token comment">// 继续下一个角落。</span>
 </span><span class="code-line line-number" line="62">            currentAngle <span class="token operator">+=</span> angleAdjustment
 </span><span class="code-line line-number" line="63">        <span class="token punctuation">}</span>
 </span><span class="code-line line-number" line="64">
-</span><span class="code-line line-number" line="65">        <span class="token comment">// figure out how much unused space we have at the bottom of our drawing rectangle</span>
+</span><span class="code-line line-number" line="65">        <span class="token comment">// 计算我们绘图矩形底部剩余的未使用空间。</span>
 </span><span class="code-line line-number" line="66">        <span class="token keyword">let</span> unusedSpace <span class="token operator">=</span> <span class="token punctuation">(</span>rect<span class="token punctuation">.</span>height <span class="token operator">/</span> <span class="token number">2</span> <span class="token operator">-</span> bottomEdge<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span>
 </span><span class="code-line line-number" line="67">
-</span><span class="code-line line-number" line="68">        <span class="token comment">// create and apply a transform that moves our path down by that amount, centering the shape vertically</span>
+</span><span class="code-line line-number" line="68">        <span class="token comment">// 创建并应用一个变换，将我们的路径向下移动相应的距离，垂直居中形状。</span>
 </span><span class="code-line line-number" line="69">        <span class="token keyword">let</span> transform <span class="token operator">=</span> <span class="token class-name">CGAffineTransform</span><span class="token punctuation">(</span>translationX<span class="token punctuation">:</span> center<span class="token punctuation">.</span>x<span class="token punctuation">,</span> y<span class="token punctuation">:</span> center<span class="token punctuation">.</span>y <span class="token operator">+</span> unusedSpace<span class="token punctuation">)</span>
 </span><span class="code-line line-number" line="70">        <span class="token keyword">return</span> path<span class="token punctuation">.</span><span class="token function">applying</span><span class="token punctuation">(</span>transform<span class="token punctuation">)</span>
 </span><span class="code-line line-number" line="71">    <span class="token punctuation">}</span>
@@ -420,62 +420,62 @@
         // 从矩形的中心绘制
         let center = CGPoint(x: rect.width / 2, y: rect.height / 2)
 
-        // start from directly upwards (as opposed to down or to the right)
+        // 从直接向上开始（与向下或向右相反）
         var currentAngle = -CGFloat.pi / 2
 
-        // calculate how much we need to move with each star corner
+        // 计算每个星形角落需要移动多少。
         let angleAdjustment = .pi * 2 / CGFloat(corners * 2)
 
-        // figure out how much we need to move X/Y for the inner points of the star
+        // 计算星形的内部点需要在X和Y方向上移动多少。
         let innerX = center.x * smoothness
         let innerY = center.y * smoothness
 
-        // we&#x27;re ready to start with our path now
+        // 我们现在准备好开始绘制路径了。
         var path = Path()
 
-        // move to our initial position
+        // 移动到我们的初始位置。
         path.move(to: CGPoint(x: center.x * cos(currentAngle), y: center.y * sin(currentAngle)))
 
-        // track the lowest point we draw to, so we can center later
+        // 跟踪我们绘制的最低点，以便稍后进行居中处理。
         var bottomEdge: CGFloat = 0
 
-        // loop over all our points/inner points
+        // 循环遍历所有的点/内部点。
         for corner in 0..<corners * 2  {
-            // figure out the location of this point
+            // 确定该点的位置。
             let sinAngle = sin(currentAngle)
             let cosAngle = cos(currentAngle)
             let bottom: CGFloat
 
-            // if we&#x27;re a multiple of 2 we are drawing the outer edge of the star
+            // 如果我们是2的倍数，那么我们正在绘制星形的外边缘。
             if corner.isMultiple(of: 2) {
-                // store this Y position
+                // 保存这个 Y 位置
                 bottom = center.y * sinAngle
 
-                // …and add a line to there
+                // ...并添加一条线到那里。
                 path.addLine(to: CGPoint(x: center.x * cosAngle, y: bottom))
             } else {
-                // we&#x27;re not a multiple of 2, which means we&#x27;re drawing an inner point
+                // 我们不是2的倍数，这意味着我们正在绘制一个内部点。
 
-                // store this Y position
+                // 保存这个 Y 位置
                 bottom = innerY * sinAngle
 
-                // …and add a line to there
+                // ...并添加一条线到那里。
                 path.addLine(to: CGPoint(x: innerX * cosAngle, y: bottom))
             }
 
-            // if this new bottom point is our lowest, stash it away for later
+            // 如果这个新的底部点是我们最低的点，将其保存供以后使用。
             if bottom > bottomEdge {
                 bottomEdge = bottom
             }
 
-            // move on to the next corner
+            // 继续下一个角落。
             currentAngle += angleAdjustment
         }
 
-        // figure out how much unused space we have at the bottom of our drawing rectangle
+        // 计算我们绘图矩形底部剩余的未使用空间。
         let unusedSpace = (rect.height / 2 - bottomEdge) / 2
 
-        // create and apply a transform that moves our path down by that amount, centering the shape vertically
+        // 创建并应用一个变换，将我们的路径向下移动相应的距离，垂直居中形状。
         let transform = CGAffineTransform(translationX: center.x, y: center.y + unusedSpace)
         return path.applying(transform)
     }
