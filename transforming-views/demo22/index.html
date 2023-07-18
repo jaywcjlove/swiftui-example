@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>如何圆角化一个视图？ SwiftUI Example</title>
-    <meta name="description" content="任何 SwiftUI 视图都可以使用 cornerRadius() 修饰符将其角圆化。 这是一个简单的以点为单位的值，控制着舍入的程度有多明显。">
+    <title>如何更改List、TextEditor等的背景色 SwiftUI Example</title>
+    <meta name="description" content="有些 SwiftUI 视图具有默认的背景颜色，会覆盖你自己尝试应用的任何背景颜色，但如果你使用 scrollContentBackground() 修饰符，你可以隐藏该默认背景并替换为其他内容。截至撰写本文时，此方法适用于 List 、 T">
     <link rel="stylesheet" type="text/css" href="../../css/main.css?v=1.26.6">
     <link rel="stylesheet" type="text/css" href="../../css/tocbot.css?v=1.26.6">
     <link rel="stylesheet" type="text/css" href="../../css/media.css?v=1.26.6">
@@ -231,7 +231,7 @@
             <a href="../demo9/index.html" class="">如何旋转视图？</a>
             <a href="../demo10/index.html" class="">如何旋转 3D 视图？</a>
             <a href="../demo11/index.html" class="">如何放大或缩小视图？</a>
-            <a href="index.html" class="active">如何圆角化一个视图？</a>
+            <a href="../demo12/index.html" class="">如何圆角化一个视图？</a>
             <a href="../demo13/index.html" class="">如何调整视图的不透明度？</a>
             <a href="../demo14/index.html" class="">如何调整视图的强调色？</a>
             <a href="../demo15/index.html" class="">如何用一个视图掩盖另一个视图？</a>
@@ -241,7 +241,7 @@
             <a href="../demo19/index.html" class="">使用 `ButtonStyle` 自定义按钮</a>
             <a href="../demo20/index.html" class="">使用 `ProgressViewStyle` 自定义 `ProgressView`</a>
             <a href="../demo21/index.html" class="">使用 `ToggleStyle` 自定义 `Toggle`</a>
-            <a href="../demo22/index.html" class="">如何更改 `List` `TextEditor` 等的背景色</a>
+            <a href="index.html" class="active">如何更改 `List` `TextEditor` 等的背景色</a>
             <label>绘画</label>
             <a href="../../drawing/demo1/index.html" class="">SwiftUI 的内置形状</a>
             <a href="../../drawing/demo2/index.html" class="">如何绘制自定义路径？</a>
@@ -324,43 +324,55 @@
         </aside>
       </div>
       <markdown-style>
-        <h1 id="如何圆角化一个视图"><a aria-hidden="true" tabindex="-1" href="#如何圆角化一个视图" class="anchor"><span class="icon icon-link"></span></a>如何圆角化一个视图？</h1>
-        <p>任何 <code>SwiftUI</code> 视图都可以使用 <code>cornerRadius()</code> 修饰符将其角圆化。 这是一个简单的以点为单位的值，控制着舍入的程度有多明显。</p>
-        <p>因此，您可以创建一个带有25个圆角的文本视图，如下所示：</p>
-        <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line line-number" line="1"><span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Round Me"</span></span><span class="token punctuation">)</span>
-</span><span class="code-line line-number" line="2">    <span class="token punctuation">.</span><span class="token function">padding</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-</span><span class="code-line line-number" line="3">    <span class="token punctuation">.</span><span class="token function">background</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span>red<span class="token punctuation">)</span>
-</span><span class="code-line line-number" line="4">    <span class="token punctuation">.</span><span class="token function">cornerRadius</span><span class="token punctuation">(</span><span class="token number">25</span><span class="token punctuation">)</span>
-</span></code><input type="hidden" value="Text(&#x22;Round Me&#x22;)
-    .padding()
-    .background(Color.red)
-    .cornerRadius(25)
+        <h1 id="如何更改listtexteditor等的背景色"><a aria-hidden="true" tabindex="-1" href="#如何更改listtexteditor等的背景色" class="anchor"><span class="icon icon-link"></span></a>如何更改<code>List</code>、<code>TextEditor</code>等的背景色</h1>
+        <p>有些 <code>SwiftUI</code> 视图具有默认的背景颜色，会覆盖你自己尝试应用的任何背景颜色，但如果你使用 <code>scrollContentBackground()</code> 修饰符，你可以隐藏该默认背景并替换为其他内容。截至撰写本文时，此方法适用于 <code>List</code> 、 <code>TextEditor和Form</code> ，因此你可以移除或更改它们的背景颜色。</p>
+        <p>例如，这将删除列表的默认背景，并替换为靛蓝色：</p>
+        <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line line-number" line="1"><span class="token class-name">List</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token operator">..&#x3C;</span><span class="token number">100</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> i <span class="token keyword">in</span>
+</span><span class="code-line line-number" line="2">    <span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Example </span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation">i</span><span class="token interpolation-punctuation punctuation">)</span><span class="token string">"</span></span><span class="token punctuation">)</span>
+</span><span class="code-line line-number" line="3"><span class="token punctuation">}</span>
+</span><span class="code-line line-number" line="4"><span class="token punctuation">.</span><span class="token function">scrollContentBackground</span><span class="token punctuation">(</span><span class="token punctuation">.</span>hidden<span class="token punctuation">)</span>
+</span><span class="code-line line-number" line="5"><span class="token punctuation">.</span><span class="token function">background</span><span class="token punctuation">(</span><span class="token punctuation">.</span>indigo<span class="token punctuation">)</span>
+</span></code><input type="hidden" value="List(0..<100) { i in
+    Text(&#x22;Example \(i)&#x22;)
+}
+.scrollContentBackground(.hidden)
+.background(.indigo)
 "><div onclick="copied(this)" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
-        <p>您可以将 <code>clipShape()</code> 修饰符与 <code>Capsule</code> 一起使用，自动将最短的边缘完全弄圆，如下所示：</p>
-        <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line line-number" line="1"><span class="token class-name">Text</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Round Me"</span></span><span class="token punctuation">)</span>
-</span><span class="code-line line-number" line="2">    <span class="token punctuation">.</span><span class="token function">padding</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-</span><span class="code-line line-number" line="3">    <span class="token punctuation">.</span><span class="token function">background</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span>red<span class="token punctuation">)</span>
-</span><span class="code-line line-number" line="4">    <span class="token punctuation">.</span><span class="token function">clipShape</span><span class="token punctuation">(</span><span class="token class-name">Capsule</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-</span></code><input type="hidden" value="Text(&#x22;Round Me&#x22;)
-    .padding()
-    .background(Color.red)
-    .clipShape(Capsule())
+        <p>这将隐藏 <code>TextEditor</code> 的默认背景并用渐变色替换它：</p>
+        <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line line-number" line="1"><span class="token keyword">struct</span> <span class="token class-name">ContentView</span><span class="token punctuation">:</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+</span><span class="code-line line-number" line="2">    <span class="token attribute atrule">@State</span> <span class="token keyword">private</span> <span class="token keyword">var</span> bio <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"Describe yourself"</span></span>
+</span><span class="code-line line-number" line="3">
+</span><span class="code-line line-number" line="4">    <span class="token keyword">var</span> body<span class="token punctuation">:</span> <span class="token keyword">some</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
+</span><span class="code-line line-number" line="5">        <span class="token class-name">TextEditor</span><span class="token punctuation">(</span>text<span class="token punctuation">:</span> $bio<span class="token punctuation">)</span>
+</span><span class="code-line line-number" line="6">            <span class="token punctuation">.</span><span class="token function">scrollContentBackground</span><span class="token punctuation">(</span><span class="token punctuation">.</span>hidden<span class="token punctuation">)</span>
+</span><span class="code-line line-number" line="7">            <span class="token punctuation">.</span><span class="token function">background</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token function">linearGradient</span><span class="token punctuation">(</span>colors<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">.</span>white<span class="token punctuation">,</span> <span class="token punctuation">.</span>gray<span class="token punctuation">]</span><span class="token punctuation">,</span> startPoint<span class="token punctuation">:</span> <span class="token punctuation">.</span>top<span class="token punctuation">,</span> endPoint<span class="token punctuation">:</span> <span class="token punctuation">.</span>bottom<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</span><span class="code-line line-number" line="8">    <span class="token punctuation">}</span>
+</span><span class="code-line line-number" line="9"><span class="token punctuation">}</span>
+</span></code><input type="hidden" value="struct ContentView: View {
+    @State private var bio = &#x22;Describe yourself&#x22;
+
+    var body: some View {
+        TextEditor(text: $bio)
+            .scrollContentBackground(.hidden)
+            .background(.linearGradient(colors: [.white, .gray], startPoint: .top, endPoint: .bottom))
+    }
+}
 "><div onclick="copied(this)" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
-        <div class="previous"><a class="prev" href="../demo11/index.html"><svg viewBox="0 0 1024 1024" width="16" height="16" fill="currentColor">
+        <div class="previous"><a class="prev" href="../demo21/index.html"><svg viewBox="0 0 1024 1024" width="16" height="16" fill="currentColor">
               <path d="M842.666667 864c-8.533333 0-14.933333-2.133333-21.333334-8.533333l-341.333333-309.333334c-6.4-6.4-10.666667-14.933333-10.666667-23.466666 0-8.533333 4.266667-17.066667 10.666667-23.466667l341.333333-309.333333c12.8-12.8 34.133333-10.666667 44.8 2.133333 12.8 12.8 10.666667 34.133333-2.133333 44.8L548.266667 522.666667l315.733333 285.866666c12.8 10.666667 14.933333 32 2.133333 44.8-6.4 6.4-14.933333 10.666667-23.466666 10.666667z"></path>
               <path d="M512 864c-8.533333 0-14.933333-2.133333-21.333333-8.533333L149.333333 546.133333c-6.4-6.4-10.666667-14.933333-10.666666-23.466666 0-8.533333 4.266667-17.066667 10.666666-23.466667L490.666667 189.866667c12.8-12.8 34.133333-10.666667 44.8 2.133333 12.8 12.8 10.666667 34.133333-2.133334 44.8L217.6 522.666667 533.333333 808.533333c12.8 12.8 14.933333 32 2.133334 44.8-6.4 6.4-14.933333 10.666667-23.466667 10.666667z"></path>
             </svg>
-<span>如何放大或缩小视图？
-</span></a><a class="next" href="../demo13/index.html"><span>如何调整视图的不透明度？
+<span>使用 `ToggleStyle` 自定义 `Toggle`
+</span></a><a class="next" href="../../drawing/demo1/index.html"><span>SwiftUI 的内置形状
 </span><svg viewBox="0 0 1024 1024" width="16" height="16" fill="currentColor">
               <path d="M544 522.666667c0-8.533333-4.266667-17.066667-10.666667-23.466667L192 189.866667c-12.8-12.8-34.133333-10.666667-44.8 2.133333-12.8 12.8-10.666667 34.133333 2.133333 44.8l315.733334 285.866667L149.333333 808.533333c-12.8 12.8-14.933333 32-2.133333 44.8 6.4 6.4 14.933333 10.666667 23.466667 10.666667 8.533333 0 14.933333-2.133333 21.333333-8.533333l341.333333-309.333334c6.4-6.4 10.666667-14.933333 10.666667-23.466666z"></path>
               <path d="M864 499.2l-341.333333-309.333333c-12.8-12.8-34.133333-10.666667-44.8 2.133333-12.8 12.8-10.666667 34.133333 2.133333 44.8l315.733333 285.866667-315.733333 285.866666c-12.8 12.8-14.933333 32-2.133333 44.8 6.4 6.4 14.933333 10.666667 23.466666 10.666667 8.533333 0 14.933333-2.133333 21.333334-8.533333l341.333333-309.333334c6.4-6.4 10.666667-14.933333 10.666667-23.466666 0-8.533333-4.266667-17.066667-10.666667-23.466667z"></path>
             </svg></a></div>
-        <section class="article-footer"><a href="https://github.com/jaywcjlove/swiftui-example/blob/master/example/transforming-views/demo12/README.md" class="edit-button" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <section class="article-footer"><a href="https://github.com/jaywcjlove/swiftui-example/blob/master/example/transforming-views/demo22/README.md" class="edit-button" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
             </svg>
 <span>Edit this page on GitHub</span>
-</a><span class="atime">2021/10/17</span></section>
+</a><span class="atime">2023/07/18</span></section>
       </markdown-style>
     </div>
     <script src="../../js/demo-preview.js?v=1.26.6"></script>
