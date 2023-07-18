@@ -305,7 +305,7 @@
 # 使您的UI结构更易于理解
 
 - composing-views/: 排版视图
-- composing-views/demo1/README.md: 如何创建和排版自定义视图？
+- composing-views/demo1/README.md: 如何创建和组合自定义视图？
 - composing-views/demo2/README.md: 如何将文本视图结合在一起？
 - composing-views/demo3/README.md: 如何将视图存储为属性？
 - composing-views/demo4/README.md: 如何创建自定义修改程序？
