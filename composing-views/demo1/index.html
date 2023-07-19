@@ -326,7 +326,7 @@
       <markdown-style>
         <h1 id="如何创建和排版自定义视图"><a aria-hidden="true" tabindex="-1" href="#如何创建和排版自定义视图" class="anchor"><span class="icon icon-link"></span></a>如何创建和排版自定义视图？</h1>
         <p>SwifUI 的一个核心原则是组成，这意味着它为我们设计了许多小视图，然后将它们与它们组合在一起，以创造更大的东西。 这使我们能够在大规模的规模上重新使用视图，这意味着对我们的工作较少。 甚至更好，结合小子视图几乎没有运行时开销，所以我们可以自由使用它们。</p>
-        <p>关键是开始小，并努力工作。 例如，许多应用程序必须与员工一起使用，这些员工看起来像这样：</p>
+        <p>关键是从小事做起，逐步提升。例如，许多应用程序必须与以下类似的员工一起工作：</p>
         <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line line-number" line="1"><span class="token keyword">struct</span> <span class="token class-name">Employee</span> <span class="token punctuation">{</span>
 </span><span class="code-line line-number" line="2">    <span class="token keyword">var</span> name<span class="token punctuation">:</span> <span class="token class-name">String</span>
 </span><span class="code-line line-number" line="3">    <span class="token keyword">var</span> jobTitle<span class="token punctuation">:</span> <span class="token class-name">String</span>
@@ -362,7 +362,7 @@
     }
 }
 "><div onclick="copied(this)" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
-        <p>您的设计师可能会告诉您，每当可见电子邮件地址时，您应该在它旁边显示一个小包络图标作为视觉提示，因此您可以制作电子邮件Address视图：</p>
+        <p>您的设计师可能会告诉您，每当可见电子邮件地址时，你应该显示一个小信封图标旁边作为一个视觉提示，所以你可以做一个 <code>EmailAddress</code> 视图：</p>
         <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line line-number" line="1"><span class="token keyword">struct</span> <span class="token class-name">EmailAddress</span><span class="token punctuation">:</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
 </span><span class="code-line line-number" line="2">    <span class="token keyword">var</span> address<span class="token punctuation">:</span> <span class="token class-name">String</span>
 </span><span class="code-line line-number" line="3">
@@ -384,7 +384,7 @@
     }
 }
 "><div onclick="copied(this)" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
-        <p>展示员工的详细信息时，您可以创建一个查看的视图，该视图具有整洁的姓名和职位标题，使用电子邮件地址备份，使用您的EmailAddress视图，如下所示：</p>
+        <p>展示员工的详细信息时，您可以创建一个查看的视图，该视图具有整洁的姓名和职位标题，使用电子邮件地址备份，使用您的 <code>EmailAddress</code> 视图，如下所示：</p>
         <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line line-number" line="1"><span class="token keyword">struct</span> <span class="token class-name">EmployeeDetails</span><span class="token punctuation">:</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
 </span><span class="code-line line-number" line="2">    <span class="token keyword">var</span> employee<span class="token punctuation">:</span> <span class="token class-name">Employee</span>
 </span><span class="code-line line-number" line="3">
@@ -414,7 +414,7 @@
     }
 }
 "><div onclick="copied(this)" class="copied"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
-        <p>而且您甚至可以创建一个更大的视图，将员工详细信息旁边放在员工详细信息旁边，以提供员工的单一视觉表示，如下所示：</p>
+        <p>你甚至可以创建一个更大的视图，将 <code>ProfilePicture</code> 放在 <code>EmployeeDetails</code> 旁边，以便提供员工的单一视觉表现，如下所示：</p>
         <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line line-number" line="1"><span class="token keyword">struct</span> <span class="token class-name">EmployeeView</span><span class="token punctuation">:</span> <span class="token class-name">View</span> <span class="token punctuation">{</span>
 </span><span class="code-line line-number" line="2">    <span class="token keyword">var</span> employee<span class="token punctuation">:</span> <span class="token class-name">Employee</span>
 </span><span class="code-line line-number" line="3">
@@ -441,10 +441,10 @@
           <li>只是他们的照片</li>
           <li>只是他们的电子邮件地址</li>
           <li>只是他们的工作细节</li>
-          <li>一切都立刻</li>
+          <li>一次性完成所有事情</li>
         </ul>
-        <p>更重要的是，这意味着在使用所有这项工作时，我们的主要内容视图不必担心员工的样子或者应该如何处理 - 所有工作都被烘焙到我们较小的景色中。 这意味着我们可以使用示例员工创建员工浏览量，并刚刚工作。</p>
-        <p>要一起演示所有这些，这里有一个代码示例，其中包含所有较小的视图结构，以显示单个员工的ContentView结构结尾。 对于用户来说，结果是相同的，但我们最终通过一系列的小视图来做个体的东西，每个都可以以任何数量的不同方式重新组合。</p>
+        <p>更重要的是，这意味着当使用所有这些工作时，我们的主要内容视图不必担心员工的外观或应该如何对待他们 - 所有这些工作都被整合到我们的较小视图中。这意味着我们可以创建一个带有示例员工的 <code>EmployeeView</code> ，并让它正常工作。</p>
+        <p>要一起演示所有这些，这里有一个代码示例，其中包含所有较小的视图结构，以显示单个员工的 <code>ContentView</code> 结构结尾。 对于用户来说，结果是相同的，但我们最终通过一系列的小视图来做个体的东西，每个都可以以任何数量的不同方式重新组合。</p>
         <p>这是代码：</p>
         <pre class="language-swift"><code class="language-swift code-highlight"><span class="code-line line-number" line="1"><span class="token keyword">struct</span> <span class="token class-name">Employee</span> <span class="token punctuation">{</span>
 </span><span class="code-line line-number" line="2">    <span class="token keyword">var</span> name<span class="token punctuation">:</span> <span class="token class-name">String</span>
