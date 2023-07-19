@@ -340,7 +340,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 
 使您的UI结构更易于理解
 
-- [如何创建和排版自定义视图？](example/composing-views/demo1/README.md)
+- [如何创建和组合自定义视图？](example/composing-views/demo1/README.md)
 - [如何将文本视图结合在一起？](example/composing-views/demo2/README.md)
 - [如何将视图存储为属性？](example/composing-views/demo3/README.md)
 - [如何创建自定义修改程序？](example/composing-views/demo4/README.md)
