@@ -23,7 +23,7 @@ struct ContentView: View {
 }
 ```
 
-请注意，如何为 `order` 属性没有默认值 - 通过使用 `@EnvironmentObject`，我们说的是值将由 `SwiftUI` 环境提供，而不是由该视图明确创建。
+请注意， `order` 属性没有给定默认值 - 通过使用 `@EnvironmentObject` ，我们表明该值将由 `SwiftUI` 环境提供，而不是由此视图显式创建。
 
 `@EnvironmentObject` 与 `@ObservedObject` 有很多共同点：两者都必须引用符合 `ObservableObject` 的类，都可以在许多视图之间共享，并且都可以在发生重大更改时更新正在监视的所有视图。 但是，`@EnvironmentObject` 明确表示“此对象将由某个外部实体提供，而不是由当前视图创建或专门传递。
 
