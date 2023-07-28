@@ -16,7 +16,7 @@ SwiftUI 给我们提供了 `@Environment` 和 `@EnvironmentObject` 属性包装�
 @EnvironmentObject var order: Order
 ```
 
-这种差异听起来很小，但由于实现 `@EnvironmentObject` 的方式而非常重要。 当我们说订单是 `Order`类型时，`SwiftUI` 将在其环境中查找该类型的对象并将其附加到`order` 属性。 但是，使用 `@Environment` 时，无法实现相同的行为，因为许多事物可能共享相同的数据类型。
+这种差异听起来很小，但由于实现 `@EnvironmentObject` 的方式而非常重要。 当我们说 `order` 的类型是 `Order` 时， `SwiftUI` 将在其环境中查找该类型的对象并将其附加到 `order` 属性。 但是，使用 `@Environment` 时，无法实现相同的行为，因为许多事物可能共享相同的数据类型。
 
 例如：
 
