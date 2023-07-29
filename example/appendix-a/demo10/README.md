@@ -30,7 +30,7 @@ Image("niagara-falls")
     )
 ```
 
-里面有很多代码，所以我们将其解压缩：
+里面有很多代码，让我们逐步解释：
 
 - `DragGesture().updating()`代码创建一个新的拖动手势，要求它修改存储在 `dragAmount` 中的值-这就是我们的 `CGSize`。
 - 它需要一个带有三个参数的闭包：`value`，`state` 和 `transaction`。
