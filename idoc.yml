@@ -15,6 +15,7 @@ menus:
   🇨🇳: 
     url: https://jaywcjlove.gitee.io/swiftui-example/
     target: __blank
+  Sponsor: https://jaywcjlove.github.io/#/sponsor
 
 editButton: 
   label: Edit this page on GitHub

@@ -1,5 +1,7 @@
 ![SwiftUI by Example](assets/logo.jpg)
 
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-048754?logo=buymeacoffee)](https://jaywcjlove.github.io/#/sponsor)
+
 SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问题以及了解 SwiftUI 的实际工作方式。主要内容来源 [`hackingwithswift.com`](https://www.hackingwithswift.com/quick-start/swiftui)，下面所有实例都是在 macOS Big Sur 系统上运行，基于 Xcode `12.4` 开发。
 
 🚧 注意：示例适用于 macOS/iOS 的 Swift 编程(主要是 macOS)，文字解释内容基于 Google 翻译，英文水平有限欢迎 RP 完善，小部分经过了添加或者修改，对部分内容进行了新增。如果对 Swift 语法不熟悉，这里有简单的  [`Swift 语法入门`](https://github.com/jaywcjlove/swift-tutorial)，对 SwiftUI 不熟悉，在这里提供了一个 [`SwiftUI 速查手册`](./example/cheat-sheet.md)。
