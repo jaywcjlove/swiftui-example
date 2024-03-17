@@ -16,6 +16,6 @@
   "license": "MIT",
   "homepage": "https://jaywcjlove.github.io/swiftui-example",
   "devDependencies": {
-    "idoc": "^1.21.1"
+    "idoc": "^1.29.0"
   }
 }
