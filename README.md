@@ -14,9 +14,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 
 只是讨论 SwiftUI 事物的地方 [论坛→](https://github.com/jaywcjlove/swiftui-example/discussions)。想法来源于 [sindresorhus/swiftui](https://github.com/sindresorhus/swiftui)
 
-
-✦ 我的 macOS 应用程序:
-
+✦ 欢迎下载我的 macOS 应用程序支持我，谢谢 ✦
 
 <div style="display: inline_block">
   <a target="_blank" href="https://wangchujiang.com/copybook-generator/" title="Copybook Generator for macOS/iOS"><img align="center" alt="Copybook Generator" height="50" width="50" src="https://github.com/jaywcjlove/jaywcjlove/assets/1680273/b90e42ff-158b-4534-82ca-5898fd0e8d73"></a>
