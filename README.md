@@ -58,7 +58,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 - [辅助功能](#辅助功能)
 - [工具](#工具)
 - [附录a](#附录a)
-- [`速查手册`](./cheat-sheet.md)
+- [`速查手册`](./example/cheat-sheet.md)
 
 <!--idoc:ignore:end-->
 
