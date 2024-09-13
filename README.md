@@ -14,7 +14,7 @@ SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问
 
 只是讨论 SwiftUI 事物的地方 [论坛→](https://github.com/jaywcjlove/swiftui-example/discussions)。想法来源于 [sindresorhus/swiftui](https://github.com/sindresorhus/swiftui)
 
-✦ 欢迎下载我的 macOS 应用程序支持我，谢谢 ✦
+✦ 欢迎下载我的 macOS/iOS 应用程序支持我，谢谢 ✦
 
 <div style="display: inline_block">
   <a target="_blank" href="https://wangchujiang.com/quick-rss/" title="Quick RSS for macOS"><img align="center" alt="Quick RSS" height="50" width="50" src="https://github.com/user-attachments/assets/deb91549-0347-458c-9768-3b0fcb18aebc"></a>
