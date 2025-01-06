@@ -13,9 +13,9 @@
   </a>
 </p>
 
-🚧 **注意事项：**这些示例适用于 macOS/iOS 上的 Swift 编程（主要是 macOS），文字解释内容是通过 Google 翻译完成的，英文水平有限，欢迎大家参与修改和完善。部分内容进行了添加或修改，并且有些部分是新增的。如果您对 Swift 语法不熟悉，可以参考 [`Swift 语法入门`](https://github.com/jaywcjlove/swift-tutorial)，而如果对 SwiftUI 不熟悉，提供了一个 [`SwiftUI 速查手册`](./example/cheat-sheet.md) 供您参考。
+🚧 **注意事项：** 这些示例适用于 macOS/iOS 上的 Swift 编程（主要是 macOS），文字解释内容是通过 Google 翻译完成的，英文水平有限，欢迎大家参与修改和完善。部分内容进行了添加或修改，并且有些部分是新增的。如果您对 Swift 语法不熟悉，可以参考 [`Swift 语法入门`](https://github.com/jaywcjlove/swift-tutorial)，而如果对 SwiftUI 不熟悉，提供了一个 [`SwiftUI 速查手册`](./example/cheat-sheet.md) 供您参考。
 
-🚧 **版权声明：**内容版权归 [`hackingwithswift.com`](https://www.hackingwithswift.com/quick-start/swiftui) 原作者所有，本站不承担任何法律责任或风险，且不以商业为目的。如果您认为本站的内容侵犯了您的版权，请及时联系我们。同时，本站无法完全保证内容的准确性，使用本站内容所带来的任何风险由用户自行承担。使用本站即表示您已接受本站的使用条款和隐私政策。
+🚧 **版权声明：** 内容版权归 [`hackingwithswift.com`](https://www.hackingwithswift.com/quick-start/swiftui) 原作者所有，本站不承担任何法律责任或风险，且不以商业为目的。如果您认为本站的内容侵犯了您的版权，请及时联系我们。同时，本站无法完全保证内容的准确性，使用本站内容所带来的任何风险由用户自行承担。使用本站即表示您已接受本站的使用条款和隐私政策。
 
 为了方便在 Swift 中进行颜色拾取，提供了一个 Web 小工具 [UI-Color](https://uiwjs.github.io/ui-color/)，此外还提供了一个桌面应用 [Palette Genius](https://github.com/jaywcjlove/palette-genius)，该应用汇集了许多颜色，并且包含一个颜色选择转换器。欢迎大家提出改进意见。
 
