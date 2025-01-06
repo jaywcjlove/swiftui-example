@@ -4,7 +4,7 @@
 
 **SwiftUI 示例、技巧和技术集合**：这个集合旨在帮助您构建应用程序、解决问题，并了解 SwiftUI 的实际工作方式。主要内容来源于 [`hackingwithswift.com`](https://www.hackingwithswift.com/quick-start/swiftui)，所有示例都是在 macOS Big Sur 系统上运行，基于 Xcode `12.4` 开发。
 
-同时，我制作了一个 Swift/SwiftUI 速查手册应用，您可以通过以下链接下载：
+此外，我还制作了一个 Swift/SwiftUI 速查手册应用，您可以通过速查手册快速查阅资料，边动手开发应用，轻松上手。您可以通过以下链接下载：
 
 <p>
   <a target="_blank" href="https://apps.apple.com/app/devtutor/id6471227008" title="DevTutor for SwiftUI AppStore"><img alt="DevTutor for SwiftUI AppStore" src="https://jaywcjlove.github.io/sb/download/macos.svg" height="51">
