@@ -2,19 +2,28 @@
 
 [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-048754?logo=buymeacoffee)](https://jaywcjlove.github.io/#/sponsor)
 
-SwiftUI 示例，技巧和技术集合，帮助我构建应用程序，解决问题以及了解 SwiftUI 的实际工作方式。主要内容来源 [`hackingwithswift.com`](https://www.hackingwithswift.com/quick-start/swiftui)，下面所有实例都是在 macOS Big Sur 系统上运行，基于 Xcode `12.4` 开发。
+**SwiftUI 示例、技巧和技术集合**：这个集合旨在帮助您构建应用程序、解决问题，并了解 SwiftUI 的实际工作方式。主要内容来源于 [`hackingwithswift.com`](https://www.hackingwithswift.com/quick-start/swiftui)，所有示例都是在 macOS Big Sur 系统上运行，基于 Xcode `12.4` 开发。
 
-🚧 注意：示例适用于 macOS/iOS 的 Swift 编程(主要是 macOS)，文字解释内容基于 Google 翻译，英文水平有限欢迎 RP 完善，小部分经过了添加或者修改，对部分内容进行了新增。如果对 Swift 语法不熟悉，这里有简单的  [`Swift 语法入门`](https://github.com/jaywcjlove/swift-tutorial)，对 SwiftUI 不熟悉，在这里提供了一个 [`SwiftUI 速查手册`](./example/cheat-sheet.md)。
+同时，我制作了一个 Swift/SwiftUI 速查手册应用，您可以通过以下链接下载：
 
-🚧 注意：版权归属 [`hackingwithswift.com`](https://www.hackingwithswift.com/quick-start/swiftui) 原作者，对任何法律问题及风险不承担任何责任，没有任何商业目的，如果认为侵犯了您的版权，请来信告知。同时我不能完全保证内容的正确性。通过使用本站内容带来的风险与我无关。当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+<p>
+  <a target="_blank" href="https://apps.apple.com/app/devtutor/id6471227008" title="DevTutor for SwiftUI AppStore"><img alt="DevTutor for SwiftUI AppStore" src="https://jaywcjlove.github.io/sb/download/macos.svg" height="51">
+  </a>
+  <a target="_blank" href="https://apps.apple.com/app/devtutor/id6471227008?platform=iphone" title="DevTutor for SwiftUI AppStore"><img alt="DevTutor for SwiftUI AppStore iOS" src="https://jaywcjlove.github.io/sb/download/appstore.svg" height="51">
+  </a>
+</p>
 
-为方便在 Swift 中颜色拾取，提供了一个小工具([UI-Color](https://uiwjs.github.io/ui-color/))，欢迎提出改进意见。
+🚧 **注意事项：**这些示例适用于 macOS/iOS 上的 Swift 编程（主要是 macOS），文字解释内容是通过 Google 翻译完成的，英文水平有限，欢迎大家参与修改和完善。部分内容进行了添加或修改，并且有些部分是新增的。如果您对 Swift 语法不熟悉，可以参考 [`Swift 语法入门`](https://github.com/jaywcjlove/swift-tutorial)，而如果对 SwiftUI 不熟悉，提供了一个 [`SwiftUI 速查手册`](./example/cheat-sheet.md) 供您参考。
+
+🚧 **版权声明：**内容版权归 [`hackingwithswift.com`](https://www.hackingwithswift.com/quick-start/swiftui) 原作者所有，本站不承担任何法律责任或风险，且不以商业为目的。如果您认为本站的内容侵犯了您的版权，请及时联系我们。同时，本站无法完全保证内容的准确性，使用本站内容所带来的任何风险由用户自行承担。使用本站即表示您已接受本站的使用条款和隐私政策。
+
+为了方便在 Swift 中进行颜色拾取，提供了一个 Web 小工具 [UI-Color](https://uiwjs.github.io/ui-color/)，此外还提供了一个桌面应用 [Palette Genius](https://github.com/jaywcjlove/palette-genius)，该应用汇集了许多颜色，并且包含一个颜色选择转换器。欢迎大家提出改进意见。
 
 [`SwiftUI 论坛`](https://github.com/jaywcjlove/swiftui-example/discussions)
 
 只是讨论 SwiftUI 事物的地方 [论坛→](https://github.com/jaywcjlove/swiftui-example/discussions)。想法来源于 [sindresorhus/swiftui](https://github.com/sindresorhus/swiftui)
 
-✦ 欢迎下载我的 macOS/iOS 应用程序支持我，谢谢 ✦
+✦ 欢迎下载我的 macOS/iOS 应用程序来支持我，谢谢 ✦
 
 <p style="display: inline-block">
   <a target="_blank" href="https://wangchujiang.com/daybar/" title="DayBar for macOS"><img align="center" alt="DayBar" height="50" width="50" src="https://github.com/user-attachments/assets/b67d4a2e-92e2-4d8c-8c6f-2a1eb3e2fa93"></a>
